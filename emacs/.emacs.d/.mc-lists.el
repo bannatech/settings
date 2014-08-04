@@ -3,6 +3,12 @@
 
 (setq mc/cmds-to-run-for-all
       '(
+	autopair-insert-opening
+	autopair-newline
+	autopair-skip-close-maybe
+	c-electric-delete-forward
+	c-indent-line-or-region
+	indent-for-tab-command
 	kill-region
 	undefined
 	))

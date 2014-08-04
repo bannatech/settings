@@ -4,34 +4,42 @@
 # Should you change your keyboard layout somewhen, delete
 # this file and re-run i3-config-wizard(1).
 #
-
 # i3 config file (v4)
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod4
 
-exec gnome-settings-daemon
-
-exec ~/.dropbox-dist/dropboxd
+exec xfsettingsd
 
 exec compton --backend glx --vsync opengl-swc --paint-on-overlay
 
-exec feh --bg-tile ~/pictures/dimension.png
+exec feh --bg-scale ~/pictures/313131.png
 
 # hide dem borders 
 hide_edge_borders both
 
 # hide dem titles
-for_window [class="^.*"] border pixel 0
+for_window [class="^.*"] border pixel 1
 for_window [title="^float$"] floating enable
-for_window [title="^float$"] border pixel 3
 
-# class                 border  backgr. text    indicator
-client.focused          #303031 #303031 #B7B7B7 #31392F
-client.focused_inactive #303031 #303031 #B7B7B7 #676767
-client.unfocused        #303031 #303031 #404041 #515151
-client.urgent           #471A19 #521414 #ffffff #900000
+#colors
+
+set $background #EEEEEE
+set $back-inact #313131
+set $back-urgen #FFEEEE
+set $border #EEEEEE
+set $bor-in #313131
+set $bor-ur #313131
+set $text #313131
+set $t-in #EEEEEE
+set $t-ur #B00011
+
+# class                 border  background  text  indicator
+client.focused          $border $background $text #31392F
+client.focused_inactive $bor-in $back-inact $t-in #676767
+client.unfocused        $bor-in $back-inact $t-in #515151
+client.urgent           $bor-ur $back-urgen $t-ur #900000
 
 # font for window titles. ISO 10646 = Unicode
 #apt-get install xfonts-terminus
@@ -51,6 +59,8 @@ bindsym $mod+shift+Q kill
 bindsym $mod+d exec dmenu_run
 
 bindsym $mod+shift+d exec i3-dmenu-desktop
+
+bindsym $mod+g exec slingshot-launcher
 
 # change focus
 bindsym $mod+b focus left
@@ -83,7 +93,7 @@ bindsym $mod+h split h
 bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
-bindsym $mod+Shfit+f fullscreen
+bindsym $mod+Shfit+z fullscreen
 
 # change container layout (stacked, tabbed, default)
 bindsym $mod+s layout stacking
@@ -176,15 +186,15 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-    output DFP2
-    status_command i3status
+    status_command conky-i3bar
+    tray_output none
     colors {
-        background #131313
-        statusline #B7B7B7
-
-        focused_workspace  #303031 #303031 #D78A0C
-        active_workspace   #303031 #303031 #9A9A9A
-        inactive_workspace #303031 #303031 #9A9A9A
-        urgent_workspace   #303031 #303031 #FF0000
+        background $back-inact
+        statusline $text
+                           #border #back       #text
+        focused_workspace  $border $background $text
+        active_workspace   $border $background $text
+        inactive_workspace $bor-in $back-inact $t-in
+        urgent_workspace   $bor-ur $back-urgen $t-ur
     }
 }
