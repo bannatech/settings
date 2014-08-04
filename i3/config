@@ -12,6 +12,8 @@ set $mod Mod4
 
 exec xfsettingsd
 
+exec xfce4-volumed
+
 exec compton --backend glx --vsync opengl-swc --paint-on-overlay
 
 exec feh --bg-scale ~/pictures/313131.png
@@ -28,7 +30,7 @@ for_window [title="^float$"] floating enable
 set $background #EEEEEE
 set $back-inact #313131
 set $back-urgen #FFEEEE
-set $border #EEEEEE
+set $border #FFFFFF
 set $bor-in #313131
 set $bor-ur #313131
 set $text #313131

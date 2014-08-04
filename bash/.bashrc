@@ -61,8 +61,8 @@ if [[ ! "${prompt_colors[@]}" ]]; then
   prompt_colors=(
     "0;37" # information color
     "1;30" # bracket color
-    "31" # error color
-    "1;36" # git color
+    "0;31" # error color
+    "1;31" # git color
   )
 
   if [[ "$SSH_TTY" ]]; then
