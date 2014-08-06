@@ -6,9 +6,9 @@ exec xfsettingsd
 
 exec xfce4-volumed
 
-exec compton --backend glx --vsync opengl-swc --paint-on-overlay
+exec compton --config ~/.comptonrc --backend glx --vsync opengl-swc --paint-on-overlay -b
 
-exec feh --bg-scale /usr/share/xfce4/backdrops/cloudbreaker.jpg 
+exec feh --bg-scale /usr/share/xfce4/backdrops/justrocks.jpg 
 
 # hide dem borders 
 hide_edge_borders both
@@ -181,6 +181,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
     status_command conky-i3bar
+    position top
 #    tray_output none
     colors {
         background $back-inact
