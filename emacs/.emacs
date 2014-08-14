@@ -5,7 +5,6 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-enabled-themes (quote (wombat)))
  '(inhibit-startup-screen t)
  '(make-backup-files nil)
  '(menu-bar-mode nil)
@@ -30,9 +29,13 @@
 (autopair-global-mode)
 
 ;; keybind yo
-
+(global-unset-key "\C-@")
+(global-unset-key "\M-@")
 (global-set-key (kbd "M-]") 'shrink-window-horizontally)
 (global-set-key (kbd "M-[") 'enlarge-window-horizontally)
+(global-set-key (kbd "C-SPC") 'forward-word)
+(global-set-key (kbd "M-SPC") 'backward-word)
+(global-set-key (kbd "C-q") 'set-mark-command)
 
 ;; make whitespace-mode use just basic coloring
 

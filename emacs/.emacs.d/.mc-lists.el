@@ -15,5 +15,6 @@
 
 (setq mc/cmds-to-run-once
       '(
+	kmacro-edit-macro
 	write-file
 	))

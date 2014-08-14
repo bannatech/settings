@@ -8,7 +8,7 @@ exec xfce4-volumed
 
 exec compton --config ~/.comptonrc --backend glx --vsync opengl-swc --paint-on-overlay -b
 
-exec feh --bg-scale /usr/share/xfce4/backdrops/justrocks.jpg 
+exec feh --bg-scale $HOME/pictures/71hnM4c.png
 
 # hide dem borders 
 hide_edge_borders both
@@ -19,15 +19,25 @@ for_window [title="^float$"] floating enable
 
 #colors
 
-set $background #839496
-set $back-inact #073642
-set $back-urgen #CB504E
-set $border #93A1A1
-set $bor-in #073642
-set $bor-ur #424242
-set $text #002B36
-set $t-in #839496
-set $t-ur #B00011
+set $background #313131
+set $back-inact #313131
+set $back-urgen #FFEEEE
+set $border #313131
+set $bor-in #313131
+set $bor-ur #313131
+set $text #EEEEEE
+set $t-in #454545
+set $t-ur #B000113
+#solarized theme, weird
+#set $background #839496
+#set $back-inact #073642
+#set $back-urgen #CB504E
+#set $border #93A1A1
+#set $bor-in #073642
+#set $bor-ur #424242
+#set $text #002B36
+#set $t-in #839496
+#set $t-ur #B00011
 
 # class                 border  background  text  indicator
 client.focused          $border $background $text #31392F
@@ -53,8 +63,6 @@ bindsym $mod+shift+Q kill
 bindsym $mod+d exec dmenu_run
 
 bindsym $mod+shift+d exec i3-dmenu-desktop
-
-bindsym $mod+g exec slingshot-launcher
 
 # change focus
 bindsym $mod+b focus left
@@ -107,22 +115,22 @@ bindsym $mod+a focus parent
 #bindcode $mod+d focus child
 
 # switch to workspace
-bindsym $mod+1 workspace 1
-bindsym $mod+2 workspace 2
-bindsym $mod+3 workspace 3
-bindsym $mod+4 workspace 4
+bindsym $mod+1 workspace 1: www
+bindsym $mod+2 workspace 2: ircode
+bindsym $mod+3 workspace 3: music
+bindsym $mod+4 workspace 4: misc
 bindsym $mod+5 workspace 5
-bindsym $mod+6 workspace 6
+bindsym $mod+6 workspace 6 
 bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
 
 # move focused container to workspace
-bindsym $mod+Shift+exclam move workspace 1
-bindsym $mod+Shift+at move workspace 2
-bindsym $mod+Shift+numbersign move workspace 3
-bindsym $mod+Shift+dollar move workspace 4
+bindsym $mod+Shift+exclam move workspace 1: www
+bindsym $mod+Shift+at move workspace 2: ircode
+bindsym $mod+Shift+numbersign move workspace 3: music
+bindsym $mod+Shift+dollar move workspace 4: misc
 bindsym $mod+Shift+percent move workspace 5
 bindsym $mod+Shift+asciicircum move workspace 6
 bindsym $mod+Shift+ampersand move workspace 7
