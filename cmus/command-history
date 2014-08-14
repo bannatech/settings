@@ -1,0 +1,14 @@
+quit
+live-filter
+add ~/music/
+add
+colorscheme screenshot
+colorscheme default
+colorscheme
+live-filter :
+bind -f common ^B win-next
+bind -f common ^F win-next
+bind -f common ^P win-up
+bind -f common ^N win-down
+bind -f common ^n win-down
+bind -f browser space win-activate
