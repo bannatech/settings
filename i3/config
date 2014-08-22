@@ -47,7 +47,8 @@ client.urgent           $bor-ur $back-urgen $t-ur #900000
 
 # font for window titles. ISO 10646 = Unicode
 #apt-get install xfonts-terminus
-font xft:Terminus 8
+#apt-get install xfonts-jmk
+font xft:Neep Alt 8
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -116,27 +117,27 @@ bindsym $mod+a focus parent
 
 # switch to workspace
 bindsym $mod+1 workspace 1: www
-bindsym $mod+2 workspace 2: ircode
-bindsym $mod+3 workspace 3: music
+bindsym $mod+2 workspace 2: code
+bindsym $mod+3 workspace 3: chat
 bindsym $mod+4 workspace 4: misc
-bindsym $mod+5 workspace 5
-bindsym $mod+6 workspace 6 
-bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace 10
+bindsym $mod+5 workspace 5: misc
+bindsym $mod+6 workspace 6: misc
+bindsym $mod+7 workspace 7: misc
+bindsym $mod+8 workspace 8: misc
+bindsym $mod+9 workspace 9: misc
+bindsym $mod+0 workspace 10: misc
 
 # move focused container to workspace
 bindsym $mod+Shift+exclam move workspace 1: www
-bindsym $mod+Shift+at move workspace 2: ircode
-bindsym $mod+Shift+numbersign move workspace 3: music
+bindsym $mod+Shift+at move workspace 2: code
+bindsym $mod+Shift+numbersign move workspace 3: chat
 bindsym $mod+Shift+dollar move workspace 4: misc
-bindsym $mod+Shift+percent move workspace 5
-bindsym $mod+Shift+asciicircum move workspace 6
-bindsym $mod+Shift+ampersand move workspace 7
-bindsym $mod+Shift+asterisk move workspace 8
-bindsym $mod+Shift+parenleft move workspace 9
-bindsym $mod+Shift+parenright move workspace 10
+bindsym $mod+Shift+percent move workspace 5: misc
+bindsym $mod+Shift+asciicircum move workspace 6: misc
+bindsym $mod+Shift+ampersand move workspace 7: misc
+bindsym $mod+Shift+asterisk move workspace 8: misc
+bindsym $mod+Shift+parenleft move workspace 9: misc
+bindsym $mod+Shift+parenright move workspace 10: misc
 
 # reload the configuration file
 bindsym $mod+Shift+C reload
@@ -167,16 +168,16 @@ bindsym Shift+F resize grow   right 1 px or 1 ppt
 
         # same bindings, but for the arrow keys
 bindsym Left resize shrink left 10 px or 10 ppt
-bindsym Shift+Left resize grow   left 10 px or 10 ppt
+bindsym Shift+Left resize grow left 10 px or 10 ppt
 
 bindsym Down resize shrink down 10 px or 10 ppt
-bindsym Shift+Down resize grow   down 10 px or 10 ppt
+bindsym Shift+Down resize grow down 10 px or 10 ppt
 
 bindsym Up resize shrink up 10 px or 10 ppt
-bindsym Shift+Up resize grow   up 10 px or 10 ppt
+bindsym Shift+Up resize grow up 10 px or 10 ppt
 
 bindsym Right resize shrink right 10 px or 10 ppt
-bindsym Shift+Right resize grow   right 10 px or 10 ppt
+bindsym Shift+Right resize grow right 10 px or 10 ppt
 
         # back to normal: Enter or Escape
 bindsym Return mode "default"
