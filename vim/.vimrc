@@ -10,7 +10,16 @@ set ruler
 
 set autoindent
 
-imap <M-Space> <Esc>
+map <M-Space> <Esc>
+
+" Whitespace stuff
+"set listchars=tab:»\ ,trail:·
+"set list
+
+" Switch to alternate file
+map <M-f> :bnext<cr>
+map <M-b> :bprevious<cr>
+map <C-d> <Ins>
 
 " Default mapping
 let g:multi_cursor_use_default_mapping=0

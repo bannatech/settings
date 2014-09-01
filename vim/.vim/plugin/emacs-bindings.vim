@@ -1,4 +1,8 @@
 " Basic cursor movement and deletion keybindings from emacs, for vim.
+map <C-f> <Right>
+map <C-b> <Left>
+map <C-e> <End>
+map <C-a> <Home>
 
 " insert mode
 imap <C-g> <ESC>
@@ -12,6 +16,13 @@ imap <C-d> <Del>
 imap <C-h> <BS>
 imap <C-k> <C-r>=<SID>kill_line()<CR>
 
+" visual mode
+vmap <C-p> <Up>
+vmap <C-n> <Down>
+vmap <C-b> <Left>
+vmap <C-f> <Right>
+
+
 " command line mode
 cmap <C-p> <Up>
 cmap <C-n> <Down>
@@ -22,12 +33,6 @@ cmap <C-e> <End>
 cnoremap <C-d> <Del>
 cnoremap <C-h> <BS>
 cnoremap <C-k> <C-f>D<C-c><C-c>:<Up>
-
-" command-T window
-let g:CommandTCursorLeftMap  = ['<Left>',  '<C-b>']
-let g:CommandTCursorRightMap = ['<Right>', '<C-f>']
-let g:CommandTBackspaceMap   = ['<BS>',    '<C-h>']
-let g:CommandTDeleteMap      = ['<Del>',   '<C-d>']
 
 function! s:home()
   let start_col = col('.')
