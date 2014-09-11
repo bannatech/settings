@@ -2,15 +2,14 @@
 
 set $mod Mod4
 
-exec xfsettingsd
+#STARTUP
+exec xset s off
+exec xset -dpms
+#Compton the compositor
+#exec compton --config ~/.comptonrc --backend glx --vsync opengl-swc --paint-on-overlay -b
+exec feh --bg-scale /usr/share/xfce4/backdrops/cloudbreaker.jpg
 
-exec xfce4-volumed
-
-exec compton --config ~/.comptonrc --backend glx --vsync opengl-swc --paint-on-overlay -b
-
-exec feh --bg-scale $HOME/pictures/71hnM4c.png
-
-# hide dem borders 
+# hide dem borders
 hide_edge_borders both
 
 # hide dem titles
@@ -18,26 +17,16 @@ for_window [class="^.*"] border pixel 1
 for_window [title="^float$"] floating enable
 
 #colors
-
-set $background #313131
-set $back-inact #313131
-set $back-urgen #FFEEEE
-set $border #313131
-set $bor-in #313131
-set $bor-ur #313131
-set $text #EEEEEE
-set $t-in #454545
-set $t-ur #B000113
 #solarized theme, weird
-#set $background #839496
-#set $back-inact #073642
-#set $back-urgen #CB504E
-#set $border #93A1A1
-#set $bor-in #073642
-#set $bor-ur #424242
-#set $text #002B36
-#set $t-in #839496
-#set $t-ur #B00011
+set $background #839496
+set $back-inact #000000
+set $back-urgen #CB504E
+set $border #93A1A1
+set $bor-in #000000
+set $bor-ur #424242
+set $text #000000
+set $t-in #839496
+set $t-ur #B00011
 
 # class                 border  background  text  indicator
 client.focused          $border $background $text #31392F
@@ -144,7 +133,7 @@ bindsym $mod+Shift+C reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+R restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+E exit
+bindsym $mod+Shift+E logout
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
