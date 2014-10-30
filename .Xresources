@@ -1,0 +1,46 @@
+URxvt.scrollBar:          off
+!URxvt.font:               xft:Neep Alt:size=8
+!URxct.boldFont:           xft:Neep Alt:size=8
+URxvt*font: neep-alt-iso8859-1-9
+URxvt*boldFont: neep-alt-iso8859-1-bold-9
+URxvt*letterSpace:        0
+URxvt.internalBorder:     1
+URxvt*selectToClipboard:  true
+URxvt*saveLines:          10000
+
+URxvt.perl-ext-common:    default,matcher,searchable-scrollback
+URxvt.urlLauncher:        /usr/bin/luakit
+URxvt.matcher.button:     1
+URxvt.tabbed.tabbar-fg:   8
+URxvt.tabbed.tabbar-bg:   0
+URxvt.tabbed.tab-fg:      2
+URxvt.tabbed.tab-bg:      0
+URxvt.tabbed.new-button:  no
+URxvt.tabbed.title:       no
+
+*background: #151515
+*foreground: #888888
+! black
+*color0: #1C1C1C
+*color8: #404040
+! red
+*color1: #B85335
+*color9: #CF6A4C
+! green
+*color2: #799D6A
+*color10: #99AD6A
+! yellow
+*color3: #FFB964
+*color11: #FAD07A
+! blue
+*color4: #667899
+*color12: #8197BF
+! magenta
+*color5: #8787AF
+*color13: #C6B6EE
+! cyan
+*color6: #668799
+*color14: #8FBFDC
+! white
+*color7: #888888
+*color15: #E8E8D3
