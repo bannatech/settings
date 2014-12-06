@@ -1,6 +1,6 @@
-set tabstop=4
+set tabstop=8
 
-set shiftwidth=4
+set shiftwidth=8
 
 set smarttab
 
@@ -13,12 +13,12 @@ set autoindent
 map <M-Space> <Esc>
 
 " Whitespace stuff
-"set listchars=tab:»\ ,trail:·
-"set list
+set listchars=tab:»\ ,trail:·
+set list
 
 " Switch to alternate file
-map <M-f> :bnext<cr>
-map <M-b> :bprevious<cr>
+map <C-x> :bnext<cr>
+map <C-c> :bprevious<cr>
 map <C-d> <Ins>
 
 " Default mapping
@@ -28,3 +28,11 @@ let g:multi_cursor_next_key='<C-l>'
 let g:multi_cursor_prev_key='<C-p>'
 let g:multi_cursor_skip_key='<C-x>'
 let g:multi_cursor_quit_key='<Esc>'
+
+" YAY COLOR
+syntax on
+hi SpecialKey ctermfg=black  cterm=bold
+hi Statement  ctermfg=yellow cterm=bold
+hi Special    ctermfg=yellow cterm=none
+hi PreProc                   cterm=none
+hi Type                      cterm=bold

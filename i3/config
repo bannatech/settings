@@ -3,12 +3,9 @@
 set $mod Mod4
 
 #STARTUP
-exec xset s off
-exec xset -dpms
-#Compton the compositor
-#exec compton --config ~/.comptonrc --backend glx --vsync opengl-swc --paint-on-overlay -b
-exec feh --bg-scale /usr/share/xfce4/backdrops/cloudbreaker.jpg
 
+exec compton --config ~/.comptonrc --backend glx --vsync opengl-swc --paint-on-overlay -b
+exec feh --bg-scale ~/pictures/glitch.jpg
 # hide dem borders
 hide_edge_borders both
 
@@ -18,14 +15,14 @@ for_window [title="^float$"] floating enable
 
 #colors
 #solarized theme, weird
-set $background #839496
-set $back-inact #000000
+set $background #313131
+set $back-inact #313131
 set $back-urgen #CB504E
-set $border #93A1A1
-set $bor-in #000000
-set $bor-ur #424242
-set $text #000000
-set $t-in #839496
+set $border #313131
+set $bor-in #313131
+set $bor-ur #313131
+set $text #777777
+set $t-in #454545
 set $t-ur #B00011
 
 # class                 border  background  text  indicator
@@ -43,8 +40,8 @@ font xft:Neep Alt 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+t exec i3-sensible-terminal -T float
+bindsym $mod+Return exec urxvt
+bindsym $mod+t exec urxvt -T float
 
 # kill focused window
 bindsym $mod+shift+Q kill
@@ -105,35 +102,35 @@ bindsym $mod+a focus parent
 #bindcode $mod+d focus child
 
 # switch to workspace
-bindsym $mod+1 workspace 1: www
-bindsym $mod+2 workspace 2: code
-bindsym $mod+3 workspace 3: chat
-bindsym $mod+4 workspace 4: misc
-bindsym $mod+5 workspace 5: misc
-bindsym $mod+6 workspace 6: misc
-bindsym $mod+7 workspace 7: misc
-bindsym $mod+8 workspace 8: misc
-bindsym $mod+9 workspace 9: misc
-bindsym $mod+0 workspace 10: misc
+bindsym $mod+1 workspace 1
+bindsym $mod+2 workspace 2
+bindsym $mod+3 workspace 3
+bindsym $mod+4 workspace 4
+bindsym $mod+5 workspace 5
+bindsym $mod+6 workspace 6
+bindsym $mod+7 workspace 7
+bindsym $mod+8 workspace 8
+bindsym $mod+9 workspace 9
+bindsym $mod+0 workspace 10
 
 # move focused container to workspace
-bindsym $mod+Shift+exclam move workspace 1: www
-bindsym $mod+Shift+at move workspace 2: code
-bindsym $mod+Shift+numbersign move workspace 3: chat
-bindsym $mod+Shift+dollar move workspace 4: misc
-bindsym $mod+Shift+percent move workspace 5: misc
-bindsym $mod+Shift+asciicircum move workspace 6: misc
-bindsym $mod+Shift+ampersand move workspace 7: misc
-bindsym $mod+Shift+asterisk move workspace 8: misc
-bindsym $mod+Shift+parenleft move workspace 9: misc
-bindsym $mod+Shift+parenright move workspace 10: misc
+bindsym $mod+Shift+exclam move workspace 1
+bindsym $mod+Shift+at move workspace 2
+bindsym $mod+Shift+numbersign move workspace 3
+bindsym $mod+Shift+dollar move workspace 4
+bindsym $mod+Shift+percent move workspace 5
+bindsym $mod+Shift+asciicircum move workspace 6
+bindsym $mod+Shift+ampersand move workspace 7
+bindsym $mod+Shift+asterisk move workspace 8
+bindsym $mod+Shift+parenleft move workspace 9
+bindsym $mod+Shift+parenright move workspace 10
 
 # reload the configuration file
 bindsym $mod+Shift+C reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+R restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+E logout
+bindsym $mod+Shift+E exec xfce4-session-logout
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -181,6 +178,7 @@ bar {
     status_command conky-i3bar
     position top
 #    tray_output none
+	output DFP2
     colors {
         background $back-inact
         statusline $text

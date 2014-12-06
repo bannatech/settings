@@ -10,11 +10,10 @@ override_utf8_locale yes
 
 TEXT
 ,[\
-  {"full_text": " ▲ [${upspeed wlan0}] ", "color":"\#839496"},\
-  {"full_text": " ▼ [${downspeed wlan0}] ", "color":"\#839496"},\
-  {"full_text": " || [$membar] ", "color":"\#839496"},\
+  {"full_text": " ▲ [${upspeed eth0}] ", "color":"\#839496"},\
+  {"full_text": " ▼ [${downspeed eth0}] ", "color":"\#839496"},\
+  {"full_text": " || [$mem] ", "color":"\#839496"},\
   {"full_text": " ■ [$cpubar] ", "color":"\#839496"},\
-  {"full_text": " ↯ [$battery] ","color":"\#839496"},\
   {"full_text": " ≈ [${hwmon 0 temp 1}°C] ","color":"\#839496"},\
   {"full_text": " ⌛ [${time %I:%M %m/%d}] ","color": "\#839496"}\
 ]
