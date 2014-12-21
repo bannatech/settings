@@ -1,28 +1,28 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
- 
+
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
- 
+
 # don't put duplicate lines in the history. See bash(1) for more options
 # ... or force ignoredups and ignorespace
 HISTCONTROL=ignoredups:ignorespace
- 
+
 # append to the history file, don't overwrite it
 shopt -s histappend
- 
+
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=1000
 HISTFILESIZE=2000
- 
+
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
- 
+
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
- 
+
 # set variable identifying the chroot you work in (used in the prompt below)
 if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
@@ -34,11 +34,11 @@ export TERM='screen'
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
- 
+
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
- 
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
@@ -62,9 +62,11 @@ fi
 if [[ ! "${prompt_colors[@]}" ]]; then
   prompt_colors=(
     "0;37" # information color
-    "1;30" # bracket color
+    "0;32" # bracket color
     "0;31" # error color
-    "1;31" # git color
+    "0;34" # git color
+    "0;33" # git bracket color
+    "0;33" # $ color
   )
 
   if [[ "$SSH_TTY" ]]; then
@@ -96,7 +98,7 @@ function prompt_git() {
       END {print r}'
   )"
   if [[ "$flags" ]]; then
-    output="$output$c1:$c3$flags"
+    output="$output$c4:$c3$flags"
   fi
   echo "$c1-$c3$output$c1$c9"
 }
@@ -119,13 +121,13 @@ function prompt_command() {
   # misc: [cmd#]
   #PS1="$PS1$c1[$c0#\#$c1]$c9"
   # name: user@host:path
-  PS1="$PS1$c1[$c0$pad$c1|$c0\w$c1]$c9"
+  PS1="$PS1$pad $c1\u $c0\w$c1$c9"
   # git: [branch:flags]
   PS1="$PS1$(prompt_git)"
   if [[ "$USER" == "root" ]]; then
     PS1="$PS1$c1 #\[\033[0;37m\] "
   else
-    PS1="$PS1$c1 \$\[\033[0;37m\] "
+    PS1="$PS1$c5 \$\[\033[0;37m\] "
   fi
   # Update the title with location
   echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD/$HOME/~}\007"
