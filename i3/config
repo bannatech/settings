@@ -5,7 +5,7 @@ set $mod Mod4
 #STARTUP
 
 exec compton --config ~/.comptonrc --backend glx --vsync opengl-swc --paint-on-overlay -b
-exec feh --bg-scale ~/pictures/glitch.jpg
+exec feh --bg-scale ~/pictures/efaw.jpg
 # hide dem borders
 hide_edge_borders both
 
@@ -15,15 +15,15 @@ for_window [title="^float$"] floating enable
 
 #colors
 #solarized theme, weird
-set $background #313131
-set $back-inact #313131
-set $back-urgen #CB504E
-set $border #313131
-set $bor-in #313131
-set $bor-ur #313131
-set $text #777777
-set $t-in #454545
-set $t-ur #B00011
+set $background #1C1C1C
+set $back-inact #1C1C1C
+set $back-urgen #B85335
+set $border #1C1C1C
+set $bor-in #1C1C1C
+set $bor-ur #1C1C1C
+set $text #FFB946
+set $t-in #888888
+set $t-ur #CF6A4C
 
 # class                 border  background  text  indicator
 client.focused          $border $background $text #31392F
@@ -41,13 +41,14 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec urxvt
-bindsym $mod+t exec urxvt -T float
+bindsym $mod+j exec urxvt -T float
 
 # kill focused window
 bindsym $mod+shift+Q kill
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run
+bindsym $mod+s exec pmenu
 
 bindsym $mod+shift+d exec i3-dmenu-desktop
 
@@ -85,7 +86,7 @@ bindsym $mod+v split v
 bindsym $mod+Shfit+z fullscreen
 
 # change container layout (stacked, tabbed, default)
-bindsym $mod+s layout stacking
+bindsym $mod+t layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout default
 
