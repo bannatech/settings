@@ -62,10 +62,13 @@ fi
 if [[ ! "${prompt_colors[@]}" ]]; then
   prompt_colors=(
     "0;37" # information color
-    "0;32" # bracket color
+    "0;32" # user color
     "0;31" # error color
     "0;34" # git color
     "0;33" # git bracket color
+    "0;32" # git + color
+    "0;31" # git ! color
+    "0;37" # git ? color
     "0;33" # $ color
   )
 
@@ -92,9 +95,9 @@ function prompt_git() {
   [[ "$output" ]] || output="$(git branch | perl -ne '/^\* (.*)/ && print $1')"
   flags="$(
     echo "$status" | awk 'BEGIN {r=""} \
-      /Changes to be committed:/        {r=r "+"}\
-      /Changes not staged for commit:/  {r=r "!"}\
-      /Untracked files:/                {r=r "?"}\
+      /Changes to be committed:/        {r=r "\\[\\e[0;1;32m\\]+"}\
+      /Changes not staged for commit:/  {r=r "\\[\\e[0;1;31m\\]!"}\
+      /Untracked files:/                {r=r "\\[\\e[0;1;37m\\]?"}\
       END {print r}'
   )"
   if [[ "$flags" ]]; then
@@ -117,18 +120,22 @@ function prompt_command() {
   # While the simple_prompt environment var is set, disable the awesome prompt.
   [[ "$simple_prompt" ]] && PS1='\n$ ' && return
   prompt_getcolors
-  PS1="\n"
-  # misc: [cmd#]
-  #PS1="$PS1$c1[$c0#\#$c1]$c9"
-  # name: user@host:path
+
+  PS1="\n$c0"
+
+  # name: 000 user pwd
   PS1="$PS1$pad $c1\u $c0\w$c1$c9"
-  # git: [branch:flags]
+
+  # git: name-branch:flags
   PS1="$PS1$(prompt_git)"
+
+  # end: git $/#
   if [[ "$USER" == "root" ]]; then
-    PS1="$PS1$c1 #\[\033[0;37m\] "
+    PS1="$PS1$c8 #\[\033[0;37m\] "
   else
-    PS1="$PS1$c5 \$\[\033[0;37m\] "
+    PS1="$PS1$c8 \$\[\033[0;37m\] "
   fi
+
   # Update the title with location
   echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD/$HOME/~}\007"
 }
