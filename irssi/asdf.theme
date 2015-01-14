@@ -1,14 +1,3 @@
-#
-#
-# Beastie's irssi theme.
-#
-# Thanks to crshd.
-#
-#
-# Visit irc.unixhub.net #unixhub :) 
-#
-
-
 
 # default foreground color (%N) - -1 is the "default terminal color"
 default_color = "-1";
@@ -24,8 +13,8 @@ abstracts = {
 
   ############# generic ###############################
 
-  #indent_default = "               + ";
-  indent_default = "";
+  indent_default = "               │ ";
+  #indent_default = "";
 
   # text to insert at the beginning of each non-message line
   # line_start = "%g//%n ";
@@ -223,7 +212,7 @@ abstracts = {
 
   # text at the beginning of statusbars. sb-item already puts
   # space there,so we don't use anything by default.
-  sbstart = "%K╒━━━━━━━━━━━━━┙";
+  sbstart = "%K              │";
   # text at the end of statusbars. Use space so that it's never
   # used for anything.
   sbend = "";
@@ -231,7 +220,7 @@ abstracts = {
   topicsbstart = "%K╘━━━━━━━━━━━━━┑  %K$N on $C: $S%N$*";
   topicsbend = "$*";
 
-  prompt = "%K└─── %n";
+  prompt =  "%K              └─ %n";
 
   sb = "%K$*%N ";
   sbmode = " %K[%g+%n$*%K]";
@@ -265,7 +254,7 @@ abstracts = {
 
 formats = {
   "fe-common/core" = {
-      line_start = "{line_start}";
+    line_start = "{line_start}";
     line_start_irssi = "{line_start}";
 
     join = "        join %g│ %n {channick $0}";
@@ -277,7 +266,7 @@ formats = {
     nick_changed = "%K{channick $[-13]0}%G│ %n {channick $1}";
     your_nick_changed = "%K         you %G│ %n {channick $1}";
 
-    pubmsg = "{pubmsgnick $2 {pubnick \00304$[-11]0}}$1";
+    pubmsg = "%b%w$2\00313$[-11]0%b%K │ %n $1";
 
     own_msg = "{ownmsgnick $2 {ownnick $[-11]0}}$1";
     own_msg_channel = "{ownmsgnick $3 {ownnick $[-11]0}{msgchannel $1}}$2";
