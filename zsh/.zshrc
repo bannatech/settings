@@ -2,7 +2,7 @@
 
 PROMPT=$'%{\e[1;37m%}λ %{\e[0m%}'
 
-RPS1=$'%{\e[0;37m%}%~ %{\e[0;33m%}$(~/.local/bin/git.sh)%{\e[0m%}'
+RPS1=$'%{\e[0;33m%}$(~/.local/bin/git.sh) %{\e[0;37m%}%~%{\e[0m%}'
 
 setopt histignorealldups sharehistory
 

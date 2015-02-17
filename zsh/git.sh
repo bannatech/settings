@@ -14,7 +14,7 @@ function prompt_git() {
       END {print r}'
   )"
   if [[ "$flags" ]]; then
-    output="$output:$flags"
+    output="$flags:$output"
   fi
   echo "$output"
 }
