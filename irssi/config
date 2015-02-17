@@ -269,7 +269,7 @@ statusbar = {
 };
 settings = {
   core = {
-    real_name = "Paul Longtine";
+    real_name = "Paul";
     user_name = "paul";
     nick = "paull";
   };

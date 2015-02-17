@@ -63,11 +63,9 @@ sub print_text_notify {
     my $server = $dest->{server};
  
     return if (!$server || !($dest->{level} & MSGLEVEL_HILIGHT));
-    my $sender = $stripped;
-    $sender =~ s/^\<.([^\>]+)\>.+/\1/ ;
+
     $stripped =~ s/^\<.[^\>]+\>.// ;
-    my $summary = $dest->{target} . ": " . $sender;
-    notify($server, $summary, $stripped);
+    notify($server, "Ping!", $stripped);
 }
  
 sub message_private_notify {
