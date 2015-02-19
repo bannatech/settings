@@ -1,8 +1,26 @@
 # Set up the prompt
+autoload -U colors
+colors
+autoload -Uz vcs_info
 
-PROMPT=$'%{\e[1;37m%}λ %{\e[0m%}'
+zstyle ':vcs_info:*' stagedstr '%F{green}+'
+zstyle ':vcs_info:*' unstagedstr '%F{red}!'
+zstyle ':vcs_info:*' check-for-changes true
+zstyle ':vcs_info:*' enable git
 
-RPS1=$'%{\e[0;33m%}$(~/.local/bin/git.sh) %{\e[0;37m%}%~%{\e[0m%}'
+precmd () {
+	if [[ -z $(git ls-files --other --exclude-standard 2> /dev/null) ]] {
+		zstyle ':vcs_info:*' formats            '%u%c%F{blue} %b%F{white}'
+	} else {
+		zstyle ':vcs_info:*' formats '%u%c%F{yellow}?%F{blue} %b%F{white}'
+	}
+	vcs_info
+}
+
+setopt prompt_subst
+
+PROMPT='%{$fg_no_bold[yellow]%}%% %{$reset_color%}'
+RPROMPT='${vcs_info_msg_0_}'
 
 setopt histignorealldups sharehistory
 
