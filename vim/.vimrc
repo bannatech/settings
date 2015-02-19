@@ -10,6 +10,8 @@ set ruler
 
 set autoindent
 
+set number
+
 map <M-Space> <Esc>
 
 " Whitespace stuff
@@ -36,3 +38,5 @@ hi Statement  ctermfg=yellow cterm=bold
 hi Special    ctermfg=yellow cterm=none
 hi PreProc                   cterm=none
 hi Type                      cterm=bold
+hi MatchParen cterm=bold ctermbg=none ctermfg=white
+hi LineNr     ctermfg=black  cterm=bold ctermbg=black
