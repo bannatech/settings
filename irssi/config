@@ -31,6 +31,18 @@ servers = (
     use_ssl = "no";
     ssl_verify = "no";
     autoconnect = "yes";
+  },
+  {
+    address = "irc.iotek.org";
+    chatnet = "iotek";
+    port = "6667";
+    autoconnect = "yes";
+  },
+  {
+    address = "irc.freenode.net";
+    chatnet = "freenode";
+    port = "6667";
+    autoconnect = "yes";
   }
 );
 
@@ -99,12 +111,14 @@ chatnets = {
   SILC = { type = "SILC"; };
   Ubuntu = { type = "IRC"; };
   esper = { type = "IRC"; };
+  iotek = { type = "IRC"; };
+  freenode = { type = "IRC"; nick = "bannanalord"; };
 };
 
 channels = (
-  { name = "#irssi"; chatnet = "ircnet"; autojoin = "No"; },
-  { name = "silc"; chatnet = "silc"; autojoin = "No"; },
-  { name = "#squirrels"; chatnet = "esper"; autojoin = "yes"; }
+  { name = "#squirrels"; chatnet = "esper"; autojoin = "yes"; },
+  { name = "#nixers"; chatnet = "iotek"; autojoin = "yes"; },
+  { name = "#OREChat"; chatnet = "freenode"; autojoin = "yes"; }
 );
 
 aliases = {
@@ -268,11 +282,8 @@ statusbar = {
   };
 };
 settings = {
-  core = {
-    real_name = "Paul";
-    user_name = "paul";
-    nick = "paull";
-  };
+  core = { real_name = "Paul"; user_name = "paul"; nick = "paull"; };
   "fe-text" = { actlist_sort = "refnum"; indent = "10"; };
-  "fe-common/core" = { theme = "asdf"; };
+  "fe-common/core" = { theme = "greenish"; };
 };
+ignores = ( );
