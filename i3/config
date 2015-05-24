@@ -1,11 +1,7 @@
-# Solarized-ish theme
-
 set $mod Mod4
 
 #STARTUP
 
-exec compton --config ~/.comptonrc --backend glx --vsync opengl-swc --paint-on-overlay -b
-exec feh --bg-scale ~/pictures/efaw.jpg
 # hide dem borders
 hide_edge_borders both
 
@@ -14,13 +10,12 @@ for_window [class="^.*"] border pixel 1
 for_window [title="^float$"] floating enable
 
 #colors
-#solarized theme, weird
-set $background #1C1C1C
-set $back-inact #1C1C1C
+set $background #151515
+set $back-inact #151515
 set $back-urgen #B85335
-set $border #1C1C1C
-set $bor-in #1C1C1C
-set $bor-ur #1C1C1C
+set $border #151515
+set $bor-in #151515
+set $bor-ur #151515
 set $text #FFB946
 set $t-in #888888
 set $t-ur #CF6A4C
@@ -31,9 +26,7 @@ client.focused_inactive $bor-in $back-inact $t-in #676767
 client.unfocused        $bor-in $back-inact $t-in #515151
 client.urgent           $bor-ur $back-urgen $t-ur #900000
 
-# font for window titles. ISO 10646 = Unicode
-#apt-get install xfonts-terminus
-#apt-get install xfonts-jmk
+#xfonts-jmk
 font xft:Neep Alt 8
 
 # Use Mouse+$mod to drag floating windows to their wanted position
@@ -98,6 +91,11 @@ bindsym $mod+space focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
+
+# volume keys
+#bindsym XF86AudioRaiseVolume exec amixer -q set Master 2dB+ unmute
+#bindsym XF86AudioLowerVolume exec amixer -q set Master 2dB- unmute
+#bindsym XF86AudioMute exec amixer -q set Master toggle
 
 # focus the child container
 #bindcode $mod+d focus child
@@ -178,8 +176,7 @@ bindsym $mod+r mode "resize"
 bar {
     status_command conky-i3bar
     position top
-#    tray_output none
-	output DFP2
+    mode hide
     colors {
         background $back-inact
         statusline $text
