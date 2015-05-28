@@ -1,6 +1,6 @@
-set tabstop=8
+set tabstop=4
 
-set shiftwidth=8
+set shiftwidth=4
 
 set smarttab
 
@@ -19,9 +19,13 @@ set listchars=tab:»\ ,trail:·
 set list
 
 " Switch to alternate file
-map <C-x> :bnext<cr>
-map <C-c> :bprevious<cr>
+map <M-x> :bnext<cr>
+map <M-c> :bprevious<cr>
 map <C-d> <Ins>
+
+" Switch tabs
+map <C-x> :tabp<cr>
+map <C-c> :tabn<cr>
 
 " Default mapping
 let g:multi_cursor_use_default_mapping=0
@@ -40,3 +44,6 @@ hi PreProc                   cterm=none
 hi Type                      cterm=bold
 hi MatchParen cterm=bold ctermbg=none ctermfg=white
 hi LineNr     ctermfg=black  cterm=bold ctermbg=black
+hi TabLineFill ctermfg=black ctermbg=black
+hi TabLine ctermfg=grey ctermbg=black cterm=none
+hi TabLineSel ctermfg=white ctermbg=black
