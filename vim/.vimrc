@@ -25,7 +25,7 @@ map <M-c> :bprevious<cr>
 " tabs
 map <C-x> :tabp<cr>
 map <C-c> :tabn<cr>
-map <C-o> :tabnew<cr>
+map <C-t> :tabnew<cr>
 
 " Toggle NERDTree
 map <C-v> :NERDTreeToggle<CR>
