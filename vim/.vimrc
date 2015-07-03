@@ -21,11 +21,14 @@ set list
 " Switch to alternate file
 map <M-x> :bnext<cr>
 map <M-c> :bprevious<cr>
-map <C-d> <Ins>
 
-" Switch tabs
+" tabs
 map <C-x> :tabp<cr>
 map <C-c> :tabn<cr>
+map <C-o> :tabnew<cr>
+
+" Toggle NERDTree
+map <C-v> :NERDTreeToggle<CR>
 
 " YAY COLOR
 syntax on
@@ -39,3 +42,5 @@ hi LineNr     ctermfg=black  cterm=bold ctermbg=black
 hi TabLineFill ctermfg=black ctermbg=black
 hi TabLine ctermfg=grey ctermbg=black cterm=none
 hi TabLineSel ctermfg=white ctermbg=black
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%81v.\+/
