@@ -29,7 +29,6 @@ map <C-t> :tabnew<cr>
 
 " Toggle NERDTree
 map <C-v> :NERDTreeToggle<CR>
-
 " YAY COLOR
 syntax on
 hi SpecialKey ctermfg=black  cterm=bold
@@ -42,5 +41,8 @@ hi LineNr     ctermfg=black  cterm=bold ctermbg=black
 hi TabLineFill ctermfg=black ctermbg=black
 hi TabLine ctermfg=grey ctermbg=black cterm=none
 hi TabLineSel ctermfg=white ctermbg=black
-highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+hi OverLength ctermbg=red ctermfg=white
 match OverLength /\%81v.\+/
+
+command DOL match OverLength //
+command EOL match OverLength /\%81v.\+/
