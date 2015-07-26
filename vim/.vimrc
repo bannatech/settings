@@ -1,8 +1,16 @@
-set tabstop=4
-
+" virtual tabstops using spaces
 set shiftwidth=4
-
-set smarttab
+set tabstop=4
+set noexpandtab
+" allow toggling between local and default mode
+function TabToggle()
+  if &expandtab
+    set noexpandtab
+  else
+    set expandtab
+  endif
+endfunction
+nmap <F9> mz:execute TabToggle()<CR>'z
 
 set showcmd
 
