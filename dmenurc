@@ -1,0 +1,5 @@
+#!/bin/sh
+#Put this in ~/.config/
+export DMENUOPT="-b -fn 'DroidSansMono-10' -sf green -sb black -nb #000000 -nf green -l 3 -i"
+export DMENU="dmenu $DMENUOPT"
+export DOPTS='-fn "DroidSansMono-10" -sf green -sb black -nb black -nf green -i'

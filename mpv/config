@@ -1,0 +1,15 @@
+slang=en
+profile=opengl-hq
+ytdl-format=best
+save-position-on-quit
+[extension.webm]
+loop-file=inf
+[extension.gif]
+loop-file=inf
+[extension.jpg]
+pause
+[extension.png]
+pause
+
+no-border
+no-osc
