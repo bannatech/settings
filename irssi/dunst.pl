@@ -25,10 +25,11 @@ sub hilight {
 
     $stripped =~ s/"/\\"/g;
 
-    my @message = split / /, $stripped, 3;
+    my @message = split / » /, $stripped, 2;
     my $sender = $message[0];
-    my $msg = $message[2];
-    
+    my $msg = $message[1];
+
+    $sender =~ s/ //g;
     
     cmd_run("exec notify-send -a 'Irssi' \"$sender\" \"$msg\"");
 }
