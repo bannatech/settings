@@ -9,22 +9,22 @@ fi
 
 sink=1
 if ! test "$2" = "" ; then
-    sink=$2
+    sink="$2"
 fi
 
 . $HOME/.config/dmenurc
 
-current_vol=$(pamixer --get-volume --sink $sink)
+current_vol=$(pamixer --get-volume --sink "$sink")
 
-op=$(printf '%s' $1 | head -c 1)
-operand=${1#?}
+op=$(printf "%s" "$1" | head -c 1)
+operand="${1#?}"
 
-case $op in
+case "$op" in
     "+")
-	operand=$(echo $current_vol $operand | awk '{print $1 + $2}')
+	operand=$(printf "%s %s" "$current_vol" "$operand" | awk '{print $1 + $2}')
 	;;
     "-")
-	operand=$(echo $current_vol $operand | awk '{print $1 - $2}')
+	operand=$(printf "%s %s" "$current_vol" "$operand" | awk '{print $1 - $2}')
 	;;
     "m")
 	pamixer --sink $sink -m
@@ -39,7 +39,7 @@ case $op in
 	exit 0
 	;;
     "a")
-	operand=$(echo $current_vol | dmenu $(echo $DOPTS) -p "Enter volume: ")
+	operand=$(printf "%s" "$current_vol" | dmenu $(printf "%s" "$DOPTS") -p "Enter volume: ")
 	;;
     *)
 	operand=$1
@@ -50,4 +50,4 @@ if test "$operand" = "" ; then
     exit 0
 fi
 
-pamixer --sink $sink --set-volume $operand 2>/dev/null >/dev/null
+pamixer --sink "$sink" --set-volume "$operand" 2>/dev/null >/dev/null

@@ -2,8 +2,8 @@
 
 . $HOME/.config/dmenurc
 
-eqn=$(xsel -o -b | dmenu $(echo $DOPTS) -p "Calculate (julia): ")
+eqn=$(xsel -o -b | dmenu $(printf "%s" "$DOPTS") -p "Calculate (julia): ")
 result=$(julia -E "$eqn")
 
-echo "$result" | dmenu $(echo $DOPTS) -p "Result: " >/dev/null
-echo "$result" | xsel -i -b
+printf "%s" "$result" | dmenu $(printf "%s" "$DOPTS") -p "Result: " >/dev/null
+printf "%s" "$result" | xsel -i -b

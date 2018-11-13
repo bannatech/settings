@@ -2,22 +2,22 @@
 
 . $HOME/.config/dmenurc
 
-name=$1
+name="$1"
 remove="yes"
 if test "$name" = "" || test "$name" = "default" ; then
     name=$(mktemp /tmp/shotXXXXXXXXX.png)
     rm $(name)
     remove="yes"
 elif test "$name" = "ask"; then
-    name=$(dmenu -noinput $(echo $DOPTS) -p "Screenshot name: ")
+    name=$(dmenu -noinput $(printf "%s" "$DOPTS") -p "Screenshot name: ")
     remove="no"
 fi
 
 if ! grep "\.png" >/dev/null ; then
-    name=$name.png
+    name="$name.png"
 fi
 
-mode=$2
+mode="$2"
 case "$mode" in
     "")
 	mode="-s"
@@ -44,16 +44,16 @@ esac
 
 
 if test "$mode" = "-s" ; then
-    dmenu -noinput $(echo $DOPTS) -p "Select an area: " >/dev/null
+    dmenu -noinput $(printf "%s" "$DOPTS") -p "Select an area: " >/dev/null
 elif test "$mode" = "-u" ; then
-    dmenu -noinput $(echo $DOPTS) -p "Capturing focused window..." >/dev/null
+    dmenu -noinput $(printf "%s" "$DOPTS") -p "Capturing focused window..." >/dev/null
 else
-    dmenu -noinput $(echo $DOPTS) -p "Capturing full screen..." > /dev/null
+    dmenu -noinput $(printf "%s" "$DOPTS") -p "Capturing full screen..." > /dev/null
 fi
 
-scrot $name $mode
+scrot "$name" $mode
 
 if test "$remove" = "yes" ; then
-    cat $name | xclip -selection clipboard -t image/png
-    rm $name
+    cat "$name" | xclip -selection clipboard -t image/png
+    rm "$name"
 fi

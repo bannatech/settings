@@ -19,7 +19,7 @@ if test "$output" = "" || test "$output" = "default"; then
 fi
 
 if test "$output" = "ask" ; then
-    output=$(dmenu -noinput $(echo $DOPTS) -p "Name screencast: ")
+    output=$(dmenu -noinput $(printf "%s" "$DOPTS") -p "Name screencast: ")
 fi
     
 mode=$2
@@ -33,12 +33,12 @@ if test "$format" = "" || test "$format" = "default" ; then
 fi
 
 if test "$format" = "ask" ; then
-    format=$(echo "mpv" | dmenu $(echo $DOPTS) -p "Select video format: ")
+    format=$(echo "mpv" | dmenu $(printf "%s" "$DOPTS") -p "Select video format: ")
 fi
 
-if echo "$output" | grep "\." >/dev/null; then
-    format=$(echo "$output" | sed -re 's/\./\n/' | tail -n 1)
-    output=$(echo "$output" | sed -re "s/\.[^\.]+\$//")
+if printf "%s" "$output" | grep "\." >/dev/null; then
+    format=$(printf "%s" "$output" | sed -re 's/\./\n/' | tail -n 1)
+    output=$(printf "%s" "$output" | sed -re "s/\.[^\.]+\$//")
 fi
 
 framerate=$4
@@ -47,10 +47,10 @@ if test "$framerate" = "" || test "$framerate" = "default" ; then
 fi
 
 if test "$framerate" = "ask" ; then
-    framerate=$(echo "15" | dmenu $(echo $DOPTS) -p "Choose framerate: ")
+    framerate=$(echo "15" | dmenu $(printf "%s" "$DOPTS") -p "Choose framerate: ")
 fi
 
-case $mode in
+case "$mode" in
     "s")
 	mode="s"
 	;;
@@ -68,18 +68,16 @@ case $mode in
 	exit 1
 esac
 
-echo $output.$format
-
 ffcast -$mode % ffmpeg -y -f x11grab -show_region 1 -framerate $framerate \
        -video_size %s -i %D+%c -codec:v huffyuv -vf crop="iw-mod(iw\\,2):ih-mod(iw\\,2)" \
-       $TMP_AVI
+       "$TMP_AVI"
 
-ffmpeg -i $TMP_AVI $output.$format
+ffmpeg -i "$TMP_AVI" "$output.$format"
 
 if test "$format" = "gif" ; then
-    convert -limit memory 1 -limit map 1 -layers Optimize $output.$format opt_$output.$format
-    rm $output.$format
-    mv opt_$output.$format $output.$format
+    convert -limit memory 1 -limit map 1 -layers Optimize "$output.$format" "opt_$output.$format"
+    rm "$output.$format"
+    mv "opt_$output.$format" "$output.$format"
 fi
 
-rm $TMP_AVI
+rm "$TMP_AVI"
