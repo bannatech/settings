@@ -9,7 +9,7 @@ if test "$name" = "" || test "$name" = "default" ; then
     rm $(name)
     remove="yes"
 elif test "$name" = "ask"; then
-    name=$(dmenu -noinput $(printf "%s" "$DOPTS") -p "Screenshot name: ")
+    name=$(dmenu -noinput $DOPTS -p "Screenshot name: ")
     remove="no"
 fi
 
@@ -44,11 +44,11 @@ esac
 
 
 if test "$mode" = "-s" ; then
-    dmenu -noinput $(printf "%s" "$DOPTS") -p "Select an area: " >/dev/null
+    dmenu -noinput $DOPTS -p "Select an area: " >/dev/null
 elif test "$mode" = "-u" ; then
-    dmenu -noinput $(printf "%s" "$DOPTS") -p "Capturing focused window..." >/dev/null
+    dmenu -noinput $DOPTS -p "Capturing focused window..." >/dev/null
 else
-    dmenu -noinput $(printf "%s" "$DOPTS") -p "Capturing full screen..." > /dev/null
+    dmenu -noinput $DOPTS -p "Capturing full screen..." > /dev/null
 fi
 
 scrot "$name" $mode

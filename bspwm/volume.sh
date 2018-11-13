@@ -39,7 +39,7 @@ case "$op" in
 	exit 0
 	;;
     "a")
-	operand=$(printf "%s" "$current_vol" | dmenu $(printf "%s" "$DOPTS") -p "Enter volume: ")
+	operand=$(printf "%s" "$current_vol" | dmenu $DOPTS -p "Enter volume: ")
 	;;
     *)
 	operand=$1

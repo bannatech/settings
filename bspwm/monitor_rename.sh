@@ -2,7 +2,7 @@
 
 . $HOME/.config/dmenurc
 
-name=$(bspc query -M -m focused --names | dmenu $(printf "%s" "$DOPTS") -p "Enter new monitor name: ")
+name=$(bspc query -M -m focused --names | dmenu $DOPTS -p "Enter new monitor name: ")
 
 if test "$name" = "" ; then
     exit 1

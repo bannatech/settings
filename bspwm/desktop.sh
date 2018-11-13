@@ -2,7 +2,7 @@
 
 . $HOME/.config/dmenurc
 
-name=$(bspc query -D --names | dmenu $(printf "%s" "$DOPTS") -p "Desktop name: ")
+name=$(bspc query -D --names | dmenu $DOPTS -p "Desktop name: ")
 
 if test "$name" = "" ; then
    exit 1

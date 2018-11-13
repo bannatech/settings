@@ -19,7 +19,7 @@ if test "$output" = "" || test "$output" = "default"; then
 fi
 
 if test "$output" = "ask" ; then
-    output=$(dmenu -noinput $(printf "%s" "$DOPTS") -p "Name screencast: ")
+    output=$(dmenu -noinput $DOPTS -p "Name screencast: ")
 fi
     
 mode=$2
@@ -33,7 +33,7 @@ if test "$format" = "" || test "$format" = "default" ; then
 fi
 
 if test "$format" = "ask" ; then
-    format=$(echo "mpv" | dmenu $(printf "%s" "$DOPTS") -p "Select video format: ")
+    format=$(echo "mpv" | dmenu $DOPTS -p "Select video format: ")
 fi
 
 if printf "%s" "$output" | grep "\." >/dev/null; then
@@ -47,7 +47,7 @@ if test "$framerate" = "" || test "$framerate" = "default" ; then
 fi
 
 if test "$framerate" = "ask" ; then
-    framerate=$(echo "15" | dmenu $(printf "%s" "$DOPTS") -p "Choose framerate: ")
+    framerate=$(echo "15" | dmenu $DOPTS -p "Choose framerate: ")
 fi
 
 case "$mode" in
