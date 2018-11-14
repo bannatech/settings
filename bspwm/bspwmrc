@@ -5,11 +5,9 @@
 # X settings
 xset -dpms
 xset -b
-setxkbmap us
 setxkbmap -option compose:caps
-
 # keybinds
-sxhkd &
+systemctl --user start sxhkd.service
 
 # Notifications
 dunst &
