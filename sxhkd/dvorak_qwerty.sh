@@ -20,8 +20,6 @@ case "$layout" in
 	;;
 esac
 
-systemctl --user stop sxhkd.service
-
 setxkbmap "$layout"
 
 rm $HOME/.config/sxhkd/sxhkdrc
@@ -32,4 +30,4 @@ else
     cp $HOME/.config/sxhkd/sxhkdrc_dvorak $HOME/.config/sxhkd/sxhkdrc
 fi
 
-systemctl --user start sxhkd.service
+systemctl --user restart sxhkd.service
