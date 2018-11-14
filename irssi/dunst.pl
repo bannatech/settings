@@ -30,6 +30,9 @@ sub hilight {
     my $msg = $message[1];
 
     $sender =~ s/ //g;
+
+    $msg = quotemeta($msg);
+    $sender = quotemeta($sender);
     
     cmd_run("exec notify-send -a 'Irssi' \"$sender\" \"$msg\"");
 }
