@@ -1,41 +1,40 @@
 servers = (
   {
-    address = "irc.oftc.net";
-    chatnet = "oftc";
-    port = "6697";
-    use_tls = "yes";
-    tls_cert = "~/.irssi/certs/nick.pem";
-    tls_verify = "yes";
-    autoconnect = "yes";
-  },
-  {
-    address = "irc.esper.net";
-    chatnet = "esper";
-    port = "6697";
-    use_tls = "yes";
-    tls_cert = "~/.irssi/certs/nick.pem";
-    tls_verify = "yes";
-    autoconnect = "yes";
-  },
-  {
-    address = "irc.freenode.net";
+    address = "165.227.57.161";
     chatnet = "freenode";
     port = "6697";
+    password = "";
     use_tls = "yes";
-    tls_cert = "~/.irssi/certs/nick.pem";
-    tls_verify = "yes";
+    tls_verify = "no";
+    autoconnect = "yes";
+  },
+  {
+    address = "165.227.57.161";
+    chatnet = "oftc";
+    port = "6697";
+    password = "";
+    use_tls = "yes";
+    tls_verify = "no";
+    autoconnect = "yes";
+  },
+  {
+    address = "165.227.57.161";
+    chatnet = "esper";
+    port = "6697";
+    password = "";
+    use_tls = "yes";
+    tls_verify = "no";
     autoconnect = "yes";
   }
 );
 
 chatnets = {
+  freenode = { type = "IRC"; };
   oftc = { type = "IRC"; };
   esper = { type = "IRC"; };
-  freenode = { type = "IRC"; };
 };
 
-channels = (
-);
+channels = ( );
 
 statusbar = {
   # formats:
@@ -149,6 +148,9 @@ statusbar = {
 };
 settings = {
   core = {
+    real_name = "aft";
+    user_name = "aft";
+    nick = "aftix";
     timestamp_format = "%I:%M";
     recode_out_default_charset = "UTF-8";
   };
@@ -212,8 +214,30 @@ windows = {
     sticky = "yes";
     parent = "2";
   };
+  2 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#squirrels";
+        tag = "esper";
+      }
+    );
+    sticky = "yes";
+  };
+  3 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#bitlbar";
+        tag = "oftc";
+      }
+    );
+  };
   4 = { name = "hilight"; sticky = "yes"; };
 };
 mainwindows = {
+  2 = { first_line = "4"; lines = "59"; };
   4 = { first_line = "1"; lines = "3"; };
 };
