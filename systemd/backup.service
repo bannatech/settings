@@ -1,0 +1,6 @@
+[Unit]
+Description=Backup to ftp
+
+[Service]
+ExecStart=/usr/local/bin/backup.sh
+Type=simple
