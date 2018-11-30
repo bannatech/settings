@@ -17,3 +17,4 @@ map d follow
 map z quit
 map f goto 1
 map A adjust_window width
+map R rotate
