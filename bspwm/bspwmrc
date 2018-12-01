@@ -5,6 +5,7 @@
 # X settings
 xset -dpms
 xset -b
+setxkbmap dvorak
 setxkbmap -option compose:caps
 # keybinds
 systemctl --user start sxhkd.service
