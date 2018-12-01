@@ -10,7 +10,7 @@ super + alt + @space
 
 # terminal emulator
 super + Return
-	urxvtc
+	st
 
 # program launcher
 super + @space
@@ -83,9 +83,6 @@ super + z
 
 super + minus
       $HOME/.config/bspwm/calculator.sh
-
-super + shift + slash
-      groff -mms -Tpdf $HOME/.config/sxhkd/help.ms | zathura -
 
 #
 # bspwm hotkeys
@@ -192,7 +189,7 @@ super + alt + {h,t,n,s}
 super + alt + shift + {h,t,n,s}
 	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
 
-#move a floating window
+# move a floating window
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
 
