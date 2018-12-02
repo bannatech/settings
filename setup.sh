@@ -64,6 +64,7 @@ cpr dunst "$CONFDIR/dunst"
 fixuser "$CONFDIR/dunst"
 cpr zathura "$CONFDIR/zathura"
 fixuser "$CONFDIR/zathura"
+mv "$CONFDIR/zathura/zathura.desktop" /usr/local/applications/
 cpr xorg/.xinitrc "$INSTDIR/.xinitrc"
 fixuser "$INSTDIR/.xinitrc"
 cpr xorg/.xbindkeysrc "$INSTDIR/.xbindkeysrc"
