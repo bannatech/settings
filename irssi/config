@@ -25,6 +25,14 @@ servers = (
     use_tls = "yes";
     tls_verify = "no";
     autoconnect = "yes";
+  },
+  {
+    address = "165.227.57.161";
+    chatnet = "twitch";
+    port = "6697";
+    password = "";
+    use_tls = "yes";
+    tls_verify = "no";
   }
 );
 
@@ -32,6 +40,7 @@ chatnets = {
   freenode = { type = "IRC"; };
   oftc = { type = "IRC"; };
   esper = { type = "IRC"; };
+  twitch = { type = "IRC"; };
 };
 
 channels = ( );
