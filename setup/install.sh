@@ -32,6 +32,7 @@ install() {
 
 init
 install emacs
+install neovim
 install bspwm
 install polybar
 install mc

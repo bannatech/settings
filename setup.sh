@@ -81,6 +81,8 @@ mkdir -p "$INSTDIR/etc/"
 cpr tmux "$INSTDIR/etc/tmux"
 rm "$INSTDIR/etc/tmux/.tmux.conf"
 fixuser "$INSTDIR/etc"
+cpr nvim "$CONFDIR/nvim"
+fixuser "$CONFDIR/nvim"
 mkdir tmp
 cd tmp
 curl -s "http://dl.suckless.org/st/st-0.8.1.tar.gz" > st.txz

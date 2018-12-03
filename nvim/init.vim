@@ -1,3 +1,4 @@
+set number relativenumber
 highlight OverLength ctermbg=Red ctermfg=White
 match OverLength /\%81v.\+/
 
@@ -72,4 +73,3 @@ noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
 
-set relativenumber
