@@ -19,22 +19,22 @@ use String::ShellQuote qw(shell_quote_best_effort);
 
 $VERSION = "0.1";
 %IRSSI = (authors     => "Guillaume Gelin",
-	  contact     => "contact\@ramnes.eu",
-	  name        => "hilightcmd",
-	  description => "Call a system command when receiving a hilight",
-	  license     => "GNU GPLv3",
-	  url         => "https://github.com/ramnes/hilightcmd");
+	contact     => "contact\@ramnes.eu",
+	name        => "hilightcmd",
+	description => "Call a system command when receiving a hilight",
+	license     => "GNU GPLv3",
+	url         => "https://github.com/ramnes/hilightcmd");
 
 
 Irssi::signal_add('print text' => sub {
-    my ($dest, $text, $stripped) = @_;
-    my $opt = MSGLEVEL_HILIGHT;
+	my ($dest, $text, $stripped) = @_;
+	my $opt = MSGLEVEL_HILIGHT;
 
-    if (Irssi::settings_get_bool('hilightcmd_privmsg')) {
-        $opt = MSGLEVEL_HILIGHT|MSGLEVEL_MSGS;
-    }
+	if (Irssi::settings_get_bool('hilightcmd_privmsg')) {
+		$opt = MSGLEVEL_HILIGHT|MSGLEVEL_MSGS;
+	}
 
-    if (($dest->{level} & ($opt))
+	if (($dest->{level} & ($opt))
 	&& ($dest->{level} & MSGLEVEL_NOHILIGHT) == 0
 	&& (Irssi::active_win()->{refnum} != $dest->{window}->{refnum}
             || Irssi::settings_get_bool('hilightcmd_currentwin'))) {
@@ -45,12 +45,14 @@ Irssi::signal_add('print text' => sub {
 	my $sender = $message[0];
 	my $msg = $message[1];
 	
-        system(named_sprintf(
-            Irssi::settings_get_str('hilightcmd_systemcmd'),
-	    (sender => shell_quote_best_effort $sender),
-	    (message => shell_quote_best_effort $msg)
-        ));
-    }
+	if ($sender !~ /^\*.+/) {
+		system(named_sprintf(
+			Irssi::settings_get_str('hilightcmd_systemcmd'),
+			(sender => shell_quote_best_effort $sender),
+			(message => shell_quote_best_effort $msg)
+			));
+		}
+	}
 });
 
 
