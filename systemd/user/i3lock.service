@@ -8,4 +8,4 @@ ExecStart=/usr/bin/xautolock -time 10 -locker '/usr/bin/i3lock'
 Restart=always
 
 [Install]
-WantedBy=graphical.target
+WantedBy=bspwm.target

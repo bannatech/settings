@@ -8,4 +8,4 @@ ExecStart=/usr/bin/compton
 ExecReload=/usr/bin/kill -SIGUSR1 $MAINPID
 
 [Install]
-WantedBy=graphical.target
+WantedBy=bspwm.target

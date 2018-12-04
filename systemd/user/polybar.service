@@ -9,4 +9,4 @@ ExecStart=/usr/bin/polybar Bar
 Restart=always
 
 [Install]
-WantedBy=graphical.target
+WantedBy=bspwm.target

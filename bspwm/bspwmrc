@@ -1,20 +1,11 @@
 #! /bin/sh
 
 # Initial programs to run
+systemctl --user start bspwm.target
 
 # X settings
 xset -dpms
 xset -b
-# keybinds
-systemctl --user start sxhkd.service
-
-# Notifications
-systemctl --user start dunst.service
-
-# Graphics
-systemctl --user start compton.service
-systemctl --user start polybar.service
-systemctl --user start i3lock.service
 feh --randomize --bg-scale ~/.wallpaper/*
 
 # bspwm setup
