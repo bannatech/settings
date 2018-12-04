@@ -28,6 +28,10 @@ super + b
 super + q
       polybar-msg hook ipc 1
 
+# Help
+super + shift + slash
+      groff -mms -Tpdf $HOME/.config/sxhxd/help.ms | zathura -
+
 # Pulseaudio volume controls
 super + {v,shift + v}
       $HOME/.config/bspwm/volume.sh {+,-}3
