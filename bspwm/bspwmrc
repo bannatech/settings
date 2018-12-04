@@ -22,7 +22,6 @@ feh --randomize --bg-scale ~/.wallpaper/*
 
 # Daemons
 urxvtd &
-$HOME/bin/notify-listener.py &
 
 # bspwm setup
 bspc monitor HDMI-0 -d I
