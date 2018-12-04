@@ -9,19 +9,12 @@ xset -b
 systemctl --user start sxhkd.service
 
 # Notifications
-dunst &
-
-# Audio
-pulseaudio -D
+systemctl --user start dunst.service
 
 # Graphics
-compton &
-$HOME/.config/polybar/launch.sh
-xrdb -merge $HOME/.Xresources
+systemctl --user start compton.service
+systemctl --user start polybar.service
 feh --randomize --bg-scale ~/.wallpaper/*
-
-# Daemons
-urxvtd &
 
 # bspwm setup
 bspc monitor HDMI-0 -d I

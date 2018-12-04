@@ -1,10 +1,10 @@
 [Unit]
-Description=Simple X Hotkey Daemon
-Documentation=man:sxhkd(1)
+Description=An X11 Compositor
+Documentation=man:compton(1)
 After=xorg.service
 
 [Service]
-ExecStart=/usr/bin/sxhkd
+ExecStart=/usr/bin/compton
 ExecReload=/usr/bin/kill -SIGUSR1 $MAINPID
 
 [Install]
