@@ -30,7 +30,7 @@ super + apostrophe
 
 # Help
 super + shift + slash
-      groff -mms -Tpdf $HOME/.config/sxhxd/help.ms | zathura -
+      groff -mms -Tpdf $HOME/.config/sxhkd/help.ms | zathura -
 
 # Pulseaudio volume controls
 super + {v,shift + v}
