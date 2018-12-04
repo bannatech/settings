@@ -3,8 +3,9 @@ servers = (
     address = "165.227.57.161";
     chatnet = "freenode";
     port = "6697";
-    password = "";
+    password = "aftix@khan/freenode:aaaaa";
     use_tls = "yes";
+    tls_cert = "~/.irssi/certs/user.pem";
     tls_verify = "no";
     autoconnect = "yes";
   },
@@ -12,8 +13,9 @@ servers = (
     address = "165.227.57.161";
     chatnet = "oftc";
     port = "6697";
-    password = "";
+    password = "aftix@khan/oftc:aaaaa";
     use_tls = "yes";
+    tls_cert = "~/.irssi/certs/user.pem";
     tls_verify = "no";
     autoconnect = "yes";
   },
@@ -21,8 +23,9 @@ servers = (
     address = "165.227.57.161";
     chatnet = "esper";
     port = "6697";
-    password = "";
+    password = "aftix@khan/esper:aaaaa";
     use_tls = "yes";
+    tls_cert = "~/.irssi/certs/user.pem";
     tls_verify = "no";
     autoconnect = "yes";
   },
@@ -30,8 +33,9 @@ servers = (
     address = "165.227.57.161";
     chatnet = "twitch";
     port = "6697";
-    password = "";
+    password = "aftix@khan/twitch:aaaaa";
     use_tls = "yes";
+    tls_cert = "~/.irssi/certs/user.pem";
     tls_verify = "no";
   }
 );
@@ -181,6 +185,7 @@ settings = {
     nicklist_height = "65";
     nicklist_width = "14";
     bitlbee_typing_allwin = "yes";
+    hilightcmd_systemcmd = "notify-send -a 'Irssi' %(sender)s %(message)s";
   };
 };
 hilights = (
