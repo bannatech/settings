@@ -64,3 +64,4 @@ install xbindkeys
 install xorg-xkbcomp
 install dunst
 install lightdm
+install i3lock

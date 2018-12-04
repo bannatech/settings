@@ -81,7 +81,7 @@ include "%L"
 #Greek
 # Alpha
 <Multi_key> <g>              <A> : "Α" U0391
-<Multi_key> <g> <apostorphe> <A> : "Ά" U0386
+<Multi_key> <g> <apostrophe> <A> : "Ά" U0386
 <Multi_key> <g>              <a> : "α" U03B1
 <Multi_key> <g> <apostrophe> <a> : "ά" U03AC
 

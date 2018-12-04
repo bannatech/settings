@@ -14,6 +14,7 @@ systemctl --user start dunst.service
 # Graphics
 systemctl --user start compton.service
 systemctl --user start polybar.service
+systemctl --user start i3lock.service
 feh --randomize --bg-scale ~/.wallpaper/*
 
 # bspwm setup
