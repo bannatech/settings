@@ -19,8 +19,12 @@ printf "Running under user %s\n" "$REALUSER"
 test "$?" != "0" && exit 1
 
 cpr () {
-    rm -rf "$2"
-    cp -r "$1" "$2"
+	SRC="$1"
+	if [ -d "$1" ] ; then
+		SRC=$(printf '%s' "$1" | sed 's/\/\{0,1\}$/\/./')
+	fi
+	
+	rsync -au "$SRC" "$2"
 }
 
 fixuser () {
@@ -38,8 +42,8 @@ cpr systemd "$CONFDIR/systemd"
 fixuser "$CONFDIR/systemd"
 cpr compton "$CONFDIR/compton"
 fixuser "$CONFDIR/compton"
-cpr irssi "$INSTDIR/.irssi"
-fixuser "$INSTDIR/.irssi"
+cpr weechat "$INSTDIR/.weechat"
+fixuser "$INSTDIR/.weechat"
 cpr mpv "$CONFDIR/mpv"
 fixuser "$CONFDIR/mpv"
 cpr mpd "$CONFDIR/mpd"
@@ -48,7 +52,6 @@ cpr emacs/.emacs "$INSTDIR/.emacs"
 fixuser "$INSTDIR/.emacs"
 cpr emacs "$INSTDIR/.emacs.d"
 fixuser "$INSTDIR/.emacs.d"
-rm "$INSTDIR/.emacs.d/.emacs"
 cpr vim/.vimrc "$INSTDIR/.vimrc"
 fixuser "$INSTDIR/.vimrc"
 cpr vim/.vim "$INSTDIR/.vim"
@@ -67,8 +70,8 @@ cpr dunst "$CONFDIR/dunst"
 fixuser "$CONFDIR/dunst"
 cpr zathura "$CONFDIR/zathura"
 fixuser "$CONFDIR/zathura"
-mv "$CONFDIR/zathura/zathura.desktop" /usr/local/applications/
-cpr Xorg/.xprofile "$INSTDIR/.xprofile"
+mv "$CONFDIR/zathura/zathura.desktop" /usr/local/share/applications/.
+cpr xorg/.xprofile "$INSTDIR/.xprofile"
 fixuser "$INSTDIR/.xprofile"
 cpr xorg/.xbindkeysrc "$INSTDIR/.xbindkeysrc"
 fixuser "$INSTDIR/.xbindkeysrc"
@@ -82,7 +85,6 @@ cpr lightdm/lightdm.conf "/etc/lightdm/lightdm.conf"
 cpr tmux/.tmux.conf "$INSTDIR/.tmux.confd"
 mkdir -p "$INSTDIR/etc/"
 cpr tmux "$INSTDIR/etc/tmux"
-rm "$INSTDIR/etc/tmux/.tmux.conf"
 fixuser "$INSTDIR/etc"
 cpr nvim "$CONFDIR/nvim"
 fixuser "$CONFDIR/nvim"

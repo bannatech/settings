@@ -31,7 +31,7 @@ install() {
 }
 
 init
-install emacs
+install rsync
 install neovim
 install bspwm
 install polybar
@@ -42,7 +42,7 @@ install mpv
 install tmux
 install zathura
 install zathura-mupdf
-install irssi
+install weechat
 install zsh
 install zsh-syntax-highlighting
 install zsh-autosuggestions
