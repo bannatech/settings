@@ -1,0 +1,21 @@
+2015-12-01 18:23:05	-->	aftix (aftix@localhost.localdomain) has joined &bitlbee
+2015-12-01 18:23:05	--	Topic for &bitlbee is "Welcome to the control channel. Type help for help information."
+2015-12-01 18:23:05	--	Topic set by root (root@localhost.localdomain) on  6:23 PM
+2015-12-01 18:23:05	--	Channel &bitlbee: 2 nicks (2 ops, 0 halfops, 0 voices, 0 normals)
+2015-12-01 18:23:05	@root	Welcome to the BitlBee gateway!
+2015-12-01 18:23:05	@root	 
+2015-12-01 18:23:05	@root	Running BitlBee-LIBPURPLE 3.4.1
+2015-12-01 18:23:05	@root	 
+2015-12-01 18:23:05	@root	If you've never used BitlBee before, please do read the help information using the help command. Lots of FAQs are answered there.
+2015-12-01 18:23:05	@root	If you already have an account on this server, just use the identify command to identify yourself.
+2015-12-01 18:23:08	@aftix	identify aftkhan
+2015-12-01 18:23:08	--	Mode &bitlbee [-C] by root
+2015-12-01 18:23:08	--	Mode &bitlbee [+C] by root
+2015-12-01 18:23:08	@root	otr: aftexploision/skypeweb ready
+2015-12-01 18:23:08	@root	Password accepted, settings and accounts loaded
+2015-12-01 18:23:08	@root	New request: You're already connected to this server. Would you like to take over this session?
+2015-12-01 18:23:08	@root	You can use the yes/no commands to accept/reject this request.
+2015-12-01 18:23:14	@aftix	yes
+2015-12-01 18:23:14	@root	Accepted: You're already connected to this server. Would you like to take over this session?
+2015-12-01 18:23:14	@root	Trying to take over existing session
+2015-12-01 18:23:14	<--	root has kicked aftix (Switching to old session)
