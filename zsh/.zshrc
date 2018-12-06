@@ -6,11 +6,11 @@ export EDITOR='emacs -nw'
 
 # neat aliases
 if [ $(uname) = "Linux" ]; then
-	alias ls="ls --color=always"
+	alias ls="ls --color=always -F -H"
 else
 	alias ls="ls -G"
 fi
-alias ll="ls -l"
+alias ll="ls -l -F -H"
 alias la="ls -a"
 alias emacs="emacs -nw"
 [ -f ~/.shrc ] && source ~/.shrc
