@@ -23,37 +23,18 @@ set shiftwidth=4
 set listchars=tab:>.
 set list
 
-set number
 set shell=/usr/bin/zsh
 set nocompatible               " be iMproved
-filetype off                   " required!
 
-call vundle#rc()
+packadd minpac
 
-" My Bundles here:
-"
-" original repos on github
-" Bundle 'tpope/vim-fugitive'
-" Bundle 'Lokaltog/vim-easymotion'
-" Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-" Bundle 'tpope/vim-rails.git'
-" vim-scripts repos
-" Bundle 'L9'
-" Bundle 'FuzzyFinder'
-" non github repos
-" Bundle 'git://git.wincent.com/command-t.git'
-" ...
+call minpac#init()
+call minpac#add('k-takata/minpac', {'type': 'opt'})
+call minpac#add('itchyny/lightline.vim')
+call minpac#add('tpope/vim-eunuch')
+call minpac#add('tpope/vim-surround')
 
-filetype plugin indent on     " required! 
-"
-" Brief help
-" :BundleList          - list configured bundles
-" :BundleInstall(!)    - install(update) bundles
-" :BundleSearch(!) foo - search(or refresh cache first) for foo
-" :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
-"
-" see :h vundle for more details or wiki for FAQ
-" NOTE: comments after Bundle command are not allowed..
+packloadall
 
 function! LaTeXCompile()
 	:!pdflatex --enable-write18 %
@@ -67,6 +48,8 @@ endfunction
 
 map <C-f>  :call LaTeXCompile()<CR>
 map D :call LaTeXDisplay()<CR>
+
+map <F2> :call minpac#update()<CR>
 
 noremap <Up> <NOP>
 noremap <Down> <NOP>

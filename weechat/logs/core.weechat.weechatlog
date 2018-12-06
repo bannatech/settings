@@ -7080,3 +7080,885 @@
 2018-12-05 19:18:45		Options saved to guile.conf
 2018-12-05 19:18:45		Options saved to script.conf
 2018-12-05 19:18:45		Options saved to fset.conf
+2018-12-05 19:21:56	!	buflist: warning: the script buffers.pl is loaded and provides a bar with list of buffers similar to the buflist plugin; you may want to uninstall the script buffers.pl (/script remove buffers.pl) or disable/unload the buflist plugin; see WeeChat release notes for more information
+2018-12-05 19:21:56		perl scripts loaded: buddylist, buffers, colorize_lines, iset
+2018-12-05 19:21:56		[vimode.py] tmux/screen users, see: https://github.com/GermainZ/weechat-vimode/blob/master/FAQ.md#esc-key-not-being-detected-instantly
+2018-12-05 19:21:56		[vimode.py] To force disable warnings, you can set plugins.var.python.vimode.no_warn to 'on'
+2018-12-05 19:21:56		URL server listening on ('127.0.0.1', 41787)
+2018-12-05 19:21:56		python scripts loaded: buffer_autoclose, colorize_nicks, go, notify_send, urlbuf, urlserver, vimode
+2018-12-05 19:21:56		script: 358 scripts for WeeChat 2.3
+2018-12-05 19:21:56		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, script, tcl, trigger, xfer
+2018-12-05 19:49:00		Option changed: weechat.bar.buddylist.hidden = off  (default: on)
+2018-12-05 20:17:07		irc: server bitlbee added
+2018-12-05 20:17:24		Option changed: irc.server.bitlbee.ssl_verify = on  (default if null: on)
+2018-12-05 20:17:33		Option changed: irc.server.bitlbee.sasl_mechanism = external  (default if null: plain)
+2018-12-05 20:18:22		Option changed: irc.server.bitlbee.ssl_fingerprint = ""5f46efd783554a913cab935a686abe9f9e27565dadfe36edb17562280a85521e5e12ba4b7878a7dad4cc50ab9d2f25e3e12e8bc6f68e2"  (default if null: "")
+2018-12-05 20:18:34		Option changed: irc.server.bitlbee.ssl_fingerprint = "5f46efd783554a913cab935a686abe9f9e27565dadfe36edb17562280a85521e5e12ba4b7878a7dad4cc50ab9d2f25e3e12e8bc6f68e2"  (default if null: "")
+2018-12-05 20:19:14		Option changed: irc.server.bitlbee.ssl_fingerprint = "5f46efd783554a913cab935a686abe9f9e27565dadfe36edb17562280a85521e5e12ba4b7878a7dad4cc50ab9d2f25e3e12e8bc6f68e2f0612c164b719006ca7"  (default if null: "")
+2018-12-05 20:20:22		Option changed: irc.server.bitlbee.ssl = on  (default if null: off)
+2018-12-05 20:20:41		Option changed: irc.server.bitlbee.ssl_cert = "%h/certs/user.pem"  (default if null: "")
+2018-12-05 20:20:56		buffer_autoclose: Closing buffer: oftc.pooby
+2018-12-05 20:22:58	!	Error: can not merge windows, there's no other window with same size near current one
+2018-12-05 20:23:05		Options saved to sec.conf
+2018-12-05 20:23:05		Options saved to weechat.conf
+2018-12-05 20:23:05		Options saved to plugins.conf
+2018-12-05 20:23:05		Options saved to charset.conf
+2018-12-05 20:23:05		Options saved to logger.conf
+2018-12-05 20:23:05		Options saved to exec.conf
+2018-12-05 20:23:05		Options saved to trigger.conf
+2018-12-05 20:23:05		Options saved to aspell.conf
+2018-12-05 20:23:05		Options saved to alias.conf
+2018-12-05 20:23:05		Options saved to buflist.conf
+2018-12-05 20:23:05		Options saved to fifo.conf
+2018-12-05 20:23:05		Options saved to xfer.conf
+2018-12-05 20:23:05		Options saved to irc.conf
+2018-12-05 20:23:05		Options saved to relay.conf
+2018-12-05 20:23:05		Options saved to lua.conf
+2018-12-05 20:23:05		Options saved to perl.conf
+2018-12-05 20:23:05		Options saved to buffers.conf
+2018-12-05 20:23:05		Options saved to iset.conf
+2018-12-05 20:23:05		Options saved to python.conf
+2018-12-05 20:23:05		Options saved to colorize_nicks.conf
+2018-12-05 20:23:05		Options saved to tcl.conf
+2018-12-05 20:23:05		Options saved to guile.conf
+2018-12-05 20:23:05		Options saved to script.conf
+2018-12-05 20:23:05		Options saved to fset.conf
+2018-12-05 20:23:34		Option changed: weechat.bar.buddylist.position = left
+2018-12-05 20:23:36		Option changed: weechat.bar.buddylist.position = left
+2018-12-05 20:23:48		Buddylist:
+2018-12-05 20:23:48		Servername.Nickname (status) ==> Channelname:
+2018-12-05 20:23:48		 esper.mort (offline)
+2018-12-05 20:23:48		 oftc.aam (offline)
+2018-12-05 20:23:48		 oftc.pooby (offline)
+2018-12-05 20:26:07	!	Too few arguments for command "/oper" (help on command: /help oper)
+2018-12-05 20:26:16	!	No help available, "opel" is not a command or an option
+2018-12-05 20:26:18		[irc]  /oper  <user> <password>
+2018-12-05 20:26:18		get operator privileges
+2018-12-05 20:26:18		    user: user
+2018-12-05 20:26:18		password: password
+2018-12-05 21:27:56		buffer_autoclose: Closing buffer: oftc.pooby
+2018-12-05 21:28:13		Options saved to sec.conf
+2018-12-05 21:28:13		Options saved to weechat.conf
+2018-12-05 21:28:13		Options saved to plugins.conf
+2018-12-05 21:28:13		Options saved to charset.conf
+2018-12-05 21:28:13		Options saved to logger.conf
+2018-12-05 21:28:13		Options saved to exec.conf
+2018-12-05 21:28:13		Options saved to trigger.conf
+2018-12-05 21:28:13		Options saved to aspell.conf
+2018-12-05 21:28:13		Options saved to alias.conf
+2018-12-05 21:28:13		Options saved to buflist.conf
+2018-12-05 21:28:13		Options saved to fifo.conf
+2018-12-05 21:28:13		Options saved to xfer.conf
+2018-12-05 21:28:13		Options saved to irc.conf
+2018-12-05 21:28:13		Options saved to relay.conf
+2018-12-05 21:28:13		Options saved to lua.conf
+2018-12-05 21:28:13		Options saved to perl.conf
+2018-12-05 21:28:13		Options saved to buffers.conf
+2018-12-05 21:28:13		Options saved to iset.conf
+2018-12-05 21:28:13		Options saved to python.conf
+2018-12-05 21:28:13		Options saved to colorize_nicks.conf
+2018-12-05 21:28:13		Options saved to tcl.conf
+2018-12-05 21:28:13		Options saved to guile.conf
+2018-12-05 21:28:13		Options saved to script.conf
+2018-12-05 21:28:13		Options saved to fset.conf
+2018-12-05 21:44:55		[perl/buddylist]  /buddylist  <add>[nick_1 [... nick_n]] | <del>[nick_1 [... nick_n]]
+2018-12-05 21:44:55		display status from your buddies a bar-item.
+2018-12-05 21:44:55		<add> [nick(s)] add nick(s) to the buddylist
+2018-12-05 21:44:55		<del> [nick(s)] delete nick(s) from the buddylist
+2018-12-05 21:44:55		<list> show buddylist
+2018-12-05 21:44:55		Options:
+2018-12-05 21:44:55		'plugins.var.perl.buddylist.buddylist'            : path/file-name to store your buddies. "%h" will be replaced by WeeChat home (by default: ~/.weechat)
+2018-12-05 21:44:55		'plugins.var.perl.buddylist.color.default         : fall back color. (default: standard weechat color)
+2018-12-05 21:44:55		'plugins.var.perl.buddylist.color.online'         : color for online buddies.
+2018-12-05 21:44:55		'plugins.var.perl.buddylist.color.away'           : color for away buddies.
+2018-12-05 21:44:55		'plugins.var.perl.buddylist.color.offline'        : color for offline buddies.
+2018-12-05 21:44:55		'plugins.var.perl.buddylist.color.server'         : color for servername.
+2018-12-05 21:44:55		'plugins.var.perl.buddylist.color.server.offline' : color for disconnected server (default: hide).
+2018-12-05 21:44:55		'plugins.var.perl.buddylist.color.number'         : color for channel number (default: lightred). If empty, channel list option is off.
+2018-12-05 21:44:55		'plugins.var.perl.buddylist.show.query'           : displays a query buffer in front of the channel list.
+2018-12-05 21:44:55		'plugins.var.perl.buddylist.hide.server.if.buddies.offline': hides server when all buddies are offline for this server (default: off).
+2018-12-05 21:44:55		'plugins.var.perl.buddylist.hide.buddy.if.offline': hide buddy if offline (default: off).
+2018-12-05 21:44:55		'plugins.var.perl.buddylist.buddy.on.server'      : show buddy who is connected to a server, but not visiting the same channel(s) (default: on).
+2018-12-05 21:44:55		'plugins.var.perl.buddylist.buddy.on.server.color': color for online buddy but not visiting the same channel(s) (default: lightgreen).
+2018-12-05 21:44:55		'plugins.var.perl.buddylist.hide.bar'             : hides buddylist bar when all servers with added buddies are offline (default: on).
+2018-12-05 21:44:55		                                          always  : buddylist bar will be hidden (for example if you want to add item 'buddylist' to 'weechat.bar.status.items'
+2018-12-05 21:44:55		                                          off     : buddylist bar will not be hidden.
+2018-12-05 21:44:55		'plugins.var.perl.buddylist.check.buddies'        : time in seconds to send a /whois request to server. Be careful not to flood server (default: 20).
+2018-12-05 21:44:55		'plugins.var.perl.buddylist.callback.timeout'     : time in seconds to wait for answer from server. (default: 60).
+2018-12-05 21:44:55		'plugins.var.perl.buddylist.display.original.nick': display original nickname even if buddy changed his /nick (you have to add new nick to buddylist) (default: off).
+2018-12-05 21:44:55		'plugins.var.perl.buddylist.sort'                 : sort method for buddylist (default or status).
+2018-12-05 21:44:55		                                          default : buddylist will be sort by nickname
+2018-12-05 21:44:55		                                          status  : buddylist will be sort by status (online, away, offline)
+2018-12-05 21:44:55		'plugins.var.perl.buddylist.display.social.net'   : using bitlbee, buddies will be sorted in sublists with social-network name (eg. msn/jabber/facebook)(default: on)
+2018-12-05 21:44:55		'plugins.var.perl.buddylist.display.social.net.color': color for social-network name (default: yellow)
+2018-12-05 21:44:55		'plugins.var.perl.buddylist.text.color'           : color for optional online/away/offline-text in buddylist (default: white)
+2018-12-05 21:44:55		'plugins.var.perl.buddylist.text.online'          : optional online text in buddylist (sort method has to be 'status')
+2018-12-05 21:44:55		'plugins.var.perl.buddylist.text.away'            : optional away text in buddylist (sort method has to be 'status')
+2018-12-05 21:44:55		'plugins.var.perl.buddylist.text.offline'         : optional offline text in buddylist (sort method has to be 'status')
+2018-12-05 21:44:55		'plugins.var.perl.buddylist.use.redirection'      : using redirection to get status of buddies (needs weechat >=0.3.4) (default: on).
+2018-12-05 21:44:55		Mouse-support:
+2018-12-05 21:44:55		  click left mouse-button on buddy to open a query buffer.
+2018-12-05 21:44:55		  add a buddy by dragging a nick with left mouse-button from nicklist or chat-area and drop on buddylist.
+2018-12-05 21:44:55		  remove a buddy by dragging a buddy with left mouse-button from buddylist and drop it on any area.
+2018-12-05 21:44:55		Cursor-Mode:
+2018-12-05 21:44:55		 q  open query with nick (/query)
+2018-12-05 21:44:55		 w  query information about user (/whois)
+2018-12-05 21:44:55		Troubleshooting:
+2018-12-05 21:44:55		If buddylist will not be refreshed in nicklist-mode, check the following WeeChat options:
+2018-12-05 21:44:55		'irc.server_default.away_check'          : interval between two checks, in minutes. (has to be >= 1 (default:0)).
+2018-12-05 21:44:55		'irc.server_default.away_check_max_nicks': channels with high number of nicks will not be checked (default: 25).
+2018-12-05 21:44:55		name of buddy has to be written 'case sensitive' (it's recommended to use nick-completion or to drag'n'drop buddy with mouse).
+2018-12-05 21:44:55		Examples:
+2018-12-05 21:44:55		  Add buddy (nils) to buddylist (server of current buffer will be used):
+2018-12-05 21:44:55		    /buddylist add nils
+2018-12-05 21:44:55		  Delete buddy (nils) from buddylist:
+2018-12-05 21:44:55		    /buddylist del nils (server of current buffer will be used)
+2018-12-05 21:44:58		Buddylist:
+2018-12-05 21:44:58		Servername.Nickname (status) ==> Channelname:
+2018-12-05 21:44:58		 esper.mort (offline)
+2018-12-05 21:44:58		 oftc.aam (offline)
+2018-12-05 21:44:58		 oftc.pooby (offline)
+2018-12-05 21:46:32	!	buddylist: You can add/del buddies only in channel/server/private buffers.
+2018-12-05 21:47:09		Buddylist:
+2018-12-05 21:47:09		Servername.Nickname (status) ==> Channelname:
+2018-12-05 21:47:09		 esper.mort (offline)
+2018-12-05 21:47:09		 oftc.aam (offline)
+2018-12-05 21:47:56		Buddylist:
+2018-12-05 21:47:56		Servername.Nickname (status) ==> Channelname:
+2018-12-05 21:47:56		 oftc.aam (offline)
+2018-12-05 21:47:56		 oftc.pooby (offline)
+2018-12-05 21:48:35		Option changed: weechat.bar.buddylist.filling_left_right = horizontal  (default: vertical)
+2018-12-05 21:48:42		Option changed: weechat.bar.buddylist.filling_left_right = vertical
+2018-12-05 21:48:51		Option changed: weechat.bar.buddylist.hidden = off  (default: on)
+2018-12-05 21:49:04	!	Unable to change bar type: you must delete bar and create another to do that
+2018-12-05 21:49:04	!	Error: failed to set option "weechat.bar.buddylist.type"
+2018-12-05 21:49:52		Option changed: weechat.bar.buddylist.conditions = "active"  (default: "")
+2018-12-05 21:50:07		Option changed: weechat.bar.buddylist.priority = 1  (default: 0)
+2018-12-05 21:50:56		Option changed: weechat.bar.buflist.size = 10  (default: 0)
+2018-12-05 21:50:58		Option changed: weechat.bar.buflist.size = 20  (default: 0)
+2018-12-05 21:51:09		Option changed: weechat.bar.buddylist.size = 10  (default: 0)
+2018-12-05 21:51:12		Option changed: weechat.bar.buddylist.size = 8  (default: 0)
+2018-12-05 21:51:19		Options saved to sec.conf
+2018-12-05 21:51:19		Options saved to weechat.conf
+2018-12-05 21:51:19		Options saved to plugins.conf
+2018-12-05 21:51:19		Options saved to charset.conf
+2018-12-05 21:51:19		Options saved to logger.conf
+2018-12-05 21:51:19		Options saved to exec.conf
+2018-12-05 21:51:19		Options saved to trigger.conf
+2018-12-05 21:51:19		Options saved to aspell.conf
+2018-12-05 21:51:19		Options saved to alias.conf
+2018-12-05 21:51:19		Options saved to buflist.conf
+2018-12-05 21:51:19		Options saved to fifo.conf
+2018-12-05 21:51:19		Options saved to xfer.conf
+2018-12-05 21:51:19		Options saved to irc.conf
+2018-12-05 21:51:19		Options saved to relay.conf
+2018-12-05 21:51:19		Options saved to lua.conf
+2018-12-05 21:51:19		Options saved to perl.conf
+2018-12-05 21:51:19		Options saved to buffers.conf
+2018-12-05 21:51:19		Options saved to iset.conf
+2018-12-05 21:51:19		Options saved to python.conf
+2018-12-05 21:51:19		Options saved to colorize_nicks.conf
+2018-12-05 21:51:19		Options saved to tcl.conf
+2018-12-05 21:51:19		Options saved to guile.conf
+2018-12-05 21:51:19		Options saved to script.conf
+2018-12-05 21:51:19		Options saved to fset.conf
+2018-12-05 21:52:12		Option changed: plugins.var.perl.buddylist.buddy.on.server = "on"
+2018-12-05 21:52:28		Option changed: plugins.var.perl.buddylist.hide.buddy.if.offline = "off"
+2018-12-05 21:52:38		Option changed: plugins.var.perl.buddylist.hide.buddy.if.offline = "on"
+2018-12-05 21:52:54		Option changed: plugins.var.perl.buddylist.show.query = "on"
+2018-12-05 21:53:19		Option changed: plugins.var.perl.buddylist.text.offline = "a"
+2018-12-05 21:53:21		Option changed: plugins.var.perl.buddylist.text.offline = ""
+2018-12-05 21:53:37		Option changed: plugins.var.perl.buddylist.text.color = "green"
+2018-12-05 21:53:44		Option changed: plugins.var.perl.buddylist.text.away = ""
+2018-12-05 21:54:02		Option changed: plugins.var.perl.buddylist.use.redirection = "on"
+2018-12-05 21:54:06		Option changed: plugins.var.perl.buddylist.use.redirection = "off"
+2018-12-05 21:54:29		[perl/buddylist]  /buddylist  <add>[nick_1 [... nick_n]] | <del>[nick_1 [... nick_n]]
+2018-12-05 21:54:29		display status from your buddies a bar-item.
+2018-12-05 21:54:29		<add> [nick(s)] add nick(s) to the buddylist
+2018-12-05 21:54:29		<del> [nick(s)] delete nick(s) from the buddylist
+2018-12-05 21:54:29		<list> show buddylist
+2018-12-05 21:54:29		Options:
+2018-12-05 21:54:29		'plugins.var.perl.buddylist.buddylist'            : path/file-name to store your buddies. "%h" will be replaced by WeeChat home (by default: ~/.weechat)
+2018-12-05 21:54:29		'plugins.var.perl.buddylist.color.default         : fall back color. (default: standard weechat color)
+2018-12-05 21:54:29		'plugins.var.perl.buddylist.color.online'         : color for online buddies.
+2018-12-05 21:54:29		'plugins.var.perl.buddylist.color.away'           : color for away buddies.
+2018-12-05 21:54:29		'plugins.var.perl.buddylist.color.offline'        : color for offline buddies.
+2018-12-05 21:54:29		'plugins.var.perl.buddylist.color.server'         : color for servername.
+2018-12-05 21:54:29		'plugins.var.perl.buddylist.color.server.offline' : color for disconnected server (default: hide).
+2018-12-05 21:54:29		'plugins.var.perl.buddylist.color.number'         : color for channel number (default: lightred). If empty, channel list option is off.
+2018-12-05 21:54:29		'plugins.var.perl.buddylist.show.query'           : displays a query buffer in front of the channel list.
+2018-12-05 21:54:29		'plugins.var.perl.buddylist.hide.server.if.buddies.offline': hides server when all buddies are offline for this server (default: off).
+2018-12-05 21:54:29		'plugins.var.perl.buddylist.hide.buddy.if.offline': hide buddy if offline (default: off).
+2018-12-05 21:54:29		'plugins.var.perl.buddylist.buddy.on.server'      : show buddy who is connected to a server, but not visiting the same channel(s) (default: on).
+2018-12-05 21:54:29		'plugins.var.perl.buddylist.buddy.on.server.color': color for online buddy but not visiting the same channel(s) (default: lightgreen).
+2018-12-05 21:54:29		'plugins.var.perl.buddylist.hide.bar'             : hides buddylist bar when all servers with added buddies are offline (default: on).
+2018-12-05 21:54:29		                                          always  : buddylist bar will be hidden (for example if you want to add item 'buddylist' to 'weechat.bar.status.items'
+2018-12-05 21:54:29		                                          off     : buddylist bar will not be hidden.
+2018-12-05 21:54:29		'plugins.var.perl.buddylist.check.buddies'        : time in seconds to send a /whois request to server. Be careful not to flood server (default: 20).
+2018-12-05 21:54:29		'plugins.var.perl.buddylist.callback.timeout'     : time in seconds to wait for answer from server. (default: 60).
+2018-12-05 21:54:29		'plugins.var.perl.buddylist.display.original.nick': display original nickname even if buddy changed his /nick (you have to add new nick to buddylist) (default: off).
+2018-12-05 21:54:29		'plugins.var.perl.buddylist.sort'                 : sort method for buddylist (default or status).
+2018-12-05 21:54:29		                                          default : buddylist will be sort by nickname
+2018-12-05 21:54:29		                                          status  : buddylist will be sort by status (online, away, offline)
+2018-12-05 21:54:29		'plugins.var.perl.buddylist.display.social.net'   : using bitlbee, buddies will be sorted in sublists with social-network name (eg. msn/jabber/facebook)(default: on)
+2018-12-05 21:54:29		'plugins.var.perl.buddylist.display.social.net.color': color for social-network name (default: yellow)
+2018-12-05 21:54:29		'plugins.var.perl.buddylist.text.color'           : color for optional online/away/offline-text in buddylist (default: white)
+2018-12-05 21:54:29		'plugins.var.perl.buddylist.text.online'          : optional online text in buddylist (sort method has to be 'status')
+2018-12-05 21:54:29		'plugins.var.perl.buddylist.text.away'            : optional away text in buddylist (sort method has to be 'status')
+2018-12-05 21:54:29		'plugins.var.perl.buddylist.text.offline'         : optional offline text in buddylist (sort method has to be 'status')
+2018-12-05 21:54:29		'plugins.var.perl.buddylist.use.redirection'      : using redirection to get status of buddies (needs weechat >=0.3.4) (default: on).
+2018-12-05 21:54:29		Mouse-support:
+2018-12-05 21:54:29		  click left mouse-button on buddy to open a query buffer.
+2018-12-05 21:54:29		  add a buddy by dragging a nick with left mouse-button from nicklist or chat-area and drop on buddylist.
+2018-12-05 21:54:29		  remove a buddy by dragging a buddy with left mouse-button from buddylist and drop it on any area.
+2018-12-05 21:54:29		Cursor-Mode:
+2018-12-05 21:54:29		 q  open query with nick (/query)
+2018-12-05 21:54:29		 w  query information about user (/whois)
+2018-12-05 21:54:29		Troubleshooting:
+2018-12-05 21:54:29		If buddylist will not be refreshed in nicklist-mode, check the following WeeChat options:
+2018-12-05 21:54:29		'irc.server_default.away_check'          : interval between two checks, in minutes. (has to be >= 1 (default:0)).
+2018-12-05 21:54:29		'irc.server_default.away_check_max_nicks': channels with high number of nicks will not be checked (default: 25).
+2018-12-05 21:54:29		name of buddy has to be written 'case sensitive' (it's recommended to use nick-completion or to drag'n'drop buddy with mouse).
+2018-12-05 21:54:29		Examples:
+2018-12-05 21:54:29		  Add buddy (nils) to buddylist (server of current buffer will be used):
+2018-12-05 21:54:29		    /buddylist add nils
+2018-12-05 21:54:29		  Delete buddy (nils) from buddylist:
+2018-12-05 21:54:29		    /buddylist del nils (server of current buffer will be used)
+2018-12-05 21:55:49		Option changed: plugins.var.perl.buddylist.show.query = "on"
+2018-12-05 21:58:27		perl: unloading script "buddylist"
+2018-12-05 21:58:27		perl: script removed: /home/aftix/.weechat/perl/autoload/buddylist.pl
+2018-12-05 21:58:27		perl: script removed: /home/aftix/.weechat/perl/buddylist.pl
+2018-12-05 21:58:37		Options saved to sec.conf
+2018-12-05 21:58:37		Options saved to weechat.conf
+2018-12-05 21:58:37		Options saved to plugins.conf
+2018-12-05 21:58:37		Options saved to charset.conf
+2018-12-05 21:58:37		Options saved to logger.conf
+2018-12-05 21:58:37		Options saved to exec.conf
+2018-12-05 21:58:37		Options saved to trigger.conf
+2018-12-05 21:58:37		Options saved to aspell.conf
+2018-12-05 21:58:37		Options saved to alias.conf
+2018-12-05 21:58:37		Options saved to buflist.conf
+2018-12-05 21:58:37		Options saved to fifo.conf
+2018-12-05 21:58:37		Options saved to xfer.conf
+2018-12-05 21:58:37		Options saved to irc.conf
+2018-12-05 21:58:37		Options saved to relay.conf
+2018-12-05 21:58:37		Options saved to lua.conf
+2018-12-05 21:58:37		Options saved to perl.conf
+2018-12-05 21:58:37		Options saved to buffers.conf
+2018-12-05 21:58:37		Options saved to iset.conf
+2018-12-05 21:58:37		Options saved to python.conf
+2018-12-05 21:58:37		Options saved to colorize_nicks.conf
+2018-12-05 21:58:37		Options saved to tcl.conf
+2018-12-05 21:58:37		Options saved to guile.conf
+2018-12-05 21:58:37		Options saved to script.conf
+2018-12-05 21:58:37		Options saved to fset.conf
+2018-12-05 21:59:24	!	Error: unknown command "/buddy" (type /help for help)
+2018-12-05 21:59:27		[core]
+2018-12-05 21:59:27		  away     command  filter   key      plugin   reload   set      version
+2018-12-05 21:59:27		  bar      cursor   help     layout   print    repeat   unset    wait   
+2018-12-05 21:59:27		  buffer   debug    history  mouse    proxy    save     upgrade  window 
+2018-12-05 21:59:27		  color    eval     input    mute     quit     secure   uptime 
+2018-12-05 21:59:27		[lua]
+2018-12-05 21:59:27		  lua
+2018-12-05 21:59:27		[fset]
+2018-12-05 21:59:27		  fset
+2018-12-05 21:59:27		[perl]
+2018-12-05 21:59:27		  buffers_detach  buffers_whitelist  iset  perl
+2018-12-05 21:59:27		[buflist]
+2018-12-05 21:59:27		  buflist
+2018-12-05 21:59:27		[script]
+2018-12-05 21:59:27		  script
+2018-12-05 21:59:27		[aspell]
+2018-12-05 21:59:27		  aspell
+2018-12-05 21:59:27		[trigger]
+2018-12-05 21:59:27		  trigger
+2018-12-05 21:59:27		[charset]
+2018-12-05 21:59:27		  charset
+2018-12-05 21:59:27		[relay]
+2018-12-05 21:59:27		  relay
+2018-12-05 21:59:27		[python]
+2018-12-05 21:59:27		  go                   urlserver            vimode_go_to_normal
+2018-12-05 21:59:27		  python               vimode             
+2018-12-05 21:59:27		[tcl]
+2018-12-05 21:59:27		  tcl
+2018-12-05 21:59:27		[irc]
+2018-12-05 21:59:27		  admin       deop        kickban     nick        reconnect   servlist    users     
+2018-12-05 21:59:27		  allchan     devoice     kill        notice      rehash      squery      version   
+2018-12-05 21:59:27		  allpv       die         links       notify      remove      squit       voice     
+2018-12-05 21:59:27		  allserv     disconnect  list        op          restart     stats       wallchops 
+2018-12-05 21:59:27		  ban         halfop      lusers      oper        sajoin      summon      wallops   
+2018-12-05 21:59:27		  cap         ignore      map         part        samode      time        who       
+2018-12-05 21:59:27		  connect     info        me          ping        sanick      topic       whois     
+2018-12-05 21:59:27		  ctcp        invite      mode        pong        sapart      trace       whowas    
+2018-12-05 21:59:27		  cycle       ison        motd        query       saquit      unban     
+2018-12-05 21:59:27		  dcc         join        msg         quiet       server      unquiet   
+2018-12-05 21:59:27		  dehalfop    kick        names       quote       service     userhost  
+2018-12-05 21:59:27		[xfer]
+2018-12-05 21:59:27		  me  xfer
+2018-12-05 21:59:27		[fifo]
+2018-12-05 21:59:27		  fifo
+2018-12-05 21:59:27		[alias]
+2018-12-05 21:59:27		  AAWAY    ANICK    CHAT     IG       LEAVE    N        SIGNOFF  V        WII    
+2018-12-05 21:59:27		  alias    BEEP     CL       J        M        Q        T        W        WW     
+2018-12-05 21:59:27		  AME      BYE      CLOSE    K        MSGBUF   REDRAW   UB       WC       znc    
+2018-12-05 21:59:27		  AMSG     C        EXIT     KB       MUB      SAY      UMODE    WI     
+2018-12-05 21:59:27		[exec]
+2018-12-05 21:59:27		  exec
+2018-12-05 21:59:27		[logger]
+2018-12-05 21:59:27		  logger
+2018-12-05 21:59:27		[guile]
+2018-12-05 21:59:27		  guile
+2018-12-05 22:00:29		perl: loading script "/home/aftix/.weechat/perl/buddylist.pl"
+2018-12-05 22:00:29		perl: registered script "buddylist", version 1.9 (display status from your buddies a bar-item.)
+2018-12-05 22:00:44	!	Error: unknown command "/buddy" (type /help for help)
+2018-12-05 22:01:09		Option changed: weechat.bar.buddylist.hidden = off  (default: on)
+2018-12-05 22:01:11		Option changed: weechat.bar.buddylist.hidden = off  (default: on)
+2018-12-05 22:01:40		Buddylist:
+2018-12-05 22:01:40		Servername.Nickname (status) ==> Channelname:
+2018-12-05 22:01:40		 oftc.aam (offline)
+2018-12-05 22:01:40		 oftc.pooby (offline)
+2018-12-05 22:04:22		Buddylist:
+2018-12-05 22:04:22		Servername.Nickname (status) ==> Channelname:
+2018-12-05 22:04:22		 oftc.aam (offline)
+2018-12-05 22:04:22		 oftc.pooby (offline)
+2018-12-05 22:04:41		Buddylist:
+2018-12-05 22:04:41		Servername.Nickname (status) ==> Channelname:
+2018-12-05 22:04:41		 oftc.aam (offline)
+2018-12-05 22:04:41		 oftc.pooby (offline)
+2018-12-05 22:04:54	!	buddylist: You can add/del buddies only in channel/server/private buffers.
+2018-12-05 22:05:10		No key found
+2018-12-05 22:06:17	!	buflist: warning: the script buffers.pl is loaded and provides a bar with list of buffers similar to the buflist plugin; you may want to uninstall the script buffers.pl (/script remove buffers.pl) or disable/unload the buflist plugin; see WeeChat release notes for more information
+2018-12-05 22:06:17		perl scripts loaded: buddylist, buffers, colorize_lines, iset
+2018-12-05 22:06:17		[vimode.py] tmux/screen users, see: https://github.com/GermainZ/weechat-vimode/blob/master/FAQ.md#esc-key-not-being-detected-instantly
+2018-12-05 22:06:17		[vimode.py] To force disable warnings, you can set plugins.var.python.vimode.no_warn to 'on'
+2018-12-05 22:06:17		URL server listening on ('127.0.0.1', 41245)
+2018-12-05 22:06:17		python scripts loaded: buffer_autoclose, colorize_nicks, go, notify_send, urlbuf, urlserver, vimode
+2018-12-05 22:06:17		script: 358 scripts for WeeChat 2.3
+2018-12-05 22:06:17		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, script, tcl, trigger, xfer
+2018-12-05 22:06:59		241 key bindings for context "default":
+2018-12-05 22:06:59		  ctrl-? => /input delete_previous_char
+2018-12-05 22:06:59		  ctrl-A => /input move_beginning_of_line
+2018-12-05 22:06:59		  ctrl-B => /input move_previous_char
+2018-12-05 22:06:59		  ctrl-C_ => /input insert \x1F
+2018-12-05 22:06:59		  ctrl-Cb => /input insert \x02
+2018-12-05 22:06:59		  ctrl-Cc => /input insert \x03
+2018-12-05 22:06:59		  ctrl-Ci => /input insert \x1D
+2018-12-05 22:06:59		  ctrl-Co => /input insert \x0F
+2018-12-05 22:06:59		  ctrl-Cv => /input insert \x16
+2018-12-05 22:06:59		  ctrl-D => /input delete_next_char
+2018-12-05 22:06:59		  ctrl-E => /input move_end_of_line
+2018-12-05 22:06:59		  ctrl-F => /input move_next_char
+2018-12-05 22:06:59		  ctrl-H => /input delete_previous_char
+2018-12-05 22:06:59		  ctrl-I => /input complete_next
+2018-12-05 22:06:59		  ctrl-J => /input return
+2018-12-05 22:06:59		  ctrl-K => /input delete_end_of_line
+2018-12-05 22:06:59		  ctrl-L => /window refresh
+2018-12-05 22:06:59		  ctrl-M => /input return
+2018-12-05 22:06:59		  ctrl-N => /buffer +1
+2018-12-05 22:06:59		  ctrl-P => /buffer -1
+2018-12-05 22:06:59		  ctrl-R => /input search_text
+2018-12-05 22:06:59		  ctrl-Sctrl-U => /input set_unread
+2018-12-05 22:06:59		  ctrl-T => /input transpose_chars
+2018-12-05 22:06:59		  ctrl-U => /input delete_beginning_of_line
+2018-12-05 22:06:59		  ctrl-W => /input delete_previous_word
+2018-12-05 22:06:59		  ctrl-W= => /window balance
+2018-12-05 22:06:59		  ctrl-Wh => /window left
+2018-12-05 22:06:59		  ctrl-Wj => /window down
+2018-12-05 22:06:59		  ctrl-Wk => /window up
+2018-12-05 22:06:59		  ctrl-Wl => /window right
+2018-12-05 22:06:59		  ctrl-Wq => /window merge
+2018-12-05 22:06:59		  ctrl-Ws => /window splith
+2018-12-05 22:06:59		  ctrl-Wv => /window splitv
+2018-12-05 22:06:59		  ctrl-Wx => /window swap
+2018-12-05 22:06:59		  ctrl-X => /input switch_active_buffer
+2018-12-05 22:06:59		  ctrl-Y => /input clipboard_paste
+2018-12-05 22:06:59		  meta-meta-OP => /bar scroll buflist * b
+2018-12-05 22:06:59		  meta-meta-OQ => /bar scroll buflist * e
+2018-12-05 22:06:59		  meta-meta2-1~ => /window scroll_top
+2018-12-05 22:06:59		  meta-meta2-23~ => /bar scroll nicklist * b
+2018-12-05 22:06:59		  meta-meta2-24~ => /bar scroll nicklist * e
+2018-12-05 22:06:59		  meta-meta2-4~ => /window scroll_bottom
+2018-12-05 22:06:59		  meta-meta2-5~ => /window scroll_up
+2018-12-05 22:06:59		  meta-meta2-6~ => /window scroll_down
+2018-12-05 22:06:59		  meta-meta2-7~ => /window scroll_top
+2018-12-05 22:06:59		  meta-meta2-8~ => /window scroll_bottom
+2018-12-05 22:06:59		  meta-meta2-A => /buffer -1
+2018-12-05 22:06:59		  meta-meta2-B => /buffer +1
+2018-12-05 22:06:59		  meta-meta2-C => /buffer +1
+2018-12-05 22:06:59		  meta-meta2-D => /buffer -1
+2018-12-05 22:06:59		  meta-' => /cursor go buflist
+2018-12-05 22:06:59		  meta-, => /cursor go chat
+2018-12-05 22:06:59		  meta-- => /filter toggle @
+2018-12-05 22:06:59		  meta-. => /cursor go nicklist
+2018-12-05 22:06:59		  meta-/ => /input jump_last_buffer_displayed
+2018-12-05 22:06:59		  meta-0 => /buffer *10
+2018-12-05 22:06:59		  meta-1 => /buffer *1
+2018-12-05 22:06:59		  meta-2 => /buffer *2
+2018-12-05 22:06:59		  meta-3 => /buffer *3
+2018-12-05 22:06:59		  meta-4 => /buffer *4
+2018-12-05 22:06:59		  meta-5 => /buffer *5
+2018-12-05 22:06:59		  meta-6 => /buffer *6
+2018-12-05 22:06:59		  meta-7 => /buffer *7
+2018-12-05 22:06:59		  meta-8 => /buffer *8
+2018-12-05 22:06:59		  meta-9 => /buffer *9
+2018-12-05 22:06:59		  meta-; => /cursor go buddylist
+2018-12-05 22:06:59		  meta-< => /input jump_previously_visited_buffer
+2018-12-05 22:06:59		  meta-= => /filter toggle
+2018-12-05 22:06:59		  meta-> => /input jump_next_visited_buffer
+2018-12-05 22:06:59		  meta-OA => /input history_global_previous
+2018-12-05 22:06:59		  meta-OB => /input history_global_next
+2018-12-05 22:06:59		  meta-OC => /input move_next_word
+2018-12-05 22:06:59		  meta-OD => /input move_previous_word
+2018-12-05 22:06:59		  meta-OF => /input move_end_of_line
+2018-12-05 22:06:59		  meta-OH => /input move_beginning_of_line
+2018-12-05 22:06:59		  meta-OP => /bar scroll buflist * -100%
+2018-12-05 22:06:59		  meta-OQ => /bar scroll buflist * +100%
+2018-12-05 22:06:59		  meta-Oa => /input history_global_previous
+2018-12-05 22:06:59		  meta-Ob => /input history_global_next
+2018-12-05 22:06:59		  meta-Oc => /input move_next_word
+2018-12-05 22:06:59		  meta-Od => /input move_previous_word
+2018-12-05 22:06:59		  meta2-15~ => /buffer -1
+2018-12-05 22:06:59		  meta2-17~ => /buffer +1
+2018-12-05 22:06:59		  meta2-18~ => /window -1
+2018-12-05 22:06:59		  meta2-19~ => /window +1
+2018-12-05 22:06:59		  meta2-1;3A => /buffer -1
+2018-12-05 22:06:59		  meta2-1;3B => /buffer +1
+2018-12-05 22:06:59		  meta2-1;3C => /buffer +1
+2018-12-05 22:06:59		  meta2-1;3D => /buffer -1
+2018-12-05 22:06:59		  meta2-1;3F => /window scroll_bottom
+2018-12-05 22:06:59		  meta2-1;3H => /window scroll_top
+2018-12-05 22:06:59		  meta2-1;5A => /input history_global_previous
+2018-12-05 22:06:59		  meta2-1;5B => /input history_global_next
+2018-12-05 22:06:59		  meta2-1;5C => /input move_next_word
+2018-12-05 22:06:59		  meta2-1;5D => /input move_previous_word
+2018-12-05 22:06:59		  meta2-1~ => /input move_beginning_of_line
+2018-12-05 22:06:59		  meta2-200~ => /input paste_start
+2018-12-05 22:06:59		  meta2-201~ => /input paste_stop
+2018-12-05 22:06:59		  meta2-20~ => /bar scroll title * -30%
+2018-12-05 22:06:59		  meta2-21~ => /bar scroll title * +30%
+2018-12-05 22:06:59		  meta2-23;3~ => /bar scroll nicklist * b
+2018-12-05 22:06:59		  meta2-23~ => /bar scroll nicklist * -100%
+2018-12-05 22:06:59		  meta2-24;3~ => /bar scroll nicklist * e
+2018-12-05 22:06:59		  meta2-24~ => /bar scroll nicklist * +100%
+2018-12-05 22:06:59		  meta2-3~ => /input delete_next_char
+2018-12-05 22:06:59		  meta2-4~ => /input move_end_of_line
+2018-12-05 22:06:59		  meta2-5;3~ => /window scroll_up
+2018-12-05 22:06:59		  meta2-5~ => /window page_up
+2018-12-05 22:06:59		  meta2-6;3~ => /window scroll_down
+2018-12-05 22:06:59		  meta2-6~ => /window page_down
+2018-12-05 22:06:59		  meta2-7~ => /input move_beginning_of_line
+2018-12-05 22:06:59		  meta2-8~ => /input move_end_of_line
+2018-12-05 22:06:59		  meta2-A => /input history_previous
+2018-12-05 22:06:59		  meta2-B => /input history_next
+2018-12-05 22:06:59		  meta2-C => /input move_next_char
+2018-12-05 22:06:59		  meta2-D => /input move_previous_char
+2018-12-05 22:06:59		  meta2-F => /input move_end_of_line
+2018-12-05 22:06:59		  meta2-G => /window page_down
+2018-12-05 22:06:59		  meta2-H => /input move_beginning_of_line
+2018-12-05 22:06:59		  meta2-I => /window page_up
+2018-12-05 22:06:59		  meta2-Z => /input complete_previous
+2018-12-05 22:06:59		  meta2-[E => /buffer -1
+2018-12-05 22:06:59		  meta-_ => /input redo
+2018-12-05 22:06:59		  meta-a => /input jump_smart
+2018-12-05 22:06:59		  meta-b => /input move_previous_word
+2018-12-05 22:06:59		  meta-c => /close
+2018-12-05 22:06:59		  meta-d => /input delete_next_word
+2018-12-05 22:06:59		  meta-f => /input move_next_word
+2018-12-05 22:06:59		  meta-g => /go
+2018-12-05 22:06:59		  meta-h => /input hotlist_clear
+2018-12-05 22:06:59		  meta-j01 => /buffer 1
+2018-12-05 22:06:59		  meta-j02 => /buffer 2
+2018-12-05 22:06:59		  meta-j03 => /buffer 3
+2018-12-05 22:06:59		  meta-j04 => /buffer 4
+2018-12-05 22:06:59		  meta-j05 => /buffer 5
+2018-12-05 22:06:59		  meta-j06 => /buffer 6
+2018-12-05 22:06:59		  meta-j07 => /buffer 7
+2018-12-05 22:06:59		  meta-j08 => /buffer 8
+2018-12-05 22:06:59		  meta-j09 => /buffer 9
+2018-12-05 22:06:59		  meta-j10 => /buffer 10
+2018-12-05 22:06:59		  meta-j11 => /buffer 11
+2018-12-05 22:06:59		  meta-j12 => /buffer 12
+2018-12-05 22:06:59		  meta-j13 => /buffer 13
+2018-12-05 22:06:59		  meta-j14 => /buffer 14
+2018-12-05 22:06:59		  meta-j15 => /buffer 15
+2018-12-05 22:06:59		  meta-j16 => /buffer 16
+2018-12-05 22:06:59		  meta-j17 => /buffer 17
+2018-12-05 22:06:59		  meta-j18 => /buffer 18
+2018-12-05 22:06:59		  meta-j19 => /buffer 19
+2018-12-05 22:06:59		  meta-j20 => /buffer 20
+2018-12-05 22:06:59		  meta-j21 => /buffer 21
+2018-12-05 22:06:59		  meta-j22 => /buffer 22
+2018-12-05 22:06:59		  meta-j23 => /buffer 23
+2018-12-05 22:06:59		  meta-j24 => /buffer 24
+2018-12-05 22:06:59		  meta-j25 => /buffer 25
+2018-12-05 22:06:59		  meta-j26 => /buffer 26
+2018-12-05 22:06:59		  meta-j27 => /buffer 27
+2018-12-05 22:06:59		  meta-j28 => /buffer 28
+2018-12-05 22:06:59		  meta-j29 => /buffer 29
+2018-12-05 22:06:59		  meta-j30 => /buffer 30
+2018-12-05 22:06:59		  meta-j31 => /buffer 31
+2018-12-05 22:06:59		  meta-j32 => /buffer 32
+2018-12-05 22:06:59		  meta-j33 => /buffer 33
+2018-12-05 22:06:59		  meta-j34 => /buffer 34
+2018-12-05 22:06:59		  meta-j35 => /buffer 35
+2018-12-05 22:06:59		  meta-j36 => /buffer 36
+2018-12-05 22:06:59		  meta-j37 => /buffer 37
+2018-12-05 22:06:59		  meta-j38 => /buffer 38
+2018-12-05 22:06:59		  meta-j39 => /buffer 39
+2018-12-05 22:06:59		  meta-j40 => /buffer 40
+2018-12-05 22:06:59		  meta-j41 => /buffer 41
+2018-12-05 22:06:59		  meta-j42 => /buffer 42
+2018-12-05 22:06:59		  meta-j43 => /buffer 43
+2018-12-05 22:06:59		  meta-j44 => /buffer 44
+2018-12-05 22:06:59		  meta-j45 => /buffer 45
+2018-12-05 22:06:59		  meta-j46 => /buffer 46
+2018-12-05 22:06:59		  meta-j47 => /buffer 47
+2018-12-05 22:06:59		  meta-j48 => /buffer 48
+2018-12-05 22:06:59		  meta-j49 => /buffer 49
+2018-12-05 22:06:59		  meta-j50 => /buffer 50
+2018-12-05 22:06:59		  meta-j51 => /buffer 51
+2018-12-05 22:06:59		  meta-j52 => /buffer 52
+2018-12-05 22:06:59		  meta-j53 => /buffer 53
+2018-12-05 22:06:59		  meta-j54 => /buffer 54
+2018-12-05 22:06:59		  meta-j55 => /buffer 55
+2018-12-05 22:06:59		  meta-j56 => /buffer 56
+2018-12-05 22:06:59		  meta-j57 => /buffer 57
+2018-12-05 22:06:59		  meta-j58 => /buffer 58
+2018-12-05 22:06:59		  meta-j59 => /buffer 59
+2018-12-05 22:06:59		  meta-j60 => /buffer 60
+2018-12-05 22:06:59		  meta-j61 => /buffer 61
+2018-12-05 22:06:59		  meta-j62 => /buffer 62
+2018-12-05 22:06:59		  meta-j63 => /buffer 63
+2018-12-05 22:06:59		  meta-j64 => /buffer 64
+2018-12-05 22:06:59		  meta-j65 => /buffer 65
+2018-12-05 22:06:59		  meta-j66 => /buffer 66
+2018-12-05 22:06:59		  meta-j67 => /buffer 67
+2018-12-05 22:06:59		  meta-j68 => /buffer 68
+2018-12-05 22:06:59		  meta-j69 => /buffer 69
+2018-12-05 22:06:59		  meta-j70 => /buffer 70
+2018-12-05 22:06:59		  meta-j71 => /buffer 71
+2018-12-05 22:06:59		  meta-j72 => /buffer 72
+2018-12-05 22:06:59		  meta-j73 => /buffer 73
+2018-12-05 22:06:59		  meta-j74 => /buffer 74
+2018-12-05 22:06:59		  meta-j75 => /buffer 75
+2018-12-05 22:06:59		  meta-j76 => /buffer 76
+2018-12-05 22:06:59		  meta-j77 => /buffer 77
+2018-12-05 22:06:59		  meta-j78 => /buffer 78
+2018-12-05 22:06:59		  meta-j79 => /buffer 79
+2018-12-05 22:06:59		  meta-j80 => /buffer 80
+2018-12-05 22:06:59		  meta-j81 => /buffer 81
+2018-12-05 22:06:59		  meta-j82 => /buffer 82
+2018-12-05 22:06:59		  meta-j83 => /buffer 83
+2018-12-05 22:06:59		  meta-j84 => /buffer 84
+2018-12-05 22:06:59		  meta-j85 => /buffer 85
+2018-12-05 22:06:59		  meta-j86 => /buffer 86
+2018-12-05 22:06:59		  meta-j87 => /buffer 87
+2018-12-05 22:06:59		  meta-j88 => /buffer 88
+2018-12-05 22:06:59		  meta-j89 => /buffer 89
+2018-12-05 22:06:59		  meta-j90 => /buffer 90
+2018-12-05 22:06:59		  meta-j91 => /buffer 91
+2018-12-05 22:06:59		  meta-j92 => /buffer 92
+2018-12-05 22:06:59		  meta-j93 => /buffer 93
+2018-12-05 22:06:59		  meta-j94 => /buffer 94
+2018-12-05 22:06:59		  meta-j95 => /buffer 95
+2018-12-05 22:06:59		  meta-j96 => /buffer 96
+2018-12-05 22:06:59		  meta-j97 => /buffer 97
+2018-12-05 22:06:59		  meta-j98 => /buffer 98
+2018-12-05 22:06:59		  meta-j99 => /buffer 99
+2018-12-05 22:06:59		  meta-k => /input grab_key_command
+2018-12-05 22:06:59		  meta-l => /window bare
+2018-12-05 22:06:59		  meta-m => /mute mouse toggle
+2018-12-05 22:06:59		  meta-n => /bar toggle nicklist
+2018-12-05 22:06:59		  meta-p => /window scroll_previous_highlight
+2018-12-05 22:06:59		  meta-r => /input delete_line
+2018-12-05 22:06:59		  meta-s => /mute aspell toggle
+2018-12-05 22:06:59		  meta-u => /window scroll_unread
+2018-12-05 22:06:59		  meta-x => /input zoom_merged_buffer
+2018-12-05 22:06:59		  meta-z => /window zoom
+2018-12-05 22:06:59		  ctrl-^ => /input jump_last_buffer_displayed
+2018-12-05 22:06:59		  ctrl-_ => /input undo
+2018-12-05 22:06:59		7 key bindings for context "search":
+2018-12-05 22:06:59		  ctrl-I => /input search_switch_where
+2018-12-05 22:06:59		  ctrl-J => /input search_stop
+2018-12-05 22:06:59		  ctrl-M => /input search_stop
+2018-12-05 22:06:59		  ctrl-R => /input search_switch_regex
+2018-12-05 22:06:59		  meta2-A => /input search_previous
+2018-12-05 22:06:59		  meta2-B => /input search_next
+2018-12-05 22:06:59		  meta-c => /input search_switch_case
+2018-12-05 22:06:59		24 key bindings for context "cursor":
+2018-12-05 22:06:59		  ctrl-J => /cursor stop
+2018-12-05 22:06:59		  ctrl-M => /cursor stop
+2018-12-05 22:06:59		  meta-meta2-A => /cursor move area_up
+2018-12-05 22:06:59		  meta-meta2-B => /cursor move area_down
+2018-12-05 22:06:59		  meta-meta2-C => /cursor move area_right
+2018-12-05 22:06:59		  meta-meta2-D => /cursor move area_left
+2018-12-05 22:06:59		  meta2-1;3A => /cursor move area_up
+2018-12-05 22:06:59		  meta2-1;3B => /cursor move area_down
+2018-12-05 22:06:59		  meta2-1;3C => /cursor move area_right
+2018-12-05 22:06:59		  meta2-1;3D => /cursor move area_left
+2018-12-05 22:06:59		  meta2-A => /cursor move up
+2018-12-05 22:06:59		  meta2-B => /cursor move down
+2018-12-05 22:06:59		  meta2-C => /cursor move right
+2018-12-05 22:06:59		  meta2-D => /cursor move left
+2018-12-05 22:06:59		  @item(buddylist):q => hsignal:buddylist_cursor
+2018-12-05 22:06:59		  @item(buddylist):w => hsignal:buddylist_cursor
+2018-12-05 22:06:59		  @item(buffer_nicklist):K => /window ${_window_number};/kickban ${nick}
+2018-12-05 22:06:59		  @item(buffer_nicklist):b => /window ${_window_number};/ban ${nick}
+2018-12-05 22:06:59		  @item(buffer_nicklist):k => /window ${_window_number};/kick ${nick}
+2018-12-05 22:06:59		  @item(buffer_nicklist):q => /window ${_window_number};/query ${nick};/cursor stop
+2018-12-05 22:06:59		  @item(buffer_nicklist):w => /window ${_window_number};/whois ${nick}
+2018-12-05 22:06:59		  @chat:Q => hsignal:chat_quote_time_prefix_message;/cursor stop
+2018-12-05 22:06:59		  @chat:m => hsignal:chat_quote_message;/cursor stop
+2018-12-05 22:06:59		  @chat:q => hsignal:chat_quote_prefix_message;/cursor stop
+2018-12-05 22:06:59		50 key bindings for context "mouse":
+2018-12-05 22:06:59		  @item(buffer_nicklist)>item(buddylist):button1-gesture-* => hsignal:buddylist_mouse
+2018-12-05 22:06:59		  @chat(*)>item(buddylist):button1-gesture-* => hsignal:buddylist_mouse
+2018-12-05 22:06:59		  @bar(buffers):ctrl-wheeldown => hsignal:buffers_mouse
+2018-12-05 22:06:59		  @bar(buffers):ctrl-wheelup => hsignal:buffers_mouse
+2018-12-05 22:06:59		  @bar(buflist):ctrl-wheeldown => hsignal:buflist_mouse
+2018-12-05 22:06:59		  @bar(buflist):ctrl-wheelup => hsignal:buflist_mouse
+2018-12-05 22:06:59		  @bar(input):button2 => /input grab_mouse_area
+2018-12-05 22:06:59		  @bar(nicklist):button1-gesture-down => /bar scroll nicklist ${_window_number} +100%
+2018-12-05 22:06:59		  @bar(nicklist):button1-gesture-down-long => /bar scroll nicklist ${_window_number} e
+2018-12-05 22:06:59		  @bar(nicklist):button1-gesture-up => /bar scroll nicklist ${_window_number} -100%
+2018-12-05 22:06:59		  @bar(nicklist):button1-gesture-up-long => /bar scroll nicklist ${_window_number} b
+2018-12-05 22:06:59		  @chat(fset.fset):button1 => /window ${_window_number};/fset -go ${_chat_line_y}
+2018-12-05 22:06:59		  @chat(fset.fset):button2* => hsignal:fset_mouse
+2018-12-05 22:06:59		  @chat(fset.fset):wheeldown => /fset -down 5
+2018-12-05 22:06:59		  @chat(fset.fset):wheelup => /fset -up 5
+2018-12-05 22:06:59		  @chat(perl.iset):button1 => hsignal:iset_mouse
+2018-12-05 22:06:59		  @chat(perl.iset):button2* => hsignal:iset_mouse
+2018-12-05 22:06:59		  @chat(perl.iset):wheeldown => /repeat 5 /iset **down
+2018-12-05 22:06:59		  @chat(perl.iset):wheelup => /repeat 5 /iset **up
+2018-12-05 22:06:59		  @chat(script.scripts):button1 => /window ${_window_number};/script go ${_chat_line_y}
+2018-12-05 22:06:59		  @chat(script.scripts):button2 => /window ${_window_number};/script go ${_chat_line_y};/script installremove -q ${script_name_with_extension}
+2018-12-05 22:06:59		  @chat(script.scripts):wheeldown => /script down 5
+2018-12-05 22:06:59		  @chat(script.scripts):wheelup => /script up 5
+2018-12-05 22:06:59		  @item(buddylist):button1* => hsignal:buddylist_mouse
+2018-12-05 22:06:59		  @item(buddylist):button1-gesture-* => hsignal:buddylist_mouse
+2018-12-05 22:06:59		  @item(buffer_nicklist):button1 => /window ${_window_number};/query ${nick}
+2018-12-05 22:06:59		  @item(buffer_nicklist):button1-gesture-left => /window ${_window_number};/kick ${nick}
+2018-12-05 22:06:59		  @item(buffer_nicklist):button1-gesture-left-long => /window ${_window_number};/kickban ${nick}
+2018-12-05 22:06:59		  @item(buffer_nicklist):button2 => /window ${_window_number};/whois ${nick}
+2018-12-05 22:06:59		  @item(buffer_nicklist):button2-gesture-left => /window ${_window_number};/ban ${nick}
+2018-12-05 22:06:59		  @item(buffers):button1* => hsignal:buffers_mouse
+2018-12-05 22:06:59		  @item(buffers):button2* => hsignal:buffers_mouse
+2018-12-05 22:06:59		  @item(buflist):button1* => hsignal:buflist_mouse
+2018-12-05 22:06:59		  @item(buflist):button2* => hsignal:buflist_mouse
+2018-12-05 22:06:59		  @item(buflist2):button1* => hsignal:buflist_mouse
+2018-12-05 22:06:59		  @item(buflist2):button2* => hsignal:buflist_mouse
+2018-12-05 22:06:59		  @item(buflist3):button1* => hsignal:buflist_mouse
+2018-12-05 22:06:59		  @item(buflist3):button2* => hsignal:buflist_mouse
+2018-12-05 22:06:59		  @bar:wheeldown => /bar scroll ${_bar_name} ${_window_number} +20%
+2018-12-05 22:06:59		  @bar:wheelup => /bar scroll ${_bar_name} ${_window_number} -20%
+2018-12-05 22:06:59		  @chat:button1 => /window ${_window_number}
+2018-12-05 22:06:59		  @chat:button1-gesture-left => /window ${_window_number};/buffer -1
+2018-12-05 22:06:59		  @chat:button1-gesture-left-long => /window ${_window_number};/buffer 1
+2018-12-05 22:06:59		  @chat:button1-gesture-right => /window ${_window_number};/buffer +1
+2018-12-05 22:06:59		  @chat:button1-gesture-right-long => /window ${_window_number};/input jump_last_buffer
+2018-12-05 22:06:59		  @chat:ctrl-wheeldown => /window scroll_horiz -window ${_window_number} +10%
+2018-12-05 22:06:59		  @chat:ctrl-wheelup => /window scroll_horiz -window ${_window_number} -10%
+2018-12-05 22:06:59		  @chat:wheeldown => /window scroll_down -window ${_window_number}
+2018-12-05 22:06:59		  @chat:wheelup => /window scroll_up -window ${_window_number}
+2018-12-05 22:06:59		  @*:button3 => /cursor go ${_x},${_y}
+2018-12-05 22:07:17		buffer_autoclose: Closing buffer: bitlbee.twitter_aftexploision
+2018-12-05 22:09:34		[perl/buddylist]  /buddylist  <add>[nick_1 [... nick_n]] | <del>[nick_1 [... nick_n]]
+2018-12-05 22:09:34		display status from your buddies a bar-item.
+2018-12-05 22:09:34		<add> [nick(s)] add nick(s) to the buddylist
+2018-12-05 22:09:34		<del> [nick(s)] delete nick(s) from the buddylist
+2018-12-05 22:09:34		<list> show buddylist
+2018-12-05 22:09:34		Options:
+2018-12-05 22:09:34		'plugins.var.perl.buddylist.buddylist'            : path/file-name to store your buddies. "%h" will be replaced by WeeChat home (by default: ~/.weechat)
+2018-12-05 22:09:34		'plugins.var.perl.buddylist.color.default         : fall back color. (default: standard weechat color)
+2018-12-05 22:09:34		'plugins.var.perl.buddylist.color.online'         : color for online buddies.
+2018-12-05 22:09:34		'plugins.var.perl.buddylist.color.away'           : color for away buddies.
+2018-12-05 22:09:34		'plugins.var.perl.buddylist.color.offline'        : color for offline buddies.
+2018-12-05 22:09:34		'plugins.var.perl.buddylist.color.server'         : color for servername.
+2018-12-05 22:09:34		'plugins.var.perl.buddylist.color.server.offline' : color for disconnected server (default: hide).
+2018-12-05 22:09:34		'plugins.var.perl.buddylist.color.number'         : color for channel number (default: lightred). If empty, channel list option is off.
+2018-12-05 22:09:34		'plugins.var.perl.buddylist.show.query'           : displays a query buffer in front of the channel list.
+2018-12-05 22:09:34		'plugins.var.perl.buddylist.hide.server.if.buddies.offline': hides server when all buddies are offline for this server (default: off).
+2018-12-05 22:09:34		'plugins.var.perl.buddylist.hide.buddy.if.offline': hide buddy if offline (default: off).
+2018-12-05 22:09:34		'plugins.var.perl.buddylist.buddy.on.server'      : show buddy who is connected to a server, but not visiting the same channel(s) (default: on).
+2018-12-05 22:09:34		'plugins.var.perl.buddylist.buddy.on.server.color': color for online buddy but not visiting the same channel(s) (default: lightgreen).
+2018-12-05 22:09:34		'plugins.var.perl.buddylist.hide.bar'             : hides buddylist bar when all servers with added buddies are offline (default: on).
+2018-12-05 22:09:34		                                          always  : buddylist bar will be hidden (for example if you want to add item 'buddylist' to 'weechat.bar.status.items'
+2018-12-05 22:09:34		                                          off     : buddylist bar will not be hidden.
+2018-12-05 22:09:34		'plugins.var.perl.buddylist.check.buddies'        : time in seconds to send a /whois request to server. Be careful not to flood server (default: 20).
+2018-12-05 22:09:34		'plugins.var.perl.buddylist.callback.timeout'     : time in seconds to wait for answer from server. (default: 60).
+2018-12-05 22:09:34		'plugins.var.perl.buddylist.display.original.nick': display original nickname even if buddy changed his /nick (you have to add new nick to buddylist) (default: off).
+2018-12-05 22:09:34		'plugins.var.perl.buddylist.sort'                 : sort method for buddylist (default or status).
+2018-12-05 22:09:34		                                          default : buddylist will be sort by nickname
+2018-12-05 22:09:34		                                          status  : buddylist will be sort by status (online, away, offline)
+2018-12-05 22:09:34		'plugins.var.perl.buddylist.display.social.net'   : using bitlbee, buddies will be sorted in sublists with social-network name (eg. msn/jabber/facebook)(default: on)
+2018-12-05 22:09:34		'plugins.var.perl.buddylist.display.social.net.color': color for social-network name (default: yellow)
+2018-12-05 22:09:34		'plugins.var.perl.buddylist.text.color'           : color for optional online/away/offline-text in buddylist (default: white)
+2018-12-05 22:09:34		'plugins.var.perl.buddylist.text.online'          : optional online text in buddylist (sort method has to be 'status')
+2018-12-05 22:09:34		'plugins.var.perl.buddylist.text.away'            : optional away text in buddylist (sort method has to be 'status')
+2018-12-05 22:09:34		'plugins.var.perl.buddylist.text.offline'         : optional offline text in buddylist (sort method has to be 'status')
+2018-12-05 22:09:34		'plugins.var.perl.buddylist.use.redirection'      : using redirection to get status of buddies (needs weechat >=0.3.4) (default: on).
+2018-12-05 22:09:34		Mouse-support:
+2018-12-05 22:09:34		  click left mouse-button on buddy to open a query buffer.
+2018-12-05 22:09:34		  add a buddy by dragging a nick with left mouse-button from nicklist or chat-area and drop on buddylist.
+2018-12-05 22:09:34		  remove a buddy by dragging a buddy with left mouse-button from buddylist and drop it on any area.
+2018-12-05 22:09:34		Cursor-Mode:
+2018-12-05 22:09:34		 q  open query with nick (/query)
+2018-12-05 22:09:34		 w  query information about user (/whois)
+2018-12-05 22:09:34		Troubleshooting:
+2018-12-05 22:09:34		If buddylist will not be refreshed in nicklist-mode, check the following WeeChat options:
+2018-12-05 22:09:34		'irc.server_default.away_check'          : interval between two checks, in minutes. (has to be >= 1 (default:0)).
+2018-12-05 22:09:34		'irc.server_default.away_check_max_nicks': channels with high number of nicks will not be checked (default: 25).
+2018-12-05 22:09:34		name of buddy has to be written 'case sensitive' (it's recommended to use nick-completion or to drag'n'drop buddy with mouse).
+2018-12-05 22:09:34		Examples:
+2018-12-05 22:09:34		  Add buddy (nils) to buddylist (server of current buffer will be used):
+2018-12-05 22:09:34		    /buddylist add nils
+2018-12-05 22:09:34		  Delete buddy (nils) from buddylist:
+2018-12-05 22:09:34		    /buddylist del nils (server of current buffer will be used)
+2018-12-05 22:09:44		Option changed: weechat.bar.buddylist.hidden = off  (default: on)
+2018-12-05 22:10:12		List of bars:
+2018-12-05 22:10:12		  input: window, bottom, height: 1
+2018-12-05 22:10:12		  title: window, top, height: 1
+2018-12-05 22:10:12		  status: window, top, height: 1
+2018-12-05 22:10:12		  nicklist: (hidden) window, right, width: auto
+2018-12-05 22:10:12		  buddylist: root, left, width: 8
+2018-12-05 22:10:12		  vi_line_numbers: window, left, width: auto
+2018-12-05 22:10:12		  isetbar: (hidden) window, top, height: 3
+2018-12-05 22:10:12		  fset: window, top, height: 3
+2018-12-05 22:10:12		  buflist: root, left, width: 20
+2018-12-05 22:10:12		  buffers: root, top, height: auto
+2018-12-05 22:10:21		[core]  /bar  list|listfull|listitems
+2018-12-05 22:10:21		              add <name> <type>[,<conditions>] <position> <size> <separator> <item1>[,<item2>...]
+2018-12-05 22:10:21		              default [input|title|status|nicklist]
+2018-12-05 22:10:21		              del <name>|-all
+2018-12-05 22:10:21		              set <name> <option> <value>
+2018-12-05 22:10:21		              hide|show|toggle <name>
+2018-12-05 22:10:21		              scroll <name> <window> <scroll_value>
+2018-12-05 22:10:21		manage bars
+2018-12-05 22:10:21		         list: list all bars
+2018-12-05 22:10:21		     listfull: list all bars (verbose)
+2018-12-05 22:10:21		    listitems: list all bar items
+2018-12-05 22:10:21		          add: add a new bar
+2018-12-05 22:10:21		         name: name of bar (must be unique)
+2018-12-05 22:10:21		         type:   root: outside windows,
+2018-12-05 22:10:21		               window: inside windows, with optional conditions (see below)
+2018-12-05 22:10:21		   conditions: the conditions to display the bar:
+2018-12-05 22:10:21		                 active: on active window
+2018-12-05 22:10:21		               inactive: on inactive windows
+2018-12-05 22:10:21		               nicklist: on windows with nicklist
+2018-12-05 22:10:21		               other condition: see /help weechat.bar.xxx.conditions and /help eval
+2018-12-05 22:10:21		               without conditions, the bar is always displayed
+2018-12-05 22:10:21		     position: bottom, top, left or right
+2018-12-05 22:10:21		         size: size of bar (in chars)
+2018-12-05 22:10:21		    separator: 1 for using separator (line), 0 or nothing means no separator
+2018-12-05 22:10:21		    item1,...: items for this bar (items can be separated by comma (space between items) or "+" (glued items))
+2018-12-05 22:10:21		      default: create a default bar (all default bars if no bar name is given)
+2018-12-05 22:10:21		          del: delete a bar (or all bars with -all)
+2018-12-05 22:10:21		          set: set a value for a bar property
+2018-12-05 22:10:21		       option: option to change (for options list, look at /set weechat.bar.<barname>.*)
+2018-12-05 22:10:21		        value: new value for option
+2018-12-05 22:10:21		         hide: hide a bar
+2018-12-05 22:10:21		         show: show an hidden bar
+2018-12-05 22:10:21		       toggle: hide/show a bar
+2018-12-05 22:10:21		       scroll: scroll bar
+2018-12-05 22:10:21		       window: window number (use '*' for current window or for root bars)
+2018-12-05 22:10:21		 scroll_value: value for scroll: 'x' or 'y' (optional), followed by '+', '-', 'b' (beginning) or 'e' (end), value (for +/-), and optional % (to scroll by % of width/height, otherwise value is number of chars)
+2018-12-05 22:10:21		Examples:
+2018-12-05 22:10:21		  create a bar with time, buffer number + name, and completion:
+2018-12-05 22:10:21		    /bar add mybar root bottom 1 0 [time],buffer_number+:+buffer_name,completion
+2018-12-05 22:10:21		  hide a bar:
+2018-12-05 22:10:21		    /bar hide mybar
+2018-12-05 22:10:21		  scroll nicklist 10 lines down on current buffer:
+2018-12-05 22:10:21		    /bar scroll nicklist * y+10
+2018-12-05 22:10:21		  scroll to end of nicklist on current buffer:
+2018-12-05 22:10:21		    /bar scroll nicklist * ye
+2018-12-05 22:13:22		[perl/buddylist]  /buddylist  <add>[nick_1 [... nick_n]] | <del>[nick_1 [... nick_n]]
+2018-12-05 22:13:22		display status from your buddies a bar-item.
+2018-12-05 22:13:22		<add> [nick(s)] add nick(s) to the buddylist
+2018-12-05 22:13:22		<del> [nick(s)] delete nick(s) from the buddylist
+2018-12-05 22:13:22		<list> show buddylist
+2018-12-05 22:13:22		Options:
+2018-12-05 22:13:22		'plugins.var.perl.buddylist.buddylist'            : path/file-name to store your buddies. "%h" will be replaced by WeeChat home (by default: ~/.weechat)
+2018-12-05 22:13:22		'plugins.var.perl.buddylist.color.default         : fall back color. (default: standard weechat color)
+2018-12-05 22:13:22		'plugins.var.perl.buddylist.color.online'         : color for online buddies.
+2018-12-05 22:13:22		'plugins.var.perl.buddylist.color.away'           : color for away buddies.
+2018-12-05 22:13:22		'plugins.var.perl.buddylist.color.offline'        : color for offline buddies.
+2018-12-05 22:13:22		'plugins.var.perl.buddylist.color.server'         : color for servername.
+2018-12-05 22:13:22		'plugins.var.perl.buddylist.color.server.offline' : color for disconnected server (default: hide).
+2018-12-05 22:13:22		'plugins.var.perl.buddylist.color.number'         : color for channel number (default: lightred). If empty, channel list option is off.
+2018-12-05 22:13:22		'plugins.var.perl.buddylist.show.query'           : displays a query buffer in front of the channel list.
+2018-12-05 22:13:22		'plugins.var.perl.buddylist.hide.server.if.buddies.offline': hides server when all buddies are offline for this server (default: off).
+2018-12-05 22:13:22		'plugins.var.perl.buddylist.hide.buddy.if.offline': hide buddy if offline (default: off).
+2018-12-05 22:13:22		'plugins.var.perl.buddylist.buddy.on.server'      : show buddy who is connected to a server, but not visiting the same channel(s) (default: on).
+2018-12-05 22:13:22		'plugins.var.perl.buddylist.buddy.on.server.color': color for online buddy but not visiting the same channel(s) (default: lightgreen).
+2018-12-05 22:13:22		'plugins.var.perl.buddylist.hide.bar'             : hides buddylist bar when all servers with added buddies are offline (default: on).
+2018-12-05 22:13:22		                                          always  : buddylist bar will be hidden (for example if you want to add item 'buddylist' to 'weechat.bar.status.items'
+2018-12-05 22:13:22		                                          off     : buddylist bar will not be hidden.
+2018-12-05 22:13:22		'plugins.var.perl.buddylist.check.buddies'        : time in seconds to send a /whois request to server. Be careful not to flood server (default: 20).
+2018-12-05 22:13:22		'plugins.var.perl.buddylist.callback.timeout'     : time in seconds to wait for answer from server. (default: 60).
+2018-12-05 22:13:22		'plugins.var.perl.buddylist.display.original.nick': display original nickname even if buddy changed his /nick (you have to add new nick to buddylist) (default: off).
+2018-12-05 22:13:22		'plugins.var.perl.buddylist.sort'                 : sort method for buddylist (default or status).
+2018-12-05 22:13:22		                                          default : buddylist will be sort by nickname
+2018-12-05 22:13:22		                                          status  : buddylist will be sort by status (online, away, offline)
+2018-12-05 22:13:22		'plugins.var.perl.buddylist.display.social.net'   : using bitlbee, buddies will be sorted in sublists with social-network name (eg. msn/jabber/facebook)(default: on)
+2018-12-05 22:13:22		'plugins.var.perl.buddylist.display.social.net.color': color for social-network name (default: yellow)
+2018-12-05 22:13:22		'plugins.var.perl.buddylist.text.color'           : color for optional online/away/offline-text in buddylist (default: white)
+2018-12-05 22:13:22		'plugins.var.perl.buddylist.text.online'          : optional online text in buddylist (sort method has to be 'status')
+2018-12-05 22:13:22		'plugins.var.perl.buddylist.text.away'            : optional away text in buddylist (sort method has to be 'status')
+2018-12-05 22:13:22		'plugins.var.perl.buddylist.text.offline'         : optional offline text in buddylist (sort method has to be 'status')
+2018-12-05 22:13:22		'plugins.var.perl.buddylist.use.redirection'      : using redirection to get status of buddies (needs weechat >=0.3.4) (default: on).
+2018-12-05 22:13:22		Mouse-support:
+2018-12-05 22:13:22		  click left mouse-button on buddy to open a query buffer.
+2018-12-05 22:13:22		  add a buddy by dragging a nick with left mouse-button from nicklist or chat-area and drop on buddylist.
+2018-12-05 22:13:22		  remove a buddy by dragging a buddy with left mouse-button from buddylist and drop it on any area.
+2018-12-05 22:13:22		Cursor-Mode:
+2018-12-05 22:13:22		 q  open query with nick (/query)
+2018-12-05 22:13:22		 w  query information about user (/whois)
+2018-12-05 22:13:22		Troubleshooting:
+2018-12-05 22:13:22		If buddylist will not be refreshed in nicklist-mode, check the following WeeChat options:
+2018-12-05 22:13:22		'irc.server_default.away_check'          : interval between two checks, in minutes. (has to be >= 1 (default:0)).
+2018-12-05 22:13:22		'irc.server_default.away_check_max_nicks': channels with high number of nicks will not be checked (default: 25).
+2018-12-05 22:13:22		name of buddy has to be written 'case sensitive' (it's recommended to use nick-completion or to drag'n'drop buddy with mouse).
+2018-12-05 22:13:22		Examples:
+2018-12-05 22:13:22		  Add buddy (nils) to buddylist (server of current buffer will be used):
+2018-12-05 22:13:22		    /buddylist add nils
+2018-12-05 22:13:22		  Delete buddy (nils) from buddylist:
+2018-12-05 22:13:22		    /buddylist del nils (server of current buffer will be used)
+2018-12-05 22:14:41		perl: unloading script "buddylist"
+2018-12-05 22:14:41		perl: script removed: /home/aftix/.weechat/perl/autoload/buddylist.pl
+2018-12-05 22:14:41		perl: script removed: /home/aftix/.weechat/perl/buddylist.pl
+2018-12-05 22:17:31		python: loading script "/home/aftix/.weechat/python/bitlbee_completion.py"
+2018-12-05 22:17:31		python: registered script "bitlbee_completion", version 0.2 (Add tab completion to bitlbee commands)
+2018-12-05 22:17:35		python: loading script "/home/aftix/.weechat/python/bitlbee_typing_notice.py"
+2018-12-05 22:17:35		python: registered script "bitlbee_typing_notice", version 0.5 (Shows when somebody is typing on bitlbee and sends the notice as well)
+2018-12-05 22:17:44	!	No help available, "bitlbee" is not a command or an option
+2018-12-05 22:17:54	!	No help available, "bitlbee_typing_notice" is not a command or an option
+2018-12-05 22:18:48		Option changed: plugins.var.python.bitlbee_typing_notice.server = "bitlbee"
+2018-12-05 22:18:54		Option changed: plugins.var.python.bitlbee_typing_notice.channel = "&bitlbee"
+2018-12-05 22:21:43		Option changed: weechat.bar.status.items = "string  "[buffer_count],[buffer_plugin],buffer_number+:+buffer_name+{buffer_nicklist_count}+buffer_filter,[lag],[hotlist],scroll,completion,[aspell_suggest],cmd_completion,bitlbee_typing_notice""  (default: "[time],[buffer_last_number],[buffer_plugin],buffer_number+:+buffer_name+(buffer_modes)+{buffer_nicklist_count}+buffer_zoom+buffer_filter,scroll,[lag],[hotlist],completion")
+2018-12-05 22:21:57		Option changed: weechat.bar.status.items = "[buffer_count],[buffer_plugin],buffer_number+:+buffer_name+{buffer_nicklist_count}+buffer_filter,[lag],[hotlist],scroll,completion,[aspell_suggest],cmd_completion,bitlbee_typing_notice"  (default: "[time],[buffer_last_number],[buffer_plugin],buffer_number+:+buffer_name+(buffer_modes)+{buffer_nicklist_count}+buffer_zoom+buffer_filter,scroll,[lag],[hotlist],completion")
+2018-12-05 22:22:05		Option changed: weechat.bar.status.items = "[buffer_count],[buffer_plugin],buffer_number+:+buffer_name+{buffer_nicklist_count}+buffer_filter,[lag],[hotlist],scroll,completion,[aspell_suggest],cmd_completion,bitlbee_typing_notice"  (default: "[time],[buffer_last_number],[buffer_plugin],buffer_number+:+buffer_name+(buffer_modes)+{buffer_nicklist_count}+buffer_zoom+buffer_filter,scroll,[lag],[hotlist],completion")
+2018-12-05 22:24:11		Options saved to sec.conf
+2018-12-05 22:24:11		Options saved to weechat.conf
+2018-12-05 22:24:11		Options saved to plugins.conf
+2018-12-05 22:24:11		Options saved to charset.conf
+2018-12-05 22:24:11		Options saved to logger.conf
+2018-12-05 22:24:11		Options saved to exec.conf
+2018-12-05 22:24:11		Options saved to trigger.conf
+2018-12-05 22:24:11		Options saved to aspell.conf
+2018-12-05 22:24:11		Options saved to alias.conf
+2018-12-05 22:24:11		Options saved to buflist.conf
+2018-12-05 22:24:11		Options saved to fifo.conf
+2018-12-05 22:24:11		Options saved to xfer.conf
+2018-12-05 22:24:11		Options saved to irc.conf
+2018-12-05 22:24:11		Options saved to relay.conf
+2018-12-05 22:24:11		Options saved to lua.conf
+2018-12-05 22:24:11		Options saved to perl.conf
+2018-12-05 22:24:11		Options saved to buffers.conf
+2018-12-05 22:24:11		Options saved to iset.conf
+2018-12-05 22:24:11		Options saved to python.conf
+2018-12-05 22:24:11		Options saved to colorize_nicks.conf
+2018-12-05 22:24:11		Options saved to tcl.conf
+2018-12-05 22:24:11		Options saved to guile.conf
+2018-12-05 22:24:11		Options saved to script.conf
+2018-12-05 22:24:11		Options saved to fset.conf
+2018-12-05 22:24:14		Layout of buffers+windows stored in "default" (current layout: default)
