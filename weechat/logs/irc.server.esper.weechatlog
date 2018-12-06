@@ -22392,3 +22392,459 @@
 2018-12-02 02:07:38	--	End of /MOTD command.
 2018-12-05 00:02:38	--	User mode [+Zi] by aftix
 2018-12-05 00:02:38	--	irc: client capability, enabled: account-notify away-notify
+2018-12-05 07:28:08	!	irc: reading data on socket: error -54 Error in the pull function.
+2018-12-05 07:28:08	& 	irc: disconnecting from server...
+2018-12-05 07:28:08	& 	irc: disconnected from server
+2018-12-05 07:28:08	& 	irc: reconnecting to server in 10 seconds
+2018-12-05 07:28:18	& 	irc: reconnecting to server...
+2018-12-05 07:28:18	& 	irc: connecting to server 165.227.57.161/6697 (SSL)...
+2018-12-05 07:28:19	!	irc: connection refused
+2018-12-05 07:28:19	& 	irc: reconnecting to server in 20 seconds
+2018-12-05 07:28:39	& 	irc: reconnecting to server...
+2018-12-05 07:28:39	& 	irc: connecting to server 165.227.57.161/6697 (SSL)...
+2018-12-05 07:28:42	!	irc: connection refused
+2018-12-05 07:28:42	& 	irc: reconnecting to server in 40 seconds
+2018-12-05 07:29:22	& 	irc: reconnecting to server...
+2018-12-05 07:29:22	& 	irc: connecting to server 165.227.57.161/6697 (SSL)...
+2018-12-05 07:29:24	!	irc: connection refused
+2018-12-05 07:29:24	& 	irc: reconnecting to server in 1 minute, 20 seconds
+2018-12-05 07:30:44	& 	irc: reconnecting to server...
+2018-12-05 07:30:44	& 	irc: connecting to server 165.227.57.161/6697 (SSL)...
+2018-12-05 07:30:46	!	irc: connection refused
+2018-12-05 07:30:46	& 	irc: reconnecting to server in 2 minutes, 40 seconds
+2018-12-05 07:33:26	& 	irc: reconnecting to server...
+2018-12-05 07:33:26	& 	irc: connecting to server 165.227.57.161/6697 (SSL)...
+2018-12-05 07:33:27	!	irc: connection refused
+2018-12-05 07:33:27	& 	irc: reconnecting to server in 5 minutes, 20 seconds
+2018-12-05 07:38:47	& 	irc: reconnecting to server...
+2018-12-05 07:38:47	& 	irc: connecting to server 165.227.57.161/6697 (SSL)...
+2018-12-05 07:38:50	!	irc: connection refused
+2018-12-05 07:38:50	& 	irc: reconnecting to server in 10 minutes
+2018-12-05 07:48:50	& 	irc: reconnecting to server...
+2018-12-05 07:48:50	& 	irc: connecting to server 165.227.57.161/6697 (SSL)...
+2018-12-05 07:48:51	!	irc: connection refused
+2018-12-05 07:48:51	& 	irc: reconnecting to server in 10 minutes
+2018-12-05 07:58:51	& 	irc: reconnecting to server...
+2018-12-05 07:58:51	& 	irc: connecting to server 165.227.57.161/6697 (SSL)...
+2018-12-05 07:58:54	!	irc: connection refused
+2018-12-05 07:58:54	& 	irc: reconnecting to server in 10 minutes
+2018-12-05 08:08:54	& 	irc: reconnecting to server...
+2018-12-05 08:08:54	& 	irc: connecting to server 165.227.57.161/6697 (SSL)...
+2018-12-05 08:08:57	!	irc: connection refused
+2018-12-05 08:08:57	& 	irc: reconnecting to server in 10 minutes
+2018-12-05 08:18:57	& 	irc: reconnecting to server...
+2018-12-05 08:18:57	& 	irc: connecting to server 165.227.57.161/6697 (SSL)...
+2018-12-05 08:19:00	!	irc: connection refused
+2018-12-05 08:19:00	& 	irc: reconnecting to server in 10 minutes
+2018-12-05 08:29:00	& 	irc: reconnecting to server...
+2018-12-05 08:29:00	& 	irc: connecting to server 165.227.57.161/6697 (SSL)...
+2018-12-05 08:29:00	!	irc: address "165.227.57.161" not found
+2018-12-05 08:29:00	!	irc: error: Address family for hostname not supported
+2018-12-05 08:29:00	& 	irc: reconnecting to server in 10 minutes
+2018-12-05 08:39:00	& 	irc: reconnecting to server...
+2018-12-05 08:39:00	& 	irc: connecting to server 165.227.57.161/6697 (SSL)...
+2018-12-05 08:39:00	!	irc: address "165.227.57.161" not found
+2018-12-05 08:39:00	!	irc: error: Address family for hostname not supported
+2018-12-05 08:39:00	& 	irc: reconnecting to server in 10 minutes
+2018-12-05 08:49:00	& 	irc: reconnecting to server...
+2018-12-05 08:49:00	& 	irc: connecting to server 165.227.57.161/6697 (SSL)...
+2018-12-05 08:49:00	!	irc: address "165.227.57.161" not found
+2018-12-05 08:49:00	!	irc: error: Address family for hostname not supported
+2018-12-05 08:49:00	& 	irc: reconnecting to server in 10 minutes
+2018-12-05 08:59:00	& 	irc: reconnecting to server...
+2018-12-05 08:59:00	& 	irc: connecting to server 165.227.57.161/6697 (SSL)...
+2018-12-05 08:59:00	!	irc: address "165.227.57.161" not found
+2018-12-05 08:59:00	!	irc: error: Address family for hostname not supported
+2018-12-05 08:59:00	& 	irc: reconnecting to server in 10 minutes
+2018-12-05 09:09:00	& 	irc: reconnecting to server...
+2018-12-05 09:09:00	& 	irc: connecting to server 165.227.57.161/6697 (SSL)...
+2018-12-05 09:09:00	!	irc: address "165.227.57.161" not found
+2018-12-05 09:09:00	!	irc: error: Address family for hostname not supported
+2018-12-05 09:09:00	& 	irc: reconnecting to server in 10 minutes
+2018-12-05 09:19:00	& 	irc: reconnecting to server...
+2018-12-05 09:19:00	& 	irc: connecting to server 165.227.57.161/6697 (SSL)...
+2018-12-05 09:19:00	!	irc: address "165.227.57.161" not found
+2018-12-05 09:19:00	!	irc: error: Address family for hostname not supported
+2018-12-05 09:19:00	& 	irc: reconnecting to server in 10 minutes
+2018-12-05 09:29:00	& 	irc: reconnecting to server...
+2018-12-05 09:29:00	& 	irc: connecting to server 165.227.57.161/6697 (SSL)...
+2018-12-05 09:29:00	!	irc: address "165.227.57.161" not found
+2018-12-05 09:29:00	!	irc: error: Address family for hostname not supported
+2018-12-05 09:29:00	& 	irc: reconnecting to server in 10 minutes
+2018-12-05 09:39:00	& 	irc: reconnecting to server...
+2018-12-05 09:39:00	& 	irc: connecting to server 165.227.57.161/6697 (SSL)...
+2018-12-05 09:39:00	!	irc: address "165.227.57.161" not found
+2018-12-05 09:39:00	!	irc: error: Address family for hostname not supported
+2018-12-05 09:39:00	& 	irc: reconnecting to server in 10 minutes
+2018-12-05 09:49:00	& 	irc: reconnecting to server...
+2018-12-05 09:49:00	& 	irc: connecting to server 165.227.57.161/6697 (SSL)...
+2018-12-05 09:49:00	!	irc: address "165.227.57.161" not found
+2018-12-05 09:49:00	!	irc: error: Address family for hostname not supported
+2018-12-05 09:49:00	& 	irc: reconnecting to server in 10 minutes
+2018-12-05 09:59:00	& 	irc: reconnecting to server...
+2018-12-05 09:59:00	& 	irc: connecting to server 165.227.57.161/6697 (SSL)...
+2018-12-05 09:59:01	& 	gnutls: connected using 2048-bit Diffie-Hellman shared secret exchange
+2018-12-05 09:59:01	& 	gnutls: receiving 1 certificate
+2018-12-05 09:59:01	& 	 - certificate[1] info:
+2018-12-05 09:59:01	& 	   - subject `EMAIL=znc@host.unknown,CN=host.unknown,OU=znc', issuer `EMAIL=znc@host.unknown,CN=host.unknown,OU=znc', serial 0x1fdb, RSA key 2048 bits, signed using RSA-SHA256, activated `2018-11-21 00:12:51 UTC', expires `2028-11-18 00:12:51 UTC', pin-sha256="/hRbtHC7LvE3PDLvh05DVw7mfDRO5Rz8KmmZQue8cMM="
+2018-12-05 09:59:01	& 	gnutls: certificate fingerprint matches
+2018-12-05 09:59:01	& 	gnutls: sending one certificate
+2018-12-05 09:59:01	& 	 - client certificate info (/home/aftix/.weechat/certs/user.pem):
+2018-12-05 09:59:01	& 	  - subject `CN=aftix', issuer `CN=aftix', serial 0x5889736f59689b48739bff162c80016db40d6e43, RSA key 4096 bits, signed using RSA-SHA256, activated `2018-12-04 03:20:46 UTC', expires `2028-12-01 03:20:46 UTC', pin-sha256="zGST+hxZfx7++6AtgRpKNINWMYZ6oi9VU3tiZKazIsc="
+2018-12-05 09:59:01	& 	irc: connected to 165.227.57.161/6697 (165.227.57.161)
+2018-12-05 09:59:01	& 	irc: client capability, server supports: server-time echo-message znc.in/server-time-iso multi-prefix znc.in/self-message znc.in/batch batch userhost-in-names cap-notify
+2018-12-05 09:59:01	& 	irc: client capability, requesting: cap-notify multi-prefix server-time znc.in/server-time-iso znc.in/self-message
+2018-12-05 09:59:01	& 	irc: client capability: SASL not supported
+2018-12-05 09:59:01	& 	irc: client capability, enabled: cap-notify multi-prefix server-time znc.in/server-time-iso znc.in/self-message
+2018-12-05 09:59:01	& 	irc: client capability, now available: account-notify away-notify extended-join
+2018-12-05 09:59:01	& 	irc: client capability, requesting: account-notify away-notify
+2018-12-02 02:07:38	& 	Welcome to the EsperNet Internet Relay Chat Network aftix
+2018-12-02 02:07:38	& 	Your host is calamity.esper.net[139.99.136.176/6697], running version charybdis-3.5.3
+2018-12-02 02:07:38	& 	This server was created Tue Aug 14 2018 at 10:48:51 CEST
+2018-12-02 02:07:38	& 	calamity.esper.net charybdis-3.5.3 DQRSZagiloswz CFILPQTbcefgijklmnopqrstvz bkloveqjfI
+2018-12-02 02:07:38	& 	KNOCK WHOX CPRIVMSG CNOTICE ETRACE MONITOR=100 FNC CHANTYPES=# EXCEPTS INVEX CHANMODES=eIbq,k,flj,CFLPQTcgimnprstz CHANLIMIT=#:50 :are supported by this server
+2018-12-02 02:07:38	& 	PREFIX=(ov)@+ MAXLIST=bqeI:100 MODES=4 NETWORK=EsperNet STATUSMSG=@+ CALLERID=g CASEMAPPING=rfc1459 NICKLEN=24 MAXNICKLEN=30 CHANNELLEN=50 TOPICLEN=390 DEAF=D :are supported by this server
+2018-12-02 02:07:38	& 	TARGMAX=NAMES:1,LIST:1,KICK:1,WHOIS:1,PRIVMSG:4,NOTICE:4,ACCEPT:,MONITOR: EXTBAN=$,acjorsxz CLIENTVER=3.0 :are supported by this server
+2018-12-02 02:07:38	& 	There are 6 users and 3772 invisible on 13 servers
+2018-12-02 02:07:38	& 	30 :IRC Operators online
+2018-12-02 02:07:38	& 	3365 :channels formed
+2018-12-02 02:07:38	& 	I have 580 clients and 1 servers
+2018-12-02 02:07:38	& 	580 979 :Current local users 580, max 979
+2018-12-02 02:07:38	& 	3778 4271 :Current global users 3778, max 4271
+2018-12-02 02:07:38	& 	Highest connection count: 980 (979 clients) (71318 connections received)
+2018-12-02 02:07:38	& 	- calamity.esper.net Message of the Day -
+2018-12-02 02:07:38	& 	-                         G'DAY MATE!
+2018-12-02 02:07:38	& 	-               _____     __           _ __
+2018-12-02 02:07:38	& 	-              / ___/__ _/ /__ ___ _  (_) /___ __
+2018-12-02 02:07:38	& 	-             / /__/ _ `/ / _ `/  ' \/ / __/ // /
+2018-12-02 02:07:38	& 	-             \___/\_,_/_/\_,_/_/_/_/_/\__/\_, /
+2018-12-02 02:07:38	& 	-                                         /___/
+2018-12-02 02:07:38	& 	-
+2018-12-02 02:07:38	& 	-               Host: calamity.esper.net
+2018-12-02 02:07:38	& 	-              Admin: RyanKnack
+2018-12-02 02:07:38	& 	-           Location: Sydney, Australia
+2018-12-02 02:07:38	& 	-  Ports (IPv4/IPv6): 5555, 6666 .. 6669, 6697 (TLS), 7000
+2018-12-02 02:07:38	& 	-
+2018-12-02 02:07:38	& 	-                        ________________
+2018-12-02 02:07:38	& 	-                   ____/ (  (    )   )  \___
+2018-12-02 02:07:38	& 	-                  /( (  (  )   _    ))  )   )\
+2018-12-02 02:07:38	& 	-                ((     (   )(    )  )   (   )  )
+2018-12-02 02:07:38	& 	-              ((/  ( _(   )   (   _) ) (  () )  )
+2018-12-02 02:07:38	& 	-             ( (  ( (_)   ((    (   )  .((_ ) .  )_
+2018-12-02 02:07:38	& 	-            ( (  )    (      (  )    )   ) . ) (   )
+2018-12-02 02:07:38	& 	-           (  (   (  (   ) (  _  ( _) ).  ) . ) ) ( )
+2018-12-02 02:07:38	& 	-           ( (  (   ) (  )   (  ))     ) _)(   )  )  )
+2018-12-02 02:07:38	& 	-          ( (  ( \ ) (    (_  ( ) ( )  )   ) )  )) ( )
+2018-12-02 02:07:38	& 	-           (  (   (  (   (_ ( ) ( _    )  ) (  )  )   )
+2018-12-02 02:07:38	& 	-          ( (  ( (  (  )     (_  )  ) )  _)   ) _( ( )
+2018-12-02 02:07:38	& 	-           ((  (   )(    (     _    )   _) _(_ (  (_ )
+2018-12-02 02:07:38	& 	-            (_((__(_(__(( ( ( |  ) ) ) )_))__))_)___)
+2018-12-02 02:07:38	& 	-            ((__)        \\||lll|l||///          \_))
+2018-12-02 02:07:38	& 	-                     (   /(/ (  )  ) )\   )
+2018-12-02 02:07:38	& 	-                   (    ( ( ( | | ) ) )\   )
+2018-12-02 02:07:38	& 	-                    (   /(| / ( )) ) ) )) )
+2018-12-02 02:07:38	& 	-                  (     ( ((((_(|)_)))))     )
+2018-12-02 02:07:38	& 	-                   (      ||\(|(|)|/||     )
+2018-12-02 02:07:38	& 	-                 (        |(||(||)||||        )
+2018-12-02 02:07:38	& 	-                   (     //|/l|||)|\\ \     )
+2018-12-02 02:07:38	& 	-                 (/ / //  /|//||||\\  \ \  \ _)
+2018-12-02 02:07:38	& 	-
+2018-12-02 02:07:38	& 	-                      * TERMS OF SERVICE *
+2018-12-02 02:07:38	& 	-
+2018-12-02 02:07:38	& 	-  Your use of this network constitutes an agreement to abide
+2018-12-02 02:07:38	& 	-  by the rules presented in the EsperNet charter and consent
+2018-12-02 02:07:38	& 	-  to a port scan, to detect open proxies and otherwise
+2018-12-02 02:07:38	& 	-  compromised systems.           https://esper.net/charter.php
+2018-12-02 02:07:38	& 	-
+2018-12-02 02:07:38	& 	-  Properly configured bots are permitted, but are required to
+2018-12-02 02:07:38	& 	-  follow the same rules as users. Please refer to our bot
+2018-12-02 02:07:38	& 	-  policy document for more information about configuration
+2018-12-02 02:07:38	& 	-  requirements and suggestions.     https://esper.net/bots.php
+2018-12-02 02:07:38	& 	-
+2018-12-02 02:07:38	& 	-  And remember mate, no woppin' the wallabies!
+2018-12-02 02:07:38	& 	-
+2018-12-02 02:07:38	& 	-                      * HELP CHANNELS *
+2018-12-02 02:07:38	& 	-
+2018-12-02 02:07:38	& 	-          #help: General IRC help
+2018-12-02 02:07:38	& 	-    #dragonweyr: For issues requiring EsperNet staff
+2018-12-02 02:07:38	& 	-
+2018-12-02 02:07:38	& 	-  Welcome to EsperNet. We hope you're ready... you won't be surviving this calamity!
+2018-12-02 02:07:38	& 	-
+2018-12-02 02:07:38	& 	End of /MOTD command.
+2018-12-05 09:59:01	& 	User mode [+Zi] by aftix
+2018-12-05 09:59:01	& 	You have been marked as being away
+2018-12-05 09:59:01	& 	irc: client capability, enabled: account-notify away-notify
+2018-12-05 09:59:01	& 	You are no longer marked as being away
+2018-12-05 17:36:14	& 	irc: connecting to server 165.227.57.161/6697 (SSL)...
+2018-12-05 17:36:14	& 	gnutls: connected using 2048-bit Diffie-Hellman shared secret exchange
+2018-12-05 17:36:14	& 	gnutls: receiving 1 certificate
+2018-12-05 17:36:14	& 	 - certificate[1] info:
+2018-12-05 17:36:14	& 	   - subject `EMAIL=znc@host.unknown,CN=host.unknown,OU=znc', issuer `EMAIL=znc@host.unknown,CN=host.unknown,OU=znc', serial 0x1fdb, RSA key 2048 bits, signed using RSA-SHA256, activated `2018-11-21 00:12:51 UTC', expires `2028-11-18 00:12:51 UTC', pin-sha256="/hRbtHC7LvE3PDLvh05DVw7mfDRO5Rz8KmmZQue8cMM="
+2018-12-05 17:36:14	& 	gnutls: certificate fingerprint matches
+2018-12-05 17:36:14	& 	gnutls: sending one certificate
+2018-12-05 17:36:14	& 	 - client certificate info (/home/aftix/.weechat/certs/user.pem):
+2018-12-05 17:36:14	& 	  - subject `CN=aftix', issuer `CN=aftix', serial 0x5889736f59689b48739bff162c80016db40d6e43, RSA key 4096 bits, signed using RSA-SHA256, activated `2018-12-04 03:20:46 UTC', expires `2028-12-01 03:20:46 UTC', pin-sha256="zGST+hxZfx7++6AtgRpKNINWMYZ6oi9VU3tiZKazIsc="
+2018-12-05 17:36:14	& 	irc: connected to 165.227.57.161/6697 (165.227.57.161)
+2018-12-05 17:36:15	& 	irc: client capability, server supports: server-time echo-message znc.in/server-time-iso multi-prefix znc.in/self-message znc.in/batch batch userhost-in-names cap-notify
+2018-12-05 17:36:15	& 	irc: client capability, requesting: cap-notify multi-prefix server-time znc.in/server-time-iso znc.in/self-message
+2018-12-05 17:36:15	& 	irc: client capability: SASL not supported
+2018-12-05 17:36:15	& 	irc: client capability, enabled: cap-notify multi-prefix server-time znc.in/server-time-iso znc.in/self-message
+2018-12-05 17:36:15	& 	irc: client capability, now available: account-notify away-notify extended-join
+2018-12-05 17:36:15	& 	irc: client capability, requesting: account-notify away-notify
+2018-12-02 02:07:38	& 	Welcome to the EsperNet Internet Relay Chat Network aftix
+2018-12-02 02:07:38	& 	Your host is calamity.esper.net[139.99.136.176/6697], running version charybdis-3.5.3
+2018-12-02 02:07:38	& 	This server was created Tue Aug 14 2018 at 10:48:51 CEST
+2018-12-02 02:07:38	& 	calamity.esper.net charybdis-3.5.3 DQRSZagiloswz CFILPQTbcefgijklmnopqrstvz bkloveqjfI
+2018-12-02 02:07:38	& 	KNOCK WHOX CPRIVMSG CNOTICE ETRACE MONITOR=100 FNC CHANTYPES=# EXCEPTS INVEX CHANMODES=eIbq,k,flj,CFLPQTcgimnprstz CHANLIMIT=#:50 :are supported by this server
+2018-12-02 02:07:38	& 	PREFIX=(ov)@+ MAXLIST=bqeI:100 MODES=4 NETWORK=EsperNet STATUSMSG=@+ CALLERID=g CASEMAPPING=rfc1459 NICKLEN=24 MAXNICKLEN=30 CHANNELLEN=50 TOPICLEN=390 DEAF=D :are supported by this server
+2018-12-02 02:07:38	& 	TARGMAX=NAMES:1,LIST:1,KICK:1,WHOIS:1,PRIVMSG:4,NOTICE:4,ACCEPT:,MONITOR: EXTBAN=$,acjorsxz CLIENTVER=3.0 :are supported by this server
+2018-12-02 02:07:38	& 	There are 6 users and 3772 invisible on 13 servers
+2018-12-02 02:07:38	& 	30 :IRC Operators online
+2018-12-02 02:07:38	& 	3365 :channels formed
+2018-12-02 02:07:38	& 	I have 580 clients and 1 servers
+2018-12-02 02:07:38	& 	580 979 :Current local users 580, max 979
+2018-12-02 02:07:38	& 	3778 4271 :Current global users 3778, max 4271
+2018-12-02 02:07:38	& 	Highest connection count: 980 (979 clients) (71318 connections received)
+2018-12-02 02:07:38	& 	- calamity.esper.net Message of the Day -
+2018-12-02 02:07:38	& 	-                         G'DAY MATE!
+2018-12-02 02:07:38	& 	-               _____     __           _ __
+2018-12-02 02:07:38	& 	-              / ___/__ _/ /__ ___ _  (_) /___ __
+2018-12-02 02:07:38	& 	-             / /__/ _ `/ / _ `/  ' \/ / __/ // /
+2018-12-02 02:07:38	& 	-             \___/\_,_/_/\_,_/_/_/_/_/\__/\_, /
+2018-12-02 02:07:38	& 	-                                         /___/
+2018-12-02 02:07:38	& 	-
+2018-12-02 02:07:38	& 	-               Host: calamity.esper.net
+2018-12-02 02:07:38	& 	-              Admin: RyanKnack
+2018-12-02 02:07:38	& 	-           Location: Sydney, Australia
+2018-12-02 02:07:38	& 	-  Ports (IPv4/IPv6): 5555, 6666 .. 6669, 6697 (TLS), 7000
+2018-12-02 02:07:38	& 	-
+2018-12-02 02:07:38	& 	-                        ________________
+2018-12-02 02:07:38	& 	-                   ____/ (  (    )   )  \___
+2018-12-02 02:07:38	& 	-                  /( (  (  )   _    ))  )   )\
+2018-12-02 02:07:38	& 	-                ((     (   )(    )  )   (   )  )
+2018-12-02 02:07:38	& 	-              ((/  ( _(   )   (   _) ) (  () )  )
+2018-12-02 02:07:38	& 	-             ( (  ( (_)   ((    (   )  .((_ ) .  )_
+2018-12-02 02:07:38	& 	-            ( (  )    (      (  )    )   ) . ) (   )
+2018-12-02 02:07:38	& 	-           (  (   (  (   ) (  _  ( _) ).  ) . ) ) ( )
+2018-12-02 02:07:38	& 	-           ( (  (   ) (  )   (  ))     ) _)(   )  )  )
+2018-12-02 02:07:38	& 	-          ( (  ( \ ) (    (_  ( ) ( )  )   ) )  )) ( )
+2018-12-02 02:07:38	& 	-           (  (   (  (   (_ ( ) ( _    )  ) (  )  )   )
+2018-12-02 02:07:38	& 	-          ( (  ( (  (  )     (_  )  ) )  _)   ) _( ( )
+2018-12-02 02:07:38	& 	-           ((  (   )(    (     _    )   _) _(_ (  (_ )
+2018-12-02 02:07:38	& 	-            (_((__(_(__(( ( ( |  ) ) ) )_))__))_)___)
+2018-12-02 02:07:38	& 	-            ((__)        \\||lll|l||///          \_))
+2018-12-02 02:07:38	& 	-                     (   /(/ (  )  ) )\   )
+2018-12-02 02:07:38	& 	-                   (    ( ( ( | | ) ) )\   )
+2018-12-02 02:07:38	& 	-                    (   /(| / ( )) ) ) )) )
+2018-12-02 02:07:38	& 	-                  (     ( ((((_(|)_)))))     )
+2018-12-02 02:07:38	& 	-                   (      ||\(|(|)|/||     )
+2018-12-02 02:07:38	& 	-                 (        |(||(||)||||        )
+2018-12-02 02:07:38	& 	-                   (     //|/l|||)|\\ \     )
+2018-12-02 02:07:38	& 	-                 (/ / //  /|//||||\\  \ \  \ _)
+2018-12-02 02:07:38	& 	-
+2018-12-02 02:07:38	& 	-                      * TERMS OF SERVICE *
+2018-12-02 02:07:38	& 	-
+2018-12-02 02:07:38	& 	-  Your use of this network constitutes an agreement to abide
+2018-12-02 02:07:38	& 	-  by the rules presented in the EsperNet charter and consent
+2018-12-02 02:07:38	& 	-  to a port scan, to detect open proxies and otherwise
+2018-12-02 02:07:38	& 	-  compromised systems.           https://esper.net/charter.php
+2018-12-02 02:07:38	& 	-
+2018-12-02 02:07:38	& 	-  Properly configured bots are permitted, but are required to
+2018-12-02 02:07:38	& 	-  follow the same rules as users. Please refer to our bot
+2018-12-02 02:07:38	& 	-  policy document for more information about configuration
+2018-12-02 02:07:38	& 	-  requirements and suggestions.     https://esper.net/bots.php
+2018-12-02 02:07:38	& 	-
+2018-12-02 02:07:38	& 	-  And remember mate, no woppin' the wallabies!
+2018-12-02 02:07:38	& 	-
+2018-12-02 02:07:38	& 	-                      * HELP CHANNELS *
+2018-12-02 02:07:38	& 	-
+2018-12-02 02:07:38	& 	-          #help: General IRC help
+2018-12-02 02:07:38	& 	-    #dragonweyr: For issues requiring EsperNet staff
+2018-12-02 02:07:38	& 	-
+2018-12-02 02:07:38	& 	-  Welcome to EsperNet. We hope you're ready... you won't be surviving this calamity!
+2018-12-02 02:07:38	& 	-
+2018-12-02 02:07:38	& 	End of /MOTD command.
+2018-12-05 17:36:15	& 	User mode [+Zi] by aftix
+2018-12-05 17:36:15	& 	irc: client capability, enabled: account-notify away-notify
+2018-12-05 18:59:53	& 	irc: connecting to server 165.227.57.161/6697 (SSL)...
+2018-12-05 18:59:53	& 	gnutls: connected using 2048-bit Diffie-Hellman shared secret exchange
+2018-12-05 18:59:53	& 	gnutls: receiving 1 certificate
+2018-12-05 18:59:53	& 	 - certificate[1] info:
+2018-12-05 18:59:53	& 	   - subject `EMAIL=znc@host.unknown,CN=host.unknown,OU=znc', issuer `EMAIL=znc@host.unknown,CN=host.unknown,OU=znc', serial 0x1fdb, RSA key 2048 bits, signed using RSA-SHA256, activated `2018-11-21 00:12:51 UTC', expires `2028-11-18 00:12:51 UTC', pin-sha256="/hRbtHC7LvE3PDLvh05DVw7mfDRO5Rz8KmmZQue8cMM="
+2018-12-05 18:59:53	& 	gnutls: certificate fingerprint matches
+2018-12-05 18:59:53	& 	gnutls: sending one certificate
+2018-12-05 18:59:53	& 	 - client certificate info (/home/aftix/.weechat/certs/user.pem):
+2018-12-05 18:59:53	& 	  - subject `CN=aftix', issuer `CN=aftix', serial 0x5889736f59689b48739bff162c80016db40d6e43, RSA key 4096 bits, signed using RSA-SHA256, activated `2018-12-04 03:20:46 UTC', expires `2028-12-01 03:20:46 UTC', pin-sha256="zGST+hxZfx7++6AtgRpKNINWMYZ6oi9VU3tiZKazIsc="
+2018-12-05 18:59:53	& 	irc: connected to 165.227.57.161/6697 (165.227.57.161)
+2018-12-05 18:59:53	& 	irc: client capability, server supports: server-time echo-message znc.in/server-time-iso multi-prefix znc.in/self-message znc.in/batch batch userhost-in-names cap-notify
+2018-12-05 18:59:53	& 	irc: client capability, requesting: cap-notify multi-prefix server-time znc.in/server-time-iso znc.in/self-message
+2018-12-05 18:59:53	& 	irc: client capability: SASL not supported
+2018-12-05 18:59:53	& 	irc: client capability, enabled: cap-notify multi-prefix server-time znc.in/server-time-iso znc.in/self-message
+2018-12-05 18:59:53	& 	irc: client capability, now available: account-notify away-notify extended-join
+2018-12-05 18:59:53	& 	irc: client capability, requesting: account-notify away-notify
+2018-12-02 02:07:38	& 	Welcome to the EsperNet Internet Relay Chat Network aftix
+2018-12-02 02:07:38	& 	Your host is calamity.esper.net[139.99.136.176/6697], running version charybdis-3.5.3
+2018-12-02 02:07:38	& 	This server was created Tue Aug 14 2018 at 10:48:51 CEST
+2018-12-02 02:07:38	& 	calamity.esper.net charybdis-3.5.3 DQRSZagiloswz CFILPQTbcefgijklmnopqrstvz bkloveqjfI
+2018-12-02 02:07:38	& 	KNOCK WHOX CPRIVMSG CNOTICE ETRACE MONITOR=100 FNC CHANTYPES=# EXCEPTS INVEX CHANMODES=eIbq,k,flj,CFLPQTcgimnprstz CHANLIMIT=#:50 :are supported by this server
+2018-12-02 02:07:38	& 	PREFIX=(ov)@+ MAXLIST=bqeI:100 MODES=4 NETWORK=EsperNet STATUSMSG=@+ CALLERID=g CASEMAPPING=rfc1459 NICKLEN=24 MAXNICKLEN=30 CHANNELLEN=50 TOPICLEN=390 DEAF=D :are supported by this server
+2018-12-02 02:07:38	& 	TARGMAX=NAMES:1,LIST:1,KICK:1,WHOIS:1,PRIVMSG:4,NOTICE:4,ACCEPT:,MONITOR: EXTBAN=$,acjorsxz CLIENTVER=3.0 :are supported by this server
+2018-12-02 02:07:38	& 	There are 6 users and 3772 invisible on 13 servers
+2018-12-02 02:07:38	& 	30 :IRC Operators online
+2018-12-02 02:07:38	& 	3365 :channels formed
+2018-12-02 02:07:38	& 	I have 580 clients and 1 servers
+2018-12-02 02:07:38	& 	580 979 :Current local users 580, max 979
+2018-12-02 02:07:38	& 	3778 4271 :Current global users 3778, max 4271
+2018-12-02 02:07:38	& 	Highest connection count: 980 (979 clients) (71318 connections received)
+2018-12-02 02:07:38	& 	- calamity.esper.net Message of the Day -
+2018-12-02 02:07:38	& 	-                         G'DAY MATE!
+2018-12-02 02:07:38	& 	-               _____     __           _ __
+2018-12-02 02:07:38	& 	-              / ___/__ _/ /__ ___ _  (_) /___ __
+2018-12-02 02:07:38	& 	-             / /__/ _ `/ / _ `/  ' \/ / __/ // /
+2018-12-02 02:07:38	& 	-             \___/\_,_/_/\_,_/_/_/_/_/\__/\_, /
+2018-12-02 02:07:38	& 	-                                         /___/
+2018-12-02 02:07:38	& 	-
+2018-12-02 02:07:38	& 	-               Host: calamity.esper.net
+2018-12-02 02:07:38	& 	-              Admin: RyanKnack
+2018-12-02 02:07:38	& 	-           Location: Sydney, Australia
+2018-12-02 02:07:38	& 	-  Ports (IPv4/IPv6): 5555, 6666 .. 6669, 6697 (TLS), 7000
+2018-12-02 02:07:38	& 	-
+2018-12-02 02:07:38	& 	-                        ________________
+2018-12-02 02:07:38	& 	-                   ____/ (  (    )   )  \___
+2018-12-02 02:07:38	& 	-                  /( (  (  )   _    ))  )   )\
+2018-12-02 02:07:38	& 	-                ((     (   )(    )  )   (   )  )
+2018-12-02 02:07:38	& 	-              ((/  ( _(   )   (   _) ) (  () )  )
+2018-12-02 02:07:38	& 	-             ( (  ( (_)   ((    (   )  .((_ ) .  )_
+2018-12-02 02:07:38	& 	-            ( (  )    (      (  )    )   ) . ) (   )
+2018-12-02 02:07:38	& 	-           (  (   (  (   ) (  _  ( _) ).  ) . ) ) ( )
+2018-12-02 02:07:38	& 	-           ( (  (   ) (  )   (  ))     ) _)(   )  )  )
+2018-12-02 02:07:38	& 	-          ( (  ( \ ) (    (_  ( ) ( )  )   ) )  )) ( )
+2018-12-02 02:07:38	& 	-           (  (   (  (   (_ ( ) ( _    )  ) (  )  )   )
+2018-12-02 02:07:38	& 	-          ( (  ( (  (  )     (_  )  ) )  _)   ) _( ( )
+2018-12-02 02:07:38	& 	-           ((  (   )(    (     _    )   _) _(_ (  (_ )
+2018-12-02 02:07:38	& 	-            (_((__(_(__(( ( ( |  ) ) ) )_))__))_)___)
+2018-12-02 02:07:38	& 	-            ((__)        \\||lll|l||///          \_))
+2018-12-02 02:07:38	& 	-                     (   /(/ (  )  ) )\   )
+2018-12-02 02:07:38	& 	-                   (    ( ( ( | | ) ) )\   )
+2018-12-02 02:07:38	& 	-                    (   /(| / ( )) ) ) )) )
+2018-12-02 02:07:38	& 	-                  (     ( ((((_(|)_)))))     )
+2018-12-02 02:07:38	& 	-                   (      ||\(|(|)|/||     )
+2018-12-02 02:07:38	& 	-                 (        |(||(||)||||        )
+2018-12-02 02:07:38	& 	-                   (     //|/l|||)|\\ \     )
+2018-12-02 02:07:38	& 	-                 (/ / //  /|//||||\\  \ \  \ _)
+2018-12-02 02:07:38	& 	-
+2018-12-02 02:07:38	& 	-                      * TERMS OF SERVICE *
+2018-12-02 02:07:38	& 	-
+2018-12-02 02:07:38	& 	-  Your use of this network constitutes an agreement to abide
+2018-12-02 02:07:38	& 	-  by the rules presented in the EsperNet charter and consent
+2018-12-02 02:07:38	& 	-  to a port scan, to detect open proxies and otherwise
+2018-12-02 02:07:38	& 	-  compromised systems.           https://esper.net/charter.php
+2018-12-02 02:07:38	& 	-
+2018-12-02 02:07:38	& 	-  Properly configured bots are permitted, but are required to
+2018-12-02 02:07:38	& 	-  follow the same rules as users. Please refer to our bot
+2018-12-02 02:07:38	& 	-  policy document for more information about configuration
+2018-12-02 02:07:38	& 	-  requirements and suggestions.     https://esper.net/bots.php
+2018-12-02 02:07:38	& 	-
+2018-12-02 02:07:38	& 	-  And remember mate, no woppin' the wallabies!
+2018-12-02 02:07:38	& 	-
+2018-12-02 02:07:38	& 	-                      * HELP CHANNELS *
+2018-12-02 02:07:38	& 	-
+2018-12-02 02:07:38	& 	-          #help: General IRC help
+2018-12-02 02:07:38	& 	-    #dragonweyr: For issues requiring EsperNet staff
+2018-12-02 02:07:38	& 	-
+2018-12-02 02:07:38	& 	-  Welcome to EsperNet. We hope you're ready... you won't be surviving this calamity!
+2018-12-02 02:07:38	& 	-
+2018-12-02 02:07:38	& 	End of /MOTD command.
+2018-12-05 18:59:53	& 	User mode [+Zi] by aftix
+2018-12-05 18:59:53	& 	irc: client capability, enabled: account-notify away-notify
+2018-12-05 19:15:51	& 	irc: connecting to server 165.227.57.161/6697 (SSL)...
+2018-12-05 19:15:51	& 	gnutls: connected using 2048-bit Diffie-Hellman shared secret exchange
+2018-12-05 19:15:51	& 	gnutls: receiving 1 certificate
+2018-12-05 19:15:51	& 	 - certificate[1] info:
+2018-12-05 19:15:51	& 	   - subject `EMAIL=znc@host.unknown,CN=host.unknown,OU=znc', issuer `EMAIL=znc@host.unknown,CN=host.unknown,OU=znc', serial 0x1fdb, RSA key 2048 bits, signed using RSA-SHA256, activated `2018-11-21 00:12:51 UTC', expires `2028-11-18 00:12:51 UTC', pin-sha256="/hRbtHC7LvE3PDLvh05DVw7mfDRO5Rz8KmmZQue8cMM="
+2018-12-05 19:15:51	& 	gnutls: certificate fingerprint matches
+2018-12-05 19:15:51	& 	gnutls: sending one certificate
+2018-12-05 19:15:51	& 	 - client certificate info (/home/aftix/.weechat/certs/user.pem):
+2018-12-05 19:15:51	& 	  - subject `CN=aftix', issuer `CN=aftix', serial 0x5889736f59689b48739bff162c80016db40d6e43, RSA key 4096 bits, signed using RSA-SHA256, activated `2018-12-04 03:20:46 UTC', expires `2028-12-01 03:20:46 UTC', pin-sha256="zGST+hxZfx7++6AtgRpKNINWMYZ6oi9VU3tiZKazIsc="
+2018-12-05 19:15:51	& 	irc: connected to 165.227.57.161/6697 (165.227.57.161)
+2018-12-05 19:15:51	& 	irc: client capability, server supports: server-time echo-message znc.in/server-time-iso multi-prefix znc.in/self-message znc.in/batch batch userhost-in-names cap-notify
+2018-12-05 19:15:51	& 	irc: client capability, requesting: cap-notify multi-prefix server-time znc.in/server-time-iso znc.in/self-message
+2018-12-05 19:15:51	& 	irc: client capability: SASL not supported
+2018-12-05 19:15:51	& 	irc: client capability, enabled: cap-notify multi-prefix server-time znc.in/server-time-iso znc.in/self-message
+2018-12-05 19:15:51	& 	irc: client capability, now available: account-notify away-notify extended-join
+2018-12-05 19:15:51	& 	irc: client capability, requesting: account-notify away-notify
+2018-12-02 02:07:38	& 	Welcome to the EsperNet Internet Relay Chat Network aftix
+2018-12-02 02:07:38	& 	Your host is calamity.esper.net[139.99.136.176/6697], running version charybdis-3.5.3
+2018-12-02 02:07:38	& 	This server was created Tue Aug 14 2018 at 10:48:51 CEST
+2018-12-02 02:07:38	& 	calamity.esper.net charybdis-3.5.3 DQRSZagiloswz CFILPQTbcefgijklmnopqrstvz bkloveqjfI
+2018-12-02 02:07:38	& 	KNOCK WHOX CPRIVMSG CNOTICE ETRACE MONITOR=100 FNC CHANTYPES=# EXCEPTS INVEX CHANMODES=eIbq,k,flj,CFLPQTcgimnprstz CHANLIMIT=#:50 :are supported by this server
+2018-12-02 02:07:38	& 	PREFIX=(ov)@+ MAXLIST=bqeI:100 MODES=4 NETWORK=EsperNet STATUSMSG=@+ CALLERID=g CASEMAPPING=rfc1459 NICKLEN=24 MAXNICKLEN=30 CHANNELLEN=50 TOPICLEN=390 DEAF=D :are supported by this server
+2018-12-02 02:07:38	& 	TARGMAX=NAMES:1,LIST:1,KICK:1,WHOIS:1,PRIVMSG:4,NOTICE:4,ACCEPT:,MONITOR: EXTBAN=$,acjorsxz CLIENTVER=3.0 :are supported by this server
+2018-12-02 02:07:38	& 	There are 6 users and 3772 invisible on 13 servers
+2018-12-02 02:07:38	& 	30 :IRC Operators online
+2018-12-02 02:07:38	& 	3365 :channels formed
+2018-12-02 02:07:38	& 	I have 580 clients and 1 servers
+2018-12-02 02:07:38	& 	580 979 :Current local users 580, max 979
+2018-12-02 02:07:38	& 	3778 4271 :Current global users 3778, max 4271
+2018-12-02 02:07:38	& 	Highest connection count: 980 (979 clients) (71318 connections received)
+2018-12-02 02:07:38	& 	- calamity.esper.net Message of the Day -
+2018-12-02 02:07:38	& 	-                         G'DAY MATE!
+2018-12-02 02:07:38	& 	-               _____     __           _ __
+2018-12-02 02:07:38	& 	-              / ___/__ _/ /__ ___ _  (_) /___ __
+2018-12-02 02:07:38	& 	-             / /__/ _ `/ / _ `/  ' \/ / __/ // /
+2018-12-02 02:07:38	& 	-             \___/\_,_/_/\_,_/_/_/_/_/\__/\_, /
+2018-12-02 02:07:38	& 	-                                         /___/
+2018-12-02 02:07:38	& 	-
+2018-12-02 02:07:38	& 	-               Host: calamity.esper.net
+2018-12-02 02:07:38	& 	-              Admin: RyanKnack
+2018-12-02 02:07:38	& 	-           Location: Sydney, Australia
+2018-12-02 02:07:38	& 	-  Ports (IPv4/IPv6): 5555, 6666 .. 6669, 6697 (TLS), 7000
+2018-12-02 02:07:38	& 	-
+2018-12-02 02:07:38	& 	-                        ________________
+2018-12-02 02:07:38	& 	-                   ____/ (  (    )   )  \___
+2018-12-02 02:07:38	& 	-                  /( (  (  )   _    ))  )   )\
+2018-12-02 02:07:38	& 	-                ((     (   )(    )  )   (   )  )
+2018-12-02 02:07:38	& 	-              ((/  ( _(   )   (   _) ) (  () )  )
+2018-12-02 02:07:38	& 	-             ( (  ( (_)   ((    (   )  .((_ ) .  )_
+2018-12-02 02:07:38	& 	-            ( (  )    (      (  )    )   ) . ) (   )
+2018-12-02 02:07:38	& 	-           (  (   (  (   ) (  _  ( _) ).  ) . ) ) ( )
+2018-12-02 02:07:38	& 	-           ( (  (   ) (  )   (  ))     ) _)(   )  )  )
+2018-12-02 02:07:38	& 	-          ( (  ( \ ) (    (_  ( ) ( )  )   ) )  )) ( )
+2018-12-02 02:07:38	& 	-           (  (   (  (   (_ ( ) ( _    )  ) (  )  )   )
+2018-12-02 02:07:38	& 	-          ( (  ( (  (  )     (_  )  ) )  _)   ) _( ( )
+2018-12-02 02:07:38	& 	-           ((  (   )(    (     _    )   _) _(_ (  (_ )
+2018-12-02 02:07:38	& 	-            (_((__(_(__(( ( ( |  ) ) ) )_))__))_)___)
+2018-12-02 02:07:38	& 	-            ((__)        \\||lll|l||///          \_))
+2018-12-02 02:07:38	& 	-                     (   /(/ (  )  ) )\   )
+2018-12-02 02:07:38	& 	-                   (    ( ( ( | | ) ) )\   )
+2018-12-02 02:07:38	& 	-                    (   /(| / ( )) ) ) )) )
+2018-12-02 02:07:38	& 	-                  (     ( ((((_(|)_)))))     )
+2018-12-02 02:07:38	& 	-                   (      ||\(|(|)|/||     )
+2018-12-02 02:07:38	& 	-                 (        |(||(||)||||        )
+2018-12-02 02:07:38	& 	-                   (     //|/l|||)|\\ \     )
+2018-12-02 02:07:38	& 	-                 (/ / //  /|//||||\\  \ \  \ _)
+2018-12-02 02:07:38	& 	-
+2018-12-02 02:07:38	& 	-                      * TERMS OF SERVICE *
+2018-12-02 02:07:38	& 	-
+2018-12-02 02:07:38	& 	-  Your use of this network constitutes an agreement to abide
+2018-12-02 02:07:38	& 	-  by the rules presented in the EsperNet charter and consent
+2018-12-02 02:07:38	& 	-  to a port scan, to detect open proxies and otherwise
+2018-12-02 02:07:38	& 	-  compromised systems.           https://esper.net/charter.php
+2018-12-02 02:07:38	& 	-
+2018-12-02 02:07:38	& 	-  Properly configured bots are permitted, but are required to
+2018-12-02 02:07:38	& 	-  follow the same rules as users. Please refer to our bot
+2018-12-02 02:07:38	& 	-  policy document for more information about configuration
+2018-12-02 02:07:38	& 	-  requirements and suggestions.     https://esper.net/bots.php
+2018-12-02 02:07:38	& 	-
+2018-12-02 02:07:38	& 	-  And remember mate, no woppin' the wallabies!
+2018-12-02 02:07:38	& 	-
+2018-12-02 02:07:38	& 	-                      * HELP CHANNELS *
+2018-12-02 02:07:38	& 	-
+2018-12-02 02:07:38	& 	-          #help: General IRC help
+2018-12-02 02:07:38	& 	-    #dragonweyr: For issues requiring EsperNet staff
+2018-12-02 02:07:38	& 	-
+2018-12-02 02:07:38	& 	-  Welcome to EsperNet. We hope you're ready... you won't be surviving this calamity!
+2018-12-02 02:07:38	& 	-
+2018-12-02 02:07:38	& 	End of /MOTD command.
+2018-12-05 19:15:51	& 	User mode [+Zi] by aftix
+2018-12-05 19:15:51	& 	irc: client capability, enabled: account-notify away-notify

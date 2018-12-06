@@ -1,0 +1,6 @@
+{
+  0: ('05/12/18 12:25:54', '', 'python.urlbuf', 'https://twitter.com/Bro_Pair/status/1070383323036344320/photo/1', '\t4  https://twitter.com/Bro_Pair/status/1070383323036344320/photo/1'),
+  1: ('05/12/18 12:25:54', 'teratoma', 'irc.oftc.#bitlbar', 'https://twitter.com/Bro_Pair/status/1070383323036344320/photo/1', 'teratoma\thttps://twitter.com/Bro_Pair/status/1070383323036344320/photo/1'),
+  2: ('05/12/18 12:48:39', '', 'python.urlbuf', 'https://www.youtube.com/watch?v=JGf6TP6hZXc', '\t4  https://www.youtube.com/watch?v=JGf6TP6hZXc'),
+  3: ('05/12/18 12:48:39', 'aam', 'irc.oftc.#bitlbar', 'https://www.youtube.com/watch?v=JGf6TP6hZXc', 'aam\thttps://www.youtube.com/watch?v=JGf6TP6hZXc'),
+}

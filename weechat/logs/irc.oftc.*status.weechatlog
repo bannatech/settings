@@ -59,3 +59,4 @@
 2018-12-04 23:01:17	*status	| Shutdown [message]                                                     | Shut down ZNC completely                                                                                        |
 2018-12-04 23:01:17	*status	| Restart [message]                                                      | Restart ZNC                                                                                                     |
 2018-12-04 23:01:17	*status	+------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------+
+2018-12-05 18:39:09	*status	Unable to load module route_replies: Module route_replies already loaded.

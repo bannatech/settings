@@ -5748,3 +5748,1335 @@
 2018-12-05 00:18:29		    /iset ==off
 2018-12-05 00:18:29		  show options for file 'weechat' which contains value 'off'
 2018-12-05 00:18:29		    /iset f weechat =off
+2018-12-05 01:54:36		buffer_autoclose: Closing buffer: oftc.pooby
+2018-12-05 09:59:36		buffer_autoclose: Closing buffer: oftc.pooby
+2018-12-05 15:39:36		buffer_autoclose: Closing buffer: esper.nagefire_
+2018-12-05 16:38:36		buffer_autoclose: Closing buffer: oftc.pooby
+2018-12-05 17:14:09		Option changed: weechat.bar.title.hidden = on  (default: off)
+2018-12-05 17:14:12		Option changed: weechat.bar.title.hidden = off
+2018-12-05 17:14:23		Option changed: weechat.bar.status.position = top  (default: bottom)
+2018-12-05 17:15:16		Option changed: weechat.look.buffer_time_format = "%H:%M"  (default: "%H:%M:%S")
+2018-12-05 17:15:35		Option changed: weechat.look.day_change = off  (default: on)
+2018-12-05 17:16:00		Option changed: weechat.look.buffer_time_format = "${234}%H:%M"  (default: "%H:%M:%S")
+2018-12-05 17:16:11		Option changed: weechat.look.buffer_time_format = "${234}%H:${236}%M"  (default: "%H:%M:%S")
+2018-12-05 17:16:38		Option changed: weechat.look.buffer_time_format = "${234}%H:${236}%M"  (default: "%H:%M:%S")
+2018-12-05 17:16:55	!	Too few arguments for command "/filter add" (help on command: /help filter)
+2018-12-05 17:17:04	!	Too few arguments for command "/filter add" (help on command: /help filter)
+2018-12-05 17:17:32		Option changed: irc.network.lag_min_show = 1000  (default: 500)
+2018-12-05 17:18:37		Key:
+2018-12-05 17:18:37		  meta-c => /close
+2018-12-05 17:20:42		Option changed: weechat.bar.status.items = "[buffer_count],[buffer_plugin],buffer_number+:+buffer_name+{buffer_nicklist_count}+buffer_filter,[lag],[hotlist],completion,scroll"  (default: "[time],[buffer_last_number],[buffer_plugin],buffer_number+:+buffer_name+(buffer_modes)+{buffer_nicklist_count}+buffer_zoom+buffer_filter,scroll,[lag],[hotlist],completion")
+2018-12-05 17:21:47		Option changed: irc.color.item_channel_modes = black  (default: default)
+2018-12-05 17:22:29	!	Error: failed to set option "weechat.color.chat_nick_self"
+2018-12-05 17:22:31		Option changed: weechat.color.chat_nick_self = gray  (default: white)
+2018-12-05 17:23:27		Option changed: aspell.check.default_dict = "en"  (default: "")
+2018-12-05 17:23:27	!	aspell: error: No word lists can be found for the language "en".
+2018-12-05 17:23:34		Spell checking is enabled (using aspell)
+2018-12-05 17:23:34		Default dictionary: en
+2018-12-05 17:23:39		[aspell]  /aspell  enable|disable|toggle
+2018-12-05 17:23:39		                   listdict
+2018-12-05 17:23:39		                   setdict <dict>[,<dict>...]
+2018-12-05 17:23:39		                   deldict
+2018-12-05 17:23:39		                   addword [<dict>] <word>
+2018-12-05 17:23:39		aspell plugin configuration
+2018-12-05 17:23:39		  enable: enable aspell
+2018-12-05 17:23:39		 disable: disable aspell
+2018-12-05 17:23:39		  toggle: toggle aspell
+2018-12-05 17:23:39		listdict: show installed dictionaries
+2018-12-05 17:23:39		 setdict: set dictionary for current buffer (multiple dictionaries can be separated by a comma)
+2018-12-05 17:23:39		 deldict: delete dictionary used on current buffer
+2018-12-05 17:23:39		 addword: add a word in personal aspell dictionary
+2018-12-05 17:23:39		Input line beginning with a '/' is not checked, except for some commands (see /set aspell.check.commands).
+2018-12-05 17:23:39		To enable aspell on all buffers, use option "default_dict", then enable aspell, for example:
+2018-12-05 17:23:39		  /set aspell.check.default_dict "en"
+2018-12-05 17:23:39		  /aspell enable
+2018-12-05 17:23:39		To display a list of suggestions in a bar, use item "aspell_suggest".
+2018-12-05 17:23:39		Default key to toggle aspell is alt-s.
+2018-12-05 17:26:26		Aspell enabled
+2018-12-05 17:26:26	!	aspell: error: No word lists can be found for the language "en".
+2018-12-05 17:26:29		[aspell]  /aspell  enable|disable|toggle
+2018-12-05 17:26:29		                   listdict
+2018-12-05 17:26:29		                   setdict <dict>[,<dict>...]
+2018-12-05 17:26:29		                   deldict
+2018-12-05 17:26:29		                   addword [<dict>] <word>
+2018-12-05 17:26:29		aspell plugin configuration
+2018-12-05 17:26:29		  enable: enable aspell
+2018-12-05 17:26:29		 disable: disable aspell
+2018-12-05 17:26:29		  toggle: toggle aspell
+2018-12-05 17:26:29		listdict: show installed dictionaries
+2018-12-05 17:26:29		 setdict: set dictionary for current buffer (multiple dictionaries can be separated by a comma)
+2018-12-05 17:26:29		 deldict: delete dictionary used on current buffer
+2018-12-05 17:26:29		 addword: add a word in personal aspell dictionary
+2018-12-05 17:26:29		Input line beginning with a '/' is not checked, except for some commands (see /set aspell.check.commands).
+2018-12-05 17:26:29		To enable aspell on all buffers, use option "default_dict", then enable aspell, for example:
+2018-12-05 17:26:29		  /set aspell.check.default_dict "en"
+2018-12-05 17:26:29		  /aspell enable
+2018-12-05 17:26:29		To display a list of suggestions in a bar, use item "aspell_suggest".
+2018-12-05 17:26:29		Default key to toggle aspell is alt-s.
+2018-12-05 17:26:32		Aspell enabled
+2018-12-05 17:27:08		Option changed: aspell.color.misspelled = red  (default: lightred)
+2018-12-05 17:27:39	!	Error: unknown command "/get" (type /help for help)
+2018-12-05 17:28:15		Option changed: weechat.bar.status.items = "[buffer_count],[buffer_plugin],buffer_number+:+buffer_name+{buffer_nicklist_count}+buffer_filter,[lag],[hotlist],completion,scroll,[aspell_suggest]"  (default: "[time],[buffer_last_number],[buffer_plugin],buffer_number+:+buffer_name+(buffer_modes)+{buffer_nicklist_count}+buffer_zoom+buffer_filter,scroll,[lag],[hotlist],completion")
+2018-12-05 17:28:42		Aspell enabled
+2018-12-05 17:28:42	!	aspell: error: No word lists can be found for the language "en".
+2018-12-05 17:29:14	!	Too few arguments for command "/allchan" (help on command: /help allchan)
+2018-12-05 17:29:22		[irc]  /allchan  [-current] [-exclude=<channel>[,<channel>...]] <command> [<arguments>]
+2018-12-05 17:29:22		                 [-current] -include=<channel>[,<channel>...] <command> [<arguments>]
+2018-12-05 17:29:22		execute a command on all channels of all connected servers
+2018-12-05 17:29:22		 -current: execute command for channels of current server only
+2018-12-05 17:29:22		 -exclude: exclude some channels (wildcard "*" is allowed)
+2018-12-05 17:29:22		 -include: include only some channels (wildcard "*" is allowed)
+2018-12-05 17:29:22		  command: command to execute
+2018-12-05 17:29:22		arguments: arguments for command (special variables $nick, $channel and $server are replaced by their value)
+2018-12-05 17:29:22		Examples:
+2018-12-05 17:29:22		  execute '/me is testing' on all channels:
+2018-12-05 17:29:22		    /allchan me is testing
+2018-12-05 17:29:22		  say 'hello' everywhere but not on #weechat:
+2018-12-05 17:29:22		    /allchan -exclude=#weechat msg * hello
+2018-12-05 17:29:22		  say 'hello' everywhere but not on #weechat and channels beginning with #linux:
+2018-12-05 17:29:22		    /allchan -exclude=#weechat,#linux* msg * hello
+2018-12-05 17:29:22		  say 'hello' on all channels beginning with #linux:
+2018-12-05 17:29:22		    /allchan -include=#linux* msg * hello
+2018-12-05 17:29:42		Option changed: aspell.check.default_dict = "en"  (default: "")
+2018-12-05 17:29:54		Option changed: aspell.check.default_dict = "en"  (default: "")
+2018-12-05 17:29:54		Option changed: aspell.check.default_dict = "en"  (default: "")
+2018-12-05 17:30:29		Option changed: aspell.check.suggestions = 3  (default: -1)
+2018-12-05 17:30:31	!	aspell: error: No word lists can be found for the language "en".
+2018-12-05 17:30:47		No key found
+2018-12-05 17:30:51		Key:
+2018-12-05 17:30:51		  meta-s => /mute aspell toggle
+2018-12-05 17:31:16		[aspell]  /aspell  enable|disable|toggle
+2018-12-05 17:31:16		                   listdict
+2018-12-05 17:31:16		                   setdict <dict>[,<dict>...]
+2018-12-05 17:31:16		                   deldict
+2018-12-05 17:31:16		                   addword [<dict>] <word>
+2018-12-05 17:31:16		aspell plugin configuration
+2018-12-05 17:31:16		  enable: enable aspell
+2018-12-05 17:31:16		 disable: disable aspell
+2018-12-05 17:31:16		  toggle: toggle aspell
+2018-12-05 17:31:16		listdict: show installed dictionaries
+2018-12-05 17:31:16		 setdict: set dictionary for current buffer (multiple dictionaries can be separated by a comma)
+2018-12-05 17:31:16		 deldict: delete dictionary used on current buffer
+2018-12-05 17:31:16		 addword: add a word in personal aspell dictionary
+2018-12-05 17:31:16		Input line beginning with a '/' is not checked, except for some commands (see /set aspell.check.commands).
+2018-12-05 17:31:16		To enable aspell on all buffers, use option "default_dict", then enable aspell, for example:
+2018-12-05 17:31:16		  /set aspell.check.default_dict "en"
+2018-12-05 17:31:16		  /aspell enable
+2018-12-05 17:31:16		To display a list of suggestions in a bar, use item "aspell_suggest".
+2018-12-05 17:31:16		Default key to toggle aspell is alt-s.
+2018-12-05 17:31:36		Aspell enabled
+2018-12-05 17:32:10	!	aspell: error: No word lists can be found for the language "en".
+2018-12-05 17:32:59		Option changed: weechat.bar.status.items = "[buffer_count],[buffer_plugin],buffer_number+:+buffer_name+{buffer_nicklist_count}+buffer_filter,[lag],[hotlist],completion,scroll,[aspell_suggest]"  (default: "[time],[buffer_last_number],[buffer_plugin],buffer_number+:+buffer_name+(buffer_modes)+{buffer_nicklist_count}+buffer_zoom+buffer_filter,scroll,[lag],[hotlist],completion")
+2018-12-05 17:33:08		Spell checking is enabled (using aspell)
+2018-12-05 17:33:08		Default dictionary: en
+2018-12-05 17:33:43		Aspell enabled
+2018-12-05 17:33:43		Aspell enabled
+2018-12-05 17:34:13	!	Error: unknown command "/unmute" (type /help for help)
+2018-12-05 17:34:19		[core]  /mute  [-core | -current | -buffer <name>] <command>
+2018-12-05 17:34:19		execute a command silently
+2018-12-05 17:34:19		   -core: no output on WeeChat core buffer
+2018-12-05 17:34:19		-current: no output on current buffer
+2018-12-05 17:34:19		 -buffer: no output on specified buffer
+2018-12-05 17:34:19		    name: full buffer name (examples: "irc.server.freenode", "irc.freenode.#weechat")
+2018-12-05 17:34:19		 command: command to execute silently (a '/' is automatically added if not found at beginning of command)
+2018-12-05 17:34:19		If no target is specified (-core, -current or -buffer), then default is to mute all buffers.
+2018-12-05 17:34:19		Examples:
+2018-12-05 17:34:19		  config save:
+2018-12-05 17:34:19		    /mute save
+2018-12-05 17:34:19		  message to current IRC channel:
+2018-12-05 17:34:19		    /mute -current msg * hi!
+2018-12-05 17:34:19		  message to #weechat channel:
+2018-12-05 17:34:19		    /mute -buffer irc.freenode.#weechat msg #weechat hi!
+2018-12-05 17:34:48		Spell checking is enabled (using aspell)
+2018-12-05 17:34:48		Default dictionary: en
+2018-12-05 17:34:54		Spell checking is enabled (using aspell)
+2018-12-05 17:34:54		Default dictionary: en
+2018-12-05 17:35:08		aspell: warning: dictionary "en" is not available on your system
+2018-12-05 17:35:08		aspell: "irc.server.esper" => en
+2018-12-05 17:35:08	!	aspell: error: No word lists can be found for the language "en".
+2018-12-05 17:35:11		aspell: warning: dictionary ""en"" is not available on your system
+2018-12-05 17:35:11		aspell: "irc.server.esper" => "en"
+2018-12-05 17:35:11	!	aspell: error: No word lists can be found for the language "".
+2018-12-05 17:35:21		aspell: warning: dictionary "en" is not available on your system
+2018-12-05 17:35:21		aspell: "irc.server.esper" => en
+2018-12-05 17:35:21	!	aspell: error: No word lists can be found for the language "en".
+2018-12-05 17:35:32		aspell dictionaries list:
+2018-12-05 17:36:00		Options saved to sec.conf
+2018-12-05 17:36:00		Options saved to weechat.conf
+2018-12-05 17:36:00		Options saved to plugins.conf
+2018-12-05 17:36:00		Options saved to charset.conf
+2018-12-05 17:36:00		Options saved to logger.conf
+2018-12-05 17:36:00		Options saved to exec.conf
+2018-12-05 17:36:00		Options saved to trigger.conf
+2018-12-05 17:36:00		Options saved to aspell.conf
+2018-12-05 17:36:00		Options saved to alias.conf
+2018-12-05 17:36:00		Options saved to buflist.conf
+2018-12-05 17:36:00		Options saved to fifo.conf
+2018-12-05 17:36:00		Options saved to xfer.conf
+2018-12-05 17:36:00		Options saved to irc.conf
+2018-12-05 17:36:00		Options saved to relay.conf
+2018-12-05 17:36:00		Options saved to lua.conf
+2018-12-05 17:36:00		Options saved to perl.conf
+2018-12-05 17:36:00		Options saved to buffers.conf
+2018-12-05 17:36:00		Options saved to iset.conf
+2018-12-05 17:36:00		Options saved to python.conf
+2018-12-05 17:36:00		Options saved to colorize_nicks.conf
+2018-12-05 17:36:00		Options saved to tcl.conf
+2018-12-05 17:36:00		Options saved to guile.conf
+2018-12-05 17:36:00		Options saved to script.conf
+2018-12-05 17:36:00		Options saved to fset.conf
+2018-12-05 17:36:05	!	Error with command "/layout save" (help on command: /help layout)
+2018-12-05 17:36:10		Layout of buffers+windows stored in "default" (current layout: default)
+2018-12-05 17:36:14	!	buflist: warning: the script buffers.pl is loaded and provides a bar with list of buffers similar to the buflist plugin; you may want to uninstall the script buffers.pl (/script remove buffers.pl) or disable/unload the buflist plugin; see WeeChat release notes for more information
+2018-12-05 17:36:14		perl scripts loaded: buffers, iset
+2018-12-05 17:36:14		URL server listening on ('192.168.0.154', 41763)
+2018-12-05 17:36:14		python scripts loaded: buffer_autoclose, colorize_nicks, go, notify_send, urlbuf, urlserver
+2018-12-05 17:36:14		script: 358 scripts for WeeChat 2.3
+2018-12-05 17:36:14		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, script, tcl, trigger, xfer
+2018-12-05 17:36:36		Spell checking is enabled (using aspell)
+2018-12-05 17:36:36		Default dictionary: en
+2018-12-05 17:36:36		Specific dictionaries on buffers:
+2018-12-05 17:36:36		  irc.server.esper: en
+2018-12-05 17:36:49		Aspell enabled
+2018-12-05 17:37:14		buffer_autoclose: Closing buffer: oftc.pooby
+2018-12-05 17:37:52		Option changed: aspell.dict.irc.server.esper = ""
+2018-12-05 17:38:01		aspell dictionaries list:
+2018-12-05 17:38:01		  en                     English
+2018-12-05 17:38:01		  en-variant_0           English (variant_0)
+2018-12-05 17:38:01		  en-variant_1           English (variant_1)
+2018-12-05 17:38:01		  en-variant_2           English (variant_2)
+2018-12-05 17:38:01		  en-w_accents           English (w_accents)
+2018-12-05 17:38:01		  en-wo_accents          English (wo_accents)
+2018-12-05 17:38:01		  en_AU                  English (Unknown)
+2018-12-05 17:38:01		  en_AU-variant_0        English (Unknown - variant_0)
+2018-12-05 17:38:01		  en_AU-variant_1        English (Unknown - variant_1)
+2018-12-05 17:38:01		  en_AU-w_accents        English (Unknown - w_accents)
+2018-12-05 17:38:01		  en_AU-wo_accents       English (Unknown - wo_accents)
+2018-12-05 17:38:01		  en_CA                  English (Canada)
+2018-12-05 17:38:01		  en_CA-variant_0        English (Canada - variant_0)
+2018-12-05 17:38:01		  en_CA-variant_1        English (Canada - variant_1)
+2018-12-05 17:38:01		  en_CA-w_accents        English (Canada - w_accents)
+2018-12-05 17:38:01		  en_CA-wo_accents       English (Canada - wo_accents)
+2018-12-05 17:38:01		  en_GB                  English (Great Britain)
+2018-12-05 17:38:01		  en_GB-ise              English (Great Britain - ise)
+2018-12-05 17:38:01		  en_GB-ise-w_accents    English (Great Britain - ise-w_accents)
+2018-12-05 17:38:01		  en_GB-ise-wo_accents   English (Great Britain - ise-wo_accents)
+2018-12-05 17:38:01		  en_GB-ize              English (Great Britain - ize)
+2018-12-05 17:38:01		  en_GB-ize-w_accents    English (Great Britain - ize-w_accents)
+2018-12-05 17:38:01		  en_GB-ize-wo_accents   English (Great Britain - ize-wo_accents)
+2018-12-05 17:38:01		  en_GB-variant_0        English (Great Britain - variant_0)
+2018-12-05 17:38:01		  en_GB-variant_1        English (Great Britain - variant_1)
+2018-12-05 17:38:01		  en_GB-w_accents        English (Great Britain - w_accents)
+2018-12-05 17:38:01		  en_GB-wo_accents       English (Great Britain - wo_accents)
+2018-12-05 17:38:01		  en_US                  English (United States of America)
+2018-12-05 17:38:01		  en_US-variant_0        English (United States of America - variant_0)
+2018-12-05 17:38:01		  en_US-variant_1        English (United States of America - variant_1)
+2018-12-05 17:38:01		  en_US-w_accents        English (United States of America - w_accents)
+2018-12-05 17:38:01		  en_US-wo_accents       English (United States of America - wo_accents)
+2018-12-05 17:38:07		aspell: "irc.server.oftc" => en
+2018-12-05 17:38:15		aspell: "irc.esper.#squirrels" => en
+2018-12-05 17:38:54		Option created: aspell.option.ignore-case = "true"  (default: "")
+2018-12-05 17:40:09		Option changed: aspell.color.suggestion = green  (default: default)
+2018-12-05 17:40:40		Options saved to sec.conf
+2018-12-05 17:40:40		Options saved to weechat.conf
+2018-12-05 17:40:40		Options saved to plugins.conf
+2018-12-05 17:40:40		Options saved to charset.conf
+2018-12-05 17:40:40		Options saved to logger.conf
+2018-12-05 17:40:40		Options saved to exec.conf
+2018-12-05 17:40:40		Options saved to trigger.conf
+2018-12-05 17:40:40		Options saved to aspell.conf
+2018-12-05 17:40:40		Options saved to alias.conf
+2018-12-05 17:40:40		Options saved to buflist.conf
+2018-12-05 17:40:40		Options saved to fifo.conf
+2018-12-05 17:40:40		Options saved to xfer.conf
+2018-12-05 17:40:40		Options saved to irc.conf
+2018-12-05 17:40:40		Options saved to relay.conf
+2018-12-05 17:40:40		Options saved to lua.conf
+2018-12-05 17:40:40		Options saved to perl.conf
+2018-12-05 17:40:40		Options saved to buffers.conf
+2018-12-05 17:40:40		Options saved to iset.conf
+2018-12-05 17:40:40		Options saved to python.conf
+2018-12-05 17:40:40		Options saved to colorize_nicks.conf
+2018-12-05 17:40:40		Options saved to tcl.conf
+2018-12-05 17:40:40		Options saved to guile.conf
+2018-12-05 17:40:40		Options saved to script.conf
+2018-12-05 17:40:40		Options saved to fset.conf
+2018-12-05 17:40:56		Key:
+2018-12-05 17:40:56		  meta-m => /mute mouse toggle
+2018-12-05 17:41:45	!	Error: unknown command "/install" (type /help for help)
+2018-12-05 17:41:49		[core]
+2018-12-05 17:41:49		  away     color    debug    help     key      mute     proxy    repeat   set      uptime   window 
+2018-12-05 17:41:49		  bar      command  eval     history  layout   plugin   quit     save     unset    version
+2018-12-05 17:41:49		  buffer   cursor   filter   input    mouse    print    reload   secure   upgrade  wait   
+2018-12-05 17:41:49		[lua]
+2018-12-05 17:41:49		  lua
+2018-12-05 17:41:49		[fset]
+2018-12-05 17:41:49		  fset
+2018-12-05 17:41:49		[perl]
+2018-12-05 17:41:49		  buffers_detach  buffers_whitelist  iset  perl
+2018-12-05 17:41:49		[buflist]
+2018-12-05 17:41:49		  buflist
+2018-12-05 17:41:49		[script]
+2018-12-05 17:41:49		  script
+2018-12-05 17:41:49		[aspell]
+2018-12-05 17:41:49		  aspell
+2018-12-05 17:41:49		[trigger]
+2018-12-05 17:41:49		  trigger
+2018-12-05 17:41:49		[charset]
+2018-12-05 17:41:49		  charset
+2018-12-05 17:41:49		[relay]
+2018-12-05 17:41:49		  relay
+2018-12-05 17:41:49		[python]
+2018-12-05 17:41:49		  go  python  urlserver
+2018-12-05 17:41:49		[tcl]
+2018-12-05 17:41:49		  tcl
+2018-12-05 17:41:49		[irc]
+2018-12-05 17:41:49		  admin       dehalfop    join        motd        pong        sanick      time        wallops   
+2018-12-05 17:41:49		  allchan     deop        kick        msg         query       sapart      topic       who       
+2018-12-05 17:41:49		  allpv       devoice     kickban     names       quiet       saquit      trace       whois     
+2018-12-05 17:41:49		  allserv     die         kill        nick        quote       server      unban       whowas    
+2018-12-05 17:41:49		  ban         disconnect  links       notice      reconnect   service     unquiet   
+2018-12-05 17:41:49		  cap         halfop      list        notify      rehash      servlist    userhost  
+2018-12-05 17:41:49		  connect     ignore      lusers      op          remove      squery      users     
+2018-12-05 17:41:49		  ctcp        info        map         oper        restart     squit       version   
+2018-12-05 17:41:49		  cycle       invite      me          part        sajoin      stats       voice     
+2018-12-05 17:41:49		  dcc         ison        mode        ping        samode      summon      wallchops 
+2018-12-05 17:41:49		[xfer]
+2018-12-05 17:41:49		  me  xfer
+2018-12-05 17:41:49		[fifo]
+2018-12-05 17:41:49		  fifo
+2018-12-05 17:41:49		[alias]
+2018-12-05 17:41:49		  AAWAY    ANICK    CHAT     IG       LEAVE    N        SIGNOFF  V        WII    
+2018-12-05 17:41:49		  alias    BEEP     CL       J        M        Q        T        W        WW     
+2018-12-05 17:41:49		  AME      BYE      CLOSE    K        MSGBUF   REDRAW   UB       WC       znc    
+2018-12-05 17:41:49		  AMSG     C        EXIT     KB       MUB      SAY      UMODE    WI     
+2018-12-05 17:41:49		[exec]
+2018-12-05 17:41:49		  exec
+2018-12-05 17:41:49		[logger]
+2018-12-05 17:41:49		  logger
+2018-12-05 17:41:49		[guile]
+2018-12-05 17:41:49		  guile
+2018-12-05 17:41:58		[script]  /script  list [-o|-i]
+2018-12-05 17:41:58		                   search <text>
+2018-12-05 17:41:58		                   show <script>
+2018-12-05 17:41:58		                   load|unload|reload <script> [<script>...]
+2018-12-05 17:41:58		                   autoload|noautoload|toggleautoload <script> [<script>...]
+2018-12-05 17:41:58		                   install|remove|installremove|hold [-q] <script> [<script>...]
+2018-12-05 17:41:58		                   upgrade
+2018-12-05 17:41:58		                   update
+2018-12-05 17:41:58		WeeChat script manager
+2018-12-05 17:41:58		          list: list loaded scripts (all languages)
+2018-12-05 17:41:58		            -o: send list of loaded scripts to buffer
+2018-12-05 17:41:58		            -i: copy list of loaded scripts in command line (for sending to buffer)
+2018-12-05 17:41:58		        search: search scripts by tags, language (python, perl, ...), filename extension (py, pl, ...) or text; result is displayed on scripts buffer
+2018-12-05 17:41:58		          show: show detailed info about a script
+2018-12-05 17:41:58		          load: load script(s)
+2018-12-05 17:41:58		        unload: unload script(s)
+2018-12-05 17:41:58		        reload: reload script(s)
+2018-12-05 17:41:58		      autoload: autoload the script
+2018-12-05 17:41:58		    noautoload: do not autoload the script
+2018-12-05 17:41:58		toggleautoload: toggle autoload
+2018-12-05 17:41:58		       install: install/upgrade script(s)
+2018-12-05 17:41:58		        remove: remove script(s)
+2018-12-05 17:41:58		 installremove: install or remove script(s), depending on current state
+2018-12-05 17:41:58		          hold: hold/unhold script(s) (a script held will not be upgraded any more and cannot be removed)
+2018-12-05 17:41:58		            -q: quiet mode: do not display messages
+2018-12-05 17:41:58		       upgrade: upgrade all installed scripts which are obsolete (new version available)
+2018-12-05 17:41:58		        update: update local scripts cache
+2018-12-05 17:41:58		Without argument, this command opens a buffer with list of scripts.
+2018-12-05 17:41:58		On script buffer, the possible status for each script are:
+2018-12-05 17:41:58		  * i a H r N
+2018-12-05 17:41:58		  | | | | | |
+2018-12-05 17:41:58		  | | | | | obsolete (new version available)
+2018-12-05 17:41:58		  | | | | running (loaded)
+2018-12-05 17:41:58		  | | | held
+2018-12-05 17:41:58		  | | autoloaded
+2018-12-05 17:41:58		  | installed
+2018-12-05 17:41:58		  popular script
+2018-12-05 17:41:58		Keys on script buffer:
+2018-12-05 17:41:58		  alt+i  install script
+2018-12-05 17:41:58		  alt+r  remove script
+2018-12-05 17:41:58		  alt+l  load script
+2018-12-05 17:41:58		  alt+L  reload script
+2018-12-05 17:41:58		  alt+u  unload script
+2018-12-05 17:41:58		  alt+A  autoload script
+2018-12-05 17:41:58		  alt+h  (un)hold script
+2018-12-05 17:41:58		  alt+v  view script
+2018-12-05 17:41:58		Input allowed on script buffer:
+2018-12-05 17:41:58		  i/r/l/L/u/h  action on script (same as keys above)
+2018-12-05 17:41:58		  q            close buffer
+2018-12-05 17:41:58		  $            refresh buffer
+2018-12-05 17:41:58		  s:x,y        sort buffer using keys x and y (see /help script.look.sort)
+2018-12-05 17:41:58		  s:           reset sort (use default sort)
+2018-12-05 17:41:58		  word(s)      filter scripts: search word(s) in scripts (description, tags, ...)
+2018-12-05 17:41:58		  *            remove filter
+2018-12-05 17:41:58		Mouse actions on script buffer:
+2018-12-05 17:41:58		  wheel         scroll list
+2018-12-05 17:41:58		  left button   select script
+2018-12-05 17:41:58		  right button  install/remove script
+2018-12-05 17:41:58		Examples:
+2018-12-05 17:41:58		  /script search url
+2018-12-05 17:41:58		  /script install go.py urlserver.py
+2018-12-05 17:41:58		  /script remove go.py
+2018-12-05 17:41:58		  /script hold urlserver.py
+2018-12-05 17:41:58		  /script reload urlserver
+2018-12-05 17:41:58		  /script upgrade
+2018-12-05 17:42:28		script: script "weeget" not found
+2018-12-05 17:42:32		python: loading script "/home/aftix/.weechat/python/weeget.py"
+2018-12-05 17:42:32		python: registered script "weeget", version 2.0 (WeeChat scripts manager)
+2018-12-05 17:42:32	!	WARNING: the script weeget.py is obsolete since WeeChat 0.3.9 (it is replaced by command /script)
+2018-12-05 17:42:32	!	To uninstall weeget.py: /weeget remove weeget.py
+2018-12-05 17:42:54		weeget: downloading list of scripts...
+2018-12-05 17:42:57		weeget: scripts downloaded
+2018-12-05 17:42:57		python: unloading script "weeget"
+2018-12-05 17:42:57		python: script removed: /home/aftix/.weechat/python/autoload/weeget.py
+2018-12-05 17:42:57		python: script removed: /home/aftix/.weechat/python/weeget.py
+2018-12-05 17:43:06	!	script: error downloading script "colorize_lines.pl": curl error 56 (Received HTTP code 503 from proxy after CONNECT) (URL: "https://weechat.org/files/scripts/colorize_lines.pl")
+2018-12-05 17:43:11		perl: loading script "/home/aftix/.weechat/perl/colorize_lines.pl"
+2018-12-05 17:43:11		perl: registered script "colorize_lines", version 3.6 (Colorize users' text in chat area with their nick color, including highlights)
+2018-12-05 17:44:28		Option changed: plugins.var.python.urlserver.msg_ignore_dup_urls = "on"
+2018-12-05 17:44:48		Option changed: plugins.var.perl.colorize_lines.own_lines = "on"
+2018-12-05 17:44:55		Option changed: plugins.var.perl.colorize_lines.highlight = "off"
+2018-12-05 17:45:24		Option changed: plugins.var.python.urlserver.http_allowed_ips = "127.0.0.1"
+2018-12-05 17:45:41		URL server stopped
+2018-12-05 17:45:41		URL server listening on ('127.0.0.1', 36705)
+2018-12-05 17:45:41		Option changed: plugins.var.python.urlserver.http_hostname = "127.0.0.1"
+2018-12-05 17:45:55		perl: loading script "/home/aftix/.weechat/perl/buddylist.pl"
+2018-12-05 17:45:55		perl: registered script "buddylist", version 1.9 (display status from your buddies a bar-item.)
+2018-12-05 17:45:55		New key binding (context "mouse"): @chat(*)>item(buddylist):button1-gesture-* => hsignal:buddylist_mouse
+2018-12-05 17:45:55		New key binding (context "mouse"): @item(buffer_nicklist)>item(buddylist):button1-gesture-* => hsignal:buddylist_mouse
+2018-12-05 17:45:55		New key binding (context "mouse"): @item(buddylist):button1* => hsignal:buddylist_mouse
+2018-12-05 17:45:55		New key binding (context "mouse"): @item(buddylist):button1-gesture-* => hsignal:buddylist_mouse
+2018-12-05 17:45:55		New key binding (context "cursor"): @item(buddylist):w => hsignal:buddylist_cursor
+2018-12-05 17:45:55		New key binding (context "cursor"): @item(buddylist):q => hsignal:buddylist_cursor
+2018-12-05 17:50:31		[aspell]  /aspell  enable|disable|toggle
+2018-12-05 17:50:31		                   listdict
+2018-12-05 17:50:31		                   setdict <dict>[,<dict>...]
+2018-12-05 17:50:31		                   deldict
+2018-12-05 17:50:31		                   addword [<dict>] <word>
+2018-12-05 17:50:31		aspell plugin configuration
+2018-12-05 17:50:31		  enable: enable aspell
+2018-12-05 17:50:31		 disable: disable aspell
+2018-12-05 17:50:31		  toggle: toggle aspell
+2018-12-05 17:50:31		listdict: show installed dictionaries
+2018-12-05 17:50:31		 setdict: set dictionary for current buffer (multiple dictionaries can be separated by a comma)
+2018-12-05 17:50:31		 deldict: delete dictionary used on current buffer
+2018-12-05 17:50:31		 addword: add a word in personal aspell dictionary
+2018-12-05 17:50:31		Input line beginning with a '/' is not checked, except for some commands (see /set aspell.check.commands).
+2018-12-05 17:50:31		To enable aspell on all buffers, use option "default_dict", then enable aspell, for example:
+2018-12-05 17:50:31		  /set aspell.check.default_dict "en"
+2018-12-05 17:50:31		  /aspell enable
+2018-12-05 17:50:31		To display a list of suggestions in a bar, use item "aspell_suggest".
+2018-12-05 17:50:31		Default key to toggle aspell is alt-s.
+2018-12-05 17:51:13		Option changed: plugins.var.perl.buddylist.hide.bar = "always"
+2018-12-05 17:51:23		Option changed: plugins.var.perl.buddylist.hide.buddy.if.offline = "on"
+2018-12-05 17:51:31		Option changed: plugins.var.perl.buddylist.display.social.net = "off"
+2018-12-05 17:51:37		Option changed: plugins.var.perl.buddylist.show.query = "off"
+2018-12-05 17:51:44		Option changed: plugins.var.perl.buddylist.color.online = "cyon"
+2018-12-05 17:51:46		Option changed: plugins.var.perl.buddylist.color.online = "cyan"
+2018-12-05 17:51:57		Option changed: plugins.var.perl.buddylist.buddy.on.server.color = "cyan"
+2018-12-05 17:52:15		Option changed: plugins.var.perl.buddylist.color.away = "235"
+2018-12-05 17:52:30		[perl/buddylist]  /buddylist  <add>[nick_1 [... nick_n]] | <del>[nick_1 [... nick_n]]
+2018-12-05 17:52:30		display status from your buddies a bar-item.
+2018-12-05 17:52:30		<add> [nick(s)] add nick(s) to the buddylist
+2018-12-05 17:52:30		<del> [nick(s)] delete nick(s) from the buddylist
+2018-12-05 17:52:30		<list> show buddylist
+2018-12-05 17:52:30		Options:
+2018-12-05 17:52:30		'plugins.var.perl.buddylist.buddylist'            : path/file-name to store your buddies. "%h" will be replaced by WeeChat home (by default: ~/.weechat)
+2018-12-05 17:52:30		'plugins.var.perl.buddylist.color.default         : fall back color. (default: standard weechat color)
+2018-12-05 17:52:30		'plugins.var.perl.buddylist.color.online'         : color for online buddies.
+2018-12-05 17:52:30		'plugins.var.perl.buddylist.color.away'           : color for away buddies.
+2018-12-05 17:52:30		'plugins.var.perl.buddylist.color.offline'        : color for offline buddies.
+2018-12-05 17:52:30		'plugins.var.perl.buddylist.color.server'         : color for servername.
+2018-12-05 17:52:30		'plugins.var.perl.buddylist.color.server.offline' : color for disconnected server (default: hide).
+2018-12-05 17:52:30		'plugins.var.perl.buddylist.color.number'         : color for channel number (default: lightred). If empty, channel list option is off.
+2018-12-05 17:52:30		'plugins.var.perl.buddylist.show.query'           : displays a query buffer in front of the channel list.
+2018-12-05 17:52:30		'plugins.var.perl.buddylist.hide.server.if.buddies.offline': hides server when all buddies are offline for this server (default: off).
+2018-12-05 17:52:30		'plugins.var.perl.buddylist.hide.buddy.if.offline': hide buddy if offline (default: off).
+2018-12-05 17:52:30		'plugins.var.perl.buddylist.buddy.on.server'      : show buddy who is connected to a server, but not visiting the same channel(s) (default: on).
+2018-12-05 17:52:30		'plugins.var.perl.buddylist.buddy.on.server.color': color for online buddy but not visiting the same channel(s) (default: lightgreen).
+2018-12-05 17:52:30		'plugins.var.perl.buddylist.hide.bar'             : hides buddylist bar when all servers with added buddies are offline (default: on).
+2018-12-05 17:52:30		                                          always  : buddylist bar will be hidden (for example if you want to add item 'buddylist' to 'weechat.bar.status.items'
+2018-12-05 17:52:30		                                          off     : buddylist bar will not be hidden.
+2018-12-05 17:52:30		'plugins.var.perl.buddylist.check.buddies'        : time in seconds to send a /whois request to server. Be careful not to flood server (default: 20).
+2018-12-05 17:52:30		'plugins.var.perl.buddylist.callback.timeout'     : time in seconds to wait for answer from server. (default: 60).
+2018-12-05 17:52:30		'plugins.var.perl.buddylist.display.original.nick': display original nickname even if buddy changed his /nick (you have to add new nick to buddylist) (default: off).
+2018-12-05 17:52:30		'plugins.var.perl.buddylist.sort'                 : sort method for buddylist (default or status).
+2018-12-05 17:52:30		                                          default : buddylist will be sort by nickname
+2018-12-05 17:52:30		                                          status  : buddylist will be sort by status (online, away, offline)
+2018-12-05 17:52:30		'plugins.var.perl.buddylist.display.social.net'   : using bitlbee, buddies will be sorted in sublists with social-network name (eg. msn/jabber/facebook)(default: on)
+2018-12-05 17:52:30		'plugins.var.perl.buddylist.display.social.net.color': color for social-network name (default: yellow)
+2018-12-05 17:52:30		'plugins.var.perl.buddylist.text.color'           : color for optional online/away/offline-text in buddylist (default: white)
+2018-12-05 17:52:30		'plugins.var.perl.buddylist.text.online'          : optional online text in buddylist (sort method has to be 'status')
+2018-12-05 17:52:30		'plugins.var.perl.buddylist.text.away'            : optional away text in buddylist (sort method has to be 'status')
+2018-12-05 17:52:30		'plugins.var.perl.buddylist.text.offline'         : optional offline text in buddylist (sort method has to be 'status')
+2018-12-05 17:52:30		'plugins.var.perl.buddylist.use.redirection'      : using redirection to get status of buddies (needs weechat >=0.3.4) (default: on).
+2018-12-05 17:52:30		Mouse-support:
+2018-12-05 17:52:30		  click left mouse-button on buddy to open a query buffer.
+2018-12-05 17:52:30		  add a buddy by dragging a nick with left mouse-button from nicklist or chat-area and drop on buddylist.
+2018-12-05 17:52:30		  remove a buddy by dragging a buddy with left mouse-button from buddylist and drop it on any area.
+2018-12-05 17:52:30		Cursor-Mode:
+2018-12-05 17:52:30		 q  open query with nick (/query)
+2018-12-05 17:52:30		 w  query information about user (/whois)
+2018-12-05 17:52:30		Troubleshooting:
+2018-12-05 17:52:30		If buddylist will not be refreshed in nicklist-mode, check the following WeeChat options:
+2018-12-05 17:52:30		'irc.server_default.away_check'          : interval between two checks, in minutes. (has to be >= 1 (default:0)).
+2018-12-05 17:52:30		'irc.server_default.away_check_max_nicks': channels with high number of nicks will not be checked (default: 25).
+2018-12-05 17:52:30		name of buddy has to be written 'case sensitive' (it's recommended to use nick-completion or to drag'n'drop buddy with mouse).
+2018-12-05 17:52:30		Examples:
+2018-12-05 17:52:30		  Add buddy (nils) to buddylist (server of current buffer will be used):
+2018-12-05 17:52:30		    /buddylist add nils
+2018-12-05 17:52:30		  Delete buddy (nils) from buddylist:
+2018-12-05 17:52:30		    /buddylist del nils (server of current buffer will be used)
+2018-12-05 17:53:27		[perl/buddylist]  /buddylist  <add>[nick_1 [... nick_n]] | <del>[nick_1 [... nick_n]]
+2018-12-05 17:53:27		display status from your buddies a bar-item.
+2018-12-05 17:53:27		<add> [nick(s)] add nick(s) to the buddylist
+2018-12-05 17:53:27		<del> [nick(s)] delete nick(s) from the buddylist
+2018-12-05 17:53:27		<list> show buddylist
+2018-12-05 17:53:27		Options:
+2018-12-05 17:53:27		'plugins.var.perl.buddylist.buddylist'            : path/file-name to store your buddies. "%h" will be replaced by WeeChat home (by default: ~/.weechat)
+2018-12-05 17:53:27		'plugins.var.perl.buddylist.color.default         : fall back color. (default: standard weechat color)
+2018-12-05 17:53:27		'plugins.var.perl.buddylist.color.online'         : color for online buddies.
+2018-12-05 17:53:27		'plugins.var.perl.buddylist.color.away'           : color for away buddies.
+2018-12-05 17:53:27		'plugins.var.perl.buddylist.color.offline'        : color for offline buddies.
+2018-12-05 17:53:27		'plugins.var.perl.buddylist.color.server'         : color for servername.
+2018-12-05 17:53:27		'plugins.var.perl.buddylist.color.server.offline' : color for disconnected server (default: hide).
+2018-12-05 17:53:27		'plugins.var.perl.buddylist.color.number'         : color for channel number (default: lightred). If empty, channel list option is off.
+2018-12-05 17:53:27		'plugins.var.perl.buddylist.show.query'           : displays a query buffer in front of the channel list.
+2018-12-05 17:53:27		'plugins.var.perl.buddylist.hide.server.if.buddies.offline': hides server when all buddies are offline for this server (default: off).
+2018-12-05 17:53:27		'plugins.var.perl.buddylist.hide.buddy.if.offline': hide buddy if offline (default: off).
+2018-12-05 17:53:27		'plugins.var.perl.buddylist.buddy.on.server'      : show buddy who is connected to a server, but not visiting the same channel(s) (default: on).
+2018-12-05 17:53:27		'plugins.var.perl.buddylist.buddy.on.server.color': color for online buddy but not visiting the same channel(s) (default: lightgreen).
+2018-12-05 17:53:27		'plugins.var.perl.buddylist.hide.bar'             : hides buddylist bar when all servers with added buddies are offline (default: on).
+2018-12-05 17:53:27		                                          always  : buddylist bar will be hidden (for example if you want to add item 'buddylist' to 'weechat.bar.status.items'
+2018-12-05 17:53:27		                                          off     : buddylist bar will not be hidden.
+2018-12-05 17:53:27		'plugins.var.perl.buddylist.check.buddies'        : time in seconds to send a /whois request to server. Be careful not to flood server (default: 20).
+2018-12-05 17:53:27		'plugins.var.perl.buddylist.callback.timeout'     : time in seconds to wait for answer from server. (default: 60).
+2018-12-05 17:53:27		'plugins.var.perl.buddylist.display.original.nick': display original nickname even if buddy changed his /nick (you have to add new nick to buddylist) (default: off).
+2018-12-05 17:53:27		'plugins.var.perl.buddylist.sort'                 : sort method for buddylist (default or status).
+2018-12-05 17:53:27		                                          default : buddylist will be sort by nickname
+2018-12-05 17:53:27		                                          status  : buddylist will be sort by status (online, away, offline)
+2018-12-05 17:53:27		'plugins.var.perl.buddylist.display.social.net'   : using bitlbee, buddies will be sorted in sublists with social-network name (eg. msn/jabber/facebook)(default: on)
+2018-12-05 17:53:27		'plugins.var.perl.buddylist.display.social.net.color': color for social-network name (default: yellow)
+2018-12-05 17:53:27		'plugins.var.perl.buddylist.text.color'           : color for optional online/away/offline-text in buddylist (default: white)
+2018-12-05 17:53:27		'plugins.var.perl.buddylist.text.online'          : optional online text in buddylist (sort method has to be 'status')
+2018-12-05 17:53:27		'plugins.var.perl.buddylist.text.away'            : optional away text in buddylist (sort method has to be 'status')
+2018-12-05 17:53:27		'plugins.var.perl.buddylist.text.offline'         : optional offline text in buddylist (sort method has to be 'status')
+2018-12-05 17:53:27		'plugins.var.perl.buddylist.use.redirection'      : using redirection to get status of buddies (needs weechat >=0.3.4) (default: on).
+2018-12-05 17:53:27		Mouse-support:
+2018-12-05 17:53:27		  click left mouse-button on buddy to open a query buffer.
+2018-12-05 17:53:27		  add a buddy by dragging a nick with left mouse-button from nicklist or chat-area and drop on buddylist.
+2018-12-05 17:53:27		  remove a buddy by dragging a buddy with left mouse-button from buddylist and drop it on any area.
+2018-12-05 17:53:27		Cursor-Mode:
+2018-12-05 17:53:27		 q  open query with nick (/query)
+2018-12-05 17:53:27		 w  query information about user (/whois)
+2018-12-05 17:53:27		Troubleshooting:
+2018-12-05 17:53:27		If buddylist will not be refreshed in nicklist-mode, check the following WeeChat options:
+2018-12-05 17:53:27		'irc.server_default.away_check'          : interval between two checks, in minutes. (has to be >= 1 (default:0)).
+2018-12-05 17:53:27		'irc.server_default.away_check_max_nicks': channels with high number of nicks will not be checked (default: 25).
+2018-12-05 17:53:27		name of buddy has to be written 'case sensitive' (it's recommended to use nick-completion or to drag'n'drop buddy with mouse).
+2018-12-05 17:53:27		Examples:
+2018-12-05 17:53:27		  Add buddy (nils) to buddylist (server of current buffer will be used):
+2018-12-05 17:53:27		    /buddylist add nils
+2018-12-05 17:53:27		  Delete buddy (nils) from buddylist:
+2018-12-05 17:53:27		    /buddylist del nils (server of current buffer will be used)
+2018-12-05 17:53:49		Buddylist:
+2018-12-05 17:53:49		Servername.Nickname (status) ==> Channelname:
+2018-12-05 17:53:49		 esper.mort (offline)
+2018-12-05 17:53:49		 oftc.pooby (offline)
+2018-12-05 17:54:36		Option changed: plugins.var.perl.buddylist.display.social.net = "on"
+2018-12-05 17:55:11		Option changed: plugins.var.perl.buddylist.hide.bar = "never"
+2018-12-05 17:55:39		Option changed: weechat.bar.buddylist.position = left
+2018-12-05 17:56:31		Option changed: weechat.bar.buddylist.hidden = off  (default: on)
+2018-12-05 17:57:06		Option changed: irc.server_default.away_check = 1  (default: 0)
+2018-12-05 17:57:34		Option changed: irc.color.input_nick = gray  (default: lightcyan)
+2018-12-05 17:57:40		Option changed: irc.color.input_nick = darkgray  (default: lightcyan)
+2018-12-05 17:58:55		Option changed: weechat.color.chat_prefix_suffix = blue  (default: green)
+2018-12-05 17:59:21		Option changed: weechat.color.chat_nick_self = darkgray  (default: white)
+2018-12-05 17:59:39		Option changed: weechat.color.separator = 60  (default: blue)
+2018-12-05 18:01:28	!	Error: failed to set option "weechat.color.nicklist_away"
+2018-12-05 18:01:33		Option changed: weechat.color.nicklist_away = 20  (default: cyan)
+2018-12-05 18:01:45		Options saved to sec.conf
+2018-12-05 18:01:45		Options saved to weechat.conf
+2018-12-05 18:01:45		Options saved to plugins.conf
+2018-12-05 18:01:45		Options saved to charset.conf
+2018-12-05 18:01:45		Options saved to logger.conf
+2018-12-05 18:01:45		Options saved to exec.conf
+2018-12-05 18:01:45		Options saved to trigger.conf
+2018-12-05 18:01:45		Options saved to aspell.conf
+2018-12-05 18:01:45		Options saved to alias.conf
+2018-12-05 18:01:45		Options saved to buflist.conf
+2018-12-05 18:01:45		Options saved to fifo.conf
+2018-12-05 18:01:45		Options saved to xfer.conf
+2018-12-05 18:01:45		Options saved to irc.conf
+2018-12-05 18:01:45		Options saved to relay.conf
+2018-12-05 18:01:45		Options saved to lua.conf
+2018-12-05 18:01:45		Options saved to perl.conf
+2018-12-05 18:01:45		Options saved to buffers.conf
+2018-12-05 18:01:45		Options saved to iset.conf
+2018-12-05 18:01:45		Options saved to python.conf
+2018-12-05 18:01:45		Options saved to colorize_nicks.conf
+2018-12-05 18:01:45		Options saved to tcl.conf
+2018-12-05 18:01:45		Options saved to guile.conf
+2018-12-05 18:01:45		Options saved to script.conf
+2018-12-05 18:01:45		Options saved to fset.conf
+2018-12-05 18:02:24		Option changed: weechat.color.status_count_highlight = red  (default: magenta)
+2018-12-05 18:02:40		Option changed: weechat.color.chat_time = black  (default: default)
+2018-12-05 18:02:53		Option changed: weechat.color.chat_channel = black  (default: white)
+2018-12-05 18:03:37		Buddylist:
+2018-12-05 18:03:37		Servername.Nickname (status) ==> Channelname:
+2018-12-05 18:03:37		 esper.mort (offline)
+2018-12-05 18:03:37		 oftc.pooby (offline)
+2018-12-05 18:04:06		Layout of buffers+windows stored in "default" (current layout: default)
+2018-12-05 18:04:08		Options saved to sec.conf
+2018-12-05 18:04:08		Options saved to weechat.conf
+2018-12-05 18:04:08		Options saved to plugins.conf
+2018-12-05 18:04:08		Options saved to charset.conf
+2018-12-05 18:04:08		Options saved to logger.conf
+2018-12-05 18:04:08		Options saved to exec.conf
+2018-12-05 18:04:08		Options saved to trigger.conf
+2018-12-05 18:04:08		Options saved to aspell.conf
+2018-12-05 18:04:08		Options saved to alias.conf
+2018-12-05 18:04:08		Options saved to buflist.conf
+2018-12-05 18:04:08		Options saved to fifo.conf
+2018-12-05 18:04:08		Options saved to xfer.conf
+2018-12-05 18:04:08		Options saved to irc.conf
+2018-12-05 18:04:08		Options saved to relay.conf
+2018-12-05 18:04:08		Options saved to lua.conf
+2018-12-05 18:04:08		Options saved to perl.conf
+2018-12-05 18:04:08		Options saved to buffers.conf
+2018-12-05 18:04:08		Options saved to iset.conf
+2018-12-05 18:04:08		Options saved to python.conf
+2018-12-05 18:04:08		Options saved to colorize_nicks.conf
+2018-12-05 18:04:08		Options saved to tcl.conf
+2018-12-05 18:04:08		Options saved to guile.conf
+2018-12-05 18:04:08		Options saved to script.conf
+2018-12-05 18:04:08		Options saved to fset.conf
+2018-12-05 18:11:25	!	No help available, "buffers" is not a command or an option
+2018-12-05 18:11:37		script: script "buffers.pl" is already installed and up-to-date
+2018-12-05 18:12:27		script: script "shell.py" not found
+2018-12-05 18:12:32		No command is running
+2018-12-05 18:12:37		[exec]  /exec  -list
+2018-12-05 18:12:37		               [-sh|-nosh] [-bg|-nobg] [-stdin|-nostdin] [-buffer <name>] [-l|-o|-n|-nf] [-cl|-nocl] [-sw|-nosw] [-ln|-noln] [-flush|-noflush] [-color ansi|auto|irc|weechat|strip] [-rc|-norc] [-timeout <timeout>] [-name <name>] [-pipe <command>] [-hsignal <name>] <command>
+2018-12-05 18:12:37		               -in <id> <text>
+2018-12-05 18:12:37		               -inclose <id> [<text>]
+2018-12-05 18:12:37		               -signal <id> <signal>
+2018-12-05 18:12:37		               -kill <id>
+2018-12-05 18:12:37		               -killall
+2018-12-05 18:12:37		               -set <id> <property> <value>
+2018-12-05 18:12:37		               -del <id>|-all [<id>...]
+2018-12-05 18:12:37		execute external commands
+2018-12-05 18:12:37		   -list: list commands
+2018-12-05 18:12:37		     -sh: use the shell to execute the command, many commands can be piped (WARNING: use this option ONLY if all arguments are safe, see option -nosh)
+2018-12-05 18:12:37		   -nosh: do not use the shell to execute the command (required if the command has some unsafe data, for example the content of a message from another user) (default)
+2018-12-05 18:12:37		     -bg: run process in background: do not display process output neither return code (not compatible with options -o/-oc/-n/-nf/-pipe/-hsignal)
+2018-12-05 18:12:37		   -nobg: catch process output and display return code (default)
+2018-12-05 18:12:37		  -stdin: create a pipe for sending data to the process (with /exec -in/-inclose)
+2018-12-05 18:12:37		-nostdin: do not create a pipe for stdin (default)
+2018-12-05 18:12:37		 -buffer: display/send output of command on this buffer (if the buffer is not found, a new buffer with name "exec.exec.xxx" is created)
+2018-12-05 18:12:37		      -l: display locally output of command on buffer (default)
+2018-12-05 18:12:37		      -o: send output of command to the buffer without executing commands (not compatible with options -bg/-pipe/-hsignal)
+2018-12-05 18:12:37		     -oc: send output of command to the buffer and execute commands (lines starting with "/" or another custom command char) (not compatible with options -bg/-pipe/-hsignal)
+2018-12-05 18:12:37		      -n: display output of command in a new buffer (not compatible with options -bg/-pipe/-hsignal)
+2018-12-05 18:12:37		     -nf: display output of command in a new buffer with free content (no word-wrap, no limit on number of lines) (not compatible with options -bg/-pipe/-hsignal)
+2018-12-05 18:12:37		     -cl: clear the new buffer before displaying output
+2018-12-05 18:12:37		   -nocl: append to the new buffer without clear (default)
+2018-12-05 18:12:37		     -sw: switch to the output buffer (default)
+2018-12-05 18:12:37		   -nosw: don't switch to the output buffer
+2018-12-05 18:12:37		     -ln: display line numbers (default in new buffer only)
+2018-12-05 18:12:37		   -noln: don't display line numbers
+2018-12-05 18:12:37		  -flush: display output of command in real time (default)
+2018-12-05 18:12:37		-noflush: display output of command after its end
+2018-12-05 18:12:37		  -color: action on ANSI colors in output:
+2018-12-05 18:12:37		             ansi: keep ANSI codes as-is
+2018-12-05 18:12:37		             auto: convert ANSI colors to WeeChat/IRC (default)
+2018-12-05 18:12:37		              irc: convert ANSI colors to IRC colors
+2018-12-05 18:12:37		          weechat: convert ANSI colors to WeeChat colors
+2018-12-05 18:12:37		            strip: remove ANSI colors
+2018-12-05 18:12:37		     -rc: display return code (default)
+2018-12-05 18:12:37		   -norc: don't display return code
+2018-12-05 18:12:37		-timeout: set a timeout for the command (in seconds)
+2018-12-05 18:12:37		   -name: set a name for the command (to name it later with /exec)
+2018-12-05 18:12:37		   -pipe: send the output to a WeeChat/plugin command (line by line); if there are spaces in command/arguments, enclose them with double quotes; variable $line is replaced by the line (by default the line is added after the command, separated by a space) (not compatible with options -bg/-o/-oc/-n/-nf)
+2018-12-05 18:12:37		-hsignal: send the output as a hsignal (to be used for example in a trigger) (not compatible with options -bg/-o/-oc/-n/-nf)
+2018-12-05 18:12:37		 command: the command to execute; if beginning with "url:", the shell is disabled and the content of URL is downloaded and sent as output
+2018-12-05 18:12:37		      id: command identifier: either its number or name (if set with "-name xxx")
+2018-12-05 18:12:37		     -in: send text on standard input of process
+2018-12-05 18:12:37		-inclose: same as -in, but stdin is closed after (and text is optional: without text, the stdin is just closed)
+2018-12-05 18:12:37		 -signal: send a signal to the process; the signal can be an integer or one of these names: hup, int, quit, kill, term, usr1, usr2
+2018-12-05 18:12:37		   -kill: alias of "-signal <id> kill"
+2018-12-05 18:12:37		-killall: kill all running processes
+2018-12-05 18:12:37		    -set: set a hook property (see function hook_set in plugin API reference)
+2018-12-05 18:12:37		property: hook property
+2018-12-05 18:12:37		   value: new value for hook property
+2018-12-05 18:12:37		    -del: delete a terminated command
+2018-12-05 18:12:37		    -all: delete all terminated commands
+2018-12-05 18:12:37		Default options can be set in the option exec.command.default_options.
+2018-12-05 18:12:37		Examples:
+2018-12-05 18:12:37		  /exec -n ls -l /tmp
+2018-12-05 18:12:37		  /exec -sh -n ps xu | grep weechat
+2018-12-05 18:12:37		  /exec -n -norc url:http://pastebin.com/raw.php?i=xxxxxxxx
+2018-12-05 18:12:37		  /exec -nf -noln links -dump https://weechat.org/files/doc/devel/weechat_user.en.html
+2018-12-05 18:12:37		  /exec -o uptime
+2018-12-05 18:12:37		  /exec -pipe "/print Machine uptime:" uptime
+2018-12-05 18:12:37		  /exec -n tail -f /var/log/messages
+2018-12-05 18:12:37		  /exec -kill 0
+2018-12-05 18:14:10		[perl/buddylist]  /buddylist  <add>[nick_1 [... nick_n]] | <del>[nick_1 [... nick_n]]
+2018-12-05 18:14:10		display status from your buddies a bar-item.
+2018-12-05 18:14:10		<add> [nick(s)] add nick(s) to the buddylist
+2018-12-05 18:14:10		<del> [nick(s)] delete nick(s) from the buddylist
+2018-12-05 18:14:10		<list> show buddylist
+2018-12-05 18:14:10		Options:
+2018-12-05 18:14:10		'plugins.var.perl.buddylist.buddylist'            : path/file-name to store your buddies. "%h" will be replaced by WeeChat home (by default: ~/.weechat)
+2018-12-05 18:14:10		'plugins.var.perl.buddylist.color.default         : fall back color. (default: standard weechat color)
+2018-12-05 18:14:10		'plugins.var.perl.buddylist.color.online'         : color for online buddies.
+2018-12-05 18:14:10		'plugins.var.perl.buddylist.color.away'           : color for away buddies.
+2018-12-05 18:14:10		'plugins.var.perl.buddylist.color.offline'        : color for offline buddies.
+2018-12-05 18:14:10		'plugins.var.perl.buddylist.color.server'         : color for servername.
+2018-12-05 18:14:10		'plugins.var.perl.buddylist.color.server.offline' : color for disconnected server (default: hide).
+2018-12-05 18:14:10		'plugins.var.perl.buddylist.color.number'         : color for channel number (default: lightred). If empty, channel list option is off.
+2018-12-05 18:14:10		'plugins.var.perl.buddylist.show.query'           : displays a query buffer in front of the channel list.
+2018-12-05 18:14:10		'plugins.var.perl.buddylist.hide.server.if.buddies.offline': hides server when all buddies are offline for this server (default: off).
+2018-12-05 18:14:10		'plugins.var.perl.buddylist.hide.buddy.if.offline': hide buddy if offline (default: off).
+2018-12-05 18:14:10		'plugins.var.perl.buddylist.buddy.on.server'      : show buddy who is connected to a server, but not visiting the same channel(s) (default: on).
+2018-12-05 18:14:10		'plugins.var.perl.buddylist.buddy.on.server.color': color for online buddy but not visiting the same channel(s) (default: lightgreen).
+2018-12-05 18:14:10		'plugins.var.perl.buddylist.hide.bar'             : hides buddylist bar when all servers with added buddies are offline (default: on).
+2018-12-05 18:14:10		                                          always  : buddylist bar will be hidden (for example if you want to add item 'buddylist' to 'weechat.bar.status.items'
+2018-12-05 18:14:10		                                          off     : buddylist bar will not be hidden.
+2018-12-05 18:14:10		'plugins.var.perl.buddylist.check.buddies'        : time in seconds to send a /whois request to server. Be careful not to flood server (default: 20).
+2018-12-05 18:14:10		'plugins.var.perl.buddylist.callback.timeout'     : time in seconds to wait for answer from server. (default: 60).
+2018-12-05 18:14:10		'plugins.var.perl.buddylist.display.original.nick': display original nickname even if buddy changed his /nick (you have to add new nick to buddylist) (default: off).
+2018-12-05 18:14:10		'plugins.var.perl.buddylist.sort'                 : sort method for buddylist (default or status).
+2018-12-05 18:14:10		                                          default : buddylist will be sort by nickname
+2018-12-05 18:14:10		                                          status  : buddylist will be sort by status (online, away, offline)
+2018-12-05 18:14:10		'plugins.var.perl.buddylist.display.social.net'   : using bitlbee, buddies will be sorted in sublists with social-network name (eg. msn/jabber/facebook)(default: on)
+2018-12-05 18:14:10		'plugins.var.perl.buddylist.display.social.net.color': color for social-network name (default: yellow)
+2018-12-05 18:14:10		'plugins.var.perl.buddylist.text.color'           : color for optional online/away/offline-text in buddylist (default: white)
+2018-12-05 18:14:10		'plugins.var.perl.buddylist.text.online'          : optional online text in buddylist (sort method has to be 'status')
+2018-12-05 18:14:10		'plugins.var.perl.buddylist.text.away'            : optional away text in buddylist (sort method has to be 'status')
+2018-12-05 18:14:10		'plugins.var.perl.buddylist.text.offline'         : optional offline text in buddylist (sort method has to be 'status')
+2018-12-05 18:14:10		'plugins.var.perl.buddylist.use.redirection'      : using redirection to get status of buddies (needs weechat >=0.3.4) (default: on).
+2018-12-05 18:14:10		Mouse-support:
+2018-12-05 18:14:10		  click left mouse-button on buddy to open a query buffer.
+2018-12-05 18:14:10		  add a buddy by dragging a nick with left mouse-button from nicklist or chat-area and drop on buddylist.
+2018-12-05 18:14:10		  remove a buddy by dragging a buddy with left mouse-button from buddylist and drop it on any area.
+2018-12-05 18:14:10		Cursor-Mode:
+2018-12-05 18:14:10		 q  open query with nick (/query)
+2018-12-05 18:14:10		 w  query information about user (/whois)
+2018-12-05 18:14:10		Troubleshooting:
+2018-12-05 18:14:10		If buddylist will not be refreshed in nicklist-mode, check the following WeeChat options:
+2018-12-05 18:14:10		'irc.server_default.away_check'          : interval between two checks, in minutes. (has to be >= 1 (default:0)).
+2018-12-05 18:14:10		'irc.server_default.away_check_max_nicks': channels with high number of nicks will not be checked (default: 25).
+2018-12-05 18:14:10		name of buddy has to be written 'case sensitive' (it's recommended to use nick-completion or to drag'n'drop buddy with mouse).
+2018-12-05 18:14:10		Examples:
+2018-12-05 18:14:10		  Add buddy (nils) to buddylist (server of current buffer will be used):
+2018-12-05 18:14:10		    /buddylist add nils
+2018-12-05 18:14:10		  Delete buddy (nils) from buddylist:
+2018-12-05 18:14:10		    /buddylist del nils (server of current buffer will be used)
+2018-12-05 18:15:18		Options saved to sec.conf
+2018-12-05 18:15:18		Options saved to weechat.conf
+2018-12-05 18:15:18		Options saved to plugins.conf
+2018-12-05 18:15:18		Options saved to charset.conf
+2018-12-05 18:15:18		Options saved to logger.conf
+2018-12-05 18:15:18		Options saved to exec.conf
+2018-12-05 18:15:18		Options saved to trigger.conf
+2018-12-05 18:15:18		Options saved to aspell.conf
+2018-12-05 18:15:18		Options saved to alias.conf
+2018-12-05 18:15:18		Options saved to buflist.conf
+2018-12-05 18:15:18		Options saved to fifo.conf
+2018-12-05 18:15:18		Options saved to xfer.conf
+2018-12-05 18:15:18		Options saved to irc.conf
+2018-12-05 18:15:18		Options saved to relay.conf
+2018-12-05 18:15:18		Options saved to lua.conf
+2018-12-05 18:15:18		Options saved to perl.conf
+2018-12-05 18:15:18		Options saved to buffers.conf
+2018-12-05 18:15:18		Options saved to iset.conf
+2018-12-05 18:15:18		Options saved to python.conf
+2018-12-05 18:15:18		Options saved to colorize_nicks.conf
+2018-12-05 18:15:18		Options saved to tcl.conf
+2018-12-05 18:15:18		Options saved to guile.conf
+2018-12-05 18:15:18		Options saved to script.conf
+2018-12-05 18:15:18		Options saved to fset.conf
+2018-12-05 18:15:19		[perl/buddylist]  /buddylist  <add>[nick_1 [... nick_n]] | <del>[nick_1 [... nick_n]]
+2018-12-05 18:15:19		display status from your buddies a bar-item.
+2018-12-05 18:15:19		<add> [nick(s)] add nick(s) to the buddylist
+2018-12-05 18:15:19		<del> [nick(s)] delete nick(s) from the buddylist
+2018-12-05 18:15:19		<list> show buddylist
+2018-12-05 18:15:19		Options:
+2018-12-05 18:15:19		'plugins.var.perl.buddylist.buddylist'            : path/file-name to store your buddies. "%h" will be replaced by WeeChat home (by default: ~/.weechat)
+2018-12-05 18:15:19		'plugins.var.perl.buddylist.color.default         : fall back color. (default: standard weechat color)
+2018-12-05 18:15:19		'plugins.var.perl.buddylist.color.online'         : color for online buddies.
+2018-12-05 18:15:19		'plugins.var.perl.buddylist.color.away'           : color for away buddies.
+2018-12-05 18:15:19		'plugins.var.perl.buddylist.color.offline'        : color for offline buddies.
+2018-12-05 18:15:19		'plugins.var.perl.buddylist.color.server'         : color for servername.
+2018-12-05 18:15:19		'plugins.var.perl.buddylist.color.server.offline' : color for disconnected server (default: hide).
+2018-12-05 18:15:19		'plugins.var.perl.buddylist.color.number'         : color for channel number (default: lightred). If empty, channel list option is off.
+2018-12-05 18:15:19		'plugins.var.perl.buddylist.show.query'           : displays a query buffer in front of the channel list.
+2018-12-05 18:15:19		'plugins.var.perl.buddylist.hide.server.if.buddies.offline': hides server when all buddies are offline for this server (default: off).
+2018-12-05 18:15:19		'plugins.var.perl.buddylist.hide.buddy.if.offline': hide buddy if offline (default: off).
+2018-12-05 18:15:19		'plugins.var.perl.buddylist.buddy.on.server'      : show buddy who is connected to a server, but not visiting the same channel(s) (default: on).
+2018-12-05 18:15:19		'plugins.var.perl.buddylist.buddy.on.server.color': color for online buddy but not visiting the same channel(s) (default: lightgreen).
+2018-12-05 18:15:19		'plugins.var.perl.buddylist.hide.bar'             : hides buddylist bar when all servers with added buddies are offline (default: on).
+2018-12-05 18:15:19		                                          always  : buddylist bar will be hidden (for example if you want to add item 'buddylist' to 'weechat.bar.status.items'
+2018-12-05 18:15:19		                                          off     : buddylist bar will not be hidden.
+2018-12-05 18:15:19		'plugins.var.perl.buddylist.check.buddies'        : time in seconds to send a /whois request to server. Be careful not to flood server (default: 20).
+2018-12-05 18:15:19		'plugins.var.perl.buddylist.callback.timeout'     : time in seconds to wait for answer from server. (default: 60).
+2018-12-05 18:15:19		'plugins.var.perl.buddylist.display.original.nick': display original nickname even if buddy changed his /nick (you have to add new nick to buddylist) (default: off).
+2018-12-05 18:15:19		'plugins.var.perl.buddylist.sort'                 : sort method for buddylist (default or status).
+2018-12-05 18:15:19		                                          default : buddylist will be sort by nickname
+2018-12-05 18:15:19		                                          status  : buddylist will be sort by status (online, away, offline)
+2018-12-05 18:15:19		'plugins.var.perl.buddylist.display.social.net'   : using bitlbee, buddies will be sorted in sublists with social-network name (eg. msn/jabber/facebook)(default: on)
+2018-12-05 18:15:19		'plugins.var.perl.buddylist.display.social.net.color': color for social-network name (default: yellow)
+2018-12-05 18:15:19		'plugins.var.perl.buddylist.text.color'           : color for optional online/away/offline-text in buddylist (default: white)
+2018-12-05 18:15:19		'plugins.var.perl.buddylist.text.online'          : optional online text in buddylist (sort method has to be 'status')
+2018-12-05 18:15:19		'plugins.var.perl.buddylist.text.away'            : optional away text in buddylist (sort method has to be 'status')
+2018-12-05 18:15:19		'plugins.var.perl.buddylist.text.offline'         : optional offline text in buddylist (sort method has to be 'status')
+2018-12-05 18:15:19		'plugins.var.perl.buddylist.use.redirection'      : using redirection to get status of buddies (needs weechat >=0.3.4) (default: on).
+2018-12-05 18:15:19		Mouse-support:
+2018-12-05 18:15:19		  click left mouse-button on buddy to open a query buffer.
+2018-12-05 18:15:19		  add a buddy by dragging a nick with left mouse-button from nicklist or chat-area and drop on buddylist.
+2018-12-05 18:15:19		  remove a buddy by dragging a buddy with left mouse-button from buddylist and drop it on any area.
+2018-12-05 18:15:19		Cursor-Mode:
+2018-12-05 18:15:19		 q  open query with nick (/query)
+2018-12-05 18:15:19		 w  query information about user (/whois)
+2018-12-05 18:15:19		Troubleshooting:
+2018-12-05 18:15:19		If buddylist will not be refreshed in nicklist-mode, check the following WeeChat options:
+2018-12-05 18:15:19		'irc.server_default.away_check'          : interval between two checks, in minutes. (has to be >= 1 (default:0)).
+2018-12-05 18:15:19		'irc.server_default.away_check_max_nicks': channels with high number of nicks will not be checked (default: 25).
+2018-12-05 18:15:19		name of buddy has to be written 'case sensitive' (it's recommended to use nick-completion or to drag'n'drop buddy with mouse).
+2018-12-05 18:15:19		Examples:
+2018-12-05 18:15:19		  Add buddy (nils) to buddylist (server of current buffer will be used):
+2018-12-05 18:15:19		    /buddylist add nils
+2018-12-05 18:15:19		  Delete buddy (nils) from buddylist:
+2018-12-05 18:15:19		    /buddylist del nils (server of current buffer will be used)
+2018-12-05 18:15:44		[core]  /cursor  go chat|<bar>|<x>,<y>
+2018-12-05 18:15:44		                 move up|down|left|right|area_up|area_down|area_left|area_right
+2018-12-05 18:15:44		                 stop
+2018-12-05 18:15:44		free movement of cursor on screen to execute actions on specific areas of screen
+2018-12-05 18:15:44		  go: move cursor to chat area, a bar (using bar name) or coordinates "x,y"
+2018-12-05 18:15:44		move: move cursor with direction
+2018-12-05 18:15:44		stop: stop cursor mode
+2018-12-05 18:15:44		Without argument, this command toggles cursor mode.
+2018-12-05 18:15:44		When mouse is enabled (see /help mouse), by default a middle click will start cursor mode at this point.
+2018-12-05 18:15:44		Default keys in cursor mode on chat messages:
+2018-12-05 18:15:44		  m  quote message
+2018-12-05 18:15:44		  q  quote prefix + message
+2018-12-05 18:15:44		  Q  quote time + prefix + message
+2018-12-05 18:15:44		Default keys in cursor mode on nicklist:
+2018-12-05 18:15:44		  b  ban nick (/ban)
+2018-12-05 18:15:44		  k  kick nick (/kick)
+2018-12-05 18:15:44		  K  kick and ban nick (/kickban)
+2018-12-05 18:15:44		  q  open query with nick (/query)
+2018-12-05 18:15:44		  w  query information about user (/whois)
+2018-12-05 18:15:44		Examples:
+2018-12-05 18:15:44		  go to nicklist:
+2018-12-05 18:15:44		    /cursor go nicklist
+2018-12-05 18:15:44		  go to coordinates x=10, y=5:
+2018-12-05 18:15:44		    /cursor go 10,5
+2018-12-05 18:18:46		No key found
+2018-12-05 18:18:54		[core]  /cursor  go chat|<bar>|<x>,<y>
+2018-12-05 18:18:54		                 move up|down|left|right|area_up|area_down|area_left|area_right
+2018-12-05 18:18:54		                 stop
+2018-12-05 18:18:54		free movement of cursor on screen to execute actions on specific areas of screen
+2018-12-05 18:18:54		  go: move cursor to chat area, a bar (using bar name) or coordinates "x,y"
+2018-12-05 18:18:54		move: move cursor with direction
+2018-12-05 18:18:54		stop: stop cursor mode
+2018-12-05 18:18:54		Without argument, this command toggles cursor mode.
+2018-12-05 18:18:54		When mouse is enabled (see /help mouse), by default a middle click will start cursor mode at this point.
+2018-12-05 18:18:54		Default keys in cursor mode on chat messages:
+2018-12-05 18:18:54		  m  quote message
+2018-12-05 18:18:54		  q  quote prefix + message
+2018-12-05 18:18:54		  Q  quote time + prefix + message
+2018-12-05 18:18:54		Default keys in cursor mode on nicklist:
+2018-12-05 18:18:54		  b  ban nick (/ban)
+2018-12-05 18:18:54		  k  kick nick (/kick)
+2018-12-05 18:18:54		  K  kick and ban nick (/kickban)
+2018-12-05 18:18:54		  q  open query with nick (/query)
+2018-12-05 18:18:54		  w  query information about user (/whois)
+2018-12-05 18:18:54		Examples:
+2018-12-05 18:18:54		  go to nicklist:
+2018-12-05 18:18:54		    /cursor go nicklist
+2018-12-05 18:18:54		  go to coordinates x=10, y=5:
+2018-12-05 18:18:54		    /cursor go 10,5
+2018-12-05 18:22:25		[core]  /mouse  enable|disable|toggle [<delay>]
+2018-12-05 18:22:25		mouse control
+2018-12-05 18:22:25		 enable: enable mouse
+2018-12-05 18:22:25		disable: disable mouse
+2018-12-05 18:22:25		 toggle: toggle mouse
+2018-12-05 18:22:25		  delay: delay (in seconds) after which initial mouse state is restored (useful to temporarily disable mouse)
+2018-12-05 18:22:25		The mouse state is saved in option "weechat.look.mouse".
+2018-12-05 18:22:25		Examples:
+2018-12-05 18:22:25		  enable mouse:
+2018-12-05 18:22:25		    /mouse enable
+2018-12-05 18:22:25		  toggle mouse for 5 seconds:
+2018-12-05 18:22:25		    /mouse toggle 5
+2018-12-05 18:23:01	!	Error: unknown command "/bind" (type /help for help)
+2018-12-05 18:23:15		No key found
+2018-12-05 18:23:22		New key binding (context "default"): ctrl-g => /cursor stop
+2018-12-05 18:23:44		Key:
+2018-12-05 18:23:44		  meta-h => /input hotlist_clear
+2018-12-05 18:23:53		No key found
+2018-12-05 18:23:55		No key found
+2018-12-05 18:23:58		No key found
+2018-12-05 18:24:00		No key found
+2018-12-05 18:24:28		New key binding (context "default"): ctrl-s => /cursor move up
+2018-12-05 18:24:33		Key "ctrl-s" unbound (context: "default")
+2018-12-05 18:24:33		New key binding (context "default"): ctrl-s => /cursor move right
+2018-12-05 18:24:46		New key binding (context "default"): ctrl-n => /cursor move up
+2018-12-05 18:24:58		New key binding (context "default"): ctrl-t => /cursor move down
+2018-12-05 18:25:05		New key binding (context "default"): ctrl-h => /cursor move left
+2018-12-05 18:25:24		No key found
+2018-12-05 18:25:35		New key binding (context "default"): ctrl-c => /cursor go chat
+2018-12-05 18:26:29		Key "ctrl-h" unbound (context: "default")
+2018-12-05 18:26:32		Key "ctrl-s" unbound (context: "default")
+2018-12-05 18:26:33	!	Error: unable to unbind key "ctrl-h"
+2018-12-05 18:26:35		Key "ctrl-t" unbound (context: "default")
+2018-12-05 18:26:35		Key "ctrl-n" unbound (context: "default")
+2018-12-05 18:26:38		Key "ctrl-g" unbound (context: "default")
+2018-12-05 18:26:41		Key "ctrl-c" unbound (context: "default")
+2018-12-05 18:27:43		New key binding (context "default"): meta-ctrl-c => /cursor go chat
+2018-12-05 18:28:10		Key "meta-ctrl-c" unbound (context: "default")
+2018-12-05 18:28:16		No key found
+2018-12-05 18:28:25		New key binding (context "default"): meta-, => /cursor go chat
+2018-12-05 18:28:36		No key found
+2018-12-05 18:28:46		New key binding (context "default"): meta-. => /cursor go nicklist
+2018-12-05 18:29:18		No key found
+2018-12-05 18:29:30		New key binding (context "default"): meta-' => /cursor go buflist
+2018-12-05 18:30:19		[trigger]  /trigger  list|listfull|listdefault
+2018-12-05 18:30:19		                     add|addoff|addreplace <name> <hook> ["<arguments>" ["<conditions>" ["<regex>" ["<command>" ["<return_code>" ["<post_action>"]]]]]]
+2018-12-05 18:30:19		                     addinput [<hook>]
+2018-12-05 18:30:19		                     input|output|recreate <name>
+2018-12-05 18:30:19		                     set <name> <option> <value>
+2018-12-05 18:30:19		                     rename|copy <name> <new_name>
+2018-12-05 18:30:19		                     enable|disable|toggle [<name>|-all [<name>...]]
+2018-12-05 18:30:19		                     restart <name>|-all [<name>...]
+2018-12-05 18:30:19		                     show <name>
+2018-12-05 18:30:19		                     del <name>|-all [<name>...]
+2018-12-05 18:30:19		                     restore <name> [<name>...]
+2018-12-05 18:30:19		                     default -yes
+2018-12-05 18:30:19		                     monitor [<filter>]
+2018-12-05 18:30:19		manage triggers, the Swiss Army knife for WeeChat
+2018-12-05 18:30:19		       list: list triggers (without argument, this list is displayed)
+2018-12-05 18:30:19		   listfull: list triggers with detailed info for each trigger
+2018-12-05 18:30:19		listdefault: list default triggers
+2018-12-05 18:30:19		        add: add a trigger
+2018-12-05 18:30:19		     addoff: add a trigger (disabled)
+2018-12-05 18:30:19		 addreplace: add or replace an existing trigger
+2018-12-05 18:30:19		       name: name of trigger
+2018-12-05 18:30:19		       hook: signal, hsignal, modifier, line, print, command, command_run, timer, config, focus
+2018-12-05 18:30:19		  arguments: arguments for the hook, depending on hook (separated by semicolons):
+2018-12-05 18:30:19		             signal: name(s) of signal (required)
+2018-12-05 18:30:19		             hsignal: name(s) of hsignal (required)
+2018-12-05 18:30:19		             modifier: name(s) of modifier (required)
+2018-12-05 18:30:19		             line: buffer type ("formatted", "free" or "*"), list of buffer masks, tags
+2018-12-05 18:30:19		             print: buffer, tags, message, strip colors
+2018-12-05 18:30:19		             command: command (required), description, arguments, description of arguments, completion
+2018-12-05 18:30:19		             command_run: command(s) (required)
+2018-12-05 18:30:19		             timer: interval (required), align on second, max calls
+2018-12-05 18:30:19		             config: name(s) of option (required)
+2018-12-05 18:30:19		             focus: name(s) of area (required)
+2018-12-05 18:30:19		 conditions: evaluated conditions for the trigger
+2018-12-05 18:30:19		      regex: one or more regular expressions to replace strings in variables
+2018-12-05 18:30:19		    command: command to execute (many commands can be separated by ";")
+2018-12-05 18:30:19		return_code: return code in callback (ok (default), ok_eat, error)
+2018-12-05 18:30:19		post_action: action to take after execution (none (default), disable, delete)
+2018-12-05 18:30:19		   addinput: set input with default arguments to create a trigger
+2018-12-05 18:30:19		      input: set input with the command used to create the trigger
+2018-12-05 18:30:19		     output: send the command to create the trigger on the buffer
+2018-12-05 18:30:19		   recreate: same as "input", with option "addreplace" instead of "add"
+2018-12-05 18:30:19		        set: set an option in a trigger
+2018-12-05 18:30:19		     option: name of option: name, hook, arguments, conditions, regex, command, return_code
+2018-12-05 18:30:19		             (for help on option, you can type: /help trigger.trigger.<name>.<option>)
+2018-12-05 18:30:19		      value: new value for the option
+2018-12-05 18:30:19		     rename: rename a trigger
+2018-12-05 18:30:19		       copy: copy a trigger
+2018-12-05 18:30:19		     enable: enable trigger(s) (without arguments: enable triggers globally)
+2018-12-05 18:30:19		    disable: disable trigger(s) (without arguments: disable triggers globally)
+2018-12-05 18:30:19		     toggle: toggle trigger(s) (without arguments: toggle triggers globally)
+2018-12-05 18:30:19		    restart: restart trigger(s) (recreate the hooks)
+2018-12-05 18:30:19		       show: show detailed info on a trigger (with some stats)
+2018-12-05 18:30:19		        del: delete a trigger
+2018-12-05 18:30:19		       -all: do action on all triggers
+2018-12-05 18:30:19		    restore: restore trigger(s) with the default values (works only for default triggers)
+2018-12-05 18:30:19		    default: delete all triggers and restore default ones
+2018-12-05 18:30:19		    monitor: open the trigger monitor buffer, with optional filter:
+2018-12-05 18:30:19		     filter: filter hooks/triggers to display (a hook must start with "@", for example "@signal"), many filters can be separated by commas; wildcard "*" is allowed in each trigger name
+2018-12-05 18:30:19		When a trigger callback is called, following actions are performed, in this order:
+2018-12-05 18:30:19		  1. check conditions; if false, exit
+2018-12-05 18:30:19		  2. replace text using POSIX extended regular expression(s) (if defined in trigger)
+2018-12-05 18:30:19		  3. execute command(s) (if defined in trigger)
+2018-12-05 18:30:19		  4. exit with a return code (except for modifier, line and focus)
+2018-12-05 18:30:19		  5. perform post action
+2018-12-05 18:30:19		Examples (you can also look at default triggers with /trigger listdefault):
+2018-12-05 18:30:19		  add text attributes *bold*, _underline_ and /italic/ (only in user messages):
+2018-12-05 18:30:19		    /trigger add effects modifier weechat_print "${tg_tag_nick}" "==\*(\S+)\*==*${color:bold}${re:1}${color:-bold}*== ==_(\S+)_==_${color:underline}${re:1}${color:-underline}_== ==/(\S+)/==/${color:italic}${re:1}${color:-italic}/"
+2018-12-05 18:30:19		  hide nicklist bar on small terminals:
+2018-12-05 18:30:19		    /trigger add resize_small signal signal_sigwinch "${info:term_width} < 100" "" "/bar hide nicklist"
+2018-12-05 18:30:19		    /trigger add resize_big signal signal_sigwinch "${info:term_width} >= 100" "" "/bar show nicklist"
+2018-12-05 18:30:19		  silently save config each hour:
+2018-12-05 18:30:19		    /trigger add cfgsave timer 3600000;0;0 "" "" "/mute /save"
+2018-12-05 18:30:19		  open trigger monitor and show only modifiers and triggers whose name starts with "resize":
+2018-12-05 18:30:19		    /trigger monitor @modifier,resize*
+2018-12-05 18:31:01		New key binding (context "default"): ctrl-h => cursor left
+2018-12-05 18:31:08		New key binding (context "default"): ctrl-t => cursor down
+2018-12-05 18:31:18		New key binding (context "default"): ctrl-n => cursor right
+2018-12-05 18:31:26		Key "ctrl-n" unbound (context: "default")
+2018-12-05 18:31:26		New key binding (context "default"): ctrl-n => cursor up
+2018-12-05 18:31:34		New key binding (context "default"): ctrl-s => cursor right
+2018-12-05 18:32:05		Key:
+2018-12-05 18:32:05		  meta-. => /cursor go nicklist
+2018-12-05 18:32:10		Key:
+2018-12-05 18:32:10		  meta-, => /cursor go chat
+2018-12-05 18:32:19		[core]  /cursor  go chat|<bar>|<x>,<y>
+2018-12-05 18:32:19		                 move up|down|left|right|area_up|area_down|area_left|area_right
+2018-12-05 18:32:19		                 stop
+2018-12-05 18:32:19		free movement of cursor on screen to execute actions on specific areas of screen
+2018-12-05 18:32:19		  go: move cursor to chat area, a bar (using bar name) or coordinates "x,y"
+2018-12-05 18:32:19		move: move cursor with direction
+2018-12-05 18:32:19		stop: stop cursor mode
+2018-12-05 18:32:19		Without argument, this command toggles cursor mode.
+2018-12-05 18:32:19		When mouse is enabled (see /help mouse), by default a middle click will start cursor mode at this point.
+2018-12-05 18:32:19		Default keys in cursor mode on chat messages:
+2018-12-05 18:32:19		  m  quote message
+2018-12-05 18:32:19		  q  quote prefix + message
+2018-12-05 18:32:19		  Q  quote time + prefix + message
+2018-12-05 18:32:19		Default keys in cursor mode on nicklist:
+2018-12-05 18:32:19		  b  ban nick (/ban)
+2018-12-05 18:32:19		  k  kick nick (/kick)
+2018-12-05 18:32:19		  K  kick and ban nick (/kickban)
+2018-12-05 18:32:19		  q  open query with nick (/query)
+2018-12-05 18:32:19		  w  query information about user (/whois)
+2018-12-05 18:32:19		Examples:
+2018-12-05 18:32:19		  go to nicklist:
+2018-12-05 18:32:19		    /cursor go nicklist
+2018-12-05 18:32:19		  go to coordinates x=10, y=5:
+2018-12-05 18:32:19		    /cursor go 10,5
+2018-12-05 18:32:40		Key "ctrl-n" unbound (context: "default")
+2018-12-05 18:32:40		New key binding (context "default"): ctrl-n => cursor move up
+2018-12-05 18:32:45		Key "ctrl-s" unbound (context: "default")
+2018-12-05 18:32:45		New key binding (context "default"): ctrl-s => cursor move right
+2018-12-05 18:32:51		Key "ctrl-t" unbound (context: "default")
+2018-12-05 18:32:51		New key binding (context "default"): ctrl-t => cursor move down
+2018-12-05 18:32:57		Key "ctrl-h" unbound (context: "default")
+2018-12-05 18:32:57		New key binding (context "default"): ctrl-h => cursor move left
+2018-12-05 18:33:20		Key:
+2018-12-05 18:33:20		  meta-. => /cursor go nicklist
+2018-12-05 18:33:50		Key "ctrl-h" unbound (context: "default")
+2018-12-05 18:33:52		Key "ctrl-t" unbound (context: "default")
+2018-12-05 18:33:53		Key "ctrl-n" unbound (context: "default")
+2018-12-05 18:33:54		Key "ctrl-s" unbound (context: "default")
+2018-12-05 18:33:59	!	Too few arguments for command "/key bindctxt" (help on command: /help key)
+2018-12-05 18:34:06		[core]  /key  list|listdefault|listdiff [<context>]
+2018-12-05 18:34:06		              bind <key> [<command> [<args>]]
+2018-12-05 18:34:06		              bindctxt <context> <key> [<command> [<args>]]
+2018-12-05 18:34:06		              unbind <key>
+2018-12-05 18:34:06		              unbindctxt <context> <key>
+2018-12-05 18:34:06		              reset <key>
+2018-12-05 18:34:06		              resetctxt <context> <key>
+2018-12-05 18:34:06		              resetall -yes [<context>]
+2018-12-05 18:34:06		              missing [<context>]
+2018-12-05 18:34:06		bind/unbind keys
+2018-12-05 18:34:06		       list: list all current keys (without argument, this list is displayed)
+2018-12-05 18:34:06		listdefault: list default keys
+2018-12-05 18:34:06		   listdiff: list differences between current and default keys (keys added, redefined or deleted)
+2018-12-05 18:34:06		    context: name of context ("default" or "search")
+2018-12-05 18:34:06		       bind: bind a command to a key or display command bound to key (for context "default")
+2018-12-05 18:34:06		   bindctxt: bind a command to a key or display command bound to key, for given context
+2018-12-05 18:34:06		    command: command (many commands can be separated by semicolons)
+2018-12-05 18:34:06		     unbind: remove a key binding (for context "default")
+2018-12-05 18:34:06		 unbindctxt: remove a key binding for given context
+2018-12-05 18:34:06		      reset: reset a key to default binding (for context "default")
+2018-12-05 18:34:06		  resetctxt: reset a key to default binding, for given context
+2018-12-05 18:34:06		   resetall: restore bindings to the default values and delete ALL personal bindings (use carefully!)
+2018-12-05 18:34:06		    missing: add missing keys (using default bindings), useful after installing new WeeChat version
+2018-12-05 18:34:06		When binding a command to a key, it is recommended to use key alt+k (or Esc then k), and then press the key to bind: this will insert key code in command line.
+2018-12-05 18:34:06		For context "mouse" (possible in context "cursor" too), key has format: "@area:key" or "@area1>area2:key" where area can be:
+2018-12-05 18:34:06		          *: any area on screen
+2018-12-05 18:34:06		       chat: chat area (any buffer)
+2018-12-05 18:34:06		  chat(xxx): chat area for buffer with name "xxx" (full name including plugin)
+2018-12-05 18:34:06		     bar(*): any bar
+2018-12-05 18:34:06		   bar(xxx): bar "xxx"
+2018-12-05 18:34:06		    item(*): any bar item
+2018-12-05 18:34:06		  item(xxx): bar item "xxx"
+2018-12-05 18:34:06		Wildcard "*" is allowed in key to match many mouse events.
+2018-12-05 18:34:06		A special value for command with format "hsignal:name" can be used for context mouse, this will send the hsignal "name" with the focus hashtable as argument.
+2018-12-05 18:34:06		Another special value "-" can be used to disable key (it will be ignored when looking for keys).
+2018-12-05 18:34:06		Examples:
+2018-12-05 18:34:06		  key alt-t to toggle nicklist bar:
+2018-12-05 18:34:06		    /key bind meta-t /bar toggle nicklist
+2018-12-05 18:34:06		  key alt-r to jump to #weechat IRC channel:
+2018-12-05 18:34:06		    /key bind meta-r /buffer #weechat
+2018-12-05 18:34:06		  restore default binding for key alt-r:
+2018-12-05 18:34:06		    /key reset meta-r
+2018-12-05 18:34:06		  key "tab" to stop search in buffer:
+2018-12-05 18:34:06		    /key bindctxt search ctrl-I /input search_stop
+2018-12-05 18:34:06		  middle button of mouse on a nick to retrieve info on nick:
+2018-12-05 18:34:06		    /key bindctxt mouse @item(buffer_nicklist):button3 /msg nickserv info ${nick}
+2018-12-05 18:35:55		New key binding (context "cursor"): ctrl-n => /cursor move down
+2018-12-05 18:36:11		New key binding (context "cursor"): @*:ctrl-n => /cursor move down
+2018-12-05 18:36:16		Key "@*:ctrl-n" unbound (context: "cursor")
+2018-12-05 18:36:16		New key binding (context "cursor"): @*:ctrl-n => cursor move down
+2018-12-05 18:36:54		Key "@*:ctrl-n" unbound (context: "cursor")
+2018-12-05 18:36:57		Key "ctrl-n" unbound (context: "cursor")
+2018-12-05 18:38:46		Buddylist:
+2018-12-05 18:38:46		Servername.Nickname (status) ==> Channelname:
+2018-12-05 18:38:46		 esper.mort (offline)
+2018-12-05 18:38:46		 oftc.aam (offline)
+2018-12-05 18:38:46		 oftc.pooby (offline)
+2018-12-05 18:40:08		No key found
+2018-12-05 18:40:11		Key:
+2018-12-05 18:40:11		  meta-b => /input move_previous_word
+2018-12-05 18:40:20		No key found
+2018-12-05 18:40:30		New key binding (context "default"): meta-ctrl-b => /cursor go buddylist
+2018-12-05 18:40:53		Key "meta-ctrl-b" unbound (context: "default")
+2018-12-05 18:41:01		Key:
+2018-12-05 18:41:01		  meta-/ => /input jump_last_buffer_displayed
+2018-12-05 18:41:06		Key:
+2018-12-05 18:41:06		  meta-= => /filter toggle
+2018-12-05 18:41:14		buffer_autoclose: Closing buffer: oftc.aam
+2018-12-05 18:41:14		No key found
+2018-12-05 18:41:19		No key found
+2018-12-05 18:41:27		New key binding (context "default"): ctrl-/ => /cursor go buddylist
+2018-12-05 18:41:45		No key found
+2018-12-05 18:42:01		New key binding (context "default"): meta-q => /cursor go buddylist
+2018-12-05 18:42:04		No key found
+2018-12-05 18:42:08		New key binding (context "default"): meta-; => /cursor go buddylist
+2018-12-05 18:42:15		Key "ctrl-/" unbound (context: "default")
+2018-12-05 18:42:19		Key "meta-q" unbound (context: "default")
+2018-12-05 18:43:14		buffer_autoclose: Closing buffer: oftc.pooby
+2018-12-05 18:43:29		python: loading script "/home/aftix/.weechat/python/vimode.py"
+2018-12-05 18:43:29		python: registered script "vimode", version 0.7 (Add vi/vim-like modes and keybindings to WeeChat.)
+2018-12-05 18:43:29		[vimode.py] Problematic keybindings detected:
+2018-12-05 18:43:29		[vimode.py]     meta-jmeta-f -> /buffer -
+2018-12-05 18:43:29		[vimode.py]     meta-jmeta-l -> /buffer +
+2018-12-05 18:43:29		[vimode.py]     meta-jmeta-r -> /server raw
+2018-12-05 18:43:29		[vimode.py]     meta-jmeta-s -> /server jump
+2018-12-05 18:43:29		[vimode.py]     meta-wmeta-meta2-A -> /window up
+2018-12-05 18:43:29		[vimode.py]     meta-wmeta-meta2-B -> /window down
+2018-12-05 18:43:29		[vimode.py]     meta-wmeta-meta2-C -> /window right
+2018-12-05 18:43:29		[vimode.py]     meta-wmeta-meta2-D -> /window left
+2018-12-05 18:43:29		[vimode.py]     meta-wmeta2-1;3A -> /window up
+2018-12-05 18:43:29		[vimode.py]     meta-wmeta2-1;3B -> /window down
+2018-12-05 18:43:29		[vimode.py]     meta-wmeta2-1;3C -> /window right
+2018-12-05 18:43:29		[vimode.py]     meta-wmeta2-1;3D -> /window left
+2018-12-05 18:43:29		[vimode.py]     meta-wmeta-b -> /window balance
+2018-12-05 18:43:29		[vimode.py]     meta-wmeta-s -> /window swap
+2018-12-05 18:43:29		[vimode.py] These keybindings may conflict with vimode.
+2018-12-05 18:43:29		[vimode.py] You can remove problematic key bindings and add recommended ones by using /vimode bind_keys, or only list them with /vimode bind_keys --list
+2018-12-05 18:43:29		[vimode.py] For help, see: https://github.com/GermainZ/weechat-vimode/blob/master/FAQ.md#problematic-key-bindings
+2018-12-05 18:43:29		[vimode.py] tmux/screen users, see: https://github.com/GermainZ/weechat-vimode/blob/master/FAQ.md#esc-key-not-being-detected-instantly
+2018-12-05 18:43:29		[vimode.py] To force disable warnings, you can set plugins.var.python.vimode.no_warn to 'on'
+2018-12-05 18:44:15		Running commands:
+2018-12-05 18:44:15		Key "ctrl-W" unbound (context: "default")
+2018-12-05 18:44:15		New key binding (context "default"): ctrl-W => /input delete_previous_word
+2018-12-05 18:44:15		New key binding (context "default"): ctrl-^ => /input jump_last_buffer_displayed
+2018-12-05 18:44:15		New key binding (context "default"): ctrl-Wh => /window left
+2018-12-05 18:44:15		New key binding (context "default"): ctrl-Wj => /window down
+2018-12-05 18:44:15		New key binding (context "default"): ctrl-Wk => /window up
+2018-12-05 18:44:15		New key binding (context "default"): ctrl-Wl => /window right
+2018-12-05 18:44:15		New key binding (context "default"): ctrl-W= => /window balance
+2018-12-05 18:44:15		New key binding (context "default"): ctrl-Wx => /window swap
+2018-12-05 18:44:15		New key binding (context "default"): ctrl-Ws => /window splith
+2018-12-05 18:44:15		New key binding (context "default"): ctrl-Wv => /window splitv
+2018-12-05 18:44:15		New key binding (context "default"): ctrl-Wq => /window merge
+2018-12-05 18:44:15		Key "meta-jmeta-f" unbound (context: "default")
+2018-12-05 18:44:15		Key "meta-jmeta-l" unbound (context: "default")
+2018-12-05 18:44:15		Key "meta-jmeta-r" unbound (context: "default")
+2018-12-05 18:44:15		Key "meta-jmeta-s" unbound (context: "default")
+2018-12-05 18:44:15		Key "meta-wmeta-meta2-A" unbound (context: "default")
+2018-12-05 18:44:15		Key "meta-wmeta-meta2-B" unbound (context: "default")
+2018-12-05 18:44:15		Key "meta-wmeta-meta2-C" unbound (context: "default")
+2018-12-05 18:44:15		Key "meta-wmeta-meta2-D" unbound (context: "default")
+2018-12-05 18:44:15		Key "meta-wmeta2-1;3A" unbound (context: "default")
+2018-12-05 18:44:15		Key "meta-wmeta2-1;3B" unbound (context: "default")
+2018-12-05 18:44:15		Key "meta-wmeta2-1;3C" unbound (context: "default")
+2018-12-05 18:44:15		Key "meta-wmeta2-1;3D" unbound (context: "default")
+2018-12-05 18:44:15		Key "meta-wmeta-b" unbound (context: "default")
+2018-12-05 18:44:15		Key "meta-wmeta-s" unbound (context: "default")
+2018-12-05 18:44:15		Done.
+2018-12-05 18:54:47		Option changed: weechat.bar.status.items = "(mode_indciator)+[buffer_count],[buffer_plugin],buffer_number+:+buffer_name+{buffer_nicklist_count}+buffer_filter,[lag],[hotlist],scroll,completion,[aspell_suggest],cmd_completion,[vi_buffer]"  (default: "[time],[buffer_last_number],[buffer_plugin],buffer_number+:+buffer_name+(buffer_modes)+{buffer_nicklist_count}+buffer_zoom+buffer_filter,scroll,[lag],[hotlist],completion")
+2018-12-05 18:55:04		Option changed: weechat.bar.status.items = "[mode_indciator]+[buffer_count],[buffer_plugin],buffer_number+:+buffer_name+{buffer_nicklist_count}+buffer_filter,[lag],[hotlist],scroll,completion,[aspell_suggest],cmd_completion,[vi_buffer]"  (default: "[time],[buffer_last_number],[buffer_plugin],buffer_number+:+buffer_name+(buffer_modes)+{buffer_nicklist_count}+buffer_zoom+buffer_filter,scroll,[lag],[hotlist],completion")
+2018-12-05 18:55:15		Option changed: weechat.bar.status.items = "mode_indciator+[buffer_count],[buffer_plugin],buffer_number+:+buffer_name+{buffer_nicklist_count}+buffer_filter,[lag],[hotlist],scroll,completion,[aspell_suggest],cmd_completion,[vi_buffer]"  (default: "[time],[buffer_last_number],[buffer_plugin],buffer_number+:+buffer_name+(buffer_modes)+{buffer_nicklist_count}+buffer_zoom+buffer_filter,scroll,[lag],[hotlist],completion")
+2018-12-05 18:56:28		Option changed: weechat.bar.status.items = "(mode_indiciator)+[buffer_count],[buffer_plugin],buffer_number+:+buffer_name+{buffer_nicklist_count}+buffer_filter,[lag],[hotlist],scroll,completion,[aspell_suggest],cmd_completion,[vi_buffer]"  (default: "[time],[buffer_last_number],[buffer_plugin],buffer_number+:+buffer_name+(buffer_modes)+{buffer_nicklist_count}+buffer_zoom+buffer_filter,scroll,[lag],[hotlist],completion")
+2018-12-05 18:58:15		[python/vimode]  /vimode  [help | bind_keys [--list]]
+2018-12-05 18:58:15		Add vi/vim-like modes and keybindings to WeeChat.
+2018-12-05 18:58:15		     help: show help
+2018-12-05 18:58:15		bind_keys: unbind problematic keys, and bind recommended keys to use in WeeChat
+2018-12-05 18:58:15		          --list: only list changes
+2018-12-05 18:58:25		[vimode.py] https://github.com/GermainZ/weechat-vimode/blob/master/README.md
+2018-12-05 18:59:43		Options saved to sec.conf
+2018-12-05 18:59:43		Options saved to weechat.conf
+2018-12-05 18:59:43		Options saved to plugins.conf
+2018-12-05 18:59:43		Options saved to charset.conf
+2018-12-05 18:59:43		Options saved to logger.conf
+2018-12-05 18:59:43		Options saved to exec.conf
+2018-12-05 18:59:43		Options saved to trigger.conf
+2018-12-05 18:59:43		Options saved to aspell.conf
+2018-12-05 18:59:43		Options saved to alias.conf
+2018-12-05 18:59:43		Options saved to buflist.conf
+2018-12-05 18:59:43		Options saved to fifo.conf
+2018-12-05 18:59:43		Options saved to xfer.conf
+2018-12-05 18:59:43		Options saved to irc.conf
+2018-12-05 18:59:43		Options saved to relay.conf
+2018-12-05 18:59:43		Options saved to lua.conf
+2018-12-05 18:59:43		Options saved to perl.conf
+2018-12-05 18:59:43		Options saved to buffers.conf
+2018-12-05 18:59:43		Options saved to iset.conf
+2018-12-05 18:59:43		Options saved to python.conf
+2018-12-05 18:59:43		Options saved to colorize_nicks.conf
+2018-12-05 18:59:43		Options saved to tcl.conf
+2018-12-05 18:59:43		Options saved to guile.conf
+2018-12-05 18:59:43		Options saved to script.conf
+2018-12-05 18:59:43		Options saved to fset.conf
+2018-12-05 18:59:46	!	Error: unknown command "/qui" (type /help for help)
+2018-12-05 18:59:53	!	buflist: warning: the script buffers.pl is loaded and provides a bar with list of buffers similar to the buflist plugin; you may want to uninstall the script buffers.pl (/script remove buffers.pl) or disable/unload the buflist plugin; see WeeChat release notes for more information
+2018-12-05 18:59:53		perl scripts loaded: buddylist, buffers, colorize_lines, iset
+2018-12-05 18:59:53		[vimode.py] tmux/screen users, see: https://github.com/GermainZ/weechat-vimode/blob/master/FAQ.md#esc-key-not-being-detected-instantly
+2018-12-05 18:59:53		[vimode.py] To force disable warnings, you can set plugins.var.python.vimode.no_warn to 'on'
+2018-12-05 18:59:53		URL server listening on ('127.0.0.1', 35317)
+2018-12-05 18:59:53		python scripts loaded: buffer_autoclose, colorize_nicks, go, notify_send, urlbuf, urlserver, vimode
+2018-12-05 18:59:53		script: 358 scripts for WeeChat 2.3
+2018-12-05 18:59:53		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, script, tcl, trigger, xfer
+2018-12-05 19:02:10		Option changed: weechat.bar.input.items = "mode_indicator+[input_prompt]+(away),[input_search],[input_paste],input_text,[vi_buffer]"  (default: "[input_prompt]+(away),[input_search],[input_paste],input_text")
+2018-12-05 19:03:51		Option changed: weechat.bar.status.items = "[buffer_count],[buffer_plugin],buffer_number+:+buffer_name+{buffer_nicklist_count}+buffer_filter,[lag],[hotlist],scroll,completion,[aspell_suggest],cmd_completion"  (default: "[time],[buffer_last_number],[buffer_plugin],buffer_number+:+buffer_name+(buffer_modes)+{buffer_nicklist_count}+buffer_zoom+buffer_filter,scroll,[lag],[hotlist],completion")
+2018-12-05 19:05:03		[python/vimode]  /vimode  [help | bind_keys [--list]]
+2018-12-05 19:05:03		Add vi/vim-like modes and keybindings to WeeChat.
+2018-12-05 19:05:03		     help: show help
+2018-12-05 19:05:03		bind_keys: unbind problematic keys, and bind recommended keys to use in WeeChat
+2018-12-05 19:05:03		          --list: only list changes
+2018-12-05 19:05:10		[vimode.py] https://github.com/GermainZ/weechat-vimode/blob/master/README.md
+2018-12-05 19:06:09		Option changed: plugins.var.python.vimode.mode_indicator_insert_color = "darkgray"
+2018-12-05 19:06:22		Option changed: plugins.var.python.vimode.mode_indicator_insert_color = "white"
+2018-12-05 19:08:00		Option changed: weechat.bar.input.color_bg = red  (default: default)
+2018-12-05 19:08:03		Option changed: weechat.bar.input.color_bg = default
+2018-12-05 19:10:09		Option changed: weechat.bar.vi_line_numbers.hidden = off  (default: on)
+2018-12-05 19:10:47	!	Error: failed to set option "weechat.bar.vi_line_numbers.color_fg"
+2018-12-05 19:11:00		Option changed: weechat.bar.vi_line_numbers.color_fg = lightcyan  (default: default)
+2018-12-05 19:15:37		Options saved to sec.conf
+2018-12-05 19:15:37		Options saved to weechat.conf
+2018-12-05 19:15:37		Options saved to plugins.conf
+2018-12-05 19:15:37		Options saved to charset.conf
+2018-12-05 19:15:37		Options saved to logger.conf
+2018-12-05 19:15:37		Options saved to exec.conf
+2018-12-05 19:15:37		Options saved to trigger.conf
+2018-12-05 19:15:37		Options saved to aspell.conf
+2018-12-05 19:15:37		Options saved to alias.conf
+2018-12-05 19:15:37		Options saved to buflist.conf
+2018-12-05 19:15:37		Options saved to fifo.conf
+2018-12-05 19:15:37		Options saved to xfer.conf
+2018-12-05 19:15:37		Options saved to irc.conf
+2018-12-05 19:15:37		Options saved to relay.conf
+2018-12-05 19:15:37		Options saved to lua.conf
+2018-12-05 19:15:37		Options saved to perl.conf
+2018-12-05 19:15:37		Options saved to buffers.conf
+2018-12-05 19:15:37		Options saved to iset.conf
+2018-12-05 19:15:37		Options saved to python.conf
+2018-12-05 19:15:37		Options saved to colorize_nicks.conf
+2018-12-05 19:15:37		Options saved to tcl.conf
+2018-12-05 19:15:37		Options saved to guile.conf
+2018-12-05 19:15:37		Options saved to script.conf
+2018-12-05 19:15:37		Options saved to fset.conf
+2018-12-05 19:15:51	!	buflist: warning: the script buffers.pl is loaded and provides a bar with list of buffers similar to the buflist plugin; you may want to uninstall the script buffers.pl (/script remove buffers.pl) or disable/unload the buflist plugin; see WeeChat release notes for more information
+2018-12-05 19:15:51		perl scripts loaded: buddylist, buffers, colorize_lines, iset
+2018-12-05 19:15:51		[vimode.py] tmux/screen users, see: https://github.com/GermainZ/weechat-vimode/blob/master/FAQ.md#esc-key-not-being-detected-instantly
+2018-12-05 19:15:51		[vimode.py] To force disable warnings, you can set plugins.var.python.vimode.no_warn to 'on'
+2018-12-05 19:15:51		URL server listening on ('127.0.0.1', 41891)
+2018-12-05 19:15:51		python scripts loaded: buffer_autoclose, colorize_nicks, go, notify_send, urlbuf, urlserver, vimode
+2018-12-05 19:15:51		script: 358 scripts for WeeChat 2.3
+2018-12-05 19:15:51		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, script, tcl, trigger, xfer
+2018-12-05 19:16:32		Options saved to sec.conf
+2018-12-05 19:16:32		Options saved to weechat.conf
+2018-12-05 19:16:32		Options saved to plugins.conf
+2018-12-05 19:16:32		Options saved to charset.conf
+2018-12-05 19:16:32		Options saved to logger.conf
+2018-12-05 19:16:32		Options saved to exec.conf
+2018-12-05 19:16:32		Options saved to trigger.conf
+2018-12-05 19:16:32		Options saved to aspell.conf
+2018-12-05 19:16:32		Options saved to alias.conf
+2018-12-05 19:16:32		Options saved to buflist.conf
+2018-12-05 19:16:32		Options saved to fifo.conf
+2018-12-05 19:16:32		Options saved to xfer.conf
+2018-12-05 19:16:32		Options saved to irc.conf
+2018-12-05 19:16:32		Options saved to relay.conf
+2018-12-05 19:16:32		Options saved to lua.conf
+2018-12-05 19:16:32		Options saved to perl.conf
+2018-12-05 19:16:32		Options saved to buffers.conf
+2018-12-05 19:16:32		Options saved to iset.conf
+2018-12-05 19:16:32		Options saved to python.conf
+2018-12-05 19:16:32		Options saved to colorize_nicks.conf
+2018-12-05 19:16:32		Options saved to tcl.conf
+2018-12-05 19:16:32		Options saved to guile.conf
+2018-12-05 19:16:32		Options saved to script.conf
+2018-12-05 19:16:32		Options saved to fset.conf
+2018-12-05 19:17:34		Options saved to sec.conf
+2018-12-05 19:17:34		Options saved to weechat.conf
+2018-12-05 19:17:34		Options saved to plugins.conf
+2018-12-05 19:17:34		Options saved to charset.conf
+2018-12-05 19:17:34		Options saved to logger.conf
+2018-12-05 19:17:34		Options saved to exec.conf
+2018-12-05 19:17:34		Options saved to trigger.conf
+2018-12-05 19:17:34		Options saved to aspell.conf
+2018-12-05 19:17:34		Options saved to alias.conf
+2018-12-05 19:17:34		Options saved to buflist.conf
+2018-12-05 19:17:34		Options saved to fifo.conf
+2018-12-05 19:17:34		Options saved to xfer.conf
+2018-12-05 19:17:34		Options saved to irc.conf
+2018-12-05 19:17:34		Options saved to relay.conf
+2018-12-05 19:17:34		Options saved to lua.conf
+2018-12-05 19:17:34		Options saved to perl.conf
+2018-12-05 19:17:34		Options saved to buffers.conf
+2018-12-05 19:17:34		Options saved to iset.conf
+2018-12-05 19:17:34		Options saved to python.conf
+2018-12-05 19:17:34		Options saved to colorize_nicks.conf
+2018-12-05 19:17:34		Options saved to tcl.conf
+2018-12-05 19:17:34		Options saved to guile.conf
+2018-12-05 19:17:34		Options saved to script.conf
+2018-12-05 19:17:34		Options saved to fset.conf
+2018-12-05 19:17:53		Options saved to sec.conf
+2018-12-05 19:17:53		Options saved to weechat.conf
+2018-12-05 19:17:53		Options saved to plugins.conf
+2018-12-05 19:17:53		Options saved to charset.conf
+2018-12-05 19:17:53		Options saved to logger.conf
+2018-12-05 19:17:53		Options saved to exec.conf
+2018-12-05 19:17:53		Options saved to trigger.conf
+2018-12-05 19:17:53		Options saved to aspell.conf
+2018-12-05 19:17:53		Options saved to alias.conf
+2018-12-05 19:17:53		Options saved to buflist.conf
+2018-12-05 19:17:53		Options saved to fifo.conf
+2018-12-05 19:17:53		Options saved to xfer.conf
+2018-12-05 19:17:53		Options saved to irc.conf
+2018-12-05 19:17:53		Options saved to relay.conf
+2018-12-05 19:17:53		Options saved to lua.conf
+2018-12-05 19:17:53		Options saved to perl.conf
+2018-12-05 19:17:53		Options saved to buffers.conf
+2018-12-05 19:17:53		Options saved to iset.conf
+2018-12-05 19:17:53		Options saved to python.conf
+2018-12-05 19:17:53		Options saved to colorize_nicks.conf
+2018-12-05 19:17:53		Options saved to tcl.conf
+2018-12-05 19:17:53		Options saved to guile.conf
+2018-12-05 19:17:53		Options saved to script.conf
+2018-12-05 19:17:53		Options saved to fset.conf
+2018-12-05 19:18:45		Options saved to sec.conf
+2018-12-05 19:18:45		Options saved to weechat.conf
+2018-12-05 19:18:45		Options saved to plugins.conf
+2018-12-05 19:18:45		Options saved to charset.conf
+2018-12-05 19:18:45		Options saved to logger.conf
+2018-12-05 19:18:45		Options saved to exec.conf
+2018-12-05 19:18:45		Options saved to trigger.conf
+2018-12-05 19:18:45		Options saved to aspell.conf
+2018-12-05 19:18:45		Options saved to alias.conf
+2018-12-05 19:18:45		Options saved to buflist.conf
+2018-12-05 19:18:45		Options saved to fifo.conf
+2018-12-05 19:18:45		Options saved to xfer.conf
+2018-12-05 19:18:45		Options saved to irc.conf
+2018-12-05 19:18:45		Options saved to relay.conf
+2018-12-05 19:18:45		Options saved to lua.conf
+2018-12-05 19:18:45		Options saved to perl.conf
+2018-12-05 19:18:45		Options saved to buffers.conf
+2018-12-05 19:18:45		Options saved to iset.conf
+2018-12-05 19:18:45		Options saved to python.conf
+2018-12-05 19:18:45		Options saved to colorize_nicks.conf
+2018-12-05 19:18:45		Options saved to tcl.conf
+2018-12-05 19:18:45		Options saved to guile.conf
+2018-12-05 19:18:45		Options saved to script.conf
+2018-12-05 19:18:45		Options saved to fset.conf
