@@ -10,3 +10,12 @@
 [submodule "nvim/pack/minpac/start/vim-surround"]
 	path = nvim/pack/minpac/start/vim-surround
 	url = https://github.com/tpope/vim-surround
+[submodule "nvim/pack/minpac/start/vim-showmarks"]
+	path = nvim/pack/minpac/start/vim-showmarks
+	url = https://github.com/jacquesbh/vim-showmarks
+[submodule "nvim/pack/minpac/start/vim-clevertab"]
+	path = nvim/pack/minpac/start/vim-clevertab
+	url = https://github.com/neitanod/vim-clevertab
+[submodule "nvim/pack/minpac/start/SearchComplete"]
+	path = nvim/pack/minpac/start/SearchComplete
+	url = https://github.com/vim-scripts/SearchComplete

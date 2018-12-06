@@ -29,10 +29,13 @@ set nocompatible               " be iMproved
 packadd minpac
 
 call minpac#init()
-call minpac#add('k-takata/minpac', {'type': 'opt'})
+
 call minpac#add('itchyny/lightline.vim')
 call minpac#add('tpope/vim-eunuch')
 call minpac#add('tpope/vim-surround')
+call minpac#add('jacquesbh/vim-showmarks')
+call minpac#add('neitanod/vim-clevertab')
+call minpac#add('vim-scripts/SearchComplete')
 
 packloadall
 
@@ -50,6 +53,11 @@ map <C-f>  :call LaTeXCompile()<CR>
 map D :call LaTeXDisplay()<CR>
 
 map <F2> :call minpac#update()<CR>
+
+map ; :DoShowMarks!<CR>
+map , :NoShowMarks!<CR>
+
+map <F1> :set hlsearch!<CR>
 
 noremap <Up> <NOP>
 noremap <Down> <NOP>
