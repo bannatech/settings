@@ -19,9 +19,16 @@ set nowrap
 set autoindent
 set tabstop=4
 set shiftwidth=4
+set expandtab
 
-set listchars=tab:>.
+set listchars=space:.,precedes:«,extends:»,tab:>.
 set list
+highlight NonIndent ctermfg=black
+2match NonIndent / /
+highlight Indentation ctermfg=cyan
+match Indentation /^ \+/
+highlight ExtraSpace ctermbg=cyan
+3match ExtraSpace /\s\+$\| \+\ze\t/
 
 set shell=/usr/bin/zsh
 set nocompatible               " be iMproved
@@ -40,13 +47,13 @@ call minpac#add('vim-scripts/SearchComplete')
 packloadall
 
 function! LaTeXCompile()
-	:!pdflatex --enable-write18 %
-	:silent !rm %:r.aux %:r.log %:r.*.gnuplot %:r.*.table
+    :!pdflatex --enable-write18 %
+    :silent !rm %:r.aux %:r.log %:r.*.gnuplot %:r.*.table
 endfunction
 
 function! LaTeXDisplay()
-	:silent !xdg-open %:r.pdf
-	:redraw!
+    :silent !xdg-open %:r.pdf
+    :redraw!
 endfunction
 
 map <C-f>  :call LaTeXCompile()<CR>
