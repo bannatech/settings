@@ -1,0 +1,12 @@
+[submodule "nvim/pack/minpac/opt/minpac"]
+	path = nvim/pack/minpac/opt/minpac
+	url = https://github.com/k-takata/minpac
+[submodule "nvim/pack/minpac/start/lightline.vim"]
+	path = nvim/pack/minpac/start/lightline.vim
+	url = https://github.com/itchyny/lightline.vim
+[submodule "nvim/pack/minpac/start/vim-eunuch"]
+	path = nvim/pack/minpac/start/vim-eunuch
+	url = https://github.com/tpope/vim-eunuch
+[submodule "nvim/pack/minpac/start/vim-surround"]
+	path = nvim/pack/minpac/start/vim-surround
+	url = https://github.com/tpope/vim-surround
