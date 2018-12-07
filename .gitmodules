@@ -55,3 +55,6 @@
 [submodule "nvim/pack/minpac/start/supertab"]
 	path = nvim/pack/minpac/start/supertab
 	url = https://github.com/ervandew/supertab
+[submodule "nvim/pack/minpac/start/vim-AutoPair"]
+	path = nvim/pack/minpac/start/vim-AutoPair
+	url = https://github.com/Ace-Who/vim-AutoPair

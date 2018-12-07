@@ -4,7 +4,7 @@ set hidden
 highlight OverLength ctermbg=Red ctermfg=White
 match OverLength /\%81v.\+/
 
-let mapleader="="
+let mapleader='='
 
 highlight Comment ctermbg=Black ctermfg=Green
 highlight Constant ctermbg=Black ctermfg=Yellow
@@ -28,11 +28,11 @@ set expandtab
 set listchars=space:.,precedes:«,extends:»,tab:>.
 set list
 highlight NonIndent ctermfg=black guifg=black ctermbg=black guifg=black
-2match NonIndent / /
+au BufWinEnter * let w:m1 = matchadd('NonIndent', ' ', 1)
 highlight Indentation ctermfg=cyan guifg=cyan
-match Indentation /^ \+/
+au BufWinEnter * let w:m2 = matchadd('Indentation', '^ \+', 2)
 highlight ExtraSpace ctermbg=cyan guibg=cyan
-3match ExtraSpace /\s\+$\| \+\ze\t/
+au BufWinEnter * let w:m3 = matchadd('ExtraSpace', '\s\+$\| \+\ze\t', 3)
 
 set shell=/usr/bin/zsh
 set nocompatible               " be iMproved
@@ -59,6 +59,7 @@ call minpac#add('tpope/vim-repeat')
 call minpac#add('tpope/vim-speeddating')
 call minpac#add('tpope/vim-fugitive')
 call minpac#add('ervandew/supertab')
+call minpac#add('Ace-Who/vim-AutoPair')
 
 packloadall
 
