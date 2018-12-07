@@ -58,6 +58,7 @@ call minpac#add('junegunn/fzf.vim')
 call minpac#add('tpope/vim-repeat')
 call minpac#add('tpope/vim-speeddating')
 call minpac#add('tpope/vim-fugitive')
+call minpac#add('ervandew/supertab')
 
 packloadall
 

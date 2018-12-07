@@ -52,3 +52,6 @@
 [submodule "nvim/pack/minpac/start/vim-fugitive"]
 	path = nvim/pack/minpac/start/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive
+[submodule "nvim/pack/minpac/start/supertab"]
+	path = nvim/pack/minpac/start/supertab
+	url = https://github.com/ervandew/supertab
