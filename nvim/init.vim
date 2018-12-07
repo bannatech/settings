@@ -106,3 +106,5 @@ let g:lightline = {
 \ }
 
 noremap Q <Nop>
+
+noremap <F4> :TagsGenerate!
