@@ -21,8 +21,8 @@ set nowrap
 
 
 set autoindent
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set expandtab
 
 set listchars=space:.,precedes:«,extends:»,tab:>.
