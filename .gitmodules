@@ -61,3 +61,6 @@
 [submodule "nvim/pack/minpac/start/vim-tags"]
 	path = nvim/pack/minpac/start/vim-tags
 	url = https://github.com/szw/vim-tags
+[submodule "nvim/pack/minpac/start/vim-vebegger"]
+	path = nvim/pack/minpac/start/vim-vebegger
+	url = https://github.com/idanarye/vim-vebugger
