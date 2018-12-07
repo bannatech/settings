@@ -43,3 +43,6 @@
 [submodule "nvim/pack/minpac/start/fzf.vim"]
 	path = nvim/pack/minpac/start/fzf.vim
 	url = https://github.com/junegunn/fzf.vim
+[submodule "nvim/pack/minpac/start/vim-repeat"]
+	path = nvim/pack/minpac/start/vim-repeat
+	url = https://github.com/tpope/vim-repeat

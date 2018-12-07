@@ -55,6 +55,7 @@ call minpac#add('w0rp/ale')
 call minpac#add('airblade/vim-gitgutter')
 call minpac#add('junegunn/fzf')
 call minpac#add('junegunn/fzf.vim')
+call minpac#add('tpope/vim-repeat')
 
 packloadall
 
