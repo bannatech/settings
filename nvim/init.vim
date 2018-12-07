@@ -57,6 +57,7 @@ call minpac#add('junegunn/fzf')
 call minpac#add('junegunn/fzf.vim')
 call minpac#add('tpope/vim-repeat')
 call minpac#add('tpope/vim-speeddating')
+call minpac#add('tpope/vim-fugitive')
 
 packloadall
 
@@ -91,3 +92,12 @@ noremap <Left> <NOP>
 noremap <Right> <NOP>
 
 let g:gitgutter_terminal_reports_focus=0
+
+let g:lightline = {
+\   'active': {
+\    'left': [[ 'mode', 'paste'], ['readonly', 'filename', 'modified', 'git']]
+\   },
+\   'component_function': {
+\    'git': 'fugitive#head'
+\   }
+\ }

@@ -49,3 +49,6 @@
 [submodule "nvim/pack/minpac/start/vim-speeddating"]
 	path = nvim/pack/minpac/start/vim-speeddating
 	url = https://github.com/tpope/vim-speeddating
+[submodule "nvim/pack/minpac/start/vim-fugitive"]
+	path = nvim/pack/minpac/start/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive
