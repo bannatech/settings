@@ -84,7 +84,7 @@ noremap <Leader>, :NoShowMarks!<CR>
 
 noremap ; :Files<CR>
 
-noremap <C-t> :NERDTreeToggle<CR>
+noremap <M-t> :NERDTreeToggle<CR>
 
 noremap <F3> :set hlsearch!<CR>
 inoremap <F3> <ESC>:set hlsearch!<CR>a
