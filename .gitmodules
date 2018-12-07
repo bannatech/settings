@@ -58,3 +58,6 @@
 [submodule "nvim/pack/minpac/start/vim-AutoPair"]
 	path = nvim/pack/minpac/start/vim-AutoPair
 	url = https://github.com/Ace-Who/vim-AutoPair
+[submodule "nvim/pack/minpac/start/vim-tags"]
+	path = nvim/pack/minpac/start/vim-tags
+	url = https://github.com/szw/vim-tags

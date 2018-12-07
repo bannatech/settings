@@ -60,6 +60,7 @@ call minpac#add('tpope/vim-speeddating')
 call minpac#add('tpope/vim-fugitive')
 call minpac#add('ervandew/supertab')
 call minpac#add('Ace-Who/vim-AutoPair')
+call minpac#add('szw/vim-tags')
 
 packloadall
 
