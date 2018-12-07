@@ -103,3 +103,5 @@ let g:lightline = {
 \    'git': 'fugitive#head'
 \   }
 \ }
+
+noremap Q <Nop>
