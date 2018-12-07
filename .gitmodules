@@ -46,3 +46,6 @@
 [submodule "nvim/pack/minpac/start/vim-repeat"]
 	path = nvim/pack/minpac/start/vim-repeat
 	url = https://github.com/tpope/vim-repeat
+[submodule "nvim/pack/minpac/start/vim-speeddating"]
+	path = nvim/pack/minpac/start/vim-speeddating
+	url = https://github.com/tpope/vim-speeddating
