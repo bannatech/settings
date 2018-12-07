@@ -25,3 +25,21 @@
 [submodule "nvim/pack/minpac/start/python-support.nvim"]
 	path = nvim/pack/minpac/start/python-support.nvim
 	url = https://github.com/roxma/python-support.nvim
+[submodule "nvim/pack/minpac/start/editorconfig-vim"]
+	path = nvim/pack/minpac/start/editorconfig-vim
+	url = https://github.com/editorconfig/editorconfig-vim
+[submodule "nvim/pack/minpac/start/nerdtree"]
+	path = nvim/pack/minpac/start/nerdtree
+	url = https://github.com/scrooloose/nerdtree
+[submodule "nvim/pack/minpac/start/ale"]
+	path = nvim/pack/minpac/start/ale
+	url = https://github.com/w0rp/ale
+[submodule "nvim/pack/minpac/start/vim-gitgutter"]
+	path = nvim/pack/minpac/start/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter
+[submodule "nvim/pack/minpac/start/fzf"]
+	path = nvim/pack/minpac/start/fzf
+	url = https://github.com/junegunn/fzf
+[submodule "nvim/pack/minpac/start/fzf.vim"]
+	path = nvim/pack/minpac/start/fzf.vim
+	url = https://github.com/junegunn/fzf.vim

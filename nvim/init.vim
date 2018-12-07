@@ -1,4 +1,6 @@
 set number relativenumber
+set hidden
+
 highlight OverLength ctermbg=Red ctermfg=White
 match OverLength /\%81v.\+/
 
@@ -13,8 +15,8 @@ highlight Cursor ctermbg=Magenta ctermfg=White
 highlight Search ctermbg=Yellow ctermfg=White
 
 syntax enable
-map <F8> :tabn
-map <F9> :!clear
+noremap <F8> :tabn
+noremap <F9> :!clear
 set nowrap
 
 
@@ -25,11 +27,11 @@ set expandtab
 
 set listchars=space:.,precedes:«,extends:»,tab:>.
 set list
-highlight NonIndent ctermfg=black
+highlight NonIndent ctermfg=black guifg=black ctermbg=black guifg=black
 2match NonIndent / /
-highlight Indentation ctermfg=cyan
+highlight Indentation ctermfg=cyan guifg=cyan
 match Indentation /^ \+/
-highlight ExtraSpace ctermbg=cyan
+highlight ExtraSpace ctermbg=cyan guibg=cyan
 3match ExtraSpace /\s\+$\| \+\ze\t/
 
 set shell=/usr/bin/zsh
@@ -47,6 +49,12 @@ call minpac#add('neitanod/vim-clevertab')
 call minpac#add('vim-scripts/SearchComplete')
 call minpac#add('lyuts/vim-rtags')
 call minpac#add('roxma/python-support.nvim')
+call minpac#add('scrooloose/nerdtree')
+call minpac#add('editorconfig/editorconfig-vim')
+call minpac#add('w0rp/ale')
+call minpac#add('airblade/vim-gitgutter')
+call minpac#add('junegunn/fzf')
+call minpac#add('junegunn/fzf.vim')
 
 packloadall
 
@@ -60,18 +68,24 @@ function! LaTeXDisplay()
     :redraw!
 endfunction
 
-map <C-f>  :call LaTeXCompile()<CR>
-map D :call LaTeXDisplay()<CR>
+noremap <C-f>  :call LaTeXCompile()<CR>
+noremap D :call LaTeXDisplay()<CR>
 
-map <F2> :call minpac#update()<CR>
+noremap <F2> :call minpac#update()<CR>
 
-map ; :DoShowMarks!<CR>
-map , :NoShowMarks!<CR>
+noremap <Leader>; :DoShowMarks!<CR>
+noremap <Leader>, :NoShowMarks!<CR>
 
-map <F1> :set hlsearch!<CR>
+noremap ; :Files<CR>
+
+noremap <C-t> :NERDTreeToggle<CR>
+
+noremap <F3> :set hlsearch!<CR>
+inoremap <F3> <ESC>:set hlsearch!<CR>a
 
 noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
 
+let g:gitgutter_terminal_reports_focus=0
