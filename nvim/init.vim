@@ -2,6 +2,8 @@ set number relativenumber
 highlight OverLength ctermbg=Red ctermfg=White
 match OverLength /\%81v.\+/
 
+let mapleader="="
+
 highlight Comment ctermbg=Black ctermfg=Green
 highlight Constant ctermbg=Black ctermfg=Yellow
 highlight Normal ctermbg=Black
@@ -43,6 +45,8 @@ call minpac#add('tpope/vim-surround')
 call minpac#add('jacquesbh/vim-showmarks')
 call minpac#add('neitanod/vim-clevertab')
 call minpac#add('vim-scripts/SearchComplete')
+call minpac#add('lyuts/vim-rtags')
+call minpac#add('roxma/python-support.nvim')
 
 packloadall
 

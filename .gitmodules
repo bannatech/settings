@@ -19,3 +19,9 @@
 [submodule "nvim/pack/minpac/start/SearchComplete"]
 	path = nvim/pack/minpac/start/SearchComplete
 	url = https://github.com/vim-scripts/SearchComplete
+[submodule "nvim/pack/minpac/start/vim-rtags"]
+	path = nvim/pack/minpac/start/vim-rtags
+	url = https://github.com/lyuts/vim-rtags
+[submodule "nvim/pack/minpac/start/python-support.nvim"]
+	path = nvim/pack/minpac/start/python-support.nvim
+	url = https://github.com/roxma/python-support.nvim
