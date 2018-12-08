@@ -186,3 +186,14 @@ let c_no_curly_error=1
 let g:omni_sql_no_default_maps = 1
 let g:rust_recommended_style = 0
 
+" Spelling
+set dictionary=en_us
+set nospell
+
+" Folding
+set foldmethod=syntax
+set foldnestmax=5
+set foldlevel=1
+noremap <Leader>zf :setlocal foldmethod=manual<CR>
+noremap <Leader>zF :setlocal foldmethod=syntax<CR>
+
