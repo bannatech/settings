@@ -78,14 +78,26 @@ packloadall
 
 " Compile LaTeX with pdflatex
 function! LaTeXCompile()
-    :!pdflatex --enable-write18 %
-    :silent !rm %:r.aux %:r.log %:r.*.gnuplot %:r.*.table
+  :!pdflatex --enable-write18 %
+  :silent !rm %:r.aux %:r.log %:r.*.gnuplot %:r.*.table
 endfunction
 
 " Display LaTeX with current xdg default viewer
 function! LaTeXDisplay()
-    :silent !xdg-open %:r.pdf
-    :redraw!
+  :silent !xdg-open %:r.pdf
+  :redraw!
+endfunction
+
+" Compile document with groff, ms macros
+function! GroffCompile()
+  :silent !groff -e -g -G -R -j -s -t -Tpdf -mms -o %:r.pdf
+  :redraw!
+endfunction
+
+" Compile document with groff, ms macros
+function! GroffManCompile()
+  :silent !groff -e -g -G -R -j -s -t -Tpdf -mman -o %:r.pdf
+  :redraw!
 endfunction
 
 " Key remaps
@@ -101,8 +113,13 @@ if has('clipboard')
 endif
 
 " LaTeX binds
-noremap <C-f>  :call LaTeXCompile()<CR>
-noremap D :call LaTeXDisplay()<CR>
+noremap <Leader>lc  :call LaTeXCompile()<CR>
+noremap <Leader>ld :call LaTeXDisplay()<CR>
+
+" Groff binds
+noremap <Leader>gc :call GroffCompile()<CR>
+noremap <Leader>gm :call GroffManCompile()<CR>
+noremap <Leader>gd :call LaTeXDisplay()<CR>
 
 " minpac binds
 noremap <F2> :call minpac#update()<CR>
