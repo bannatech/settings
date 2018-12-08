@@ -84,13 +84,13 @@ endfunction
 
 " Display LaTeX with current xdg default viewer
 function! LaTeXDisplay()
-  :silent !xdg-open %:r.pdf
+  :silent !xdg-open %:r.pdf &
   :redraw!
 endfunction
 
 " Compile document with groff, ms macros
 function! GroffCompile()
-  :silent !groff -e -g -G -R -j -s -t -Tpdf -mms -o %:r.pdf
+  :silent !groff % -Tpdf -mms  -e -g -R -j -s -t > %:r.pdf
   :redraw!
 endfunction
 
