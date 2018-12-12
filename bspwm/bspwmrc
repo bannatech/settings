@@ -4,6 +4,7 @@
 systemctl --user start bspwm.target
 
 # X settings
+numlockx on
 xset -dpms
 xset -b
 feh --randomize --bg-scale ~/.wallpaper/*
