@@ -12,6 +12,10 @@ super + alt + @space
 super + Return
   st
 
+# Emoji
+super + alt + Return
+  $HOME/.config/bspwm/dmenuunicode
+
 # program launcher
 super + @space
   dmenu_run
