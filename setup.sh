@@ -38,6 +38,8 @@ CONFDIR="$INSTDIR/.config"
 
 cpr bspwm "$CONFDIR/bspwm"
 fixuser "$CONFDIR/bspwm"
+cpr .emoji "$CONFDIR/.emoji"
+fixuser "$CONFIR/.emoji"
 cpr systemd "$CONFDIR/systemd"
 fixuser "$CONFDIR/systemd"
 cpr compton "$CONFDIR/compton"
