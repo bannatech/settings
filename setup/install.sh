@@ -66,3 +66,5 @@ install dunst
 install lightdm
 install i3lock
 install tff-ancient-fonts
+install npm
+npm install stylelint-config-standard

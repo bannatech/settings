@@ -36,6 +36,8 @@ fixuser () {
 INSTDIR="/home/$REALUSER"
 CONFDIR="$INSTDIR/.config"
 
+cpr .stylelintrc "$INSTDIR/.stylelintrc"
+fixuser "$INSTDIR/.stylelintrc"
 cpr bspwm "$CONFDIR/bspwm"
 fixuser "$CONFDIR/bspwm"
 cpr .emoji "$CONFDIR/.emoji"
