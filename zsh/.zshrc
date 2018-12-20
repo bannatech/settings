@@ -2,7 +2,7 @@
 export LC_ALL="en_US.UTF-8"
 
 # Editor
-export EDITOR='emacs -nw'
+export EDITOR='nvim'
 
 # neat aliases
 if [ $(uname) = "Linux" ]; then
@@ -50,16 +50,12 @@ bindkey '^[[A' up-line-or-search
 bindkey '^[[B' down-line-or-search
 WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
 
-# fuck
-which thefuck &>/dev/null && eval $(thefuck --alias)
-
 # I don't want to have to import weird terminfos to all systems I SSH into
 case "$TERM" in
 	xterm-termite) export TERM="xterm";;
 esac
 
 # prompt
-#
 autoload -U colors && colors
 setopt PROMPT_SUBST
 
@@ -118,3 +114,33 @@ do
 		suggested=1
 	fi
 done
+
+# Disable ^S and ^Q
+stty -ixon
+
+# Nice aliases
+alias p="sudo pacman"
+alias t="trizen"
+alias sy="sudo systemctl"
+alias sys="systemctl"
+alias sysu="systemctl --user"
+alias TT="trizen -Syu"
+alias mkd="mkdir -pv"
+alias e="nvim"
+alias E="sudo nvim"
+alias bt="btfs"
+alias m="sudo mount"
+alias u="sudo umount"
+alias k="make"
+alias c="./configure"
+alias f="fusermount"
+alias F="fusermount -u"
+alias g="git"
+alias mpvf="mpv --fs"
+alias anipv="mpv --slang=en --fs --alang=jpn"
+alias s="sed"
+alias G="grep --color=auto"
+alias a="awk"
+
+# Path
+PATH=$PATH:$HOME/bin:$HOME/.scripts
