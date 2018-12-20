@@ -120,6 +120,7 @@ stty -ixon
 
 # Nice aliases
 alias p="sudo pacman"
+alias P="pacman"
 alias t="trizen"
 alias sy="sudo systemctl"
 alias sys="systemctl"
