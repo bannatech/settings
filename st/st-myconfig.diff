@@ -1,0 +1,83 @@
+diff -crB st2/config.def.h st/config.def.h
+*** st2/config.def.h	2018-12-21 16:33:11.996609932 -0600
+--- st/config.def.h	2018-12-21 16:29:50.613468514 -0600
+***************
+*** 5,11 ****
+   *
+   * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
+   */
+! static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
+  static int borderpx = 2;
+  
+  /*
+--- 5,11 ----
+   *
+   * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
+   */
+! static char *font = "Inconsolata:pixelsize=18:antialias=true:autohint=true";
+  static int borderpx = 2;
+  
+  /*
+***************
+*** 83,89 ****
+  unsigned int tabspaces = 8;
+  
+  /* bg opacity */
+! unsigned int alpha = 0xcc;
+  
+  /* Terminal colors (16 first used in escape sequence) */
+  static const char *colorname[] = {
+--- 83,89 ----
+  unsigned int tabspaces = 8;
+  
+  /* bg opacity */
+! unsigned int alpha = 0xd9;
+  
+  /* Terminal colors (16 first used in escape sequence) */
+  static const char *colorname[] = {
+***************
+*** 132,138 ****
+   * 6: Bar ("|")
+   * 7: Snowman ("☃")
+   */
+! static unsigned int cursorshape = 2;
+  
+  /*
+   * Default columns and rows numbers
+--- 132,138 ----
+   * 6: Bar ("|")
+   * 7: Snowman ("☃")
+   */
+! static unsigned int cursorshape = 4;
+  
+  /*
+   * Default columns and rows numbers
+Binary files st2/.git/index and st/.git/index differ
+diff -crB st2/.git/logs/HEAD st/.git/logs/HEAD
+*** st2/.git/logs/HEAD	2018-12-21 16:33:03.946220699 -0600
+--- st/.git/logs/HEAD	2018-12-21 16:25:24.707145639 -0600
+***************
+*** 1 ****
+! 0000000000000000000000000000000000000000 096b125db7ec254002a049ef3a5c1204bd7f0ad9 Aftix <gameraftexploision@gmail.com> 1545431583 -0600	clone: from git://git.suckless.org/st
+--- 1 ----
+! 0000000000000000000000000000000000000000 096b125db7ec254002a049ef3a5c1204bd7f0ad9 Aftix <gameraftexploision@gmail.com> 1545431124 -0600	clone: from git://git.suckless.org/st
+diff -crB st2/.git/logs/refs/heads/master st/.git/logs/refs/heads/master
+*** st2/.git/logs/refs/heads/master	2018-12-21 16:33:03.946220699 -0600
+--- st/.git/logs/refs/heads/master	2018-12-21 16:25:24.707145639 -0600
+***************
+*** 1 ****
+! 0000000000000000000000000000000000000000 096b125db7ec254002a049ef3a5c1204bd7f0ad9 Aftix <gameraftexploision@gmail.com> 1545431583 -0600	clone: from git://git.suckless.org/st
+--- 1 ----
+! 0000000000000000000000000000000000000000 096b125db7ec254002a049ef3a5c1204bd7f0ad9 Aftix <gameraftexploision@gmail.com> 1545431124 -0600	clone: from git://git.suckless.org/st
+diff -crB st2/.git/logs/refs/remotes/origin/HEAD st/.git/logs/refs/remotes/origin/HEAD
+*** st2/.git/logs/refs/remotes/origin/HEAD	2018-12-21 16:33:03.946220699 -0600
+--- st/.git/logs/refs/remotes/origin/HEAD	2018-12-21 16:25:24.707145639 -0600
+***************
+*** 1 ****
+! 0000000000000000000000000000000000000000 096b125db7ec254002a049ef3a5c1204bd7f0ad9 Aftix <gameraftexploision@gmail.com> 1545431583 -0600	clone: from git://git.suckless.org/st
+--- 1 ----
+! 0000000000000000000000000000000000000000 096b125db7ec254002a049ef3a5c1204bd7f0ad9 Aftix <gameraftexploision@gmail.com> 1545431124 -0600	clone: from git://git.suckless.org/st
+Only in st/.git/objects/pack: pack-10356bccbdf1dcb91fa659a6dad4343e496bbdc5.idx
+Only in st/.git/objects/pack: pack-10356bccbdf1dcb91fa659a6dad4343e496bbdc5.pack
+Only in st2/.git/objects/pack: pack-1c4c8853542e9d485979f0c57e5f642439325363.idx
+Only in st2/.git/objects/pack: pack-1c4c8853542e9d485979f0c57e5f642439325363.pack

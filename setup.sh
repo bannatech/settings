@@ -99,9 +99,8 @@ tar xzf st.txz
 cd st-0.8.1
 cp ../../st/st-alpha-20180616-0.8.1.diff .
 patch <st-alpha-20180616-0.8.1.diff
-make
-rm config.h
-cp ../../st/config.h .
+cp ../../st/st-myconfig.diff .
+patch <st-myconfig.diff
 make
 make install
 cd ../..
