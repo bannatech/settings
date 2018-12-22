@@ -142,6 +142,7 @@ alias anipv="mpv --slang=en --fs --alang=jpn"
 alias s="sed"
 alias G="grep --color=auto"
 alias a="awk"
+alias pl="plzip -n4"
 
 # Path
 PATH=$PATH:$HOME/bin:$HOME/.scripts
