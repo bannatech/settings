@@ -143,6 +143,7 @@ alias s="sed"
 alias G="grep --color=auto"
 alias a="awk"
 alias pl="plzip -n4"
+alias ed="ed -vp '*'"
 
 # Path
 PATH=$PATH:$HOME/bin:$HOME/.scripts
