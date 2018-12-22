@@ -92,17 +92,31 @@ cpr tmux "$INSTDIR/etc/tmux"
 fixuser "$INSTDIR/etc"
 cpr nvim "$CONFDIR/nvim"
 fixuser "$CONFDIR/nvim"
+
 mkdir tmp
+fixuser tmp
 cd tmp
-curl -s "http://dl.suckless.org/st/st-0.8.1.tar.gz" > st.txz
-tar xzf st.txz
-cd st-0.8.1
-cp ../../st/st-alpha-20180616-0.8.1.diff .
-patch <st-alpha-20180616-0.8.1.diff
-cp ../../st/st-myconfig.diff .
-patch <st-myconfig.diff
-make
-make install
+# If the system uses pacman use the PKGBUILD
+if which makepkg>/dev/null && which pacman >/dev/null ; then
+  cp ../../st/PKGBUILD .
+  cp ../../st/st-0.8.1-myconfig.diff .
+  fixuser PKGBUILD
+  fixuser st-0.8.1-myconfig.diff
+  sudo -u $REALUSER makepkg -s
+  pacman --noconfirm -Rn st
+  pacman --noconfirm -U $(find . -maxdepth 1 -name "*.tar.xz")
+else
+  curl -s "http://dl.suckless.org/st/st-0.8.1.tar.gz" > st.tar.gz
+  tar xzf st.tar.gz
+  cd st-0.8.1
+  cp ../../st/st-alpha-20180616-0.8.1.diff .
+  patch <st-alpha-20180616-0.8.1.diff
+  cp ../../st/st-0.8.1-myconfig.diff .
+  patch <st-0.8.1-myconfig.diff
+  make
+  make install
+fi
+
 cd ../..
 rm -rf tmp/
 
