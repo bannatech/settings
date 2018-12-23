@@ -149,6 +149,24 @@
               "altKey": false,
               "metaKey": false
             }
+          ],
+          [
+            {
+              "code": "KeyD",
+              "key": "d",
+              "shiftKey": false,
+              "ctrlKey": false,
+              "altKey": false,
+              "metaKey": false
+            },
+            {
+              "code": "KeyL",
+              "key": "l",
+              "shiftKey": false,
+              "ctrlKey": false,
+              "altKey": false,
+              "metaKey": false
+            }
           ]
         ],
         "focusInput": [
@@ -164,6 +182,24 @@
             {
               "code": "KeyC",
               "key": "c",
+              "shiftKey": false,
+              "ctrlKey": false,
+              "altKey": false,
+              "metaKey": false
+            }
+          ],
+          [
+            {
+              "code": "KeyD",
+              "key": "d",
+              "shiftKey": false,
+              "ctrlKey": false,
+              "altKey": false,
+              "metaKey": false
+            },
+            {
+              "code": "KeyI",
+              "key": "i",
               "shiftKey": false,
               "ctrlKey": false,
               "altKey": false,
@@ -223,8 +259,8 @@
         "scrollPageDown": [
           [
             {
-              "code": "KeyE",
-              "key": "e",
+              "code": "KeyB",
+              "key": "b",
               "shiftKey": false,
               "ctrlKey": true,
               "altKey": false,
@@ -235,8 +271,8 @@
         "scrollPageUp": [
           [
             {
-              "code": "KeyY",
-              "key": "y",
+              "code": "KeyF",
+              "key": "f",
               "shiftKey": false,
               "ctrlKey": true,
               "altKey": false,
@@ -342,10 +378,18 @@
         "goUp": [
           [
             {
-              "code": "KeyB",
-              "key": "b",
+              "code": "KeyG",
+              "key": "g",
               "shiftKey": false,
-              "ctrlKey": true,
+              "ctrlKey": false,
+              "altKey": false,
+              "metaKey": false
+            },
+            {
+              "code": "KeyU",
+              "key": "u",
+              "shiftKey": false,
+              "ctrlKey": false,
               "altKey": false,
               "metaKey": false
             }
