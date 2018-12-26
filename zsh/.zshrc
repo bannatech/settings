@@ -144,6 +144,7 @@ alias G="grep --color=auto"
 alias a="awk"
 alias pl="plzip -n4"
 alias ed="ed -vp '*'"
+alias ydl="youtube-dl --add-metadeta -ic -o '%(title)s.%(ext)s'"
 
 # Path
 PATH=$PATH:$HOME/bin:$HOME/.scripts
