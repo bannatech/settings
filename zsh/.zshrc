@@ -38,17 +38,21 @@ setopt hist_verify
 setopt inc_append_history
 
 # binds
-bindkey -e
-bindkey "^[[3~" delete-char
-bindkey "^[[1;5C" forward-word
-bindkey "^[[OC" forward-word
-bindkey "^[[1;5D" backward-word
-bindkey "^[[OD" backward-word
-bindkey "^[[3;5~" kill-word
-bindkey "\x08" backward-kill-word
-bindkey '^[[A' up-line-or-search
-bindkey '^[[B' down-line-or-search
-WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
+# bindkey -e
+# bindkey "^[[3~" delete-char
+# bindkey "^[[1;5C" forward-word
+# bindkey "^[[OC" forward-word
+# bindkey "^[[1;5D" backward-word
+# bindkey "^[[OD" backward-word
+# bindkey "^[[3;5~" kill-word
+# bindkey "\x08" backward-kill-word
+# bindkey '^[[A' up-line-or-search
+# bindkey '^[[B' down-line-or-search
+# WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
+
+# VI mode
+bindkey -v
+export KEYTIMEOUT=1
 
 # I don't want to have to import weird terminfos to all systems I SSH into
 case "$TERM" in
@@ -93,6 +97,30 @@ PROMPT_CWD="%{${fg_bold[yellow]}%}%~ "
 PROMPT_ARROW="%(?:%{$fg_bold[green]%}$ :%{$fg_bold[red]%}$ %s)"
 PS1="$PROMPT_HOST$PROMPT_CWD$PROMPT_GIT$PROMPT_ARROW%{$reset_color%}"
 PS2="%{${fg_bold[green]}%}>%{$reset_color%}"
+BASEPS1=$PS1
+BASEPS2=$PS2
+
+# print out normal mode thing
+function zle-line-init zle-keymap-select {
+  VIM_PROMPT="%{$fg_bold[yellow]%} [% N]% %{$reset_color%}"
+  if [[ "$KEYMAP" == "vicmd" ]] ; then
+    PS1="$VIM_PROMPT $BASEPS1"
+  else
+    PS1="$BASEPS1"
+  fi
+  zle reset-prompt
+}
+
+zle -N zle-line-init
+zle -N zle-keymap-select
+
+# Useful bash keys in vimode
+bindkey '^P' up-history
+bindkey '^N' down-history
+bindkey '^?' backward-delete-char
+bindkey '^h' backward-delete-char
+bindkey '^w' backward-kill-word
+bindkey '^r' history-incremental-search-backward
 
 # Highlight
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
