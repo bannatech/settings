@@ -173,6 +173,7 @@ alias a="awk"
 alias pl="plzip -n4"
 alias ed="ed -vp '*'"
 alias ydl="youtube-dl --add-metadeta -ic -o '%(title)s.%(ext)s'"
+alias df='df -h'
 
 # Path
 PATH=$PATH:$HOME/bin:$HOME/.scripts
