@@ -23,11 +23,27 @@ syntax enable
 " No dumb wrapping
 set nowrap
 
+" Splits
+set splitbelow splitright
+noremap <C-h> <C-w>h
+noremap <C-j> <C-w>j
+noremap <C-k> <C-w>k
+noremap <C-l> <C-w>l
+
 " Use 2 spaces for indentation
 set autoindent
 set tabstop=2
 set shiftwidth=2
 set expandtab
+
+" Delete trailing whitespace
+autocmd BufWritePre * %s/\s\+$//e
+
+" Automerge .Xresources
+autocmd BufWritePost ~/.Xresourses,~/.Xdefaults !xrdb %
+
+" Autoupdate sxhkd
+autocmd BufWritePost ~/.config/sxhkd/sxhkdrc !pkill -USR1 sxhkd
 
 " Put cyan '.' on spaces that are indentations only
 " Hide for everything else
