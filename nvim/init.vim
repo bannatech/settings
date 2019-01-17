@@ -84,7 +84,6 @@ call minpac#add('junegunn/fzf.vim')
 call minpac#add('tpope/vim-repeat')
 call minpac#add('tpope/vim-speeddating')
 call minpac#add('tpope/vim-fugitive')
-call minpac#add('ervandew/supertab')
 call minpac#add('Ace-Who/vim-AutoPair')
 call minpac#add('szw/vim-tags')
 call minpac#add('idanarye/vim-vebugger')
@@ -195,7 +194,7 @@ let g:lightline = {
 \ }
 
 " ASM needs 8 space tabs
-au FileType asm setlocal tabstop=8 shiftwidth=8
+au FileType asm setlocal tabstop=8 shiftwidth=8 noexpandtab
 
 " Searching
 set incsearch
@@ -231,3 +230,7 @@ set foldlevel=1
 noremap <Leader>zf :setlocal foldmethod=manual<CR>
 noremap <Leader>zF :setlocal foldmethod=syntax<CR>
 
+augroup CleanWhitespace
+  autocmd!
+  au BufWritePre * :%s/\s\+$//e
+augroup END
