@@ -94,6 +94,9 @@ packloadall
 " Compile LaTeX with pdflatex
 function! LaTeXCompile()
   :!pdflatex --enable-write18 %
+endfunction
+
+function! LaTeXClean()
   :silent !rm %:r.aux %:r.log %:r.*.gnuplot %:r.*.table
 endfunction
 
@@ -233,4 +236,12 @@ noremap <Leader>zF :setlocal foldmethod=syntax<CR>
 augroup CleanWhitespace
   autocmd!
   au BufWritePre * :%s/\s\+$//e
+augroup END
+
+augroup doccmd
+  autocmd!
+  au BufWritePost *.tex call LaTeXCompile()
+  au BufWritePost *.groff call GroffCompile()
+  au BufWritePost *.man call GroffManCompile()
+  au BufUnload *.tex call LaTeXClean()
 augroup END
