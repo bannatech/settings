@@ -93,6 +93,9 @@ packloadall
 " Compile LaTeX with pdflatex
 function! LaTeXCompile()
   :!pdflatex --enable-write18 %
+  :!bibtex %:r.aux
+  :!pdflatex --enable-write18 %
+  :!pdflatex --enable-write18 %
 endfunction
 
 function! LaTeXClean()
