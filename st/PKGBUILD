@@ -6,7 +6,7 @@
 # Maintainer: Your Name <youremail@domain.com>
 pkgname=st
 pkgver=0.8.2
-pkgrel=1
+pkgrel=2
 pkgdesc="The Simple (Suckless) Terminal"
 arch=('x86_64' 'i386')
 url="https://st.suckless.org/"
