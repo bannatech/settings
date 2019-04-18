@@ -172,8 +172,12 @@ alias G="grep --color=auto"
 alias a="awk"
 alias pl="plzip -n4"
 alias ed="ed -vp '*'"
-alias ydl="youtube-dl --add-metadeta -ic -o '%(title)s.%(ext)s'"
+alias ydl="youtube-dl --add-metadata -ic -o '%(title)s.%(ext)s'"
 alias df='df -h'
+alias mv='mv -v'
+alias du='du -h'
+alias mutt='neomutt'
+alias em='neomutt'
 
 # Path
 PATH=$PATH:$HOME/bin:$HOME/.scripts
