@@ -1,5 +1,7 @@
 #! /bin/sh
 
+fcitx &
+
 # Initial programs to run
 systemctl --user start bspwm.target
 
