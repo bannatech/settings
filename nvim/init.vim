@@ -93,13 +93,19 @@ packloadall
 " Compile LaTeX with pdflatex
 function! LaTeXCompile()
   :!pdflatex --enable-write18 %
-  :!bibtex %:r.aux
+  :!biber %:r
   :!pdflatex --enable-write18 %
   :!pdflatex --enable-write18 %
 endfunction
 
 function! LaTeXClean()
-  :silent !rm %:r.aux %:r.log %:r.*.gnuplot %:r.*.table
+  :silent !rm %:r.aux %:r.log
+  :silent !rm %:r.*.gnuplot
+  :silent !rm %:r.*.table
+  :silent !rm %:r.bbl
+  :silent !rm %:r.bcf
+  :silent !rm %:r.run.xml
+  :silent !rm %:r.blg
 endfunction
 
 " Display LaTeX with current xdg default viewer
@@ -120,6 +126,14 @@ function! GroffManCompile()
   :redraw!
 endfunction
 
+function! ShowMarkdown()
+  :silent !pandoc -s % -t ms | groff -m ms -T pdf | zathura -
+endfunction
+
+function! CompileMarkdown()
+  :!pandoc -s % -t ms | groff -m ms -T pdf > %:r.pdf
+endfunction
+
 " Key remaps
 
 " Useful clipboard binds for visual mode
@@ -135,11 +149,15 @@ endif
 " LaTeX binds
 noremap <Leader>lc  :call LaTeXCompile()<CR>
 noremap <Leader>ld :call LaTeXDisplay()<CR>
+noremap <Leader>lC :call LaTeXClean()<CR>
 
 " Groff binds
 noremap <Leader>gc :call GroffCompile()<CR>
 noremap <Leader>gm :call GroffManCompile()<CR>
 noremap <Leader>gd :call LaTeXDisplay()<CR>
+
+noremap <Leader>md :call ShowMarkdown()<CR>
+noremap <Leader>mc :call CompileMarkdown()<CR>
 
 " minpac binds
 noremap <F2> :call minpac#update()<CR>
