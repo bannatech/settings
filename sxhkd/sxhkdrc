@@ -4,10 +4,6 @@
 # wm independent hotkeys
 #
 
-# Swap between dvorak and qwerty layouts
-super + alt + @space
-  $HOME/.config/sxhkd/dvorak_qwerty.sh qwerty
-
 # terminal emulator
 super + Return
   st
