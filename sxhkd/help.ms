@@ -131,51 +131,51 @@ Dmenu emoji select
 .SH
 Volume Control
 .LP
-.IP "super + v"
+.IP "super + v ; u"
 Raise volume by 3%.
-.IP "super + shift + v"
+.IP "super + v ; d"
 Lower volume by 3%.
-.IP "super + ctrl + v"
+.IP "super + v ; shift + u"
 Raise volume by 10%.
-.IP "super + ctrl + shift + v"
+.IP "super + v ; shift + d"
 Lower volume by 10%.
-.IP "super + alt + v"
+.IP "super + v ; e"
 Set volume to a specific value.
-.IP "super + alt + shift + v"
+.IP "super + v ; t"
 Toggle the mute state.
-.IP "super + alt + ctrl + v"
+.IP "super + v ; m"
 Mute all audio.
-.IP "super + alt + ctrl + shift + v"
+.IP "super + v ; shift + m"
 Unmute all audio.
 .SH
 Screenshots
 .LP
-.IP "super + a"
+.IP "super + a ; s"
 Take a screenshot of an area and put it in the clipboard.
-.IP "super + shift + a"
+.IP "super + a ; shift + s"
 Take a screenshot of an area and put it in a file.
-.IP "super + alt + a"
+.IP "super + a ; f"
 Take a screenshot of the focused window and put it in the clipboard.
-.IP "super + alt + shift + a"
-Take a screenshot and put it in a file.
-.IP "super + ctrl + a"
+.IP "super + a ; shift + f"
+Take a screenshot of the focused window and put it in a file.
+.IP "super + a ; z"
 Take a screenshot of the x session and put it in the clipboard.
-.IP "super + ctrl + shift + a"
+.IP "super + a ; shift + z"
 Take a screenshot of the x session and put it in a file.
 .SH
 Screencasts
 .LP
-.IP "super + r"
+.IP "super + r ; r"
 Record a screencast of an area and save it to a specified file.
-.IP "super + shift + r"
+.IP "super + r ;  shift + r"
 Record a screencast of an area and save it to a mp4 file named with the current time.
-.IP "super + alt + r"
+.IP "super + r ; w"
 Record a screencast of a window and save it to a specified file.
-.IP "super + alt + shift + r"
+.IP "super + r ; shift + w"
 Record a screencast of a windov and save it to a mp4 file named with the current time.
-.IP "super + ctrl + r"
+.IP "super + r ; k"
 Stop recording and save the screencast (saving depends on how cast was started).
-.IP "super + ctrl + alt + r"
-Record a screencast of the entire x session and save it to a specified file.
-.IP "super + ctrl + alt + shift + r"
-Record a screencast of the entire x session and save it to a mp4 file named with the current time.
+.IP "super + r ; alt + r"
+Record a screencast of a selection in a specified framerate.
+.IP "super + r ; alt + w"
+Record a screencast of the window in a specified framerate.

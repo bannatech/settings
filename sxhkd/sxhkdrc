@@ -29,56 +29,50 @@ super + apostrophe
   polybar-msg hook ipc 1
 
 # Help
-super + shift + slash
+super + F1
   groff -mms -Tpdf $HOME/.config/sxhkd/help.ms | zathura -
 
 # Pulseaudio volume controls
-super + {v,shift + v}
+super + v ; {u, d}
   $HOME/.config/bspwm/volume.sh {+,-}3
 
-super + ctrl + {v, shift + v}
+super + v ; shift + {u, d}
   $HOME/.config/bspwm/volume.sh {+,-}10
 
-super + alt + {v, shift + v}
-  $HOME/.config/bspwm/volume.sh {a,t}
+super + v ; {e, t, m}
+  $HOME/.config/bspwm/volume.sh {a, t, m}
 
-super + alt + ctrl + {v, shift + v}
-  $HOME/.config/bspwm/volume.sh {m, u}
+super + v ; shift + m
+  $HOME/.config/bspwm/volume.sh u
 
 # Swap clipboard buffers
 super + x
   xsel -o -p | xsel -i -s ; xsel -o -b | xsel -i -p ; xsel -o -s | xsel -i -b
 
 # Screenshot hotkeys
-super + {_,shift + }a
-  $HOME/.config/bspwm/screenshot.sh {none,ask}
+super + a ; {_, shift +} s
+  $HOME/.config/bspwm/screenshot.sh {none, ask}
 
-super + alt + {_,shift + }a
-  $HOME/.config/bspwm/screenshot.sh {none,ask} focused
+super + a ; {f, z}
+  $HOME/.config/bspwm/screenshot.sh none {focused, full}
 
-super + ctrl + {_,shift + }a
-  $HOME/.config/bspwm/screenshot.sh {none,ask} full
+super + a ; shift + {f, z}
+  $HOME/.config/bspwm/screenshot.sh ask {focused, full}
 
 # Screencast hotkeys
-super + r
-  $HOME/.config/bspwm/screencast.sh ask
+super + r ; {_, shift +} r
+  $HOME/.config/bspwm/screencast.sh {ask, }
 
-super + alt + r
-  $HOME/.config/bspwm/screencast.sh ask w
+super + r ; {_, shift +, alt + } w
+  $HOME/.config/bspwm/screencast.sh {ask, default} w
 
-super + shift + r
-  $HOME/.config/bspwm/screencast.sh
-
-super + alt + shift + r
-  $HOME/.config/bspwm/screencast.sh default w
-
-super + ctrl + r
+super + r ; k
   $HOME/.config/bspwm/screencast.sh __kill
 
-super + ctrl + alt + r
+super + r ; alt + r
   $HOME/.config/bspwm/screencast.sh ask s default ask
 
-super + ctrl + alt + shift + r
+super + r ; alt + w
   $HOME/.config/bspwm/screencast.sh ask w default ask
 
 # Convience scripts
