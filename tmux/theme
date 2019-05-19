@@ -30,9 +30,6 @@ ${split} #(free -h | grep 'buffers/cache' | awk '{printf $3}')iB \
 ${split} #(icon-bar) \
 ${split} %Y-%m-%d %H:%M "
 
-set -g status-left-length 30	
+set -g status-left-length 30
 set -g status-left " #H ${split} "
 
-set -g pane-active-border-bg ${c_sb}
-set -g pane-active-border-fg ${c_txt}
-set -g pane-border-fg ${c_txt}
