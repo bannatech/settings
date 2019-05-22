@@ -245,6 +245,7 @@ let g:rust_recommended_style = 0
 set dictionary=en_us
 set nospell
 au BufWinEnter,BufEnter,BufNewFile,BufRead *.txt setlocal spell
+au BufWinEnter,BufEnter,BufNewFile,BufRead *.md setlocal spell
 
 " Folding
 set foldmethod=syntax
