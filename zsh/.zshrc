@@ -178,6 +178,7 @@ alias mv='mv -v'
 alias du='du -h'
 alias mutt='neomutt'
 alias em='neomutt'
+alias fzf='fzf -i --reverse'
 
 # Path
 PATH=$PATH:$HOME/bin:$HOME/.scripts
