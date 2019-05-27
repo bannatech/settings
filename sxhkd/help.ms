@@ -48,7 +48,7 @@ Switch to the next desktop on this monitor.
 Switch to the previous desktop on this monitor.
 .IP "super + m"
 Swap desktop between monocled and tiled layout.
-.IP "super + ctrl + alt + space"
+.IP "super + ctrl + space"
 Clear all node preselections in the current desktop.
 .SH
 Monitor Controls
@@ -62,7 +62,7 @@ Focus the next monitor.
 .SH
 Node Controls
 .LP
-.IP "super + {h,t,n,s}"
+.IP "super + ctrl + {h,t,n,s}"
 Preselect a node split to be in a direction.
 .IP "super + ctrl + {1-9}"
 Preset the ratio for a node split.
@@ -109,7 +109,7 @@ Toggle between dvorak and qwerty. Changes x keyboard map and WM hotkeys.
 Reload hotkey daemon.
 .IP "super + alt + escape"
 Exit xorg.
-.IP "super + b"
+.IP "super + shift + b"
 Reload the wallpapers.
 .IP "super + enter"
 Launch a terminal.
