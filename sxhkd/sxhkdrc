@@ -21,7 +21,7 @@ super + Escape
   pkill -USR1 -x sxhkd
 
 # Randomize wallpaper
-super + b
+super + shift + b
   feh --randomize --bg-scale ~/.wallpaper/*
 
 # Clear messages
@@ -81,6 +81,9 @@ super + z
 
 super + minus
   $HOME/.config/bspwm/calculator.sh
+
+super + shift + z
+  $HOME/.config/bspwm/open.sh
 
 #
 # bspwm hotkeys

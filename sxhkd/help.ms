@@ -124,6 +124,8 @@ Convience scripts
 .LP
 .IP "super + z"
 Play a url with mpv.
+.IP "super + shift + z"
+Open whatever is in the primay clipboard with xdg-open.
 .IP "super + -"
 Bring up a calculator (uses julia).
 .IP "super + alt + enter"
