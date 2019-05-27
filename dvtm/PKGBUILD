@@ -1,0 +1,35 @@
+# This is an example PKGBUILD file. Use this as a start to creating your own,
+# and remove these comments. For more information, see 'man PKGBUILD'.
+# NOTE: Please fill out the license field for your package! If it is unknown,
+# then please put 'unknown'.
+
+# Maintainer: Your Name <youremail@domain.com>
+pkgname=dvtm
+pkgver=0.15
+pkgrel=40
+pkgdesc="dynamic virtual terminal manager"
+arch=('x86_64' 'i386')
+url="https://github.com/martanne/dvtm"
+license=('MIT')
+depends=('ncurses')
+provides=('dvtm')
+source=("config.h" "dvtm.1")
+sha256sums=('f1630bd981ccca776e9118eae4eb1c2bdc4f6c3641685ffb2a1f0584b225451c'
+  'ffc1e816201abe37c9854201401d5f5e5ee5d5ab927dd809c1b67912c980c12d')
+
+prepare() {
+  git clone "https://github.com/martanne/dvtm"
+  cd dvtm
+  cp ../config.h .
+  cp ../dvtm.1 .
+}
+
+build() {
+	cd "dvtm"
+	make
+}
+
+package() {
+	cd "dvtm"
+	make PREFIX=/usr MANPREFIX=/usr/share/man DESTDIR="$pkgdir/" install
+}
