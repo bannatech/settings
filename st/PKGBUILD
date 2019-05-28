@@ -9,7 +9,7 @@ pkgver=0.8.2
 pkgrel=2
 pkgdesc="The Simple (Suckless) Terminal"
 arch=('x86_64' 'i386')
-url="https://st.suckless.org/"
+url="https://gitlab.com/aftix/st"
 license=('MIT')
 depends=('libx11')
 provides=('st')
@@ -18,7 +18,7 @@ source=()
 sha256sums=()
 
 prepare() {
-  git clone https://gitlab.com/aftix/st
+  git clone "$url"
   mv "st" "$pkgname-$pkgver"
 	cd "$pkgname-$pkgver"
   git checkout my_st

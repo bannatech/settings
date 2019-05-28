@@ -9,28 +9,27 @@ pkgver=0.15
 pkgrel=40
 pkgdesc="dynamic virtual terminal manager"
 arch=('x86_64' 'i386')
-url="https://github.com/martanne/dvtm"
+url="https://gitlab.com/aftix/dvtm"
 license=('MIT')
 depends=('ncurses')
 makedepends=('git')
 provides=('dvtm')
-source=("config.h" "dvtm.1")
-sha256sums=('f1630bd981ccca776e9118eae4eb1c2bdc4f6c3641685ffb2a1f0584b225451c'
-  'ffc1e816201abe37c9854201401d5f5e5ee5d5ab927dd809c1b67912c980c12d')
+source=()
+sha256sums=()
 
 prepare() {
-  git clone "https://github.com/martanne/dvtm"
-  cd dvtm
-  cp ../config.h .
-  cp ../dvtm.1 .
+  git clone "$url"
+  mv "dvtm" "$pkgname-$pkgver"
+  cd "$pkgname-$pkgver"
+  git checkout my_dvtm
 }
 
 build() {
-	cd "dvtm"
+	cd "$pkgname-$pkgver"
 	make
 }
 
 package() {
-	cd "dvtm"
+	cd "$pkgname-$pkgver"
 	make PREFIX=/usr MANPREFIX=/usr/share/man DESTDIR="$pkgdir/" install
 }

@@ -7,9 +7,9 @@
 pkgname=st
 pkgver=6.2
 pkgrel=1
-pkgdesc="The Simple (Suckless) Terminal"
+pkgdesc="Dynamic Window Manager"
 arch=('x86_64' 'i386')
-url="https://st.suckless.org/"
+url="https://gitlab.com/aftix/dwm"
 license=('MIT')
 depends=('libx11')
 provides=('dwm')
@@ -18,7 +18,7 @@ source=()
 sha256sums=()
 
 prepare() {
-  git clone https://gitlab.com/aftix/dwm
+  git clone "$url"
   mv "dwm" "$pkgname-$pkgver"
 	cd "$pkgname-$pkgver"
   git checkout my_dwm
