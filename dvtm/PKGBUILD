@@ -12,6 +12,7 @@ arch=('x86_64' 'i386')
 url="https://github.com/martanne/dvtm"
 license=('MIT')
 depends=('ncurses')
+makedepends=('git')
 provides=('dvtm')
 source=("config.h" "dvtm.1")
 sha256sums=('f1630bd981ccca776e9118eae4eb1c2bdc4f6c3641685ffb2a1f0584b225451c'

@@ -5,23 +5,23 @@
 
 # Maintainer: Your Name <youremail@domain.com>
 pkgname=st
-pkgver=0.8.2
-pkgrel=2
+pkgver=6.2
+pkgrel=1
 pkgdesc="The Simple (Suckless) Terminal"
 arch=('x86_64' 'i386')
 url="https://st.suckless.org/"
 license=('MIT')
 depends=('libx11')
-provides=('st')
+provides=('dwm')
 makedepends=('git')
 source=()
 sha256sums=()
 
 prepare() {
-  git clone https://gitlab.com/aftix/st
-  mv "st" "$pkgname-$pkgver"
+  git clone https://gitlab.com/aftix/dwm
+  mv "dwm" "$pkgname-$pkgver"
 	cd "$pkgname-$pkgver"
-  git checkout my_st
+  git checkout my_dwm
 }
 
 build() {
