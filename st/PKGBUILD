@@ -13,16 +13,14 @@ url="https://st.suckless.org/"
 license=('MIT')
 depends=('libx11')
 provides=('st')
-source=("https://dl.suckless.org/st/$pkgname-$pkgver.tar.gz"
-        "https://st.suckless.org/patches/alpha/$pkgname-alpha-$pkgver.diff"
-        "$pkgname-$pkgver-myconfig.diff")
-sha256sums=('aeb74e10aa11ed364e1bcc635a81a523119093e63befd2f231f8b0705b15bf35'
-            'SKIP' 'SKIP')
+source=()
+sha256sums=()
 
 prepare() {
+  git clone https://gitlab.com/aftix/st
+  mv "st" "$pkgname-$pkgver"
 	cd "$pkgname-$pkgver"
-	patch <"$srcdir/$pkgname-alpha-$pkgver.diff"
-	patch <"$srcdir/$pkgname-$pkgver-myconfig.diff"
+  git checkout my_st
 }
 
 build() {
