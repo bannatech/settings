@@ -254,6 +254,11 @@ set foldlevel=1
 noremap <Leader>zf :setlocal foldmethod=manual<CR>
 noremap <Leader>zF :setlocal foldmethod=syntax<CR>
 
+"URL Search
+noremap <Leader><Leader> /http<CR>
+noremap <Leader>y "+y$"+yt<SPACE>
+noremap <Leader>Y gJN"+y$"+yt<SPACE>
+
 augroup CleanWhitespace
   autocmd!
   au BufWritePre * :%s/\s\+$//e
