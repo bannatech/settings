@@ -3,12 +3,12 @@
 # $1 is volume
 # $2 is sink (optional)
 
-if test "$1" = "" ; then
+if [ "$1" = "" ] ; then
     exit 1
 fi
 
 sink=0
-if ! test "$2" = "" ; then
+if ! [ "$2" = "" ] ; then
     sink="$2"
 fi
 
@@ -46,7 +46,7 @@ case "$op" in
 	;;
 esac
 
-if test "$operand" = "" ; then
+if [ "$operand" = "" ] ; then
     exit 0
 fi
 

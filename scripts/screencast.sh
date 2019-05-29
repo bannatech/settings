@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if test "$1" = "__kill" ; then
+if [ "$1" = "__kill" ] ; then
     pkill -15 ffmpeg
     exit 0
 fi
@@ -14,25 +14,25 @@ fi
 TMP_AVI=$(mktemp /tmp/outXXXXXXXXXX.avi)
 
 output=$1
-if test "$output" = "" || test "$output" = "default"; then
+if [ "$output" = "" ] || [ "$output" = "default" ] ; then
     output=$(date +%F-%T)'_screencast'
 fi
 
-if test "$output" = "ask" ; then
-    output=$(dmenu -noinput $DOPTS -p "Name screencast: ")
+if [ "$output" = "ask" ] ; then
+    output=$(printf "" | dmenu $DOPTS -p "Name screencast: ")
 fi
-    
+
 mode=$2
-if test "$mode" = "" || test "$mode" = "default"; then
+if [ "$mode" = "" ] || [ "$mode" = "default" ] ; then
     mode="s"
 fi
 
 format=$3
-if test "$format" = "" || test "$format" = "default" ; then
+if [ "$format" = "" ] || [ "$format" = "default" ] ; then
     format="mp4"
 fi
 
-if test "$format" = "ask" ; then
+if [ "$format" = "ask" ] ; then
     format=$(echo "mpv" | dmenu $DOPTS -p "Select video format: ")
 fi
 
@@ -42,11 +42,11 @@ if printf "%s" "$output" | grep "\." >/dev/null; then
 fi
 
 framerate=$4
-if test "$framerate" = "" || test "$framerate" = "default" ; then
+if [ "$framerate" = "" ] || [ "$framerate" = "default" ] ; then
     framerate="15"
 fi
 
-if test "$framerate" = "ask" ; then
+if [ "$framerate" = "ask" ] ; then
     framerate=$(echo "15" | dmenu $DOPTS -p "Choose framerate: ")
 fi
 
@@ -74,7 +74,7 @@ ffcast -$mode % ffmpeg -y -f x11grab -show_region 1 -framerate $framerate \
 
 ffmpeg -i "$TMP_AVI" "$output.$format"
 
-if test "$format" = "gif" ; then
+if [ "$format" = "gif" ] ; then
     convert -limit memory 1 -limit map 1 -layers Optimize "$output.$format" "opt_$output.$format"
     rm "$output.$format"
     mv "opt_$output.$format" "$output.$format"
