@@ -36,14 +36,17 @@ case "$op" in
 	;;
     "m")
 	pamixer --sink $sink -m
+  kill -USR1 "$pid"
 	exit 0
 	;;
     "u")
 	pamixer --sink $sink -u
+  kill -USR1 "$pid"
 	exit 0
 	;;
     "t")
 	pamixer --sink $sink -t
+  kill -USR1 "$pid"
 	exit 0
 	;;
     "a")
