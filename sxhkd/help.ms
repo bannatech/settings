@@ -14,10 +14,16 @@ Tag Controls
 Kill active window.
 .IP "super + {1-9}"
 View the nth tag.
+.IP "super + ctrl + {1-9}"
+Toggle viewing of the nth tag.
 .IP "super + 0"
 View all tags.
 .IP "super + shift + {1-9}"
 Change the active window's tag.
+.IP "super + shift + ctrl + {1-9}"
+Toggle a tag on the active window.
+.IP "super + shift + 0"
+Tag the active window with all tags.
 .IP "super + tab"
 Change the active tag to the previously active tag.
 .IP "super + {comma, period}"
