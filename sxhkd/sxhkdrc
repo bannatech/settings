@@ -34,16 +34,16 @@ super + F1
 
 # Pulseaudio volume controls
 super + v ; {u, d}
-  volume.sh {+,-}3
+  $HOME/.scripts/volume.sh {+,-}3
 
 super + v ; shift + {u, d}
-  volume.sh {+,-}10
+  $HOME/.scripts/volume.sh {+,-}10
 
 super + v ; {e, t, m}
-  volume.sh {a, t, m}
+  $HOME/.scripts/volume.sh {a, t, m}
 
 super + v ; shift + m
-  volume.sh u
+  $HOME/.scripts/volume.sh u
 
 # Swap clipboard buffers
 super + x
@@ -51,39 +51,39 @@ super + x
 
 # Screenshot hotkeys
 super + a ; {_, shift +} s
-  screenshot.sh {none, ask}
+  $HOME/.scripts/screenshot.sh {none, ask}
 
 super + a ; {f, z}
-  screenshot.sh none {focused, full}
+  $HOME/.scripts/screenshot.sh none {focused, full}
 
 super + a ; shift + {f, z}
-  screenshot.sh ask {focused, full}
+  $HOME/.scripts/screenshot.sh ask {focused, full}
 
 # Screencast hotkeys
 super + r ; {_, shift +} r
-  screencast.sh {ask, }
+  $HOME/.scripts/screencast.sh {ask, }
 
 super + r ; {_, shift +, alt + } w
-  screencast.sh {ask, default} w
+  $HOME/.scripts/screencast.sh {ask, default} w
 
 super + r ; k
-  screencast.sh __kill
+  $HOME/.scripts/screencast.sh __kill
 
 super + r ; alt + r
-  screencast.sh ask s default ask
+  $HOME/.scripts/screencast.sh ask s default ask
 
 super + r ; alt + w
-  screencast.sh ask w default ask
+  $HOME/.scripts/screencast.sh ask w default ask
 
 # Convience scripts
 super + z
-  play.sh
+  $HOME/.scripts/play.sh
 
 super + minus
-  calculator.sh
+  $HOME/.scripts/calculator.sh
 
 super + shift + z
-  open.sh
+  $HOME/.scripts/open.sh
 
 # DWM Layouts (here for sequencing)
 super + e ; {t, n, m, b, h, s, d}
