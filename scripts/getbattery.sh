@@ -7,4 +7,4 @@ if [ "$PERC" = "99" ] || [ "$PERC" = "100" ] ; then
   exit 0
 fi
 
-printf "%s %s" "$CHRG" "$PERC"
+printf "%s %s%%" "$CHRG" "$PERC"
