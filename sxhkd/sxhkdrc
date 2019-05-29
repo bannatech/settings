@@ -13,11 +13,11 @@ super + alt + shift + Return
   dmenuunicode
 
 # program launcher
-super + @space
+super + space
   dmenu_run
 
 # Conky
-super + @F2
+super + F2
   conky
 
 # make sxhkd reload its configuration files:
@@ -27,10 +27,6 @@ super + Escape
 # Randomize wallpaper
 super + shift + b
   feh --randomize --bg-scale ~/.wallpaper/*
-
-# Clear messages
-super + apostrophe
-  polybar-msg hook ipc 1
 
 # Help
 super + F1
