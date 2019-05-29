@@ -7,7 +7,7 @@ if test "$1" = "" ; then
     exit 1
 fi
 
-sink=1
+sink=0
 if ! test "$2" = "" ; then
     sink="$2"
 fi
@@ -51,3 +51,4 @@ if test "$operand" = "" ; then
 fi
 
 pamixer --sink "$sink" --set-volume "$operand" 2>/dev/null >/dev/null
+pkill -USR1 dwmbar.sh 2>/dev/null >/dev/null
