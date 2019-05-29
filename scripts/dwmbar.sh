@@ -1,14 +1,12 @@
 #!/bin/sh
 
-timef="$(mktemp)"
+timef="/tmp/dwmbar.date"
+lck="/tmp/dwmbar.lock"
 
 cd $HOME
 
-while true ; do
-  date "+%a %e %b %y, %k:%M" > "$timef"
-  sleep 60
-done &
-
+date "+%a %e %b %y, %k:%M" > "$timef"
+echo "$$" > "$lck"
 
 while true ; do
   function killsub() {
@@ -20,5 +18,6 @@ while true ; do
   BAR="$(printf " %s | Bat: %s | Vol: %s" "$TIME" "$BAT" "$VOL" )"
   xsetroot -name "$BAR"
   trap "killsub" SIGUSR1
-  sleep 10 & wait ${!}
-done &
+  trap "killsub" SIGUSR2
+  sleep 1000 & wait ${!}
+done

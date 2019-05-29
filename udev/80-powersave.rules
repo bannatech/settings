@@ -1,1 +1,1 @@
-ACTION=="change",SUBSYSTEM=="power_supply",RUN+="/usr/bin/pkill -USR1 dwmbar.sh"
+ACTION=="change",SUBSYSTEM=="power_supply",RUN+="/usr/bin/kill -USR1 \"$(cat \"/tmp/dwmbar.lock\")\""

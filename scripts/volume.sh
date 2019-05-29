@@ -3,6 +3,14 @@
 # $1 is volume
 # $2 is sink (optional)
 
+lck="/tmp/dwmbar.lock"
+
+while ! [ -e "$lck" ] ; do
+  sleep 1
+done
+
+pid="$(cat "$lck")"
+
 if [ "$1" = "" ] ; then
     exit 1
 fi
@@ -51,4 +59,4 @@ if [ "$operand" = "" ] ; then
 fi
 
 pamixer --sink "$sink" --set-volume "$operand" 2>/dev/null >/dev/null
-pkill -USR1 dwmbar.sh 2>/dev/null >/dev/null
+kill -USR1 "$pid" 2>/dev/null >/dev/null
