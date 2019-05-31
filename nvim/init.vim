@@ -206,6 +206,9 @@ au BufWinEnter,BufEnter,BufNewFile,BufRead *.c,*.cpp,*.h,*.hpp setlocal omnifunc
 " st does not report focus
 let g:gitgutter_terminal_reports_focus=0
 
+" Editor config
+let g:EditorConfig_exclude_patterns = ['fugitive://.\*']
+
 " Lightline appearence
 let g:lightline = {
 \   'active': {
@@ -270,4 +273,9 @@ augroup doccmd
   au BufWritePost *.groff call GroffCompile()
   au BufWritePost *.man call GroffManCompile()
   au BufUnload *.tex call LaTeXClean()
+augroup END
+
+augroup editor
+  autocmd!
+  au BufWinEnter,BufEnter,BufNewFile,BufRead * EditorConfigEnable
 augroup END

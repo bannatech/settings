@@ -80,6 +80,12 @@ In change layout mode, change to a spiral layout.
 In change layout mode, change to a bottom stack layout.
 .IP "h"
 In change layout mode, change to a bottom horizontal stack layout.
+.IP "e"
+In change layout mode, change to a centered master stack layout.
+.IP "f"
+In change layout mode, change to a floating centered master stack layout.
+.IP "c"
+In change layout mode, change to a columns master stack layout.
 .SH
 Convience scripts
 .LP
