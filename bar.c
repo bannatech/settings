@@ -283,14 +283,6 @@ int get_script(char *buf, size_t maxlen, unsigned int num)
     return STAT_NULLPIPE;
   }
 
-  char buffer[1024];
-  memset(buffer, 0, 1024);
-  int fret = fscanf(scr, "%s", &buffer[0]);
-
-  if (fret == EOF) {
-    return STAT_BADFSCANF;
-  }
-
   size_t bufcnt = strlen(PREFIXES[num]);
   if (maxlen < bufcnt) {
     return STAT_BADLENGTH;
@@ -298,12 +290,28 @@ int get_script(char *buf, size_t maxlen, unsigned int num)
 
   strcpy(buf, PREFIXES[num]);
 
-  bufcnt += strlen(buffer);
-  if (bufcnt > maxlen) {
-    return STAT_BADLENGTH;
-  }
+  char buffer[30];
+  memset(buffer, 0, 30);
+  int fret = 0;
+  int cont = 0;
 
-  strcat(buf, buffer);
+  fscanf(scr, "%s", &buffer[0]);
+  while (fret != EOF) {
+    bufcnt += strlen(buffer) + cont;
+    if (bufcnt > maxlen) {
+      return STAT_BADLENGTH;
+    }
+
+    if (cont) {
+      strcat(buf, " ");
+    } else {
+      cont = 1;
+    }
+    strcat(buf, buffer);
+
+    memset(buffer, 0, 30);
+    fret = fscanf(scr, "%s", &buffer[0]);
+  }
 
   bufcnt += strlen(SUFFIXES[num]);
   if (bufcnt > maxlen) {
