@@ -25,6 +25,7 @@
 #define STAT_BADEXEC -3
 #define STAT_BADWAIT -4
 #define STAT_OVERMEM -5
+#define STAT_BADMATCH -6
 
 #define STAT_NOLOCKDIR 1
 #define STAT_LOCKNOTDIR 2
@@ -55,6 +56,8 @@
 #define STAT_NULLBUF 27
 #define STAT_BADSCRIPT 28
 
+#define LEN(x) (sizeof(x) / sizeof(x[0]))
+
 // Customization
 const char *SEPERATOR = " | ";
 
@@ -63,22 +66,19 @@ const char *TIMEFMT = "%a %d %b %y, %H:%M";
 const char *CMDS[] = {
   "@TIME@",
   "$HOME/.scripts/getbattery.sh",
-  "$HOME/.scripts/getvol.sh",
-  NULL
+  "$HOME/.scripts/getvol.sh"
 };
 
 const char *PREFIXES[] = {
   " ",
   "Bat: ",
-  "Vol: ",
-  NULL
+  "Vol: "
 };
 
 const char *SUFFIXES[] = {
   "",
   "",
-  "",
-  NULL
+  ""
 };
 
 const char *LOCKDIR = "/var/run/dwmbar";
@@ -288,7 +288,7 @@ int get_script(char *buf, size_t maxlen, unsigned int num)
     return STAT_NULLBUF;
   }
 
-  if (num > (sizeof(CMDS) / sizeof(CMDS[0])) - 1) {
+  if (num >= LEN(CMDS)) {
     return STAT_BADSCRIPT;
   }
 
@@ -362,6 +362,11 @@ int get_time(char *buf, size_t maxlen)
 
 int main(int argc, char **argv)
 {
+  if (LEN(CMDS) != LEN(PREFIXES) || LEN(CMDS) != LEN(SUFFIXES)) {
+    fprintf(stderr, "CMD arrays not all the same size! Recompile after fixing.\n");
+    return STAT_BADMATCH;
+  }
+
   int status = daemonize();
   if (status == STAT_NOLOCKDIR) {
     fprintf(stderr, "Unable to access %s. Exiting.\n", LOCKDIR);
@@ -395,34 +400,33 @@ int main(int argc, char **argv)
   }
 
   int sig;
-  char *timebuf = malloc(100);
-  char *scriptbuf = malloc(100);
-  char *barbuf = malloc(4096);
+  char timebuf[100];
+  char scriptbuf[100];
+  char barbuf[4096];
 
   int retstatus = STAT_GOOD;
 
   while (run) {
-    memset(timebuf, 0, 100);
-    memset(barbuf, 0, 4096);
+    memset(timebuf, 0, sizeof(timebuf));
+    memset(barbuf, 0, sizeof(barbuf));
 
     size_t barlen = 1;
 
-    int towait = get_time(&timebuf[0], 100);
+    int towait = get_time(&timebuf[0], sizeof(timebuf));
     if (towait < 0) {
       printf("Error getting time. Exiting.\n");
       retstatus = STAT_BADTIME;
       goto quit;
     }
 
-    unsigned int pos = 0;
-    for (const char **ptr = CMDS; *ptr != NULL; ++ptr, ++pos) {
-      memset(scriptbuf, 0, 100);
+    for (unsigned int pos = 0; pos < LEN(CMDS); ++pos) {
+      memset(scriptbuf, 0, sizeof(scriptbuf));
 
-      if (strcmp(*ptr, "@TIME@") != 0) {
-      status = get_script(scriptbuf, 100, pos);
+      if (strcmp(CMDS[pos], "@TIME@") != 0) {
+      status = get_script(scriptbuf, sizeof(scriptbuf), pos);
         if (status != 0) {
           retstatus = STAT_BADEXEC;
-          printf("Error getting script %s, %d. Exiting.\n", *ptr, status);
+          printf("Error getting script %s, %d. Exiting.\n", CMDS[pos], status);
           goto quit;
         }
       } else {
@@ -435,7 +439,7 @@ int main(int argc, char **argv)
         barlen += strlen(scriptbuf);
       }
 
-      if (barlen > 4096) {
+      if (barlen > sizeof(barbuf)) {
         retstatus = STAT_OVERMEM;
         printf("Error making bar text. Exiting.\n");
         goto quit;
@@ -465,9 +469,6 @@ int main(int argc, char **argv)
   }
 
 quit:
-  free(scriptbuf);
-  free(timebuf);
-  free(barbuf);
   printf("Exiting with status %d.\n", retstatus);
   fflush(stdout);
   close(logfd);
