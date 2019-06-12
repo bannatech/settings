@@ -3,7 +3,7 @@
 # $1 is volume
 # $2 is sink (optional)
 
-lck="/tmp/dwmbar.lock"
+lck="/var/run/dwmbar/bar.pid"
 
 while ! [ -e "$lck" ] ; do
   sleep 1
@@ -36,17 +36,17 @@ case "$op" in
 	;;
     "m")
 	pamixer --sink $sink -m
-  kill -USR1 "$pid"
+  kill -ALRM "$pid"
 	exit 0
 	;;
     "u")
 	pamixer --sink $sink -u
-  kill -USR1 "$pid"
+  kill -ALRM "$pid"
 	exit 0
 	;;
     "t")
 	pamixer --sink $sink -t
-  kill -USR1 "$pid"
+  kill -ALRM "$pid"
 	exit 0
 	;;
     "a")
@@ -62,4 +62,4 @@ if [ "$operand" = "" ] ; then
 fi
 
 pamixer --sink "$sink" --set-volume "$operand" 2>/dev/null >/dev/null
-kill -USR1 "$pid" 2>/dev/null >/dev/null
+kill -ALRM "$pid" 2>/dev/null >/dev/null

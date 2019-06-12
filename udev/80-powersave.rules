@@ -1,1 +1,1 @@
-ACTION=="change",SUBSYSTEM=="power_supply",RUN+="/usr/bin/kill -USR1 \"$(cat \"/tmp/dwmbar.lock\")\""
+ACTION=="change",SUBSYSTEM=="power_supply",RUN+="/usr/bin/kill -ALRM \"$(cat \"/var/run/dwmbar/bar.pid")\""
