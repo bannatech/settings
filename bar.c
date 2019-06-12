@@ -18,6 +18,7 @@
 #include <X11/Xutil.h>
 #include <X11/Xatom.h>
 
+// Error Codes
 #define STAT_GOOD 0
 #define STAT_BADFLAG -1
 #define STAT_BADTIME -2
@@ -54,6 +55,7 @@
 #define STAT_NULLBUF 27
 #define STAT_BADSCRIPT 28
 
+// Customization
 const char *SEPERATOR = " | ";
 
 const char *TIMEFMT = "%a %d %b %y, %H:%M";
@@ -85,26 +87,31 @@ const char *FDDIR = "/proc/self/fd/";
 const char *LOGDIR = "/var/log/dwmbar";
 const char *LOGFILE = "/var/log/dwmbar/bar.log";
 
+// Structs
 struct XData {
   Display *disp;
   Window root;
 };
 
+// Global Variables
 int logfd = -1;
 atomic_bool run = true;
 sigset_t sset;
 
-int close_fds();
-int connect_X(struct XData *xd);
-int daemonize();
-void disconnect_X(struct XData *xd);
-int get_script(char *buf, size_t maxlen, unsigned int num);
-int get_time(char *buf, size_t maxlen);
+// Prototypes
+int close_fds(); // Close all active fds above 2
+int connect_X(struct XData *xd); // Connect to the X session
+int daemonize(); // Turn the process into a daemon
+void disconnect_X(struct XData *xd); // Disconnect from the X session
+int get_script(char *buf, size_t maxlen, unsigned int num); // Get output of a script
+int get_time(char *buf, size_t maxlen); // Get the current time according to TIMEFMT, return seconds to next minute
 int main(int argc, char **argv);
-int make_signals();
-void reset_sigs();
-int set_text(char *txt);
-void sighandler(int num);
+int make_signals(); // Create signal handlers and block on SIGALRM
+void reset_sigs(); // Clear all signal blocking and set all handlers to SIG_DFL
+int set_text(char *txt); // Set the root window name
+void sighandler(int num); // Handle exit signals
+
+// Functions
 
 int close_fds()
 {
@@ -129,6 +136,7 @@ int close_fds()
     return STAT_LOCKEXISTS;
   }
 
+  // Try to iterate over files in FDDIR (/proc/self/fd) and close open fds
   DIR *d = NULL;
   if (stat(FDDIR, &st_info) == 0) {
     d = opendir(FDDIR);
@@ -150,6 +158,7 @@ int close_fds()
     return STAT_GOOD;
   }
 
+  // Fallback to closing all fds from 3 to the limit
   struct rlimit lim;
   int status = getrlimit(RLIMIT_NOFILE, &lim);
   if (status != 0) {
@@ -179,6 +188,11 @@ int connect_X(struct XData *xd)
   return STAT_GOOD;
 }
 
+// SysV non-conformant by:
+//    - Not keeping parent process open until daemonization is done
+//    - Not dropping permissions
+//    - Not atomically checking lockfile
+//  Doesn't really matter for this small thing in dwm autostart
 int daemonize()
 {
   int status = close_fds();
@@ -278,7 +292,7 @@ int get_script(char *buf, size_t maxlen, unsigned int num)
     return STAT_BADSCRIPT;
   }
 
-  FILE *scr = popen(CMDS[num], "r");
+  FILE *scr = popen(CMDS[num], "r"); // Run script with pipe
   if (scr == NULL) {
     return STAT_NULLPIPE;
   }
@@ -295,6 +309,7 @@ int get_script(char *buf, size_t maxlen, unsigned int num)
   int fret = 0;
   int cont = 0;
 
+  // Keep getting output until script terminates
   fscanf(scr, "%s", &buffer[0]);
   while (fret != EOF) {
     bufcnt += strlen(buffer) + cont;
@@ -438,8 +453,8 @@ int main(int argc, char **argv)
     set_text(barbuf);
 
     fflush(stdout);
-    alarm(towait);
-    status = sigwait(&sset, &sig);
+    alarm(towait); // At the very least, wake up when the minute changes to update
+    status = sigwait(&sset, &sig); // Wait for SIGALRM
     if (status != 0) {
       retstatus = STAT_BADWAIT;
       perror("Error in sigwait. Exiting.");
