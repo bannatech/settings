@@ -161,6 +161,7 @@ alias bt="btfs"
 alias m="sudo mount"
 alias u="sudo umount"
 alias k="make"
+alias kd="make DEBUG=yes"
 alias c="./configure"
 alias f="fusermount"
 alias F="fusermount -u"
@@ -179,6 +180,14 @@ alias du='du -h'
 alias mutt='neomutt'
 alias em='neomutt'
 alias fzf='fzf -i --reverse'
+
+#PROXY
+http_proxy="http://localhost:3128"
+https_proxy="http://localhost:3128"
+ftp_proxy="ftp://localhost:3128"
+HTTP_PROXY="http://localhost:3128"
+HTTPS_PROXY="http://localhost:3128"
+FTP_PROXY="ftp://localhost:3128"
 
 # Path
 PATH=$PATH:$HOME/bin:$HOME/.scripts
