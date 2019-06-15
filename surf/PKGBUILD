@@ -4,24 +4,24 @@
 # then please put 'unknown'.
 
 # Maintainer: Your Name <youremail@domain.com>
-pkgname=my_dwm
-pkgver=6.2
+pkgname=my_surf
+pkgver=2.0
 pkgrel=1
-pkgdesc="Dynamic Window Manager"
+pkgdesc="Simple Web Browser"
 arch=('x86_64' 'i386')
-url="https://gitlab.com/aftix/dwm"
+url="https://gitlab.com/aftix/surf"
 license=('MIT')
-depends=('libx11')
-provides=('dwm')
+depends=('libx11' 'glib2' 'gtk3' 'gcr')
+provides=('surf')
 makedepends=('git')
 source=()
 sha256sums=()
 
 prepare() {
   git clone "$url"
-  mv "dwm" "$pkgname-$pkgver"
+  mv "surf" "$pkgname-$pkgver"
 	cd "$pkgname-$pkgver"
-  git checkout my_dwm
+  git checkout my_surf
 }
 
 build() {
@@ -32,4 +32,6 @@ build() {
 package() {
 	cd "$pkgname-$pkgver"
 	make PREFIX=/usr MANPREFIX=/usr/share/man DESTDIR="$pkgdir/" install
+  mkdir -p "$HOME/.surf"
+  cp plugins/* "$HOME/.surf/."
 }
