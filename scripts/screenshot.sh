@@ -44,16 +44,16 @@ esac
 
 
 if [ "$mode" = "-s" ] ; then
-    printf "" | dmenu $DOPTS -p "Select an area: " >/dev/null
+  printf "" | dmenu $DOPTS -p "Select an area: " >/dev/null
 elif [ "$mode" = "-u" ] ; then
-    printf "" | dmenu $DOPTS -p "Capturing focused window..." >/dev/null
+  sleep 1
 else
-    printf "" | dmenu $DOPTS -p "Capturing full screen..." > /dev/null
+  sleep 1
 fi
 
 scrot "$name" $mode
 
 if [ "$remove" = "yes" ] ; then
-    cat "$name" | xclip -selection clipboard -t image/png
-    rm "$name"
+  cat "$name" | xclip -selection clipboard -t image/png
+  rm "$name"
 fi
