@@ -1,0 +1,12 @@
+[Unit]
+Description=Create directory for dwmbar
+
+[Service]
+Type=
+RemainAfterExit=yes
+ExecStart=/home/aftix/.scripts/makedir.sh
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=default.target
