@@ -26,6 +26,7 @@
 #define STAT_BADWAIT -4
 #define STAT_OVERMEM -5
 #define STAT_BADMATCH -6
+#define STAT_BADSTREAM -7
 
 #define STAT_NOLOCKDIR 1
 #define STAT_LOCKNOTDIR 2
@@ -55,6 +56,7 @@
 #define STAT_NULLDISP 26
 #define STAT_NULLBUF 27
 #define STAT_BADSCRIPT 28
+#define STAT_BADCLOSE 29
 
 #define LEN(x) (sizeof(x) / sizeof(x[0]))
 
@@ -103,8 +105,8 @@ int close_fds(); // Close all active fds above 2
 int connect_X(struct XData *xd); // Connect to the X session
 int daemonize(); // Turn the process into a daemon
 void disconnect_X(struct XData *xd); // Disconnect from the X session
-int get_script(char *buf, size_t maxlen, unsigned int num); // Get output of a script
-int get_time(char *buf, size_t maxlen); // Get the current time according to TIMEFMT, return seconds to next minute
+int get_script(FILE *f, size_t pos); // Get output of a script
+int get_time(FILE *f, size_t pos); // Get the current time according to TIMEFMT, return seconds to next minute
 int main(int argc, char **argv);
 int make_signals(); // Create signal handlers and block on SIGALRM
 void reset_sigs(); // Clear all signal blocking and set all handlers to SIG_DFL
@@ -282,58 +284,40 @@ void disconnect_X(struct XData *xd)
   xd->disp = NULL;
 }
 
-int get_script(char *buf, size_t maxlen, unsigned int num)
+int get_script(FILE *f, size_t pos)
 {
-  if (buf == NULL) {
+  if (f == NULL) {
     return STAT_NULLBUF;
   }
 
-  if (num >= LEN(CMDS)) {
+  if (pos >= LEN(CMDS)) {
     return STAT_BADSCRIPT;
   }
 
-  FILE *scr = popen(CMDS[num], "r"); // Run script with pipe
+  FILE *scr = popen(CMDS[pos], "r"); // Run script with pipe
   if (scr == NULL) {
     return STAT_NULLPIPE;
   }
 
-  size_t bufcnt = strlen(PREFIXES[num]);
-  if (maxlen < bufcnt) {
-    return STAT_BADLENGTH;
-  }
-
-  strcpy(buf, PREFIXES[num]);
+  fprintf(f, "%s", PREFIXES[pos]);
 
   char buffer[30];
   memset(buffer, 0, 30);
-  int fret = 0;
-  int cont = 0;
 
   // Keep getting output until script terminates
-  fscanf(scr, "%s", &buffer[0]);
-  while (fret != EOF) {
-    bufcnt += strlen(buffer) + cont;
-    if (bufcnt > maxlen) {
-      return STAT_BADLENGTH;
+  while (!feof(scr)) {
+    int status = fread(&buffer[0], 1, LEN(buffer), scr);
+    if (status != LEN(buffer)) {
+      if (ferror(scr)) {
+        return STAT_BADFSCANF;
+      }
     }
 
-    if (cont) {
-      strcat(buf, " ");
-    } else {
-      cont = 1;
-    }
-    strcat(buf, buffer);
-
+    fprintf(f, "%s", &buffer[0]);
     memset(buffer, 0, 30);
-    fret = fscanf(scr, "%s", &buffer[0]);
   }
 
-  bufcnt += strlen(SUFFIXES[num]);
-  if (bufcnt > maxlen) {
-    return STAT_BADLENGTH;
-  }
-
-  strcat(buf, SUFFIXES[num]);
+  fprintf(f, "%s", SUFFIXES[pos]);
 
   int status = pclose(scr);
   if (status == -1) {
@@ -343,15 +327,25 @@ int get_script(char *buf, size_t maxlen, unsigned int num)
   return STAT_GOOD;
 }
 
-int get_time(char *buf, size_t maxlen)
+int get_time(FILE *f, size_t pos)
 {
-  if (buf == NULL) {
+  if (f == NULL) {
     return STAT_BADFLAG;
   }
 
+  if (pos >= LEN(CMDS)) {
+    return STAT_BADTIME;
+  }
+
+  char buf[30];
+
   time_t curtime = time(NULL);
   struct tm *now = localtime(&curtime);
-  size_t ret = strftime(buf, maxlen, TIMEFMT, now);
+  size_t ret = strftime(&buf[0], LEN(buf), TIMEFMT, now);
+
+  fprintf(f, "%s", PREFIXES[pos]);
+  fprintf(f, "%s", &buf[0]);
+  fprintf(f, "%s", SUFFIXES[pos]);
 
   if (ret == 0) {
     return 60;
@@ -401,60 +395,52 @@ int main(int argc, char **argv)
 
   int sig;
   char timebuf[100];
-  char scriptbuf[100];
-  char barbuf[4096];
+
+  char *buffer = NULL;
+  size_t bufsize = 0;
 
   int retstatus = STAT_GOOD;
 
   while (run) {
-    memset(timebuf, 0, sizeof(timebuf));
-    memset(barbuf, 0, sizeof(barbuf));
-
-    size_t barlen = 1;
-
-    int towait = get_time(&timebuf[0], sizeof(timebuf));
-    if (towait < 0) {
-      printf("Error getting time. Exiting.\n");
-      retstatus = STAT_BADTIME;
+    buffer = NULL;
+    bufsize = 0;
+    FILE *stream = open_memstream(&buffer, &bufsize);
+    if (stream == NULL) {
+      printf("Error making memstream. Exiting.\n");
+      retstatus = STAT_BADSTREAM;
       goto quit;
     }
 
-    for (unsigned int pos = 0; pos < LEN(CMDS); ++pos) {
-      memset(scriptbuf, 0, sizeof(scriptbuf));
+    int towait = -1;
 
+    for (unsigned int pos = 0; pos < LEN(CMDS); ++pos) {
+      if (pos != 0) {
+        fprintf(stream, "%s", SEPERATOR);
+      }
       if (strcmp(CMDS[pos], "@TIME@") != 0) {
-      status = get_script(scriptbuf, sizeof(scriptbuf), pos);
+        status = get_script(stream, pos);
         if (status != 0) {
           retstatus = STAT_BADEXEC;
           printf("Error getting script %s, %d. Exiting.\n", CMDS[pos], status);
           goto quit;
         }
       } else {
-        strcpy(scriptbuf, timebuf);
-      }
-
-      if (pos == 0) {
-        barlen += strlen(scriptbuf) + strlen(SEPERATOR);
-      } else {
-        barlen += strlen(scriptbuf);
-      }
-
-      if (barlen > sizeof(barbuf)) {
-        retstatus = STAT_OVERMEM;
-        printf("Error making bar text. Exiting.\n");
-        goto quit;
-      }
-
-      if (pos != 0) {
-        strcat(barbuf, SEPERATOR);
-        strcat(barbuf, scriptbuf);
-      } else {
-        strcpy(barbuf, scriptbuf);
+        towait = get_time(stream, pos);
+        if (towait < 0) {
+          printf("Error getting time. Exiting.\n");
+          retstatus = STAT_BADTIME;
+          goto quit;
+        }
       }
     }
 
-    printf("%s\n", barbuf);
-    set_text(barbuf);
+    if (fclose(stream)) {
+      retstatus = STAT_BADCLOSE;
+    }
+
+    printf("%s\n", buffer);
+    set_text(buffer);
+    free(buffer);
 
     fflush(stdout);
     alarm(towait); // At the very least, wake up when the minute changes to update
