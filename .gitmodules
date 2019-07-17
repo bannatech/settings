@@ -67,3 +67,6 @@
 [submodule "nvim/pack/minpac/start/vim-vebugger"]
 	path = nvim/pack/minpac/start/vim-vebugger
 	url = https://github.com/idanarye/vim-vebugger
+[submodule "nvim/pack/minpac/start/vim-latex"]
+	path = nvim/pack/minpac/start/vim-latex
+	url = https://github.com/vim-latex/vim-latex
