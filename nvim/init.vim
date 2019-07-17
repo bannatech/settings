@@ -86,27 +86,10 @@ call minpac#add('tpope/vim-fugitive')
 call minpac#add('Ace-Who/vim-AutoPair')
 call minpac#add('szw/vim-tags')
 call minpac#add('idanarye/vim-vebugger')
+call minpac#add('vim-latex/vim-latex')
 
 " Load the packages
 packloadall
-
-" Compile LaTeX with pdflatex
-function! LaTeXCompile()
-  :!pdflatex --enable-write18 %
-  :!biber %:r
-  :!pdflatex --enable-write18 %
-  :!pdflatex --enable-write18 %
-endfunction
-
-function! LaTeXClean()
-  :silent !rm %:r.aux %:r.log
-  :silent !rm %:r.*.gnuplot
-  :silent !rm %:r.*.table
-  :silent !rm %:r.bbl
-  :silent !rm %:r.bcf
-  :silent !rm %:r.run.xml
-  :silent !rm %:r.blg
-endfunction
 
 " Display LaTeX with current xdg default viewer
 function! LaTeXDisplay()
@@ -147,9 +130,9 @@ if has('clipboard')
 endif
 
 " LaTeX binds
-noremap <Leader>lc  :call LaTeXCompile()<CR>
+" noremap <Leader>lc  :call LaTeXCompile()<CR>
 noremap <Leader>ld :call LaTeXDisplay()<CR>
-noremap <Leader>lC :call LaTeXClean()<CR>
+" noremap <Leader>lC :call LaTeXClean()<CR>
 
 " Groff binds
 noremap <Leader>gc :call GroffCompile()<CR>
@@ -222,6 +205,10 @@ let g:lightline = {
 " ASM needs 8 space tabs
 au FileType asm setlocal tabstop=8 shiftwidth=8 noexpandtab
 
+" Makefiles need 2 space tabs
+au FileType mk setlocal tabstop=2 shiftwidth=2 noexpandtab
+au BufWinEnter,BufEnter,BufNewFile,BufRead Makefile setlocal tabstop=2 shiftwidth=2 noexpandtab
+
 " Searching
 set incsearch
 set ignorecase
@@ -269,10 +256,7 @@ augroup END
 
 augroup doccmd
   autocmd!
-  au BufWritePost *.tex call LaTeXCompile()
   au BufWritePost *.groff call GroffCompile()
-  au BufWritePost *.man call GroffManCompile()
-  au BufUnload *.tex call LaTeXClean()
 augroup END
 
 augroup editor
