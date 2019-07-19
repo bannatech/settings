@@ -11,9 +11,9 @@ map r reload
 map i recolor
 map p print
 map h scroll left
-map t scroll down
-map n scroll up
-map s scroll right
+map j scroll down
+map k scroll up
+map l scroll right
 map d follow
 map z quit
 map f goto 1

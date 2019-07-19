@@ -91,8 +91,7 @@ call minpac#add('vim-latex/vim-latex')
 " Load the packages
 packloadall
 
-" Display LaTeX with current xdg default viewer
-function! LaTeXDisplay()
+function! GroffDisplay()
   :silent !xdg-open %:r.pdf &
   :redraw!
 endfunction
@@ -129,18 +128,19 @@ if has('clipboard')
   vnoremap X "+X
 endif
 
-" LaTeX binds
-" noremap <Leader>lc  :call LaTeXCompile()<CR>
-noremap <Leader>ld :call LaTeXDisplay()<CR>
-" noremap <Leader>lC :call LaTeXClean()<CR>
-
 " Groff binds
 noremap <Leader>gc :call GroffCompile()<CR>
 noremap <Leader>gm :call GroffManCompile()<CR>
-noremap <Leader>gd :call LaTeXDisplay()<CR>
+noremap <Leader>gd :call GroffDisplay()<CR>
 
 noremap <Leader>md :call ShowMarkdown()<CR>
 noremap <Leader>mc :call CompileMarkdown()<CR>
+
+" Makefile
+noremap <Leader>m :!make -j2 DEBUG=yes<CR>
+noremap <Leader>M :!make -j2 DEBUG=no<CR>
+noremap <Leader>tt :!make -j2 DEBUG=yes test<CR>
+noremap <Leader>tT :!make -j2 DEBUG=no test<CR>
 
 " minpac binds
 noremap <F2> :call minpac#update()<CR>
@@ -230,12 +230,14 @@ filetype plugin indent on
 let c_no_curly_error=1
 let g:omni_sql_no_default_maps = 1
 let g:rust_recommended_style = 0
+let g:Tex_DefaultTargetFormat = 'pdf'
 
 " Spelling
 set dictionary=en_us
 set nospell
 au BufWinEnter,BufEnter,BufNewFile,BufRead *.txt setlocal spell
 au BufWinEnter,BufEnter,BufNewFile,BufRead *.md setlocal spell
+au BufWinEnter,BufEnter,BufNewFile,BufRead *.tex setlocal spell
 
 " Folding
 set foldmethod=syntax
