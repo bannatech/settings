@@ -60,6 +60,10 @@ au BufWinEnter * let w:m3 = matchadd('ExtraSpace', '\s\+$\| \+\ze\t', 3)
 set shell=/usr/bin/zsh
 
 set nocompatible               " be iMproved
+set noshowmode
+
+" Let ale complete
+let g:ale_completion_enabled = 1
 
 " Use the minpac package manager
 packadd minpac
@@ -72,7 +76,6 @@ call minpac#add('tpope/vim-eunuch')
 call minpac#add('tpope/vim-surround')
 call minpac#add('jacquesbh/vim-showmarks')
 call minpac#add('vim-scripts/SearchComplete')
-call minpac#add('lyuts/vim-rtags')
 call minpac#add('roxma/python-support.nvim')
 call minpac#add('scrooloose/nerdtree')
 call minpac#add('editorconfig/editorconfig-vim')
@@ -87,9 +90,13 @@ call minpac#add('Ace-Who/vim-AutoPair')
 call minpac#add('szw/vim-tags')
 call minpac#add('idanarye/vim-vebugger')
 call minpac#add('vim-latex/vim-latex')
+call minpac#add('tikhomirov/vim-glsl')
+call minpac#add('maximbaz/lightline-ale')
 
 " Load the packages
 packloadall
+
+set omnifunc=ale#completion#omnifunc
 
 function! GroffDisplay()
   :silent !xdg-open %:r.pdf &
@@ -180,12 +187,6 @@ noremap Q <Nop>
 " Generate ctags
 noremap <F4> :TagsGenerate!
 
-" Automatically reindex rtags on c files
-au BufWinEnter *.c,*.cpp,*.h,*.hpp call rtags#ReindexFile()
-
-" Set omnicomplete to rtags on c and cpp files
-au BufWinEnter,BufEnter,BufNewFile,BufRead *.c,*.cpp,*.h,*.hpp setlocal omnifunc=RtagsCompleteFunc
-
 " st does not report focus
 let g:gitgutter_terminal_reports_focus=0
 
@@ -193,9 +194,29 @@ let g:gitgutter_terminal_reports_focus=0
 let g:EditorConfig_exclude_patterns = ['fugitive://.\*']
 
 " Lightline appearence
+let g:lightline = {}
+
+let g:lightline.component_expand = {
+  \ 'linter_checking': 'lightline#ale#checking',
+  \ 'linter_warnings': 'lightline#ale#warnings',
+  \ 'linter_errors': 'lightline#ale#errors',
+  \ 'linter_ok': 'lightline#ale#ok',
+  \ }
+
+let g:lightline.component_type = {
+      \ 'linter_checking': 'left',
+      \ 'linter_warnings': 'warning',
+      \ 'linter_errors': 'error',
+      \ 'linter_ok': 'left',
+      \}
+
 let g:lightline = {
 \   'active': {
-\    'left': [[ 'mode', 'paste'], ['readonly', 'filename', 'modified', 'git']]
+\    'left': [[ 'mode', 'paste'], ['readonly', 'filename', 'modified', 'git']],
+\    'right': [
+\             ['lineinfo'], ['percent'], ['fileformat', 'fileencoding', 'filetype'],
+\             [ 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_ok' ]
+\             ]
 \   },
 \   'component_function': {
 \    'git': 'fugitive#head'
@@ -231,6 +252,7 @@ let c_no_curly_error=1
 let g:omni_sql_no_default_maps = 1
 let g:rust_recommended_style = 0
 let g:Tex_DefaultTargetFormat = 'pdf'
+let g:ale_linters = { 'c': ['ccls']}
 
 " Spelling
 set dictionary=en_us
