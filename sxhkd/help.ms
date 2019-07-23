@@ -3,122 +3,89 @@ sxhxd Keybinds - dvorak version
 .SH
 Movement Commands
 .LP
-.IP "super + {h,t,n,s}"
-Move focus left, up, down, or right.
-.IP "super + shift + {h,t,n,s}"
-Move node left, up, down, or right.
-.IP "super + p"
-Move focus to the parent node.
-.IP "super + b"
-Move focus to the brother node.
-.IP "super + l"
-Move focus to the first child.
-.IP "super + ."
-Move focus to the second child.
-.IP "super + `"
-Focus the last node that was focused before the current one.
-.IP "super + {left, right, up, down}"
-Move a floating node.
+.IP "super  + j"
+Go down in the priority stack.
+.IP "super + k"
+Go up in the priority stack.
 .SH
-Desktop Controls
+Tag Controls
 .LP
-.IP "super + c"
-Focus the next node in this desktop.
 .IP "super + shift + c"
-Focus the previous node in this desktop.
-.IP "super + {0-9}"
-Go to the nth desktop (by order of creation). 0 is desktop #10.
-.IP "super + shift + {0-9}"
-Send a node to the nth desktop. 0 is desktop #10.
-.IP "super + ="
-Go to desktop by name, creating the desktop if necessary.
-.IP "super + alt + ="
-Remove desktop by name.
-.IP "super + ctrl + ="
-Rename current desktop.
-.IP "super + /"
-Send node to a desktop using the desktop name.
-.IP "super + alt + /"
-Send node to a desktop using the name and follow the node to the desktop.
-.IP "super + tab"
-Switch to previously focused desktop (on any monitor).
-.IP "super + ["
-Switch to the next desktop on this monitor.
-.IP "super + ]"
-Switch to the previous desktop on this monitor.
-.IP "super + m"
-Swap desktop between monocled and tiled layout.
-.IP "super + ctrl + space"
-Clear all node preselections in the current desktop.
-.SH
-Monitor Controls
-.LP
-.IP "super + ctrl + /"
-Send node to the active desktop on a particular monitor.
-.IP "super + ctrl + alt + /"
-Send node to a monitor and follow it there.
-.IP "super + shift + m"
-Focus the next monitor.
-.SH
-Node Controls
-.LP
-.IP "super + ctrl + {h,t,n,s}"
-Preselect a node split to be in a direction.
+Kill active window.
+.IP "super + {1-9}"
+View the nth tag.
 .IP "super + ctrl + {1-9}"
-Preset the ratio for a node split.
-.IP "super + ctrl + space"
-Clear direction preselect
-.IP "super + ,"
-Close focused node.
-.IP "super + shift + ,"
-Kill the focused node.
-.IP "super + g"
-Swap the current node and the biggest node.
-.IP "super + y"
-Make the current node tiled.
-.IP "super + shift + y"
-Make the current node pseudo tiled.
-.IP "super + f"
-Make the current node fullscreen.
-.IP "super + shift + f"
-Make the current node floating.
-.IP "super + alt + {h,t,n,s}"
-Resize a tiled node by moving a side outward.
-.IP "super + alt + shift + {h,t,n,s}"
-Resize a tiled node by moving a side inward.
-.IP "super + ctrl + m"
-Mark the current node.
-.IP "super + ctrl + x"
-Lock the current node.
-.IP "super + ctrl + y"
-Make the current node sticky.
-.IP "super + ctrl + z"
-Make the current node private.
-.IP "super + o"
-Focus a node 1 older in the focus history.
+Toggle viewing of the nth tag.
+.IP "super + 0"
+View all tags.
+.IP "super + shift + {1-9}"
+Change the active window's tag.
+.IP "super + shift + ctrl + {1-9}"
+Toggle a tag on the active window.
+.IP "super + shift + 0"
+Tag the active window with all tags.
+.IP "super + tab"
+Change the active tag to the previously active tag.
+.IP "super + {comma, period}"
+Change the active tag to the tag left or right of the current tag.
 .IP "super + i"
-Focus a node 1 newer in the focus history.
+Increment the number of master windows in this tag.
+.IP "super + d"
+Decrement the number of master windows in this tag.
+.SH
+Window Controls
+.LP
+.IP "super + {l, h}"
+Grow/shrink the amount of space the master window occupies.
+.IP "super + enter"
+Make the active window the master of the tag.
+.IP "super + shift + {period, comma}
+Move the active window one tag to the left or right.
+.IP "super + alt + space"
+Toggle the floating modifier on the active window.
 .SH
 Special WM keys
 .LP
+.IP "super + b"
+Toggle dwm bar visibility.
 .IP "super + space"
 Run a program.
-.IP "super + alt + space"
-Toggle between dvorak and qwerty. Changes x keyboard map and WM hotkeys.
 .IP "super + escape"
 Reload hotkey daemon.
-.IP "super + alt + escape"
+.IP "super + alt + q"
 Exit xorg.
 .IP "super + shift + b"
 Reload the wallpapers.
-.IP "super + enter"
+.IP "super + alt + enter"
 Launch a terminal.
-.IP "super + '"
-Clear messages on polybar.
 .IP "super + x"
 Swap contents of primary and clipboard x buffers.
-.IP "super + shift + /"
+.IP "super + F1"
 Show this help file.
+.IP "super + F2"
+Check system info (conky)
+.IP "super + e"
+Put the window manager into a "Change layout mode"
+.IP "t"
+In change layout mode, change to a tiling layout.
+.IP "n"
+In change layout mode, change to no layout.
+.IP "d"
+In change layout mode, change to a dwindling layout.
+.IP "m"
+In change layout mode, change to a monocle layout.
+.IP "s"
+In change layout mode, change to a spiral layout.
+.IP "b"
+In change layout mode, change to a bottom stack layout.
+.IP "h"
+In change layout mode, change to a bottom horizontal stack layout.
+.IP "e"
+In change layout mode, change to a centered master stack layout.
+.IP "f"
+In change layout mode, change to a floating centered master stack layout.
+.IP "c"
+In change layout mode, change to a columns master stack layout.
 .SH
 Convience scripts
 .LP
@@ -128,7 +95,7 @@ Play a url with mpv.
 Open whatever is in the primay clipboard with xdg-open.
 .IP "super + -"
 Bring up a calculator (uses julia).
-.IP "super + alt + enter"
+.IP "super + shift + alt + enter"
 Dmenu emoji select
 .SH
 Volume Control

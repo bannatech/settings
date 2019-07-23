@@ -18,8 +18,6 @@ line-size = 1
 foreground = ${colors.green}
 background = ${colors.black}
 
-monitor = HDMI-0
-
 fixed-center = true
 
 border-size = 0
@@ -39,7 +37,7 @@ module-margin-left = 0
 
 modules-center = date padding ipc
 modules-left = cpu padding filesystem padding memory 
-modules-right = bspwm padding pulse spacing
+modules-right = bspwm padding battery padding pulse spacing
 
 font-0 = Inconsolata:size=12;0
 font-1 = Symbola:size=12;0
@@ -85,14 +83,12 @@ content-padding = 2
 [module/filesystem]
 type = internal/fs
 mount-0 = /
-mount-1 = /home
 interval = 10
 fixed-values = true
 label-mounted = %mountpoint%: %free%
 
 [module/pulse]
 type = internal/pulseaudio
-sink = alsa_output.pci-0000_01_00.1.hdmi-stereo-extra1
 interval = 5
 label-muted-foreground = ${colors.red}
 label-muted = 🎵
@@ -108,3 +104,14 @@ type = custom/ipc
 hook-1 = touch /tmp/polybar_ipc ; cat /tmp/polybar_ipc
 hook-0 = echo "No new messages"
 initial = 1
+
+[module/battery]
+type = internal/battery
+full-at = 99
+battery = BAT0
+adapter = ADP0
+poll-interval = 5
+label-charging = Charging %percentage%%
+label-discharging = %percentage%%
+label-full = Fully Charged
+

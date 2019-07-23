@@ -4,7 +4,7 @@
 # then please put 'unknown'.
 
 # Maintainer: Your Name <youremail@domain.com>
-pkgname=dvtm
+pkgname=my_dvtm
 pkgver=0.15
 pkgrel=40
 pkgdesc="dynamic virtual terminal manager"

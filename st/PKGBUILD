@@ -4,7 +4,7 @@
 # then please put 'unknown'.
 
 # Maintainer: Your Name <youremail@domain.com>
-pkgname=st
+pkgname=my_st
 pkgver=0.8.2
 pkgrel=2
 pkgdesc="The Simple (Suckless) Terminal"

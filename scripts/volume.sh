@@ -3,12 +3,20 @@
 # $1 is volume
 # $2 is sink (optional)
 
-if test "$1" = "" ; then
+lck="/var/run/dwmbar/bar.pid"
+
+while ! [ -e "$lck" ] ; do
+  sleep 1
+done
+
+pid="$(cat "$lck")"
+
+if [ "$1" = "" ] ; then
     exit 1
 fi
 
-sink=1
-if ! test "$2" = "" ; then
+sink=0
+if ! [ "$2" = "" ] ; then
     sink="$2"
 fi
 
@@ -28,14 +36,17 @@ case "$op" in
 	;;
     "m")
 	pamixer --sink $sink -m
+  kill -ALRM "$pid"
 	exit 0
 	;;
     "u")
 	pamixer --sink $sink -u
+  kill -ALRM "$pid"
 	exit 0
 	;;
     "t")
 	pamixer --sink $sink -t
+  kill -ALRM "$pid"
 	exit 0
 	;;
     "a")
@@ -46,8 +57,9 @@ case "$op" in
 	;;
 esac
 
-if test "$operand" = "" ; then
+if [ "$operand" = "" ] ; then
     exit 0
 fi
 
 pamixer --sink "$sink" --set-volume "$operand" 2>/dev/null >/dev/null
+kill -ALRM "$pid" 2>/dev/null >/dev/null
