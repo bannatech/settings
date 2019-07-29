@@ -10,7 +10,7 @@ super + alt + Return
 
 # Emoji
 super + alt + shift + Return
-  dmenuunicode
+  $HOME/.scripts/dmenuunicode
 
 # program launcher
 super + space

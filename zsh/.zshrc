@@ -21,6 +21,7 @@ zstyle ':completion:*' menu select
 autoload -U compinit
 compinit
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=3"
 
 # gem
 PATH="$PATH:$HOME/.gem/ruby/2.3.0/bin"
