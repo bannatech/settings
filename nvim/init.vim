@@ -1,13 +1,14 @@
 set number relativenumber " Relative Line Numbers
 set hidden "Let vim act like every other editor
 
+" To expand the number of binds nvim can do
+let mapleader="\<Space>"
+let maplocalleader='='
+
 " Highlight when a line exceeds 80 columns
 highlight OverLength ctermbg=Red ctermfg=White
 " match OverLength /\%81v.\+/ " Old Method
 au BufWinEnter * let w:ol = matchadd('OverLength', '\%81v.\+', -1)
-
-" To expand the number of binds nvim can do
-let mapleader='='
 
 " Syntax colors
 highlight Comment ctermbg=Black ctermfg=Green
@@ -89,9 +90,14 @@ call minpac#add('tpope/vim-fugitive')
 call minpac#add('Ace-Who/vim-AutoPair')
 call minpac#add('szw/vim-tags')
 call minpac#add('idanarye/vim-vebugger')
-call minpac#add('vim-latex/vim-latex')
+call minpac#add('lervag/vimtex')
 call minpac#add('tikhomirov/vim-glsl')
 call minpac#add('maximbaz/lightline-ale')
+call minpac#add('sirver/ultisnips')
+call minpac#add('honza/vim-snippets')
+"call minpac#add('0mco/math-tex-snippets')
+"call minpac#add('gillescastel/latex-snippets')
+call minpac#add('shougo/deoplete.nvim')
 
 " Load the packages
 packloadall
@@ -260,6 +266,22 @@ set nospell
 au BufWinEnter,BufEnter,BufNewFile,BufRead *.txt setlocal spell
 au BufWinEnter,BufEnter,BufNewFile,BufRead *.md setlocal spell
 au BufWinEnter,BufEnter,BufNewFile,BufRead *.tex setlocal spell
+
+" UltiSnips
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+let g:UltiSnipsSnippetDirectories=['UltiSnips', 'customsnips']
+
+let g:tex_flavor="latex"
+let g:vimtex_view_method="zathura"
+let g:vimtex_quickfix_mode=0
+set conceallevel=1
+let g:tex_conceal="abdmg"
+
+set spelllang=en_us
+" automatically choose first spelling correction
+inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 
 " Folding
 set foldmethod=syntax
