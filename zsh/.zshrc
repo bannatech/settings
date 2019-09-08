@@ -157,7 +157,7 @@ alias sysu="systemctl --user"
 alias TT="trizen -Syu"
 alias mkd="mkdir -pv"
 alias e="$EDITOR"
-alias E="sudo nvim"
+alias E="sudo $EDITOR"
 alias bt="btfs"
 alias m="sudo mount"
 alias u="sudo umount"
@@ -192,3 +192,6 @@ alias fzf='fzf -i --reverse'
 
 # Path
 PATH=$PATH:$HOME/bin:$HOME/.scripts
+
+# Fix gpg entry
+GPG_TTY=$(tty)
