@@ -1,0 +1,166 @@
+priority 0
+
+snippet main "C main" b
+int main(int argc, char ** argv)
+{
+	${VISUAL}$1
+	return 0;
+}
+$0
+endsnippet
+
+snippet st "C struct" w
+struct $! {
+	$2
+};
+$0
+endsnippet
+
+snippet fun! "C function" Ab
+${1:void}
+$2($3)
+{
+	$4
+}
+$0
+endsnippet
+
+snippet fun? "C function prototype" Ab
+${1:void} $2(${3:void});
+$0
+endsnippet
+
+snippet enum "C enum" w
+enum {
+	$1
+}$0
+endsnippet
+
+snippet type "C typedef" b
+typedef ${1:old} ${2:new};$0
+endsnippet
+
+snippet fptr "C function pointer" b
+typedef ${1:void} (*${2:typename}(${3:void});$0
+endsnippet
+
+snippet sort "C sort" b
+qsort($1, ${2:nmemb}, ${3:size}, ${4:compare});
+endsnippet
+
+# C standard headers
+snippet ias "C assert" b
+#include <assert.h>
+endsnippet
+
+snippet icomp "C complex" b
+#include <complex.h>
+endsnippet
+
+snippet ict "C ctype" b
+#include <ctype.h>
+endsnippet
+
+snippet ierr "C errno" b
+#include <errno.h>
+endsnippet
+
+snippet ifenv "C fenv" b
+#include <fenv.h>
+endsnippet
+
+snippet ifl "C float" b
+#include <float.h>
+endsnippet
+
+snippet iit "C inttypes" b
+#include <inttypes.h>
+endsnippet
+
+snippet i646 "C iso646" b
+#include <iso646.h>
+endsnippet
+
+snippet ilim "C limits" b
+#include <limits.h>
+endsnippet
+
+snippet iloc "C locale" b
+#include <locale.h>
+endsnippet
+
+snippet im "C math" b
+#include <math.h>
+endsnippet
+
+snippet ijmp "C setjmp" b
+#include <setjmp.h>
+endsnippet
+
+snippet isig "C signal" b
+#include <signal.h>
+endsnippet
+
+snippet ialign "C stdalign" b
+#include <stdalign.h>
+endsnippet
+
+snippet iarg "C stdarg" b
+#include <stdarg.h>
+endsnippet
+
+snippet iatom "C stdatomic" b
+#include <stdatomic.h>
+endsnippet
+
+snippet ibool "C stdbool" b
+#include <stdbool.h>
+endsnippet
+
+snippet idef "C stddef" b
+#include <stddef.h>
+endsnippet
+
+snippet iint "C stdint" b
+#include <stdint.h>
+endsnippet
+
+snippet iio "C stdio" b
+#include <stdio.h>
+endsnippet
+
+snippet ilib "C stdlib" b
+#include <stdlib.h>
+endsnippet
+
+snippet inoret "C stdnoreturn.h" b
+#include <stdnoreturn.h>
+endsnippet
+
+snippet istr "C string" b
+#include <string.h>
+endsnippet
+
+snippet itg "C tgmath" b
+#include <tgmath.h>
+endsnippet
+
+snippet ith "C threads" b
+#include <threads.h>
+endsnippet
+
+snippet iti "C time" b
+#include <time.h>
+endsnippet
+
+snippet iuch "C uchar" b
+#include <uchar.h>
+endsnippet
+
+snippet iwch "C wchar" b
+#include <wchar.h>
+endsnippet
+
+snippet iwt "C wctype" b
+#include <wctype.h>
+endsnippet

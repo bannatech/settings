@@ -1,0 +1,486 @@
+priority 0
+
+extends c
+
+snippet vec "C++ vector" w
+std::vector<$1> $2($3);$0
+endsnippet
+
+snippet map "C++ map" b
+std::map<$1, $2> $3($4);$0
+endsnippet
+
+snippet umap "C++ unordered map" b
+std::unordered_map<$1, $2> $3($4);$0
+endsnippet
+
+snippet mmap "C++ multimap" b
+std::multimap<$1, $2> $3($4);$0
+endsnippet
+
+snippet find "C++ find" w
+std::find($1.cbegin(), $1.cend(), $2);$0
+endsnippet
+
+snippet findif "C++ find_if" w
+std::find_if(
+	$1.cbegin(),
+	$1.cend(),
+	${2:[${3:&}] ($4) {
+		${5:return $6;}
+	}}
+);$0
+endsnippet
+
+snippet apply "C++ map" w
+std::for_each(
+	$1.begin(),
+	$1.end(),
+	${2:[${3:&}] ($3) {
+		$4
+	}}
+);$0
+endsnippet
+
+snippet fora "C++ iterator loop" b
+for (auto& ${1:i} = $2.begin(); $1 != $2.end(); ++$1) {
+	$3
+}$0
+endsnippet
+
+snippet forc "C++ const iterator loop" b
+for (const auto& ${1:i} = $2.cbegin(); $1 != $2.cend(); ++$1) {
+	$3
+}$0
+endsnippet
+
+snippet foreach "C++ range for loop" b
+for (auto& ${1:i} : $2) {
+	$3
+}$0
+endsnippet
+
+snippet forceach "C++ const range for loop" b
+for (const auto& ${1:i} : $2) {
+	$3
+}$0
+endsnippet
+
+# Replace C stuff
+priority 5
+snippet sort "C++ sort" w
+std::sort(
+	$1.begin(),
+	$1.end()${2:,
+	[${3:&}] ($4) {
+		return
+	}}
+);$0
+endsnippet
+
+# C standard headers
+snippet icas "C assert" b
+#include <cassert>
+endsnippet
+
+snippet icct "C ctype" b
+#include <cctype>
+endsnippet
+
+snippet icerr "C errno" b
+#include <cerrno>
+endsnippet
+
+snippet icfenv "C fenv" b
+#include <cfenv>
+endsnippet
+
+snippet icfl "C float" b
+#include <cfloat>
+endsnippet
+
+snippet icit "C inttypes" b
+#include <cinttypes>
+endsnippet
+
+snippet iclim "C limits" b
+#include <climits>
+endsnippet
+
+snippet icloc "C locale" b
+#include <clocale>
+endsnippet
+
+snippet icm "C math" b
+#include <cmath>
+endsnippet
+
+snippet icjmp "C setjmp" b
+#include <csetjmp>
+endsnippet
+
+snippet icsig "C signal" b
+#include <csignal>
+endsnippet
+
+snippet icarg "C stdarg" b
+#include <cstdarg>
+endsnippet
+
+snippet icatom "C stdatomic" b
+#include <cstdatomic>
+endsnippet
+
+snippet icdef "C stddef" b
+#include <cstddef>
+endsnippet
+
+snippet icint "C stdint" b
+#include <cstdint>
+endsnippet
+
+snippet icio "C stdio" b
+#include <cstdio>
+endsnippet
+
+snippet iclib "C stdlib" b
+#include <cstdlib>
+endsnippet
+
+snippet icstr "C string" b
+#include <cstring>
+endsnippet
+
+snippet icti "C time" b
+#include <ctime>
+endsnippet
+
+snippet icuch "C uchar" b
+#include <cuchar>
+endsnippet
+
+snippet icwch "C wchar" b
+#include <cwchar>
+endsnippet
+
+snippet icwt "C wctype" b
+#include <cwctype>
+endsnippet
+
+# C++ headers
+## Concepts
+snippet iconc "C++ concepts" b
+#include <concepts>
+endsnippet
+
+## Coroutines
+snippet icoro "C++ coroutine" b
+#include <coroutine>
+endsnippet
+
+## Utility
+snippet itinfo "C++ typeinfo" b
+#include <typeinfo>
+endsnippet
+
+snippet itindex "C++ typeindex" b
+#include <typeindex>
+endsnippet
+
+snippet ittrait "C++ type_traits" b
+#include <type_traits>
+endsnippet
+
+snippet ibits "C++ bitset" b
+#include <bitset>
+endsnippet
+
+snippet ifunc "C++ functional" b
+#include <functional>
+endsnippet
+
+snippet iutil "C++ utility" b
+#include <utility>
+endsnippet
+
+snippet ichron "C++ chrono" b
+#include <chrono>
+endsnippet
+
+snippet iinit "C++ initializer_list" b
+#include <initializer_list>
+endsnippet
+
+snippet itup "C++ tuple" b
+#include <tuple>
+endsnippet
+
+snippet iany "C++ any" b
+#include <any>
+endsnippet
+
+snippet ioption "C++ optional" b
+#include <optional>
+endsnippet
+
+snippet ivar "C++ variant" b
+#include <variant>
+endsnippet
+
+snippet icmp "C++ compare" b
+#include <compare>
+endsnippet
+
+snippet iver "C++ version" b
+#include <version>
+endsnippet
+
+snippet isource "C++ source_location" b
+#include <source_location>
+endsnippet
+
+## Memory management
+snippet inew "C++ new"
+#include <new>
+endsnippet
+
+snippet imem "C++ memory"
+#include <memory>
+endsnippet
+
+snippet iscoped "C++ scoped_allocator" b
+#include <scoped_allocator>
+endsnippet
+
+snippet imemory "C++ memory_resource" b
+#include <memory_resource>
+endsnippet
+
+## limits
+snippet ilim "C++ limits" b
+#include <limits>
+endsnippet
+
+## Exceptions
+snippet iexc "C++ exception"
+#include <exception>
+endsnippet
+
+snippet istd "C++ stdexcept"
+#include <stdexcept>
+endsnippet
+
+snippet isystem "C++ system_error" b
+#include <system_error>
+endsnippet
+
+## Strings
+snippet istr "C++ string" b
+#include <string>
+endsnippet
+
+snippet istring "C++ string_view" b
+#include <string_view>
+endsnippet
+
+snippet ichar "C++ charconv" b
+#include <charconv>
+endsnippet
+
+snippet iform "C++ format" b
+#include <format>
+endsnippet
+
+## Containers
+snippet iarr "C++ array" b
+#include <array>
+endsnippet
+
+snippet ivec "C++ vector" b
+#include <vector>
+endsnippet
+
+snippet ideq "C++ dequeue" b
+#include <dequeue>
+endsnippet
+
+snippet ilist "C++ list" b
+#include <list>
+endsnippet
+
+snippet iforward "C++ forward_list" b
+#include <forward_list>
+endsnippet
+
+snippet iset "C++ set" b
+#include <set>
+endsnippet
+
+snippet imap "C++ map" b
+#include <map>
+endsnippet
+
+snippet iuset "C++ unordered_set" b
+#include <unordered_set>
+endsnippet
+
+snippet iumap "C++ unordered_map" b
+#include <unordered_map>
+endsnippet
+
+snippet istk "C++ stack" b
+#include <stack>
+endsnippet
+
+snippet ique "C++ queue" b
+#include <queue>
+endsnippet
+
+snippet ispan "C++ span" b
+#include <span>
+endsnippet
+
+## Iterators
+snippet iiter "C++ iterator" b
+#include <iterator>
+endsnippet
+
+## Ranges
+snippet irange "C++ ranges" b
+#include <ranges>
+endsnippet
+
+## Algorithms
+snippet ialgo "C++ algorithm" b
+#include <algorithm>
+endsnippet
+
+snippet iexe "C++ execution" b
+#include <execution>
+endsnippet
+
+## Numerics
+snippet icomp "C++ complex" b
+#include <complex>
+endsnippet
+
+snippet ival "C++ valarray" b
+#include <valarray>
+endsnippet
+
+snippet irand "C++ random" b
+#include <random>
+endsnippet
+
+snippet inum "C++ numeric" b
+#include <numeric>
+endsnippet
+
+snippet irat "C++ ratio" b
+#include <ratio>
+endsnippet
+
+snippet ibit "C++ bit" b
+#include <bit>
+endsnippet
+
+## IO
+snippet iiofwd "C++ iosfwd" b
+#include <iosfwd>
+endsnippet
+
+snippet iios "C++ ios" b
+#include <ios>
+endsnippet
+
+snippet iist "C++ istream" b
+#include <istream>
+endsnippet
+
+snippet iost "C++ ostream" b
+#include <ostream>
+endsnippet
+
+snippet iio "C++ iostream" b
+#include <iostream>
+endsnippet
+
+snippet ifst "C++ fstream" b
+#include <fstream>
+endsnippet
+
+snippet isst "C++ sstream" b
+#include <sstream>
+endsnippet
+
+snippet isync "C++ syncstream" b
+#include <syncstream>
+endsnippet
+
+snippet iiom "C++ iomanip" b
+#include <iomanip>
+endsnippet
+
+snippet istream "C++ streambuf" b
+#include <streambuf>
+endsnippet
+
+## Localization
+snippet iloc "C++ locale" b
+#include <locale>
+endsnippet
+
+snippet icode "C++ codecvt" b
+#include <codecvt>
+endsnippet
+
+## regex
+snippet ireg "C++ regex" b
+#include <regex>
+endsnippet
+
+## atomic
+snippet iatom "C++ atomic" b
+#include <atomic>
+endsnippet
+
+## Threads
+snippet ith "C++ thread" b
+#include <thread>
+endsnippet
+
+snippet istop "C++ stop_token" b
+#include <stop_token>
+endsnippet
+
+snippet imux "C++ mutex" b
+#include <mutex>
+endsnippet
+
+snippet ismux "C++ shared_mutex" b
+#include <shared_mutex>
+endsnippet
+
+snippet ifut "C++ future" b
+#include <future>
+endsnippet
+
+snippet icond "C++ condition_variable" b
+#include <condition_variable>
+endsnippet
+
+snippet isem "C++ semaphore" b
+#include <semaphore>
+endsnippet
+
+snippet ilat "C++ latch" b
+#include <latch>
+endsnippet
+
+snippet ibar "C++ barrier" b
+#include <barrier>
+endsnippet
+
+snippet ifile "C++ filesystem" b
+#include <filesystem>
+endsnippet
