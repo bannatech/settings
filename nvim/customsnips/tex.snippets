@@ -18,31 +18,131 @@ def math():
 endglobal
 
 snippet template "Basic template" b
-\documentclass[a4paper]{article}
+\documentclass[letterpaper]{article}
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{textcomp}
-\usepackage[dutch]{babel}
+\usepackage{csquotes}
+\usepackage[american]{babel}
 \usepackage{amsmath, amssymb}
+\usepackage{myutils}
+\usepackage[document]{ragged2e}
+\usepackage{siunitx}
+\usepackage[super]{nth}
+\usepackage{listings}
+\usepackage{authblk}
 
 
 % figure support
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathmorphing,patterns,positioning}
 \usepackage{import}
 \usepackage{xifthen}
 \pdfminorversion=7
 \usepackage{pdfpages}
 \usepackage{transparent}
-\newcommand{\incfig}[1]{%
-	\def\svgwidth{\columnwidth}
-	\import{./figures/}{#1.pdf_tex}
-}
 
 \pdfsuppresswarningpagegroup=1
 
+\author{$1}
+\date{$2}
+\title{$3}
+
 \begin{document}
-	$0
+${4:\maketitle}
+$0
 \end{document}
+endsnippet
+
+snippet notestemplate "Notes template" b
+\documentclass[letterpaper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{csquotes}
+\usepackage[american]{babel}
+\usepackage{amsmath, amssymb}
+\usepackage{myutils}
+\usepackage[document]{ragged2e}
+\usepackage{siunitx}
+\usepackage[super]{nth}
+\usepackage{listings}
+\usepackage{authblk}
+
+
+% figure support
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathmorphing,patterns,positioning}
+\usepackage{import}
+\usepackage{xifthen}
+\pdfminorversion=7
+\usepackage{pdfpages}
+\usepackage{transparent}
+
+\pdfsuppresswarningpagegroup=1
+
+\author{$1}
+\date{$2}
+\title{$3}
+
+\setlength{\parindent}{0em}
+
+\begin{document}
+${4:\maketitle}
+\RaggedRight%
+$0
+\end{document}
+endsnippet
+
+snippet tcir "tikz circle" b
+\draw (${1:${2:0}, ${3:0}}) circle (${3:cm});$0
+endsnippet
+
+snippet tc "tikz node circle" b
+\draw[$1] (${2:${3:0}, ${4:0}}) node[circle,minimum size=${5:1cm},draw$6] ($7) {$8};$0
+endsnippet
+
+snippet tspr "tikz spring" b
+\draw[decoration={aspect=${1:0.3},segment length=${2:3cm}, amplitude=${3:3cm},coil},decorate] (${4:${5:0}, ${6:0}}) -- (${7:${8:0}, ${9:0}});$0
+endsnippet
+
+snippet tn "tikz node" b
+\node[$1] ($2) ${3:at (${4:${5:0}, ${6:0}})} {$7};$0
+endsnippet
+
+snippet ex: "example" bA
+\\example%
+$0
+endsnippet
+
+snippet "tp" "tikz point" b
+\fill ($1) circle [radius=${2:0.08cm}];$0
+endsnippet
+
+snippet cont "contained" b
+\\begin{mdframed}[style=Plain]
+\\begin{center}
+${1:${VISUAL}}
+\\end{center}
+\\end{mdframed}
+endsnippet
+
+snippet note "note" b
+\\makenote{${1:${VISUAL}}}$0
+endsnippet
+
+snippet adef "definition" b
+\\makedef{${1:${VISUAL}}}{$2}$0
+endsnippet
+
+snippet dtxt "definition color text" w
+\\adef{${1:${VISUAL}}}$0
+endsnippet
+
+snippet ntxt "note color text" w
+\\anote{${1:${VISUAL}}}$0
 endsnippet
 
 snippet beg "begin{} / end{}" bA
@@ -129,13 +229,17 @@ endsnippet
 snippet ali "Align" bA
 \begin{align*}
 	${1:${VISUAL}}
-.\end{align*}
+\end{align*}
 endsnippet
 
 snippet eqn "Equation" bA
 \begin{equation}
 	${1:${VISUAL}}
 .\end{equation} $0
+endsnippet
+
+snippet der "Derivative d" w
+\mathrm{d}
 endsnippet
 
 context "math()"
@@ -236,6 +340,12 @@ snippet bmat "bmat" iA
 \begin{bmatrix} $1 \end{bmatrix} $0
 endsnippet
 
+snippet amat "amat" iA
+\begin{amatrix}{$1}
+	$2
+\end{amatrix}$0
+endsnippet
+
 context "math()"
 snippet () "left( right)" iA
 \left( ${1:${VISUAL}} \right) $0
@@ -296,6 +406,10 @@ endsnippet
 
 snippet part "d/dx" w
 \frac{\partial ${1:V}}{\partial ${2:x}} $0
+endsnippet
+
+snippet ddx "d/dx" wA
+\frac{\mathrm{d} ${1:y}}{\mathrm{d} ${2:x}} $0
 endsnippet
 
 context "math()"
@@ -467,6 +581,10 @@ snippet '(?<!\\)(arcsin|arccos|arctan|arccot|arccsc|arcsec|pi|zeta|int)' "ln" rw
 \\`!p snip.rv = match.group(1)`
 endsnippet
 
+context "math()"
+snippet hb "hbar" i
+\hbar
+endsnippet
 
 priority 100
 context "math()"
@@ -614,6 +732,11 @@ snippet cvec "column vector" iA
 \begin{pmatrix} ${1:x}_${2:1}\\\\ \vdots\\\\ $1_${2:n} \end{pmatrix}
 endsnippet
 
+context "math()"
+snippet choose "nCr" w
+\begin{pmatrix} $1 \\\\ $2\\\\ \end{pmatrix}$0
+endsnippet
+
 priority 10
 context "math()"
 snippet "bar" "bar" riA
@@ -626,16 +749,55 @@ snippet "([a-zA-Z])bar" "bar" riA
 \overline{`!p snip.rv=match.group(1)`}
 endsnippet
 
+context "math()"
+snippet "([a-zA-Z])cal" "cal" riA
+\mathcal{`!p snip.rv=match.group(1)`}
+endsnippet
+
+context "math()"
+snippet "([a-zA-Z])rem" "remove math" riA
+\mathrm{`!p snip.rv=match.group(1)`$1}$0
+endsnippet
+
 priority 10
 context "math()"
 snippet "hat" "hat" riA
 \hat{$1}$0
 endsnippet
 
+context "math()"
+snippet '= "equivalent to" wA
+\equiv $0
+endsnippet
+
+context "math()"
+snippet vdot "dot" i
+\dot{$1}$0
+endsnippet
+
 priority 100
 context "math()"
 snippet "([a-zA-Z])hat" "hat" riA
 \hat{`!p snip.rv=match.group(1)`}
+endsnippet
+
+context "math()"
+snippet "([a-zA-Z])dot" "hat" riA
+\dot{`!p snip.rv=match.group(1)`}
+endsnippet
+
+snippet "([a-zA-Z])(\.,|,\.)" "vector" riA
+\vec{`!p snip.rv=match.group(1)`}
+endsnippet
+
+context "math()"
+snippet "([a-zA-Z])bf" "bold" riA
+\mathbf{`!p snip.rv=match.group(1)`}
+endsnippet
+
+context "math()"
+snippet "([a-zA-Z])it" "italic" ri
+\mathit{`!p snip.rv=match.group(1)`}
 endsnippet
 
 snippet letw "let omega" iA

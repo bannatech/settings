@@ -87,7 +87,6 @@ call minpac#add('junegunn/fzf.vim')
 call minpac#add('tpope/vim-repeat')
 call minpac#add('tpope/vim-speeddating')
 call minpac#add('tpope/vim-fugitive')
-call minpac#add('Ace-Who/vim-AutoPair')
 call minpac#add('szw/vim-tags')
 call minpac#add('idanarye/vim-vebugger')
 call minpac#add('lervag/vimtex')
@@ -103,6 +102,8 @@ call minpac#add('shougo/deoplete.nvim')
 packloadall
 
 set omnifunc=ale#completion#omnifunc
+let g:deoplete#enable_at_startup = 1
+set completeopt=longest,menuone,preview
 
 function! GroffDisplay()
   :silent !xdg-open %:r.pdf &
