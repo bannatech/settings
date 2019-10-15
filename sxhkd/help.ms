@@ -94,7 +94,7 @@ Play a url with mpv.
 .IP "super + shift + z"
 Open whatever is in the primay clipboard with xdg-open.
 .IP "super + -"
-Bring up a calculator (uses julia).
+Bring up a calculator (uses bc).
 .IP "super + shift + alt + enter"
 Dmenu emoji select
 .SH
