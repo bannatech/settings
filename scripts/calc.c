@@ -299,7 +299,7 @@ make_op(qstack_t * op, qstack_t * vals)
     size_t popped = 0;
     void * stk = qstack_pop(vals, &popped);
     if (!stk) {
-      fprintf(stderr, "%c requires an operand.", op);
+      fprintf(stderr, "%c requires an operand.", cop);
       exit(EXIT_FAILURE);
     }
     if (popped == sizeof(*top.left)) { // Popped operand is a node
@@ -326,7 +326,7 @@ make_op(qstack_t * op, qstack_t * vals)
     size_t popped = 0;
     void * rhs = qstack_pop(vals, &popped);
     if (!rhs) {
-      fprintf(stderr, "%c requires an operand.", op);
+      fprintf(stderr, "%c requires an operand.", cop);
       exit(EXIT_FAILURE);
     }
 
@@ -353,7 +353,7 @@ make_op(qstack_t * op, qstack_t * vals)
 
     void * lhs = qstack_pop(vals, &popped);
     if (!lhs) {
-      fprintf(stderr, "%c requires a left operand.", op);
+      fprintf(stderr, "%c requires a left operand.", cop);
       exit(EXIT_FAILURE);
     }
 
