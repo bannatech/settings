@@ -116,6 +116,8 @@ Toggle the mute state.
 Mute all audio.
 .IP "super + v ; shift + m"
 Unmute all audio.
+.IP "super + t"
+Toggle MPD playback
 .SH
 Screenshots
 .LP
