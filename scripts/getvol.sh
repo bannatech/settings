@@ -17,7 +17,7 @@ printf " | "
 if [ "$(mpc | wc -l)" -gt 1 ] ; then
   mpc | awk '/^\[/ {print $1}' | tr -d '\n' | sed 's/playing/▶/ ; s/paused/P/'
   printf " "
-  mpc | head -n 1 | tr -d '\n'
+  mpc | head -n 1 | cut -c-30 | tr -d '\n'
 
   mpc | tail -n 1 | grep -q ": on" &&
   mpc | sed -n "$SED1;/volume/p" | sed "$SED2" | tr -d ' ' | xargs printf " [%s]"
