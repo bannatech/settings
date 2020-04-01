@@ -67,17 +67,17 @@ const char *TIMEFMT = "%a %d %b %y, %H:%M";
 
 const char *CMDS[] = {
   "@TIME@",
-//  "$HOME/.scripts/getvol.sh"
+  "$HOME/.scripts/getvol.sh"
 };
 
 const char *PREFIXES[] = {
   " ",
- // "Vol: "
+  "Vol: "
 };
 
 const char *SUFFIXES[] = {
   "",
-  //""
+  ""
 };
 
 const char *LOCKDIR = "/var/run/dwmbar";
