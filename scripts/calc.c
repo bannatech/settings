@@ -227,6 +227,9 @@ lexer()
 
   if (is_special(nch)) { // token is an operator or ()
     tok->val = nch;
+#ifdef DEBUG
+    printf("Got token %c\n", nch);
+#endif
     return tok;
   }
 
@@ -234,6 +237,9 @@ lexer()
     ungetc(nch, stdin);
     tok->number = true;
     tok->fval = lex_number();
+#ifdef DEBUG
+    printf("Got token %f\n", tok->fval);
+#endif
     return tok;
   }
 
@@ -281,6 +287,10 @@ make_op(qstack_t * op, qstack_t * vals)
     exit(EXIT_FAILURE);
   }
 
+#ifdef DEBUG
+  printf("Making %c node.\n", cop);
+#endif
+
   // Node to create
   struct node top;
   top.t = malloc(sizeof(*top.t));
@@ -299,11 +309,19 @@ make_op(qstack_t * op, qstack_t * vals)
     size_t popped = 0;
     void * stk = qstack_pop(vals, &popped);
     if (!stk) {
-      fprintf(stderr, "%c requires an operand.", cop);
+      fprintf(stderr, "%c requires an operand.", op);
       exit(EXIT_FAILURE);
     }
     if (popped == sizeof(*top.left)) { // Popped operand is a node
       top.left = stk; // Note that the pop value is already malloc'd, no need to memcpy into a new one
+#ifdef DEBUG
+      printf("Unary child is another node. It is:");
+      if (top.left->t->number) {
+        printf("A number node: %f\n", top.left->t->fval);
+      } else {
+        printf("An operator node: %c\n", top.left->t->val);
+      }
+#endif
     } else { // Popped operand is a float - make a number node and put it as unary's left child
       top.left = malloc(sizeof(struct node));
       if (!top.left) {
@@ -321,17 +339,28 @@ make_op(qstack_t * op, qstack_t * vals)
       top.left->t->fval = *((float *)stk);
       top.left->t->val = '\0';
       free(stk);
+#ifdef DEBUG
+      printf("Unary child is a number: %f\n", top.left->t->fval);
+#endif
     }
   } else { // binary operator
     size_t popped = 0;
     void * rhs = qstack_pop(vals, &popped);
     if (!rhs) {
-      fprintf(stderr, "%c requires an operand.", cop);
+      fprintf(stderr, "%c requires an operand.", op);
       exit(EXIT_FAILURE);
     }
 
     if (popped == sizeof(*top.right)) { // The right hand side operand is a node
       top.right = rhs;
+#ifdef DEBUG
+      printf("RHS is a node: ");
+      if (top.right->t->number) {
+        printf("It is a number node: %f\n", top.right->t->fval);
+      } else {
+        printf("It is an operator node: %c\n", top.right->t->val);
+      }
+#endif
     } else {
       top.right = malloc(sizeof(struct node)); // The right hand side is a float, make a node
       if (!top.right) {
@@ -349,16 +378,27 @@ make_op(qstack_t * op, qstack_t * vals)
       top.right->t->fval = *((float *)rhs);
       top.right->t->val = '\0';
       free(rhs);
+#ifdef DEBUG
+      printf("RHS is a number: %f\n", top.right->t->fval);
+#endif
     }
 
     void * lhs = qstack_pop(vals, &popped);
     if (!lhs) {
-      fprintf(stderr, "%c requires a left operand.", cop);
+      fprintf(stderr, "%c requires a left operand.", op);
       exit(EXIT_FAILURE);
     }
 
     if (popped == sizeof(*top.left)) {
       top.left = lhs; // Left hand side is a node
+#ifdef DEBUG
+      printf("LHS is a node: ");
+      if (top.right->t->number) {
+        printf("It is a number node: %f\n", top.left->t->fval);
+      } else {
+        printf("It is an operator node: %c\n", top.left->t->val);
+      }
+#endif
     } else {
       top.left = malloc(sizeof(struct node)); // Left hand side is a float
       if (!top.left) {
@@ -376,6 +416,9 @@ make_op(qstack_t * op, qstack_t * vals)
       top.left->t->fval = *((float *)lhs);
       top.left->t->val = '\0';
       free(lhs);
+#ifdef DEBUG
+      printf("LHS is a number: %f\n", top.left->t->fval);
+#endif
     }
   }
 
@@ -513,6 +556,10 @@ parse_sub(qstack_t * op, qstack_t * vals, int depth)
   size_t opstart = qstack_size(op);
   size_t valsstart = qstack_size(vals);
 
+#ifdef DEBUG
+  printf("Starting level %d\n", depth);
+#endif
+
   bool opLast = true;
 
   struct token * t = lexer();
@@ -543,10 +590,17 @@ parse_sub(qstack_t * op, qstack_t * vals, int depth)
         exit(EXIT_FAILURE);
       }
 
+#ifdef DEBUG
+      printf("Pushed %f to operand stack.\n", t->fval);
+#endif
+
       goto contwhile;
     }
 
     if (opLast && t->val == '+') { // Unary + (+ after another operator is unary)
+#ifdef DEBUG
+      printf("Skipping unary +\n");
+#endif
       goto contwhile;
     }
 
@@ -555,6 +609,9 @@ parse_sub(qstack_t * op, qstack_t * vals, int depth)
         fprintf(stderr, "Push error\n");
         exit(EXIT_FAILURE);
       }
+#ifdef DEBUG
+      printf("Pushing unary -\n");
+#endif
       goto contwhile;
     }
 
@@ -578,6 +635,9 @@ parse_sub(qstack_t * op, qstack_t * vals, int depth)
         fprintf(stderr, "Push error\n");
         exit(EXIT_FAILURE);
       }
+#ifdef DEBUG
+      printf("Pushing %c to operator stack.\n", t->val);
+#endif
     } else {
       errno = 0;
       // If the current operator has less precedence than the top of the stack,
@@ -590,7 +650,11 @@ parse_sub(qstack_t * op, qstack_t * vals, int depth)
         exit(EXIT_FAILURE);
       }
 
-      while (precedence(topop) >= prec && qstack_size(op) > opstart) {
+#ifdef DEBUG
+      printf("Precedence: %d, top precedence: %d\n", prec, precedence(topop));
+#endif
+
+      while (precedence(topop) >= prec && qstack_size(op) + 1 > opstart) {
         if (!qstack_pushint(op, topop)) {
           fprintf(stderr, "Push error\n");
           exit(EXIT_FAILURE);
