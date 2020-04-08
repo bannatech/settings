@@ -1,11 +1,9 @@
 #!/bin/sh
 
-temps="$(curl http://wttr.in/?0QTA 2>/dev/null | grep "°" | sed --posix -e \
-  's/\(-\{0,1\}[0-9][0-9]\{0,2\}\)\.\.\(-\{0,1\}[0-9][0-9]\{0,2\}\)/\n\1\n\2\n/' | \
-  grep "[0-9]" | xargs printf "%s %s")"
+JSON=$(curl -s https://wttr.in/?m\&format='j1' | jq '.current_condition[0]' -c)
 
-low="$(printf "%s" "$temps" | cut -d " " -f 1)"
-high="$(printf "%s" "$temps" | cut -d " " -f 2)"
-
-avg="$(( ( "$low" + "$high" ) / 2 ))"
-printf "%s°F" "$avg"
+curl -s https://wttr.in/\?m\&format='j1'\
+  |jq -r '.current_condition[0]|.weatherDesc[0].value,.FeelsLikeC,.temp_C,.humidity,.windspeedKmph,.winddirDegree,.precipMM,.uvIndex' \
+  | sed -e '2 s/^/Feels: / ; 2,3 s/$/°C/ ; 4 s/^/Humidity: / ; 4 s/$/%/' \
+    -e '5 s/^/Wind: / ; 5 s/$/kph/ ; 6 s/^/Wind Direction: / ; 6 s/$/°/' \
+    -e '7 s/^/Precipitation: / ; 7 s/$/mm/ ; 8 s/^/UV: /'
