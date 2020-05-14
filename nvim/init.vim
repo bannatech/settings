@@ -94,8 +94,8 @@ call minpac#add('tikhomirov/vim-glsl')
 call minpac#add('maximbaz/lightline-ale')
 call minpac#add('sirver/ultisnips')
 call minpac#add('honza/vim-snippets')
-"call minpac#add('0mco/math-tex-snippets')
-"call minpac#add('gillescastel/latex-snippets')
+call minpac#add('0mco/math-tex-snippets')
+call minpac#add('gillescastel/latex-snippets')
 call minpac#add('shougo/deoplete.nvim')
 
 " Load the packages
