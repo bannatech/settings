@@ -1,7 +1,5 @@
 #!/bin/sh
 
-. $HOME/.config/dmenurc
-
 name="$1"
 remove="yes"
 if [ "$name" = "" ] || [ "$name" = "default" ] ; then
@@ -9,7 +7,7 @@ if [ "$name" = "" ] || [ "$name" = "default" ] ; then
     rm $(name)
     remove="yes"
 elif [ "$name" = "ask" ] ; then
-  name=$(printf "" | dmenu $DOPTS -p "Screenshot name: ")
+  name=$(printf "" | rofi -dmenu -p "Screenshot name")
     remove="no"
 fi
 
@@ -44,7 +42,7 @@ esac
 
 
 if [ "$mode" = "-s" ] ; then
-  printf "" | dmenu $DOPTS -p "Select an area: " >/dev/null
+  printf "" | rofi -dmenu -p "Select an area" >/dev/null
 elif [ "$mode" = "-u" ] ; then
   sleep 1
 else

@@ -15,12 +15,10 @@ if [ "$1" = "" ] ; then
     exit 1
 fi
 
-sink=0
+sink="$(pamixer --list-sinks | awk '/Built/ {print $1}')"
 if ! [ "$2" = "" ] ; then
     sink="$2"
 fi
-
-. $HOME/.config/dmenurc
 
 current_vol=$(pamixer --get-volume --sink "$sink")
 
@@ -50,7 +48,7 @@ case "$op" in
 	exit 0
 	;;
     "a")
-	operand=$(printf "%s" "$current_vol" | dmenu $DOPTS -p "Enter volume: ")
+	operand=$(printf "%s" "$current_vol" | rofi -dmenu -p "Enter volume")
 	;;
     *)
 	operand=$1

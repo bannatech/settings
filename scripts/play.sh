@@ -1,8 +1,6 @@
 #!/bin/sh
 
-. $HOME/.config/dmenurc
-
-url=$(xsel -o -b | dmenu $DOPTS -p "Play with mpv: ")
+url=$(xsel -o -b | rofi -dmenu -p "Play with mpv")
 if ! mpv "$url" >/dev/null ; then
-    printf "" | dmenu $DOPTS -p "Error playing $url" > /dev/null
+    printf "" | rofi -dmenu -p "Error playing $url" > /dev/null
 fi

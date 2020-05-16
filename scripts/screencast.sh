@@ -9,8 +9,6 @@ if ps -x | grep "ffcast" | grep -v "grep" >/dev/null; then
     exit 1
 fi
 
-. $HOME/.config/dmenurc
-
 TMP_AVI=$(mktemp /tmp/outXXXXXXXXXX.avi)
 
 output=$1
@@ -19,7 +17,7 @@ if [ "$output" = "" ] || [ "$output" = "default" ] ; then
 fi
 
 if [ "$output" = "ask" ] ; then
-    output=$(printf "" | dmenu $DOPTS -p "Name screencast: ")
+    output=$(printf "" | rofi -dmenu -p "Name screencast")
 fi
 
 mode=$2
@@ -33,7 +31,7 @@ if [ "$format" = "" ] || [ "$format" = "default" ] ; then
 fi
 
 if [ "$format" = "ask" ] ; then
-    format=$(echo "mpv" | dmenu $DOPTS -p "Select video format: ")
+    format=$(echo "mpv" | rofi -dmenu -p "Select video format")
 fi
 
 if printf "%s" "$output" | grep "\." >/dev/null; then
@@ -47,7 +45,7 @@ if [ "$framerate" = "" ] || [ "$framerate" = "default" ] ; then
 fi
 
 if [ "$framerate" = "ask" ] ; then
-    framerate=$(echo "15" | dmenu $DOPTS -p "Choose framerate: ")
+    framerate=$(echo "15" | rofi -dmenu -p "Choose framerate")
 fi
 
 case "$mode" in
