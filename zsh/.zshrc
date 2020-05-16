@@ -15,6 +15,8 @@ alias la="ls -a"
 alias emacs="emacs -nw"
 [ -f ~/.shrc ] && source ~/.shrc
 
+export TERMINAL="termite"
+
 # completion
 zstyle ':completion:*' list-colors "${(@s.:.)LS_COLORS}"
 zstyle ':completion:*' menu select
@@ -148,19 +150,19 @@ done
 stty -ixon
 
 # Nice aliases
-alias p="sudo pacman"
+alias p="doas pacman"
 alias P="pacman"
 alias t="trizen"
-alias sy="sudo systemctl"
+alias sy="doas systemctl"
 alias sys="systemctl"
 alias sysu="systemctl --user"
 alias TT="trizen -Syu"
 alias mkd="mkdir -pv"
 alias e="$EDITOR"
-alias E="sudo $EDITOR"
+alias E="doas $EDITOR"
 alias bt="btfs"
-alias m="sudo mount"
-alias u="sudo umount"
+alias m="doas mount"
+alias u="doas umount"
 alias k="make -j$(nproc)"
 alias kd="make DEBUG=yes -j$(nproc)"
 alias c="./configure"
