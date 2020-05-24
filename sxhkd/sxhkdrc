@@ -14,7 +14,7 @@ super + alt + shift + Return
 
 # program launcher
 super + space
-  dmenu_run
+  rofi -show run
 
 # Conky
 super + F2
@@ -44,6 +44,15 @@ super + v ; {e, t, m}
 
 super + v ; shift + m
   $HOME/.scripts/volume.sh u
+
+XF86AudioLowerVolume
+  $HOME/.scripts/volume.sh -1
+
+XF86AudioRaiseVolume
+  $HOME/.scripts/volume.sh +1
+
+XF86AudioMute
+  $HOME/.scripts/volume.sh t
 
 # Swap clipboard buffers
 super + x
@@ -92,3 +101,15 @@ super + e ; {t, n, m, b, h, s, d, e, f, c}
 # Toggle MPD playing
 super + t
   mpc toggle
+
+XF86AudioPlay
+  mpc toggle
+
+XF86AudioStop
+  mpc stop
+
+XF86AudioPrev
+  mpc prev
+
+XF86AudioNext
+  mpc next
