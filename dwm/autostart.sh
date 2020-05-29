@@ -1,10 +1,11 @@
 #!/bin/sh
 cd $HOME
-
+setxkbmap us -variant dvorak
+xmodmap $HOME/.Xmodmap
+xset r rate 290 50
 fcitx &
-sxhkd &
 compton &
 dunst &
 xautolock -time 10 -locker '/usr/bin/i3lock' &
-./.scripts/warningbattery.sh &
 ./.scripts/bar
+sxhkd &
