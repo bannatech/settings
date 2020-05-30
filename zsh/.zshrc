@@ -197,3 +197,10 @@ export PATH=$PATH:$HOME/bin:$HOME/.scripts
 
 # Fix gpg entry
 export GPG_TTY=$(tty)
+
+# Kitty auto complete
+kitty + complete setup zsh | source /dev/stdin
+
+# Kitty aliases
+alias icat="kitty +kitten icat"
+alias kdiff="kitty +kitten diff"
