@@ -6,7 +6,7 @@
 
 # terminal emulator
 super + alt + Return
-  termite
+  kitty
 
 # Emoji
 super + alt + shift + Return
@@ -93,6 +93,15 @@ super + minus
 
 super + shift + z
   $HOME/.scripts/open.sh
+
+super + w
+  firefox
+
+super + shift + w
+  chromium
+
+super + shift + l
+  lbry
 
 # DWM Layouts (here for sequencing)
 super + e ; {t, n, m, b, h, s, d, e, f, c}
