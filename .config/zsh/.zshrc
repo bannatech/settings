@@ -60,6 +60,7 @@ export KEYTIMEOUT=1
 # I don't want to have to import weird terminfos to all systems I SSH into
 case "$TERM" in
 	xterm-termite) export TERM="xterm";;
+  xterm-kitty) export TERM="xterm";;
 esac
 
 # prompt

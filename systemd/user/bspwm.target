@@ -1,5 +1,0 @@
-[Unit]
-Description=Target to start bspwm daemons
-Documentation=man:bspwm(1)
-Wants=pulseaudio.service
-Wants=mpd.service
