@@ -3,7 +3,7 @@
 # $1 is volume
 # $2 is sink (optional)
 
-lck="/var/run/dwmbar/bar.pid"
+lck="$HOME/.cache/dwmbar/bar.pid"
 
 while ! [ -e "$lck" ] ; do
   sleep 1

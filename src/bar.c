@@ -6,6 +6,7 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <signal.h>
+#include <wordexp.h>
 
 #include <sys/time.h>
 #include <sys/resource.h>
@@ -67,7 +68,7 @@ const char *TIMEFMT = "%a %d %b %y, %H:%M";
 
 const char *CMDS[] = {
   "@TIME@",
-  "$HOME/.scripts/getvol.sh"
+  "$HOME/.local/bin/getvol.sh"
 };
 
 const char *PREFIXES[] = {
@@ -80,11 +81,11 @@ const char *SUFFIXES[] = {
   ""
 };
 
-const char *LOCKDIR = "/var/run/dwmbar";
-const char *LOCKFILE = "/var/run/dwmbar/bar.pid";
+const char *LOCKDIR = "$HOME/.cache/dwmbar";
+const char *LOCKFILE = "bar.pid";
 const char *FDDIR = "/proc/self/fd/";
-const char *LOGDIR = "/var/log/dwmbar";
-const char *LOGFILE = "/var/log/dwmbar/bar.log";
+const char *LOGDIR = "$HOME/.cache/dwmbar";
+const char *LOGFILE = "bar.log";
 
 // Structs
 struct XData {
@@ -114,32 +115,67 @@ void sighandler(int num); // Handle exit signals
 
 int close_fds()
 {
-  struct stat st_info;
-  if (stat(LOCKDIR, &st_info) == -1) {
+  wordexp_t p;
+  if (wordexp(LOCKDIR, &p, 0)) {
     return STAT_NOLOCKDIR;
   }
 
-  if ((st_info.st_mode & 0770000) != 0040000) {
+  struct stat st_info;
+  if (stat(p.we_wordv[0], &st_info) == -1) {
+    if (mkdir(p.we_wordv[0], 0755)) {
+      return STAT_NOLOCKDIR;
+    }
+  }
+  wordfree(&p);
+
+  if (!S_ISDIR(st_info.st_mode)) {
     return STAT_LOCKNOTDIR;
   }
 
-  if (stat(LOGDIR, &st_info) == -1) {
+  if (wordexp(LOGDIR, &p, 0)) {
     return STAT_NOLOGDIR;
   }
 
-  if ((st_info.st_mode & 0770000) != 0040000) {
+  if (stat(p.we_wordv[0], &st_info) == -1) {
+    if (mkdir(p.we_wordv[0], 0755)) {
+      return STAT_NOLOGDIR;
+    }
+  }
+  wordfree(&p);
+
+  if (!S_ISDIR(st_info.st_mode)) {
     return STAT_LOGNOTDIR;
   }
 
-  if (stat(LOCKFILE, &st_info) == 0) {
+  char buffer[1024];
+
+  const size_t lockdirlen = strlen(LOCKDIR);
+  const size_t lockfilelen = strlen(LOCKFILE);
+  size_t locklen = lockdirlen + lockfilelen + 2;
+  if (locklen > LEN(buffer)) {
+    return STAT_NOLOGDIR;
+  }
+  strcpy(&buffer[0], LOCKDIR);
+  strcpy(&buffer[lockdirlen], "/");
+  strcpy(&buffer[lockdirlen + 1], LOCKFILE);
+  if (wordexp(buffer, &p, 0)) {
+    return STAT_NOLOGDIR;
+  }
+
+  if (stat(p.we_wordv[0], &st_info) == 0) {
     return STAT_LOCKEXISTS;
   }
+  wordfree(&p);
 
   // Try to iterate over files in FDDIR (/proc/self/fd) and close open fds
   DIR *d = NULL;
-  if (stat(FDDIR, &st_info) == 0) {
+  if (wordexp(FDDIR, &p, 0)) {
+    return STAT_GOOD;
+  }
+  if (stat(p.we_wordv[0], &st_info) == 0) {
     d = opendir(FDDIR);
   }
+  wordfree(&p);
 
   if (d != NULL) {
     struct dirent *entry = NULL;
@@ -228,24 +264,54 @@ int daemonize()
 
   close(STDIN_FILENO);
 
-  FILE *lockfile = fopen(LOCKFILE, "w");
+  char buffer[1024];
+  const size_t lockdirlen = strlen(LOCKDIR);
+  const size_t lockfilelen = strlen(LOCKFILE);
+  const size_t locklen = lockdirlen + lockfilelen + 2;
+  if (locklen > LEN(buffer)) {
+    return STAT_BADCREATE;
+  }
+  strcpy(&buffer[0], LOCKDIR);
+  strcpy(&buffer[lockdirlen], "/");
+  strcpy(&buffer[lockdirlen + 1], LOCKFILE);
+  wordexp_t p;
+  if (wordexp(buffer, &p, 0)) {
+    return STAT_BADCREATE;
+  }
+
+  FILE *lockfile = fopen(p.we_wordv[0], "w");
   if (lockfile == NULL) {
     return STAT_BADCREATE;
   }
 
   fprintf(lockfile, "%d", getpid());
   fclose(lockfile);
+  wordfree(&p);
 
-  struct stat st_info;
-  if (stat(LOGFILE, &st_info) == -1) {
-    creat(LOGFILE, 0777);
+  const size_t logdirlen = strlen(LOGDIR);
+  const size_t logfilelen = strlen(LOGFILE);
+  const size_t loglen = lockdirlen + lockfilelen + 2;
+  if (loglen > LEN(buffer)) {
+    return STAT_BADOPEN;
+  }
+  strcpy(&buffer[0], LOGDIR);
+  strcpy(&buffer[logdirlen], "/");
+  strcpy(&buffer[logdirlen + 1], LOGFILE);
+  if (wordexp(buffer, &p, 0)) {
+    return STAT_BADOPEN;
   }
 
-  logfd = open(LOGFILE, O_WRONLY|O_TRUNC);
+  struct stat st_info;
+  if (stat(p.we_wordv[0], &st_info) == -1) {
+    creat(p.we_wordv[0], 0755);
+  }
+
+  logfd = open(p.we_wordv[0], O_WRONLY|O_TRUNC);
   if (logfd == -1) {
     perror("open log");
     return STAT_BADOPEN;
   }
+  wordfree(&p);
 
   int mydup = dup2(logfd, STDOUT_FILENO);
   if (mydup == -1) {

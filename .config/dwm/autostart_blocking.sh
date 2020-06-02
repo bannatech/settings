@@ -3,5 +3,4 @@ cd $HOME
 numlockx on
 xset -dpms
 xset -b
-feh --randomize --bg-scale ~/.wallpaper/*
-setxkbmap -option "compose:caps"
+feh --randomize --bg-scale ~/.local/share/wallpaper/*

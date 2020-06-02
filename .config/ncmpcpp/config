@@ -1,0 +1,3 @@
+ncmpcpp_directory = $XDG_CONFIG_HOME/ncmpcpp
+lyrics_directory = $XDG_DATA_HOME/lyrics
+
