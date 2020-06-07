@@ -1,6 +1,5 @@
 set number relativenumber " Relative Line Numbers
 set hidden "Let vim act like every other editor
-
 " To expand the number of binds nvim can do
 let mapleader="\<Space>"
 let maplocalleader='='
@@ -295,6 +294,10 @@ noremap <Leader><Leader> /http<CR>
 noremap <Leader>y "+y$"+yt<SPACE>
 noremap <Leader>Y gJN"+y$"+yt<SPACE>
 
+" RFC date
+command RFCDate .-1read !date "+\%a, \%d \%b \%Y \%H:\%M:\%S \%Z"
+noremap <Leader>d a<CR><ESC>:RFCDate<CR>I<BS><ESC>j0i<BS><ESC>l
+
 augroup CleanWhitespace
   autocmd!
   au BufWritePre * :%s/\s\+$//e
@@ -309,3 +312,7 @@ augroup editor
   autocmd!
   au BufWinEnter,BufEnter,BufNewFile,BufRead * EditorConfigEnable
 augroup END
+
+augroup Mail
+  autocmd!
+  au BufRead,BufNewFile /tmp/mutt-* set tw=72

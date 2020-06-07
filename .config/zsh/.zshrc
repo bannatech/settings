@@ -15,7 +15,7 @@ alias la="ls -a"
 alias emacs="emacs -nw"
 [ -f ~/.shrc ] && source ~/.shrc
 
-export TERMINAL="termite"
+export TERMINAL="kitty"
 
 # completion
 zstyle ':completion:*' list-colors "${(@s.:.)LS_COLORS}"
@@ -181,20 +181,13 @@ alias ydl="youtube-dl --add-metadata -ic -o '%(title)s.%(ext)s'"
 alias df='df -h'
 alias mv='mv -v'
 alias du='du -h'
+alias rfcdate="date \"+%a, %d %b %Y %H:%M:%S %Z\""
+
+# Email
 alias mutt='neomutt'
 alias em='neomutt'
-alias fzf='fzf -i --reverse'
-
-#PROXY
-#http_proxy="http://localhost:3128"
-#https_proxy="http://localhost:3128"
-#ftp_proxy="ftp://localhost:3128"
-#HTTP_PROXY="http://localhost:3128"
-#HTTPS_PROXY="http://localhost:3128"
-#FTP_PROXY="ftp://localhost:3128"
-
-# Path
-export PATH=$PATH:$HOME/bin:$HOME/.scripts
+alias abook='abook -C $XDG_CONFIG_HOME/abook/abookrc --datafile $XDG_DATA_HOME/abook/addressbook'
+alias mbsync='mbsync -c $XDG_CONFIG_HOME/isync/mbsyncrc'
 
 # Fix gpg entry
 export GPG_TTY=$(tty)
