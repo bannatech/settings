@@ -295,7 +295,7 @@ noremap <Leader>y "+y$"+yt<SPACE>
 noremap <Leader>Y gJN"+y$"+yt<SPACE>
 
 " RFC date
-command RFCDate .-1read !date "+\%a, \%d \%b \%Y \%H:\%M:\%S \%Z"
+command RFCDate .-1read !date "+\%a, \%d \%b \%Y \%H:\%M:\%S \%z"
 noremap <Leader>d a<CR><ESC>:RFCDate<CR>I<BS><ESC>j0i<BS><ESC>l
 
 augroup CleanWhitespace

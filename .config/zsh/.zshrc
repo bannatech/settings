@@ -181,7 +181,7 @@ alias ydl="youtube-dl --add-metadata -ic -o '%(title)s.%(ext)s'"
 alias df='df -h'
 alias mv='mv -v'
 alias du='du -h'
-alias rfcdate="date \"+%a, %d %b %Y %H:%M:%S %Z\""
+alias rfcdate="date \"+%a, %d %b %Y %H:%M:%S %z\""
 
 # Email
 alias mutt='neomutt'
