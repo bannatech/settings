@@ -6,11 +6,11 @@ export EDITOR='nvim'
 
 # neat aliases
 if [ $(uname) = "Linux" ]; then
-	alias ls="ls --color=always -F -H"
+	alias ls="ls --color=always -F -H -h"
 else
 	alias ls="ls -G"
 fi
-alias ll="ls -l -F -H"
+alias ll="ls -l -F -H -h"
 alias la="ls -a"
 alias emacs="emacs -nw"
 [ -f ~/.shrc ] && source ~/.shrc

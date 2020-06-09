@@ -6,7 +6,7 @@
 # Maintainer: Your Name <youremail@domain.com>
 pkgname=my_dwm
 pkgver=6.2
-pkgrel=1
+pkgrel=2
 pkgdesc="Dynamic Window Manager"
 arch=('x86_64' 'i386')
 url="https://gitlab.com/aftix/dwm"
