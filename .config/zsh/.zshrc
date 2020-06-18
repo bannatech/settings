@@ -6,12 +6,12 @@ export EDITOR='nvim'
 
 # neat aliases
 if [ $(uname) = "Linux" ]; then
-	alias ls="ls --color=always -F -H -h"
+	alias ls="ls --color=auto -F -H -h"
 else
 	alias ls="ls -G"
 fi
 alias ll="ls -l -F -H -h"
-alias la="ls -a"
+alias la="ls -A"
 alias emacs="emacs -nw"
 [ -f ~/.shrc ] && source ~/.shrc
 
@@ -170,6 +170,8 @@ alias c="./configure"
 alias f="fusermount"
 alias F="fusermount -u"
 alias g="git"
+alias gua="git remote | xargs -l git push"
+alias gum="git remote | xargs -I _ git push _ master"
 alias mpvf="mpv --fs"
 alias anipv="mpv --slang=en --fs --alang=jpn"
 alias s="sed --posix"
@@ -179,9 +181,11 @@ alias pl="plzip -n4"
 alias ed="ed -vp '*'"
 alias ydl="youtube-dl --add-metadata -ic -o '%(title)s.%(ext)s'"
 alias df='df -h'
-alias mv='mv -v'
+alias mv='mv -iv'
+alias cp='cp -iv'
 alias du='du -h'
 alias rfcdate="date \"+%a, %d %b %Y %H:%M:%S %z\""
+alias btc="bitcoin-cli -datadir=$XDG_DATA_HOME/bitcoin"
 
 # Email
 alias mutt='neomutt'

@@ -316,3 +316,4 @@ augroup END
 augroup Mail
   autocmd!
   au BufRead,BufNewFile /tmp/mutt-* set tw=72
+augroup END
