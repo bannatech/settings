@@ -185,7 +185,9 @@ alias mv='mv -iv'
 alias cp='cp -iv'
 alias du='du -h'
 alias rfcdate="date \"+%a, %d %b %Y %H:%M:%S %z\""
-alias btc="bitcoin-cli -datadir=$XDG_DATA_HOME/bitcoin"
+alias xz="xz --threads=0"
+alias gzip="pigz"
+alias bzip2="pbzip2"
 
 # Email
 alias mutt='neomutt'
