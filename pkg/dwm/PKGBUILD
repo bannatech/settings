@@ -3,13 +3,13 @@
 # NOTE: Please fill out the license field for your package! If it is unknown,
 # then please put 'unknown'.
 
-# Maintainer: Your Name <youremail@domain.com>
+# Maintainer: aftix@aftix.xyz
 pkgname=my_dwm
 pkgver=6.2
 pkgrel=2
 pkgdesc="Dynamic Window Manager"
 arch=('x86_64' 'i386')
-url="https://gitlab.com/aftix/dwm"
+url="git://git.aftix.xyz/dwm.git"
 license=('MIT')
 depends=('libx11')
 provides=('dwm')
