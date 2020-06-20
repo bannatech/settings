@@ -188,6 +188,7 @@ alias rfcdate="date \"+%a, %d %b %Y %H:%M:%S %z\""
 alias xz="xz --threads=0"
 alias gzip="pigz"
 alias bzip2="pbzip2"
+alias ssh="ssh -o'VisualHostKey=yes'"
 
 # Email
 alias mutt='neomutt'
