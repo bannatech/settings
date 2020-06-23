@@ -25,9 +25,6 @@ compinit
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=3"
 
-# gem
-PATH="$PATH:$HOME/.gem/ruby/2.3.0/bin"
-
 # history
 HISTFILE=~/.zhistory
 HISTSIZE=10000
@@ -39,19 +36,6 @@ setopt hist_ignore_dups
 setopt hist_ignore_space
 setopt hist_verify
 setopt inc_append_history
-
-# binds
-# bindkey -e
-# bindkey "^[[3~" delete-char
-# bindkey "^[[1;5C" forward-word
-# bindkey "^[[OC" forward-word
-# bindkey "^[[1;5D" backward-word
-# bindkey "^[[OD" backward-word
-# bindkey "^[[3;5~" kill-word
-# bindkey "\x08" backward-kill-word
-# bindkey '^[[A' up-line-or-search
-# bindkey '^[[B' down-line-or-search
-# WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
 
 # VI mode
 bindkey -v
@@ -173,7 +157,7 @@ alias g="git"
 alias gua="git remote | grep -v "^upstream$" | xargs -l git push"
 alias gum="git remote | grep -v "^upstream$" | xargs -I _ git push _ master"
 alias mpvf="mpv --fs"
-alias anipv="mpv --slang=en,eng --fs --alang=jpn"
+alias anipv="mpv --slang=en,eng --fs --alang=jpn,jp"
 alias s="sed --posix"
 alias G="grep --color=auto"
 alias a="awk"
