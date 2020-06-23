@@ -109,16 +109,16 @@ super + e ; {t, n, m, b, h, s, d, e, f, c}
 
 # Toggle MPD playing
 super + t
-  mpc toggle
+  mpc.sh toggle
 
 XF86AudioPlay
-  mpc toggle
+  mpc.sh toggle
 
 XF86AudioStop
-  mpc stop
+  mpc.sh stop
 
 XF86AudioPrev
-  mpc prev
+  mpc.sh prev
 
 XF86AudioNext
-  mpc next
+  mpc.sh next

@@ -3,14 +3,6 @@
 # $1 is volume
 # $2 is sink (optional)
 
-lck="$HOME/.cache/dwmbar/bar.pid"
-
-while ! [ -e "$lck" ] ; do
-  sleep 1
-done
-
-pid="$(cat "$lck")"
-
 if [ "$1" = "" ] ; then
     exit 1
 fi
@@ -34,17 +26,17 @@ case "$op" in
 	;;
     "m")
 	pamixer --sink $sink -m
-  kill -ALRM "$pid"
+  pkill -RTMIN+10 dwmblocks
 	exit 0
 	;;
     "u")
 	pamixer --sink $sink -u
-  kill -ALRM "$pid"
+  pkill -RTMIN+10 dwmblocks
 	exit 0
 	;;
     "t")
 	pamixer --sink $sink -t
-  kill -ALRM "$pid"
+  pkill -RTMIN+10 dwmblocks
 	exit 0
 	;;
     "a")
@@ -59,5 +51,5 @@ if [ "$operand" = "" ] ; then
     exit 0
 fi
 
-pamixer --sink "$sink" --set-volume "$operand" 2>/dev/null >/dev/null
-kill -ALRM "$pid" 2>/dev/null >/dev/null
+pamixer --sink "$sink" --set-volume "$operand"
+pkill -RTMIN+10 dwmblocks
