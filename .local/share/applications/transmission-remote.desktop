@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=transmission
+Comment=A lightweight torrent daemon/client
+GenericName=bittorrent application
+Exec=neomutt %u
+TryExec=transmission-cli
+Icon=none
+Terminal=true
+MimeType=application/x-bitorrent;x-scheme-handler/magnent
