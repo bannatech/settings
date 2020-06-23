@@ -9,3 +9,4 @@ $HOME/.local/bin/bar
 setxkbmap -layout us -variant dvorak
 xmodmap $XDG_CONFIG_HOME/.Xmodmap
 sxhkd &
+xmodmap .config/.Xmodmap
