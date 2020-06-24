@@ -17,4 +17,4 @@ doc	$HOME/doc
 ltx	$HOME/latex
 wtc	/var/lib/transmission/watch
 mus	$HOME/music
-
+dot	$HOME/src/dotfiles

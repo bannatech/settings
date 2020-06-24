@@ -8,15 +8,15 @@ alias mkd="mkdir -pv" \
   s="sed --posix" \
   G="grep --color=auto" \
   a="awk" \
-  df='df -h' \
-  mv='mv -iv' \
-  cp='cp -iv' \
-  du='du -h' \
+  df="df -h" \
+  mv="mv -iv" \
+  cp="cp -iv" \
+  du="du -h" \
   ed="ed -vp '*'" \
   diff="diff --color=auto"
 
 # Programs with specific options
-  sysu="systemctl --user" \
+alias sysu="systemctl --user" \
   TT="trizen -Syu" \
   k="make -j$(nproc)" \
   kd="make DEBUG=yes -j$(nproc)" \
