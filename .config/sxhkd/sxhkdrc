@@ -26,7 +26,7 @@ super + Escape
 
 # Randomize wallpaper
 super + shift + b
-  feh --randomize --bg-scale ~/.wallpaper/*
+  feh --randomize --bg-scale $HOME/.local/share/wallpaper/*
 
 # Help
 super + F1
@@ -60,13 +60,22 @@ super + x
 
 # Screenshot hotkeys
 super + a ; {_, shift +} s
-  $HOME/.local/bin/screenshot.sh {none, ask}
+  $HOME/.local/bin/screenshot.sh {default, ask} select
 
 super + a ; {f, z}
-  $HOME/.local/bin/screenshot.sh none {focused, full}
+  $HOME/.local/bin/screenshot.sh default {focused, full}
 
 super + a ; shift + {f, z}
   $HOME/.local/bin/screenshot.sh ask {focused, full}
+
+super + a ; ctrl + {_, shift +} s
+  $HOME/.local/bin/screenshot.sh {default, ask} select copy
+
+super + a ; ctrl + {f, z}
+  $HOME/.local/bin/screenshot.sh default {focused, full} copy
+
+super + a ; ctrl + shift + {f, z}
+  $HOME/.local/bin/screenshot.sh ask {focused, full} copy
 
 # Screencast hotkeys
 super + r ; {_, shift +} r
@@ -107,18 +116,24 @@ super + shift + l
 super + e ; {t, n, m, b, h, s, d, e, f, c}
   xsetroot -name "fsignal:"{1,2,3,4,5,6,7,8,9,10}
 
+super + {comma, period}
+  xsetroot -name "fsignal:"{11,12}
+
+super + shift + {comma, period}
+  xsetroot -name "fsignal:"{13,14}
+
 # Toggle MPD playing
 super + t
-  mpc.sh toggle
+  mpc toggle
 
 XF86AudioPlay
-  mpc.sh toggle
+  mpc toggle
 
 XF86AudioStop
-  mpc.sh stop
+  mpc stop
 
 XF86AudioPrev
-  mpc.sh prev
+  mpc prev
 
 XF86AudioNext
-  mpc.sh next
+  mpc next

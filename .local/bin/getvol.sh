@@ -3,19 +3,18 @@
 VOL="$(pamixer --get-volume-human)"
 
 if [ "$VOL" = "muted" ] ; then
-  #echo -n "🔇"
-  echo "MUTED "
+  echo -n "🔇"
   exit 0
 fi
 
 # emoji dont work in dwmblocks for some reason
-#if [ "${VOL%%%}" -ge 66 ] ; then
-  #echo -n "🔊"
-#elif [ "${VOL%%%}" -ge 33 ]; then
-  #echo -n "🔉"
-#else
-  #echo -n "🔈"
-#fi
+if [ "${VOL%%%}" -ge 66 ] ; then
+  echo -n "🔊"
+elif [ "${VOL%%%}" -ge 33 ]; then
+ echo -n "🔉"
+else
+ echo -n "🔈"
+fi
 
-echo "VOL: ${VOL%%%}%"
+echo " ${VOL%%%}%"
 

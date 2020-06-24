@@ -18,7 +18,7 @@ case "$clock" in
 	"12") icon="🕛" ;;
 esac
 
-echo -n "$icon"
+echo -n "$icon "
 
 case $BLOCK_BUTTON in
   1) notify-send "gettime.sh" "value 1" ;;
