@@ -297,6 +297,8 @@ noremap <Leader>Y gJN"+y$"+yt<SPACE>
 " RFC date
 command RFCDate .-1read !date --iso-8601=seconds
 noremap <Leader>d a<CR><ESC>:RFCDate<CR>I<BS><ESC>j0i<BS><ESC>l
+command EMDate .-1read !date -R
+noremap <Leader>D a<CR><ESC>:EMDate<CR>I<BS><ESC>j0i<BS><ESC>l
 
 augroup CleanWhitespace
   autocmd!
