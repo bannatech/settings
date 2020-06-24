@@ -3,7 +3,7 @@
 VOL="$(pamixer --get-volume-human)"
 
 if [ "$VOL" = "muted" ] ; then
-  echo -n "🔇"
+  echo "🔇"
   exit 0
 fi
 
