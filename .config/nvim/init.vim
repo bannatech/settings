@@ -36,9 +36,6 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 
-" Delete trailing whitespace
-autocmd BufWritePre * %s/\s\+$//e
-
 " Automerge .Xresources
 autocmd BufWritePost ~/.Xresourses,~/.Xdefaults !xrdb %
 
@@ -300,9 +297,11 @@ noremap <Leader>d a<CR><ESC>:RFCDate<CR>I<BS><ESC>j0i<BS><ESC>l
 command EMDate .-1read !date -R
 noremap <Leader>D a<CR><ESC>:EMDate<CR>I<BS><ESC>j0i<BS><ESC>l
 
+let ftKeepspace = ['markdown']
+
 augroup CleanWhitespace
   autocmd!
-  au BufWritePre * :%s/\s\+$//e
+  au BufWritePre * if index(ftKeepspace, &ft) < 0 | :%s/\s\+$//e
 augroup END
 
 augroup doccmd

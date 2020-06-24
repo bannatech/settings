@@ -135,51 +135,13 @@ done
 stty -ixon
 
 # Nice aliases
-alias p="doas pacman"
-alias P="pacman"
-alias t="trizen"
-alias sy="doas systemctl"
-alias sys="systemctl"
-alias sysu="systemctl --user"
-alias TT="trizen -Syu"
-alias mkd="mkdir -pv"
-alias e="$EDITOR"
-alias E="doas $EDITOR"
-alias bt="btfs"
-alias m="doas mount"
-alias u="doas umount"
-alias k="make -j$(nproc)"
-alias kd="make DEBUG=yes -j$(nproc)"
-alias c="./configure"
-alias f="fusermount"
-alias F="fusermount -u"
-alias g="git"
-alias gua="git remote | grep -v "^upstream$" | xargs -l git push"
-alias gum="git remote | grep -v "^upstream$" | xargs -I _ git push _ master"
-alias mpvf="mpv --fs"
-alias anipv="mpv --slang=en,eng --fs --alang=jpn,jp"
-alias s="sed --posix"
-alias G="grep --color=auto"
-alias a="awk"
-alias pl="plzip -n4"
-alias ed="ed -vp '*'"
-alias ydl="youtube-dl --add-metadata -ic -o '%(title)s.%(ext)s'"
-alias df='df -h'
-alias mv='mv -iv'
-alias cp='cp -iv'
-alias du='du -h'
-alias rfcdate="date --iso-8601=\"seconds\""
-alias emdate="date -R" # Same as RSS2 standard as i can tell
-alias xz="xz --threads=0"
-alias gzip="pigz"
-alias bzip2="pbzip2"
-alias ssh="ssh -o'VisualHostKey=yes'"
+[ -f "$XDG_CONFIG_HOME/aliasrc" ] && source "$XDG_CONFIG_HOME/aliasrc"
 
-# Email
-alias mutt='neomutt'
-alias em='neomutt'
-alias abook='abook -C $XDG_CONFIG_HOME/abook/abookrc --datafile $XDG_DATA_HOME/abook/addressbook'
-alias mbsync='mbsync -c $XDG_CONFIG_HOME/isync/mbsyncrc'
+# Get bookmarks
+[ -f "$XDG_CONFIG_HOME/bookmarks" ] && \
+  source <(grep -ve "^$" -e "^#" $XDG_CONFIG_HOME/bookmarks \
+  | cut -f1,2 | sed 's/^/alias b/ ; s/\t/="cd / ; s/$/"/')
+
 
 # Fix gpg entry
 export GPG_TTY=$(tty)

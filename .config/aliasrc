@@ -1,0 +1,62 @@
+#!/bin/sh
+
+command -v nvim >/dev/null && alias vim="nvim" vimdiff="nvim -d"
+which neomutt >/dev/null 2>&1 && alias mutt="neomutt"
+
+# Standard utils with better options
+alias mkd="mkdir -pv" \
+  s="sed --posix" \
+  G="grep --color=auto" \
+  a="awk" \
+  df='df -h' \
+  mv='mv -iv' \
+  cp='cp -iv' \
+  du='du -h' \
+  ed="ed -vp '*'" \
+  diff="diff --color=auto"
+
+# Programs with specific options
+  sysu="systemctl --user" \
+  TT="trizen -Syu" \
+  k="make -j$(nproc)" \
+  kd="make DEBUG=yes -j$(nproc)" \
+  mpvf="mpv --fs" \
+  anipv="mpv --slang=en,eng --fs --alang=jpn,jp" \
+  rfcdate="date --iso-8601=\"seconds\"" \
+  emdate="date -R" \
+  xz="xz --threads=0" \
+  ssh="ssh -o'VisualHostKey=yes'" \
+  ydl="youtube-dl --add-metadata -ic -o '%(title)s.%(ext)s'"
+
+# Shortening names
+alias trem="transmission-remote" \
+  P="pacman" \
+  t="trizen" \
+  sys="systemctl" \
+  e="$EDITOR" \
+  f="fusermount" \
+  F="fusermount -u" \
+  g="git" \
+  c="./configure" \
+  ka="killall" \
+  z="zathura"
+
+# automatically raise to root
+alias p="doas pacman" \
+  sy="doas systemctl"\
+  E="doas $EDITOR"\
+  m="doas mount"\
+  u="doas umount"
+
+# Git stuff for all branches
+alias gua="git remote | grep -v "^upstream$" | xargs -l git push" \
+  gum="git remote | grep -v "^upstream$" | xargs -I _ git push _ master"
+
+# Using better utils
+alias gzip="pigz" \
+  bzip2="pbzip2"
+
+# Email
+alias em='mutt' \
+  abook='abook -C $XDG_CONFIG_HOME/abook/abookrc --datafile $XDG_DATA_HOME/abook/addressbook' \
+  mbsync='mbsync -c $XDG_CONFIG_HOME/isync/mbsyncrc'
