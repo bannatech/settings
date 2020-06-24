@@ -5,8 +5,8 @@ cscale=ewa_lanczossharp
 video-sync=display-resample
 interpolation
 tscale=oversample
-hwdec=auto
-ytdl-format=best
+hwdec=best
+ytdl-format=bestvideo[width<=1080]+bestaudio/best[width<=1080]
 save-position-on-quit
 [extension.webm]
 loop-file=inf
