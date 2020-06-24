@@ -40,5 +40,8 @@ bind-key D pb-download
 bind-key U show-urls
 bind-key x pb-delete
 
-macro v set browser "youtube-dl --add-metadata -ic -o '/home/aftix/Downloads/%%(title)s.%%(ext)s' --f 'bestvideo[width<=1080]+bestaudio,best[width<=1080]' %u" ; open-in-browser ; set browser "xdg-open %u"
-macro w set brower "mpv %u" ; open-in-browser ; set browser "xdg-open %u"
+macro q set browser "echo %u >> $XDG_RUNTIME_DIR/ydlqueue" ; open-in-browser ; set browser "xdg-open %u"
+macro Q set browser "echo %u >> $XDG_RUNTIME_DIR/ydlqueue" ; open-in-browser ; set browser "pkill -USR1 readqueue.sh && echo" ; open-in-browser ;  set browser "xdg-open %u"
+macro D set browser "pkill -USR1 readqueue.sh && echo" ; open-in-browser ; set browser "xdg-open %u"
+macro w set browser "mpv %u" ; open-in-browser ; set browser "xdg-open %u"
+macro l set browser "lynx %u" ; open-in-browser ; set browser "xdg-open %u"
