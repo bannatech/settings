@@ -18,12 +18,14 @@ function queuedl () {
 
   pushd ~/Downloads >/dev/null 2>&1
   mkdir -p ~/video/download
-  local title="$(youtube-dl $YDLOPT --get-title "$2" 2>/dev/null)"
-  local id="$(youtube-dl $YDLOPT --get-id "$2" 2>/dev/null)"
+  local title="$(youtube-dl $YDLOPT --get-title "$2" 2>/dev/null | sed -n 1p)"
+  local id="$(youtube-dl $YDLOPT --get-id "$2" 2>/dev/null | sed -n 1p)"
   notify-send "YDL Queue" "Downloading $2 ($title) to ~/Downloads"
 
-  if youtube-dl $YDLOPT -o "%(title)s_%(id)s.%(ext)s" "$2" 2>/dev/null ; then
-    name="$(find ~/Downloads -name "${title}_$id.*" | sed -n 1p)"
+  if youtube-dl $YDLOPT -o "${title}_$id.%(ext)s" "$2" 2>/dev/null ; then
+    echo "title: $title"
+    name="$(find . -name "${title}_$id.*" | sed -n 1p)"
+    find . -name "${title}_$id.*"
     name="${name##*/}"
     notify-send "YDL Queue" "Finished downloading ~/Downloads/$name, moving to ~/video/download/$name"
     mv "$HOME/Downloads/$name" "$HOME/video/download/$name"
@@ -69,9 +71,11 @@ while /bin/true; do
   done
 
   if [ -s "$XDG_RUNTIME_DIR/ydlqueue" ]; then
-    rm -f "$XDG_CACHE_HOME/ydlqueue" "$XDG_CACHE_HOME/ydlqueue_finished"
-    mv "$XDG_RUNTIME_DIR/ydlqueue" "$XDG_CACHE_HOME/ydlqueue"
-    echo >> "$XDG_CACHE_HOME/ydlqueue"
+    # My RSS feeder uses nitter to get tweets, but ydl fails to download them currently.
+    # Luckily, the use the same path after the URL
+    sed 's@^\(https\{0,1\}://\)nitter.net@\1twitter.com@' "$XDG_RUNTIME_DIR/ydlqueue" > "$XDG_CACHE_HOME/ydlqueue"
+    rm "$XDG_RUNTIME_DIR/ydlqueue"
+    echo >> "$XDG_CACHE_HOME/ydlqueue" # add trailing newline for read
     while IFS= read -r line; do
       (echo "$line" | grep -v '^[[:space:]]\+$' -q) && queuedl "$XDG_CACHE_HOME/ydlqueue_finished" "$line"
     done < "$XDG_CACHE_HOME/ydlqueue"
