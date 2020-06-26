@@ -4,7 +4,7 @@ name="$1"
 remove="yes"
 if [ "$name" = "" ] || [ "$name" = "default" ] ; then
     name=$(mktemp /tmp/shotXXXXXXXXX.png)
-    rm $(name)
+    rm $name
     remove="yes"
 elif [ "$name" = "ask" ] ; then
   name=$(printf "" | rofi -dmenu -p "Screenshot name")
@@ -26,7 +26,7 @@ case "$mode" in
     "full")
 	mode=""
 	;;
-    "selectt")
+    "select")
 	mode="-s"
 	;;
     "focused")

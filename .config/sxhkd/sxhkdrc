@@ -112,6 +112,15 @@ super + shift + w
 super + shift + l
   lbry
 
+super + p
+  passmenu
+
+super + shift + v
+  $HOME/.local/bin/termrun.sh
+
+super + alt + shift + v
+  $HOME/.local/bin/termrun.sh nnn
+
 # DWM Layouts (here for sequencing)
 super + e ; {t, n, m, b, h, s, d, e, f, c}
   xsetroot -name "fsignal:"{1,2,3,4,5,6,7,8,9,10}

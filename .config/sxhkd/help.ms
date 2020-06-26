@@ -27,7 +27,9 @@ Tag the active window with all tags.
 .IP "super + tab"
 Change the active tag to the previously active tag.
 .IP "super + {comma, period}"
-Change the active tag to the tag left or right of the current tag.
+Move focus to the previous or next monitor
+.IP "super + shift + {comma, period}"
+Move window to the previous or next monitor
 .IP "super + i"
 Increment the number of master windows in this tag.
 .IP "super + d"
@@ -97,6 +99,18 @@ Open whatever is in the primay clipboard with xdg-open.
 Bring up a calculator (uses bc).
 .IP "super + shift + alt + enter"
 Dmenu emoji select
+.IP "super + p"
+Password menu
+.IP "super + w"
+Firefox
+.IP "super + shift + w"
+Chromium
+.IP "super + shift + l"
+LBRY
+.IP "super + shift + v"
+Open kitty at a bookmark
+.IP "super + shift + alt + v"
+Open NNN at a bookmark
 .SH
 Volume Control
 .LP
@@ -133,6 +147,18 @@ Take a screenshot of the focused window and put it in a file.
 Take a screenshot of the x session and put it in the clipboard.
 .IP "super + a ; shift + z"
 Take a screenshot of the x session and put it in a file.
+.IP "super + a ; ctrl + s"
+Take a screenshot of an area and put it in the clipboard, also uploading it to file.aftix.xyz with scp.
+.IP "super + a ; ctrl + shift + s"
+Take a screenshot of an area and put it in a file, also uploading it to file.aftix.xyz with scp.
+.IP "super + a ; ctrl + f"
+Take a screenshot of the focused window and put it in the clipboard, also uploading it to file.aftix.xyz with scp.
+.IP "super + a ; ctrl + shift + f"
+Take a screenshot of the focused window and put it in a file, also uploading it to file.aftix.xyz with scp.
+.IP "super + a ; ctrl + z"
+Take a screenshot of the x session and put it in the clipboard, also uploading it to file.aftix.xyz with scp.
+.IP "super + a ; ctrl + shift + z"
+Take a screenshot of the x session and put it in a file, also uploading it to file.aftix.xyz with scp.
 .SH
 Screencasts
 .LP

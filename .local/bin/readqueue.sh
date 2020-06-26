@@ -7,6 +7,9 @@
 # (for example queueing up videos for a trip)
 # so they go in ~/video/downloads so my video folder doesn't get cluttered
 
+ionice -c 3 -p $$
+renice +12 -p $$
+
 # bestvideo,bestaudio DL'd two files
 YDLOPT='-icq -f best[width<=1080]'
 
@@ -15,21 +18,37 @@ function queuedl () {
   [ -z "$2" ] && return 1
   [ "$#" -le 1 ] && return 1
   [ "$#" -ge 3 ] && return 1
+  echo "line $2"
 
   pushd ~/Downloads >/dev/null 2>&1
-  mkdir -p ~/video/download
-  local title="$(youtube-dl $YDLOPT --get-title "$2" 2>/dev/null | sed -n 1p)"
-  local id="$(youtube-dl $YDLOPT --get-id "$2" 2>/dev/null | sed -n 1p)"
-  notify-send "YDL Queue" "Downloading $2 ($title) to ~/Downloads"
 
-  if youtube-dl $YDLOPT -o "${title}_$id.%(ext)s" "$2" 2>/dev/null ; then
-    echo "title: $title"
+  url="$(echo "$line" | cut -f1)"
+  direc="$(echo "$line" | cut -f2)"
+  echo "url: $url"
+  echo "direc: $direc"
+
+  local title="$(youtube-dl $YDLOPT --get-title "$url" 2>/dev/null | sed -n 1p)"
+  local id="$(youtube-dl $YDLOPT --get-id "$url" 2>/dev/null | sed -n 1p)"
+  notify-send "YDL Queue" "Downloading $url ($title) to ~/Downloads"
+
+  if youtube-dl $YDLOPT -o "${title}_$id.%(ext)s" "$url" 2>/dev/null ; then
     name="$(find . -name "${title}_$id.*" | sed -n 1p)"
     find . -name "${title}_$id.*"
     name="${name##*/}"
-    notify-send "YDL Queue" "Finished downloading ~/Downloads/$name, moving to ~/video/download/$name"
-    mv "$HOME/Downloads/$name" "$HOME/video/download/$name"
-    echo "$2" >> "$1"
+    if [ "$direc" != "." ] ; then
+      echo "got here"
+      if ! mkdir -p "$direc" ; then
+        notify-send -u "YDL Queue" "Finished downloading ~/Downloads/$name, but unable to find directory $direc"
+      else
+        notify-send "YDL Queue" "Finished downloading ~/Downloads/$name, moving to $direc/$name"
+        mv "$HOME/Downloads/$name" "$direc/$name"
+        echo "$2" >> "$1"
+      fi
+    else
+      echo "not  there"
+      notify-send "YDL Queue" "Finished downloading ~/Downloads/$name"
+      echo "$2" >> "$1"
+    fi
   else
     notify-send -u critical "YDL Queue" "Error downloading $2"
   fi
@@ -46,6 +65,7 @@ if [ -s "$XDG_CACHE_HOME/ydlqueue" ] ; then
   | while IFS= read -r line; do
     queuedl "$XDG_CACHE_HOME/ydlqueue_finished" "$line"
   done
+  rm "$diffed"
 fi
 
 rm -f "$XDG_CACHE_HOME/ydlqueue" "$XDG_CACHE_HOME/ydlqueue_finished"
@@ -71,9 +91,11 @@ while /bin/true; do
   done
 
   if [ -s "$XDG_RUNTIME_DIR/ydlqueue" ]; then
-    # My RSS feeder uses nitter to get tweets, but ydl fails to download them currently.
-    # Luckily, the use the same path after the URL
-    sed 's@^\(https\{0,1\}://\)nitter.net@\1twitter.com@' "$XDG_RUNTIME_DIR/ydlqueue" > "$XDG_CACHE_HOME/ydlqueue"
+    # This: adds a failsafe \t. in case no move dir is specifieda
+    # translates nitter links to twitter
+    # paste doesn't quit if I use `yes $'\t.'`, the lines must be right
+    sed "c ." "$XDG_RUNTIME_DIR/ydlqueue" | paste "$XDG_RUNTIME_DIR/ydlqueue" - |\
+      sed 's@^\(https\{0,1\}://\)nitter.net@\1twitter.com@' > "$XDG_CACHE_HOME/ydlqueue"
     rm "$XDG_RUNTIME_DIR/ydlqueue"
     echo >> "$XDG_CACHE_HOME/ydlqueue" # add trailing newline for read
     while IFS= read -r line; do
