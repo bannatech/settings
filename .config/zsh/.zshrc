@@ -141,6 +141,9 @@ stty -ixon
 [ -f "$XDG_CONFIG_HOME/bookmarks" ] && \
   source <(grep -ve "^$" -e "^#" $XDG_CONFIG_HOME/bookmarks \
   | cut -f1,2 | sed 's/^/alias b/ ; s/\t/="cd / ; s/$/"/')
+[ -f "$XDG_CONFIG_HOME/bookmarks" ] && \
+  source <(grep -ve "^$" -e "^#" $XDG_CONFIG_HOME/bookmarks \
+  | cut -f1,2 | sed 's/^/alias e/ ; s/\t/="echo / ; s/$/"/')
 
 # NNN
 export NNN_FIFO=$XDG_RUNTIME_DIR/nnn.fifo

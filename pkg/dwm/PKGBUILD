@@ -21,7 +21,6 @@ prepare() {
   git clone "$url"
   mv "dwm" "$pkgname-$pkgver"
 	cd "$pkgname-$pkgver"
-  git checkout my_dwm
 }
 
 build() {
