@@ -16,5 +16,5 @@ if [ "$(mpc | wc -l)" -gt 1 ] ; then
   mpc | tail -n 1 | grep -q ": on" &&
     mpc | sed -n "$SED1;/volume/p" | \
     sed 's/volume: [[:digit:]]\{1,2\}%// ; s@volume: n/a@@ ; s/[[:alpha:]]: off//g ; s/: on//g' \
-    | tr -d ' ' | xargs printf " [%s]"
+    | tr -d ' ' | xargs printf " [%s]\n"
 fi
