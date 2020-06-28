@@ -8,7 +8,6 @@ color listfocus_unread yellow default bold
 color info red black bold
 color article white default bold
 
-highlight all "---.*---" yellow
 highlight feedlist ".*(0/0))" black
 highlight article "(^Feed:.*|^Title:.*|^Author:.*)" cyan default bold
 highlight article "(^Link:.*|^Date:.*)" default default
@@ -20,6 +19,9 @@ highlight article "\\[embedded flash: [0-9][0-9]*\\]" green default bold
 highlight article ":.*\\(link\\)$" cyan default
 highlight article ":.*\\(image\\)$" blue default
 highlight article ":.*\\(embedded flash\\)$" magenta default
+
+notify-format "%n unread articles in %f feeds (%d,%D new)"
+notify-program "notify-send newsboat"
 
 bind-key j down
 bind-key k up
@@ -44,6 +46,22 @@ macro q set browser "echo '%u	/home/aftix/video/download' >> $XDG_RUNTIME_DIR/yd
 macro Q set browser "echo '%u	/home/aftix/video/download' >> $XDG_RUNTIME_DIR/ydlqueue" ; open-in-browser ; set browser "pkill -USR1 readqueue.sh && echo" ; open-in-browser ;  set browser "xdg-open %u"
 macro p set browser "echo '%u	/home/aftix/podcast/download' >> $XDG_RUNTIME_DIR/ydlqueue" ; open-in-browser ; set browser "xdg-open %u"
 macro P set browser "echo '%u	/home/aftix/podcast/download' >> $XDG_RUNTIME_DIR/ydlqueue" ; open-in-browser ; set browser "pkill -USR1 readqueue.sh && echo" ; open-in-browser ;  set browser "xdg-open %u"
+macro e set browser "echo '%u' >> $XDG_RUNTIME_DIR/ydlqueue" ; open-in-browser ; set browser "xdg-open %u"
+macro E set browser "echo '%u' >> $XDG_RUNTIME_DIR/ydlqueue" ; open-in-browser ; set browser "pkill -USR1 readqueue.sh && echo" ; open-in-browser ;  set browser "xdg-open %u"
 macro D set browser "pkill -USR1 readqueue.sh && echo" ; open-in-browser ; set browser "xdg-open %u"
 macro w set browser "mpv %u" ; open-in-browser ; set browser "xdg-open %u"
 macro l set browser "lynx %u" ; open-in-browser ; set browser "xdg-open %u"
+macro c set browser "echo %u | xsel -ib" ; open-in-browser ; set browser "xdg-open %u"
+
+# Use tiny tiny rss
+urls-source "ttrss"
+ttrss-url ""
+ttrss-login ""
+ttrss-passwordeval ""
+ttrss-mode "multi"
+ttrss-flag-star "s"
+ttrss-flag-publish "p"
+
+ # Podcast
+player "mpv --no-video"
+download-path "~/podcast/download"

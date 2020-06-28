@@ -389,7 +389,7 @@
 
 [mpd]
      summary = "*MPD*"
-     script = ~/.scripts/barupdate.sh
+     script = ~/.local/bin/updatempd.sh
 
 #[signed_on]
 #    appname = Pidgin
