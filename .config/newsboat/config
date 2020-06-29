@@ -39,6 +39,7 @@ bind-key a toggle-article-read
 bind-key n next-unread
 bind-key N prev-unread
 bind-key D pb-download
+external-url-viewer "extract_url"
 bind-key U show-urls
 bind-key x pb-delete
 
@@ -51,13 +52,13 @@ macro E set browser "echo '%u' >> $XDG_RUNTIME_DIR/ydlqueue" ; open-in-browser ;
 macro D set browser "pkill -USR1 readqueue.sh && echo" ; open-in-browser ; set browser "xdg-open %u"
 macro w set browser "mpv %u" ; open-in-browser ; set browser "xdg-open %u"
 macro l set browser "lynx %u" ; open-in-browser ; set browser "xdg-open %u"
-macro c set browser "echo %u | xsel -ib" ; open-in-browser ; set browser "xdg-open %u"
+macro c set browser "echo -n %u | xsel -ib" ; open-in-browser ; set browser "xdg-open %u"
 
 # Use tiny tiny rss
 urls-source "ttrss"
-ttrss-url ""
-ttrss-login ""
-ttrss-passwordeval ""
+ttrss-url "https://rss.aftix.xyz"
+ttrss-login "aftix"
+ttrss-passwordeval "pass rss/aftix"
 ttrss-mode "multi"
 ttrss-flag-star "s"
 ttrss-flag-publish "p"
