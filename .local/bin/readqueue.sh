@@ -11,7 +11,7 @@ ionice -c 3 -p $$
 renice +12 -p $$
 
 # bestvideo,bestaudio DL'd two files
-YDLOPT='-icq -f best[width<=1080]'
+YDLOPT='-icq -f bestvideo[height<=1080]+bestaudio/best[height<=1080]/bestvideo+bestaudio/best'
 
 # arguments are: done file, url
 function queuedl () {

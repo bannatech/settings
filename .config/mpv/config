@@ -6,7 +6,7 @@ video-sync=display-resample
 interpolation
 tscale=oversample
 hwdec=best
-ytdl-format=bestvideo[width<=1080]+bestaudio/best[width<=1080],best
+ytdl-format=bestvideo[height<=1080]+bestaudio/best[height<=1080]/bestvideo+bestaudio/best
 save-position-on-quit
 [extension.webm]
 loop-file=inf
