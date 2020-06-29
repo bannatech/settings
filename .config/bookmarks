@@ -3,6 +3,7 @@
 # Try not to conflict prefixes
 # format is name \t location \t comments
 rtd	$XDG_RUNTIME_HOME
+mdd	/run/media/aftix
 vdd	$HOME/video/download	permanant video download
 vv	$HOME/video
 dwn	$HOME/Downloads
@@ -18,3 +19,4 @@ ltx	$HOME/latex
 wtc	/var/lib/transmission/watch
 mus	$HOME/music
 dot	$HOME/src/dotfiles
+nmt	$XDG_CONFIG_HOME/neomutt
