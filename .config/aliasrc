@@ -39,7 +39,9 @@ alias trem="transmission-remote" \
   g="git" \
   c="./configure" \
   ka="killall" \
-  z="zathura"
+  z="zathura" \
+  um="udiskie-mount" \
+  ud="udiskie-umount"
 
 # automatically raise to root
 alias p="doas pacman" \
