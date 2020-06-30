@@ -20,3 +20,5 @@ wtc	/var/lib/transmission/watch
 mus	$HOME/music
 dot	$HOME/src/dotfiles
 nmt	$XDG_CONFIG_HOME/neomutt
+dwm	$HOME/src/dwm
+dbl	$HOME/src/dwmblocks

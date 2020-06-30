@@ -56,9 +56,9 @@ macro c set browser "echo -n %u | xsel -ib" ; open-in-browser ; set browser "xdg
 
 # Use tiny tiny rss
 urls-source "ttrss"
-ttrss-url "https://rss.aftix.xyz"
-ttrss-login "aftix"
-ttrss-passwordeval "pass rss/aftix"
+ttrss-url ""
+ttrss-login ""
+ttrss-passwordeval ""
 ttrss-mode "multi"
 ttrss-flag-star "s"
 ttrss-flag-publish "p"
