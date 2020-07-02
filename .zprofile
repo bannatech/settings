@@ -8,6 +8,7 @@ export PATH="$PATH:$(du "$HOME/.local/bin/" | cut -f2 | paste -sd ':')"
 # Defaults
 export EDITOR="nvim"
 export VISUAL="nvim"
+export TERM="kitty"
 export TERMINAL="kitty"
 export BROWSER="firefox"
 export READER="zathura"
