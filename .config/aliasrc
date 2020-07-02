@@ -26,7 +26,10 @@ alias sysu="systemctl --user" \
   emdate="date -R" \
   xz="xz --threads=0" \
   ssh="ssh -o'VisualHostKey=yes'" \
-  ydl="youtube-dl --add-metadata -ic -o '%(title)s.%(ext)s'"
+  ydl="youtube-dl --add-metadata -ic -o '%(title)s.%(ext)s'" \
+  ls="ls --color=auto -F -H -h" \
+  ll="ls --color=auto -l -F -H -h" \
+  la="ls --color-auto -F -H -h -A"
 
 # Shortening names
 alias trem="transmission-remote" \

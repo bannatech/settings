@@ -1,22 +1,6 @@
 # locale
 export LC_ALL="en_US.UTF-8"
 
-# Editor
-export EDITOR='nvim'
-
-# neat aliases
-if [ $(uname) = "Linux" ]; then
-	alias ls="ls --color=auto -F -H -h"
-else
-	alias ls="ls -G"
-fi
-alias ll="ls -l -F -H -h"
-alias la="ls -A"
-alias emacs="emacs -nw"
-[ -f ~/.shrc ] && source ~/.shrc
-
-export TERMINAL="kitty"
-
 # completion
 zstyle ':completion:*' list-colors "${(@s.:.)LS_COLORS}"
 zstyle ':completion:*' menu select
