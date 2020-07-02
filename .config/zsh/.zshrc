@@ -1,3 +1,5 @@
+[ -f ~/.zprofile ] && source ~/.zprofile
+
 # locale
 export LC_ALL="en_US.UTF-8"
 
