@@ -29,7 +29,7 @@ alias sysu="systemctl --user" \
   ydl="youtube-dl --add-metadata -ic -o '%(title)s.%(ext)s'" \
   ls="ls --color=auto -F -H -h" \
   ll="ls --color=auto -l -F -H -h" \
-  la="ls --color-auto -F -H -h -A"
+  la="ls --color=auto -F -H -h -A"
 
 # Shortening names
 alias trem="transmission-remote" \
