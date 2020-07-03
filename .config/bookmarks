@@ -22,3 +22,6 @@ dot	$HOME/src/dotfiles
 nmt	$XDG_CONFIG_HOME/neomutt
 dwm	$HOME/src/dwm
 dbl	$HOME/src/dwmblocks
+loc	$HOME/.local
+shr	$HOME/.local/share
+bin	$HOME/.local/bin
