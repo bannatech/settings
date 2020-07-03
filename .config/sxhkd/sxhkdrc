@@ -8,6 +8,10 @@
 super + alt + Return
   kitty
 
+# Quit
+super + shift + q
+  $HOME/.local/bin/quit.sh
+
 # Emoji
 super + alt + shift + Return
   $HOME/.local/bin/dmenuunicode

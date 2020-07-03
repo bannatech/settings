@@ -148,17 +148,17 @@ Take a screenshot of the x session and put it in the clipboard.
 .IP "super + a ; shift + z"
 Take a screenshot of the x session and put it in a file.
 .IP "super + a ; ctrl + s"
-Take a screenshot of an area and put it in the clipboard, also uploading it to file.aftix.xyz with scp.
+Take a screenshot of an area and put it in the clipboard, also uploading it to file.aftix.xyz with curl.
 .IP "super + a ; ctrl + shift + s"
-Take a screenshot of an area and put it in a file, also uploading it to file.aftix.xyz with scp.
+Take a screenshot of an area and put it in a file, also uploading it to file.aftix.xyz with curl.
 .IP "super + a ; ctrl + f"
-Take a screenshot of the focused window and put it in the clipboard, also uploading it to file.aftix.xyz with scp.
+Take a screenshot of the focused window and put it in the clipboard, also uploading it to file.aftix.xyz with curl.
 .IP "super + a ; ctrl + shift + f"
-Take a screenshot of the focused window and put it in a file, also uploading it to file.aftix.xyz with scp.
+Take a screenshot of the focused window and put it in a file, also uploading it to file.aftix.xyz with curl.
 .IP "super + a ; ctrl + z"
-Take a screenshot of the x session and put it in the clipboard, also uploading it to file.aftix.xyz with scp.
+Take a screenshot of the x session and put it in the clipboard, also uploading it to file.aftix.xyz with curl.
 .IP "super + a ; ctrl + shift + z"
-Take a screenshot of the x session and put it in a file, also uploading it to file.aftix.xyz with scp.
+Take a screenshot of the x session and put it in a file, also uploading it to file.aftix.xyz with curl.
 .SH
 Screencasts
 .LP

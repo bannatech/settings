@@ -51,7 +51,12 @@ fi
 
 scrot "$name" $mode
 
-if [ "$remove" = "yes" ] ; then
+if [ "$3" = "copy" ]; then
+  url="$(curl --upload-file "$name" https://file.aftix.xyz)"
+  rofi -dmenu -p "URL: $url"
+  echo -n "$url" | xsel -ib
+  [ "$remove" = yes ] && rm "$name"
+elif [ "$remove" = "yes" ] ; then
   cat "$name" | xclip -selection clipboard -t image/png
   rm "$name"
 fi

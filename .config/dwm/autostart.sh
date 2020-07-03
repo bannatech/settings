@@ -7,6 +7,5 @@ xmodmap $XDG_CONFIG_HOME/.Xmodmap
 xset r rate 290 50
 dwmblocks &
 sxhkd -m 2 &
-ckb-next -b &
 udiskie &
 $HOME/.local/bin/readqueue.sh &
