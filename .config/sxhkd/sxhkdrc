@@ -113,6 +113,9 @@ super + w
 super + shift + w
   chromium
 
+super + {h, l}
+  xsetroot -name "fsignal:"{15,16}
+
 super + shift + l
   lbry
 
