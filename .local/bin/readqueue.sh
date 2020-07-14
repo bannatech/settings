@@ -2,10 +2,6 @@
 
 # Idea of script: sit suspended until SIGUSR1,
 # then read a file of urls and download them.
-# Note that my downloads is a tmpfs, but I assume
-# I'll want to keep these videos after reboot
-# (for example queueing up videos for a trip)
-# so they go in ~/video/downloads so my video folder doesn't get cluttered
 
 ionice -c 3 -p $$
 renice +12 -p $$
@@ -18,39 +14,26 @@ function queuedl () {
   [ -z "$2" ] && return 1
   [ "$#" -le 1 ] && return 1
   [ "$#" -ge 3 ] && return 1
-  echo "line $2"
-
-  pushd ~/Downloads >/dev/null 2>&1
 
   url="$(echo "$line" | cut -f1)"
   direc="$(echo "$line" | cut -f2)"
-  echo "url: $url"
-  echo "direc: $direc"
+
+  [ "$direc" = "." ] && direc="$HOME/Downloads"
+
+  pushd "$direc" >/dev/null 2>&1
 
   local title="$(youtube-dl $YDLOPT --get-title "$url" 2>/dev/null | sed -n 1p)"
   local id="$(youtube-dl $YDLOPT --get-id "$url" 2>/dev/null | sed -n 1p)"
-  notify-send "YDL Queue" "Downloading $url ($title) to ~/Downloads"
+  notify-send "YDL Queue" "Downloading $url ($title) to $direc"
 
   if youtube-dl $YDLOPT -o "${title}_$id.%(ext)s" "$url" 2>/dev/null ; then
     name="$(find . -name "${title}_$id.*" | sed -n 1p)"
     find . -name "${title}_$id.*"
     name="${name##*/}"
-    if [ "$direc" != "." ] ; then
-      echo "got here"
-      if ! mkdir -p "$direc" ; then
-        notify-send -u "YDL Queue" "Finished downloading ~/Downloads/$name, but unable to find directory $direc"
-      else
-        notify-send "YDL Queue" "Finished downloading ~/Downloads/$name, moving to $direc/$name"
-        mv "$HOME/Downloads/$name" "$direc/$name"
-        echo "$2" >> "$1"
-      fi
-    else
-      echo "not  there"
-      notify-send "YDL Queue" "Finished downloading ~/Downloads/$name"
-      echo "$2" >> "$1"
-    fi
+    notify-send "YDL Queue" "Finished downloading $direc/$name"
+    echo "$2" >> "$1"
   else
-    notify-send -u critical "YDL Queue" "Error downloading $2"
+    notify-send -u critical "YDL Queue" "Error downloading $title"
   fi
 
   popd >/dev/null 2>&1
