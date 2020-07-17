@@ -138,6 +138,13 @@ super + {comma, period}
 super + shift + {comma, period}
   xsetroot -name "fsignal:"{13,14}
 
+# Change nitter links
+super + n
+  $HOME/.local/bin/nitter.sh
+
+super + shift + n
+  $HOME/.local/bin/nitter.sh nitter
+
 # Toggle MPD playing
 super + t
   mpc toggle
