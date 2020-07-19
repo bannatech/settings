@@ -22,7 +22,7 @@ function queuedl () {
 
   pushd "$direc" >/dev/null 2>&1
 
-  local title="$(youtube-dl $YDLOPT --get-title "$url" 2>/dev/null | sed -n 1p)"
+  local title="$(youtube-dl $YDLOPT --get-title "$url" 2>/dev/null | sed -n 1p | sed 's@/@_@g')"
   local id="$(youtube-dl $YDLOPT --get-id "$url" 2>/dev/null | sed -n 1p)"
   notify-send "YDL Queue" "Downloading $url ($title) to $direc"
 
