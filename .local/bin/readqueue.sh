@@ -6,9 +6,10 @@
 ionice -c 3 -p $$
 renice +12 -p $$
 
-# bestvideo,bestaudio DL'd two files
 # User agent must be set to this for some description bug
-YDLOPT='-icq --user-agent "Mozilla/5.0 (compatible; Googlebot/2.1;+http://www.google.com/bot.html)" -f bestvideo[height<=1080]+bestaudio/best[height<=1080]/bestvideo+bestaudio/best'
+USERAGT="Mozilla/5.0 (compatible; Googlebot/2.1;+http://www.google.com/bot.html)"
+FORMAT="bestvideo[height<=1080]+bestaudio/best[height<=1080]/bestvideo+bestaudio/best"
+YDLOPT='-icq --add-metadata'
 
 # arguments are: done file, url
 function queuedl () {
@@ -23,14 +24,12 @@ function queuedl () {
 
   pushd "$direc" >/dev/null 2>&1
 
-  local title="$(youtube-dl $YDLOPT --get-title "$url" 2>/dev/null | sed -n 1p | sed 's@/@_@g')"
-  local id="$(youtube-dl $YDLOPT --get-id "$url" 2>/dev/null | sed -n 1p)"
+  local title="$(youtube-dl --get-title "$url" 2>/dev/null | sed -n 1p | sed 's@/@_@g')"
+  local id="$(youtube-dl --get-id "$url" 2>/dev/null | sed -n 1p)"
   notify-send "YDL Queue" "Downloading $url ($title) to $direc"
 
-  # Don't want to add metadata to the get calls
-  if youtube-dl $YDLOPT --add-metadata -o "${title}_$id.%(ext)s" "$url" 2>/dev/null ; then
+  if youtube-dl -f "$FORMAT" --user-agent "$USERAGT" $YDLOPT -o "${title}_$id.%(ext)s" "$url"  2>/dev/null ; then
     name="$(find . -name "${title}_$id.*" | sed -n 1p)"
-    find . -name "${title}_$id.*"
     name="${name##*/}"
     notify-send "YDL Queue" "Finished downloading $direc/$name"
     echo "$2" >> "$1"
