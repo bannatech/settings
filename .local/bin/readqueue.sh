@@ -7,7 +7,8 @@ ionice -c 3 -p $$
 renice +12 -p $$
 
 # bestvideo,bestaudio DL'd two files
-YDLOPT='-icq -f bestvideo[height<=1080]+bestaudio/best[height<=1080]/bestvideo+bestaudio/best'
+# User agent must be set to this for some description bug
+YDLOPT='-icq --user-agent "Mozilla/5.0 (compatible; Googlebot/2.1;+http://www.google.com/bot.html)" -f bestvideo[height<=1080]+bestaudio/best[height<=1080]/bestvideo+bestaudio/best'
 
 # arguments are: done file, url
 function queuedl () {
@@ -26,7 +27,8 @@ function queuedl () {
   local id="$(youtube-dl $YDLOPT --get-id "$url" 2>/dev/null | sed -n 1p)"
   notify-send "YDL Queue" "Downloading $url ($title) to $direc"
 
-  if youtube-dl $YDLOPT -o "${title}_$id.%(ext)s" "$url" 2>/dev/null ; then
+  # Don't want to add metadata to the get calls
+  if youtube-dl $YDLOPT --add-metadata -o "${title}_$id.%(ext)s" "$url" 2>/dev/null ; then
     name="$(find . -name "${title}_$id.*" | sed -n 1p)"
     find . -name "${title}_$id.*"
     name="${name##*/}"

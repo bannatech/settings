@@ -26,7 +26,7 @@ alias sysu="systemctl --user" \
   emdate="date -R" \
   xz="xz --threads=0" \
   ssh="ssh -o'VisualHostKey=yes'" \
-  ydl="youtube-dl --add-metadata -ic -o '%(title)s.%(ext)s'" \
+  ydl="youtube-dl -ic -o '%(title)s.%(ext)s' --add-metadata --user-agent 'Mozilla/5.0 (compatible; Googlebot/2.1;+http://www.google.com/bot.html/)'" \
   ls="ls --color=auto -F -H -h" \
   ll="ls --color=auto -l -F -H -h" \
   la="ls --color=auto -F -H -h -A"
@@ -65,3 +65,8 @@ alias gzip="pigz" \
 alias em='mutt' \
   abook='abook -C $XDG_CONFIG_HOME/abook/abookrc --datafile $XDG_DATA_HOME/abook/addressbook' \
   mbsync='mbsync -c $XDG_CONFIG_HOME/isync/mbsyncrc'
+
+# Some convience functions that are a bit more complex but not script worthy
+function vdesc() {
+  ffprobe -v quiet -print_format json -show_format "$1" | jq ".format.tags.DESCRIPTION" | xargs echo -e
+}
