@@ -9,7 +9,6 @@ renice +12 -p $$
 # User agent must be set to this for some description bug
 USERAGT="Mozilla/5.0 (compatible; Googlebot/2.1;+http://www.google.com/bot.html)"
 FORMAT="bestvideo[height<=1080]+bestaudio/best[height<=1080]/bestvideo+bestaudio/best"
-YDLOPT='-icq --add-metadata'
 
 # arguments are: done file, url
 function queuedl () {
@@ -28,7 +27,7 @@ function queuedl () {
   local id="$(youtube-dl --get-id "$url" 2>/dev/null | sed -n 1p)"
   notify-send "YDL Queue" "Downloading $url ($title) to $direc"
 
-  if youtube-dl -f "$FORMAT" --user-agent "$USERAGT" $YDLOPT -o "${title}_$id.%(ext)s" "$url"  2>/dev/null ; then
+  if youtube-dl -f "$FORMAT" --user-agent "$USERAGT" -icq -o "${title}_$id.%(ext)s" --add-metadata "$url"  2>/dev/null ; then
     name="$(find . -name "${title}_$id.*" | sed -n 1p)"
     name="${name##*/}"
     notify-send "YDL Queue" "Finished downloading $direc/$name"
