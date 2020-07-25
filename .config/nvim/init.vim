@@ -92,6 +92,7 @@ call minpac#add('honza/vim-snippets')
 call minpac#add('0mco/math-tex-snippets')
 call minpac#add('gillescastel/latex-snippets')
 call minpac#add('shougo/deoplete.nvim')
+call minpac#add('rust-lang/rust.vim')
 
 " Load the packages
 packloadall
