@@ -68,5 +68,5 @@ alias em='mutt' \
 
 # Some convience functions that are a bit more complex but not script worthy
 function vdesc() {
-  ffprobe -v quiet -print_format json -show_format "$1" | jq ".format.tags.DESCRIPTION" | xargs echo -e
+  ffprobe -v quiet -print_format json -show_format "$1" | jq ".format.tags.DESCRIPTION" | sed 's/\\n/\n/g'
 }
