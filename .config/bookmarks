@@ -25,3 +25,5 @@ dbl	$HOME/src/dwmblocks
 loc	$HOME/.local
 shr	$HOME/.local/share
 bin	$HOME/.local/bin
+pdd	$HOME/podcast/download
+pp	$HOME/podcast
