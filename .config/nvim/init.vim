@@ -1,3 +1,4 @@
+let g:tex_flavor='latex'
 set number relativenumber " Relative Line Numbers
 set hidden "Let vim act like every other editor
 " To expand the number of binds nvim can do
@@ -97,7 +98,6 @@ call minpac#add('rust-lang/rust.vim')
 " Load the packages
 packloadall
 
-set omnifunc=ale#completion#omnifunc
 let g:deoplete#enable_at_startup = 1
 set completeopt=longest,menuone,preview
 
@@ -265,16 +265,15 @@ au BufWinEnter,BufEnter,BufNewFile,BufRead *.md setlocal spell
 au BufWinEnter,BufEnter,BufNewFile,BufRead *.tex setlocal spell
 
 " UltiSnips
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-j>"
-let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+let g:UltiSnipsExpandTrigger='<tab>'
+let g:UltiSnipsJumpForwardTrigger='<c-j>'
+let g:UltiSnipsJumpBackwardTrigger='<c-k>'
 let g:UltiSnipsSnippetDirectories=['UltiSnips', 'customsnips']
 
-let g:tex_flavor="latex"
-let g:vimtex_view_method="zathura"
+let g:vimtex_view_method='zathura'
 let g:vimtex_quickfix_mode=0
 set conceallevel=1
-let g:tex_conceal="abdmg"
+let g:tex_conceal='abdmg'
 
 set spelllang=en_us
 " automatically choose first spelling correction
