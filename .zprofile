@@ -3,13 +3,13 @@
 # ZSH profile
 
 # Add ~/.local/bin to path
-export PATH="$PATH:$(du "$HOME/.local/bin/" | cut -f2 | paste -sd ':')"
+export PATH="$PATH:$(du "$HOME/.local/bin/" | cut -f2 | paste -sd ':'):$HOME/.cargo/bin"
 
 # Defaults
 export EDITOR="nvim"
 export VISUAL="nvim"
-export TERM="kitty"
-export TERMINAL="kitty"
+export TERM="xterm"
+export TERMINAL="xterm"
 export BROWSER="firefox"
 export READER="zathura"
 export PAGER="less"

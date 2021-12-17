@@ -33,8 +33,8 @@ noremap <C-l> <C-w>l
 
 " Use 2 spaces for indentation
 set autoindent
-set tabstop=2
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
 set expandtab
 
 " Automerge .Xresources
@@ -94,9 +94,13 @@ call minpac#add('0mco/math-tex-snippets')
 call minpac#add('gillescastel/latex-snippets')
 call minpac#add('shougo/deoplete.nvim')
 call minpac#add('rust-lang/rust.vim')
+call minpac#add('rhysd/vim-clang-format')
 
 " Load the packages
 packloadall
+
+au FileType c,cpp,objc nnoremap <buffer><Leader>cf :<C-u>ClangFormat<CR>
+au FileType c,cpp,objc vnoremap <buffer><Leader>cf :<C-u>ClangFormat<CR>
 
 let g:deoplete#enable_at_startup = 1
 set completeopt=longest,menuone,preview
@@ -255,7 +259,7 @@ let c_no_curly_error=1
 let g:omni_sql_no_default_maps = 1
 let g:rust_recommended_style = 0
 let g:Tex_DefaultTargetFormat = 'pdf'
-let g:ale_linters = { 'c': ['ccls']}
+let g:ale_linters = { 'c': ['cpplint'], 'c++': ['cpplint']}
 
 " Spelling
 set dictionary=en_us
@@ -318,4 +322,9 @@ augroup END
 augroup Mail
   autocmd!
   au BufRead,BufNewFile /tmp/mutt-* set tw=72
+augroup END
+
+augroup Format
+    autocmd!
+    au BufWritePre *.c,*.cpp,*.cxx,*.h,*.hpp,*.C :ClangFormat
 augroup END
