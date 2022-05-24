@@ -227,6 +227,7 @@ input * {
     xkb_variant "dvorak"
     xkb_numlock "enable"
     xkb_options "compose:prsc"
+    xkb_options "caps:escape"
 }
 
 input * repeat_delay 300
@@ -261,17 +262,18 @@ bindsym XF86AudioRaiseVolume $HOME/.local/bin/volume.sh +1
 
 bindsym XF86AudioMute $HOME/.local/bin/volume.sh t
 
-bindsym $mod+z $HOME/.local/bin/play.sh
-bindsym $mod+equal $HOME/.local/bin/calculator.sh
-bindsym $mod+shift+z $HOME/.local/bin/open.sh
-bindsym $mod+shift+s $HOME/.local/bin/screenshot.sh
-bindsym $mod+ctrl+s $HOME/.local/bin/screenshot.sh default copy
+bindsym $mod+z exec $HOME/.local/bin/play.sh
+bindsym $mod+equal exec $HOME/.local/bin/calculator.sh
+bindsym $mod+shift+z exec $HOME/.local/bin/open.sh
+bindsym $mod+shift+s exec $HOME/.local/bin/screenshot.sh
+bindsym $mod+ctrl+s exec $HOME/.local/bin/screenshot.sh default copy
+bindsym $mod+tab workspace back_and_forth
 
 mode "programs" {
-    bindsym w firefox
-    bindsym shift+w chromium
-    bindsym d discord
-    bindsym shift+d element-desktop
+    bindsym w exec firefox
+    bindsym shift+w exec chromium
+    bindsym d exec discord
+    bindsym shift+d exec element-desktop
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
