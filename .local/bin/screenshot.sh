@@ -15,43 +15,9 @@ if ! printf "%s" "$name" | grep "\.png" >/dev/null ; then
     name="$name.png"
 fi
 
-mode="$2"
-case "$mode" in
-    "")
-	mode="-s"
-	;;
-    "none")
-	mode=""
-	;;
-    "full")
-	mode=""
-	;;
-    "select")
-	mode="-s"
-	;;
-    "focused")
-	mode="-u"
-	;;
-    "u")
-	mode="-u"
-	;;
-    *)
-	exit 1
-	;;
-esac
+grim -g "$(slurp)" "$name"
 
-
-if [ "$mode" = "-s" ] ; then
-  printf "" | rofi -dmenu -p "Select an area" >/dev/null
-elif [ "$mode" = "-u" ] ; then
-  sleep 1
-else
-  sleep 1
-fi
-
-scrot "$name" $mode
-
-if [ "$3" = "copy" ]; then
+if [ "$2" = "copy" ]; then
   url="$(curl --upload-file "$name" https://file.aftix.xyz)"
   rofi -dmenu -p "URL: $url"
   echo -n "$url" | xsel -ib
