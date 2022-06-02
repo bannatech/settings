@@ -145,3 +145,6 @@ kitty + complete setup zsh | source /dev/stdin
 # Kitty aliases
 alias icat="kitty +kitten icat"
 alias kdiff="kitty +kitten diff"
+
+export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/docker.sock
+export RUSTC_WRAPPER=sccache
