@@ -26,7 +26,7 @@ set $HOME /home/aftix
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+output * bg $(find $HOME/.local/share/wallpaper | shuf -n 1) fill
 #
 # Example configuration:
 #
@@ -218,6 +218,7 @@ bar {
         background #323232
         inactive_workspace #32323200 #32323200 #5c5c5c
     }
+    tray_output HDMI-A-1
 }
 
 include /etc/sway/config.d/*
@@ -268,6 +269,7 @@ bindsym $mod+shift+z exec $HOME/.local/bin/open.sh
 bindsym $mod+shift+s exec $HOME/.local/bin/screenshot.sh
 bindsym $mod+ctrl+s exec $HOME/.local/bin/screenshot.sh default copy
 bindsym $mod+tab workspace back_and_forth
+bindsym $mod+p exec passmenu
 
 mode "programs" {
     bindsym w exec firefox
