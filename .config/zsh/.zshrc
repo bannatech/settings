@@ -35,58 +35,6 @@ esac
 
 # prompt
 autoload -U colors && colors
-setopt PROMPT_SUBST
-
-if [ "$USER" = root ]; then
-	PROMPT_USER="%{$reset_color%}%{${fg[red]}%}$USER%{$reset_color%}@"
-else
-	PROMPT_USER=""
-fi
-
-prompt_git() {
-	if prompt_current_branch="$(git rev-parse --abbrev-ref HEAD 2>/dev/null)"; then
-		local space=0
-		if [ "$prompt_current_branch" != master ]; then
-			printf "%s" "%{${fg_bold[red]}%}$prompt_current_branch"
-			space=1
-		fi
-		if ! [ -z "$(git status --porcelain)" ]; then
-			printf "%s" "%{${fg_bold[yellow]}%}*"
-			space=1
-		fi
-		if [ $space = 1 ]; then
-			printf " "
-		fi
-	fi
-}
-
-PROMPT_GIT='$(prompt_git)'
-
-if [ -z "$SSH_CLIENT" ]; then
-	PROMPT_HOST="$PROMPT_USER%{${fg_bold[cyan]}%}%m "
-else
-	PROMPT_HOST="%{${fg_bold[green]}%}∞ $PROMPT_USER%{${fg_bold[red]}%}%m "
-fi
-PROMPT_CWD="%{${fg_bold[yellow]}%}%~ "
-PROMPT_ARROW="%(?:%{$fg_bold[green]%}$ :%{$fg_bold[red]%}$ %s)"
-PS1="$PROMPT_HOST$PROMPT_CWD$PROMPT_GIT$PROMPT_ARROW%{$reset_color%}"
-PS2="%{${fg_bold[green]}%}>%{$reset_color%}"
-BASEPS1=$PS1
-BASEPS2=$PS2
-
-# print out normal mode thing
-function zle-line-init zle-keymap-select {
-  VIM_PROMPT="%{$fg_bold[yellow]%} [% N]% %{$reset_color%}"
-  if [[ "$KEYMAP" == "vicmd" ]] ; then
-    PS1="$VIM_PROMPT $BASEPS1"
-  else
-    PS1="$BASEPS1"
-  fi
-  zle reset-prompt
-}
-
-zle -N zle-line-init
-zle -N zle-keymap-select
 
 # Useful bash keys in vimode
 bindkey '^P' up-history
@@ -148,3 +96,5 @@ alias kdiff="kitty +kitten diff"
 
 export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/docker.sock
 export RUSTC_WRAPPER=sccache
+
+eval "$(starship init zsh)"
