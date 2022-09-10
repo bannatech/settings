@@ -1,0 +1,34 @@
+# This is an example PKGBUILD file. Use this as a start to creating your own,
+# and remove these comments. For more information, see 'man PKGBUILD'.
+# NOTE: Please fill out the license field for your package! If it is unknown,
+# then please put 'unknown'.
+
+# Maintainer: aftix@aftix.xyz
+pkgname=my_dwm
+pkgver=6.2
+pkgrel=2
+pkgdesc="Dynamic Window Manager"
+arch=('x86_64' 'i386')
+url="git://git.aftix.xyz/dwm.git"
+license=('MIT')
+depends=('libx11')
+provides=('dwm')
+makedepends=('git')
+source=()
+sha256sums=()
+
+prepare() {
+  git clone "$url"
+  mv "dwm" "$pkgname-$pkgver"
+	cd "$pkgname-$pkgver"
+}
+
+build() {
+	cd "$pkgname-$pkgver"
+	make
+}
+
+package() {
+	cd "$pkgname-$pkgver"
+	make PREFIX=/usr MANPREFIX=/usr/share/man DESTDIR="$pkgdir/" install
+}

@@ -1,0 +1,162 @@
+# Dvorak Layout
+
+#
+# wm independent hotkeys
+#
+
+# terminal emulator
+super + alt + Return
+  kitty
+
+# Quit
+super + shift + q
+  $HOME/.local/bin/quit.sh
+
+# Emoji
+super + alt + shift + Return
+  $HOME/.local/bin/dmenuunicode
+
+# program launcher
+super + space
+  rofi -show run
+
+# Conky
+super + F2
+  conky
+
+# make sxhkd reload its configuration files:
+super + Escape
+  pkill -USR1 -x sxhkd
+
+# Randomize wallpaper
+super + shift + b
+  feh --randomize --bg-scale $HOME/.local/share/wallpaper/*
+
+# Help
+super + F1
+  groff -mms -Tpdf $HOME/.config/sxhkd/help.ms | zathura -
+
+# Pulseaudio volume controls
+super + v ; {u, d}
+  $HOME/.local/bin/volume.sh {+,-}3
+
+super + v ; shift + {u, d}
+  $HOME/.local/bin/volume.sh {+,-}10
+
+super + v ; {e, t, m}
+  $HOME/.local/bin/volume.sh {a, t, m}
+
+super + v ; shift + m
+  $HOME/.local/bin/volume.sh u
+
+XF86AudioLowerVolume
+  $HOME/.local/bin/volume.sh -1
+
+XF86AudioRaiseVolume
+  $HOME/.local/bin/volume.sh +1
+
+XF86AudioMute
+  $HOME/.local/bin/volume.sh t
+
+# Swap clipboard buffers
+super + x
+  xsel -o -p | xsel -i -s ; xsel -o -b | xsel -i -p ; xsel -o -s | xsel -i -b
+
+# Screenshot hotkeys
+super + a ; {_, shift +} s
+  $HOME/.local/bin/screenshot.sh {default, ask} select
+
+super + a ; {f, z}
+  $HOME/.local/bin/screenshot.sh default {focused, full}
+
+super + a ; shift + {f, z}
+  $HOME/.local/bin/screenshot.sh ask {focused, full}
+
+super + a ; ctrl + {_, shift +} s
+  $HOME/.local/bin/screenshot.sh {default, ask} select copy
+
+super + a ; ctrl + {f, z}
+  $HOME/.local/bin/screenshot.sh default {focused, full} copy
+
+super + a ; ctrl + shift + {f, z}
+  $HOME/.local/bin/screenshot.sh ask {focused, full} copy
+
+# Screencast hotkeys
+super + r ; {_, shift +} r
+  $HOME/.local/bin/screencast.sh {ask, }
+
+super + r ; {_, shift +, alt + } w
+  $HOME/.local/bin/screencast.sh {ask, default} w
+
+super + r ; k
+  $HOME/.local/bin/screencast.sh __kill
+
+super + r ; alt + r
+  $HOME/.local/bin/screencast.sh ask s default ask
+
+super + r ; alt + w
+  $HOME/.local/bin/screencast.sh ask w default ask
+
+# Convience scripts
+super + z
+  $HOME/.local/bin/play.sh
+
+super + minus
+  $HOME/.local/bin/calculator.sh
+
+super + shift + z
+  $HOME/.local/bin/open.sh
+
+super + w
+  firefox
+
+super + shift + w
+  chromium
+
+super + {h, l}
+  xsetroot -name "fsignal:"{15,16}
+
+super + shift + l
+  lbry
+
+super + p
+  passmenu
+
+super + shift + v
+  $HOME/.local/bin/termrun.sh
+
+super + alt + shift + v
+  $HOME/.local/bin/termrun.sh nnn
+
+# DWM Layouts (here for sequencing)
+super + e ; {t, n, m, b, h, s, d, e, f, c}
+  xsetroot -name "fsignal:"{1,2,3,4,5,6,7,8,9,10}
+
+super + {comma, period}
+  xsetroot -name "fsignal:"{11,12}
+
+super + shift + {comma, period}
+  xsetroot -name "fsignal:"{13,14}
+
+# Change nitter links
+super + n
+  $HOME/.local/bin/nitter.sh
+
+super + shift + n
+  $HOME/.local/bin/nitter.sh nitter
+
+# Toggle MPD playing
+super + t
+  mpc toggle
+
+XF86AudioPlay
+  mpc toggle
+
+XF86AudioStop
+  mpc stop
+
+XF86AudioPrev
+  mpc prev
+
+XF86AudioNext
+  mpc next

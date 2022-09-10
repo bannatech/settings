@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=transmission-remote
+Comment=A lightweight torrent client
+GenericName=bittorrent application
+Exec=transmission-remote -a %u
+TryExec=transmission-remote
+Icon=none
+Terminal=true
+MimeType=application/x-bitorrent;x-scheme-handler/magnent

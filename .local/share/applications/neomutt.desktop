@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=neomutt
+Comment=A terminal email client
+GenericName=email client
+Exec=neomutt %u
+TryExec=neomutt
+Icon=none
+Terminal=true
+MimeType=x-scheme-handler/mailto
