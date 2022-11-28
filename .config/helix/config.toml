@@ -1,0 +1,27 @@
+theme = "ayu_dark"
+
+[editor]
+line-number = "relative"
+auto-completion = true
+auto-info = true
+completion-trigger-len = 2
+true-color = true
+shell = ["zsh", "-cl"]
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = true
+git-global = true
+git-ignore = true
+parents = true
+
+[editor.lsp]
+display-messages = true
+
+[editor.search]
+smart-case = true
+wrap-around = false
