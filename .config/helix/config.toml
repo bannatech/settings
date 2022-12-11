@@ -8,6 +8,16 @@ completion-trigger-len = 2
 true-color = true
 shell = ["zsh", "-cl"]
 
+[editor.whitespace]
+render = "all"
+
+[editor.whitespace.characters]
+space = " "
+nbsp = "⍽"
+tab = "→"
+newline = "¬"
+tabpad = "."
+
 [editor.cursor-shape]
 insert = "bar"
 normal = "block"
