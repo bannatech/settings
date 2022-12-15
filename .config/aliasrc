@@ -26,7 +26,7 @@ alias sysu="systemctl --user" \
   emdate="date -R" \
   xz="xz --threads=0" \
   ssh="ssh -o'VisualHostKey=yes'" \
-  ydl="youtube-dl -ic -o '%(title)s.%(ext)s' --add-metadata --user-agent 'Mozilla/5.0 (compatible; Googlebot/2.1;+http://www.google.com/bot.html/)'" \
+  ydl="yt-dlp -ic -o '%(title)s.%(ext)s' --add-metadata --user-agent 'Mozilla/5.0 (compatible; Googlebot/2.1;+http://www.google.com/bot.html/)'" \
   ls="ls --color=auto -F -H -h" \
   ll="ls --color=auto -l -F -H -h" \
   la="ls --color=auto -F -H -h -A"
@@ -44,7 +44,8 @@ alias trem="transmission-remote" \
   ka="killall" \
   z="zathura" \
   um="udiskie-mount" \
-  ud="udiskie-umount"
+  ud="udiskie-umount" \
+  hx="helix"
 
 # automatically raise to root
 alias p="doas pacman" \
