@@ -81,14 +81,9 @@ stty -ixon
 
 # NNN
 export NNN_FIFO=$XDG_RUNTIME_DIR/nnn.fifo
-export NNN_PLUG='a:-_anipv $nnn*'
-
 
 # Fix gpg entry
 export GPG_TTY=$(tty)
-
-# Kitty auto complete
-kitty + complete setup zsh | source /dev/stdin
 
 # Kitty aliases
 alias icat="kitty +kitten icat"
@@ -97,7 +92,8 @@ alias kdiff="kitty +kitten diff"
 export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/docker.sock
 export RUSTC_WRAPPER=sccache
 
-export VAULT_URL="https://vault-public-vault-fb2b1f33.91dcc66b.z1.hashicorp.cloud:8200"
+export VAULT_ADDR="https://vault-public-vault-fb2b1f33.91dcc66b.z1.hashicorp.cloud:8200"
 export VAULT_NAMESPACE="admin"
 
 eval "$(starship init zsh)"
+[ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh
