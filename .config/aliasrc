@@ -29,7 +29,10 @@ alias sysu="systemctl --user" \
   ydl="yt-dlp -ic -o '%(title)s.%(ext)s' --add-metadata --user-agent 'Mozilla/5.0 (compatible; Googlebot/2.1;+http://www.google.com/bot.html/)'" \
   ls="ls --color=auto -F -H -h" \
   ll="ls --color=auto -l -F -H -h" \
-  la="ls --color=auto -F -H -h -A"
+  la="ls --color=auto -F -H -h -A" \
+  exal="exa -lhb" \
+  exa="exa --icons" \
+  exat="exa --tree -lbh"
 
 # Shortening names
 alias trem="transmission-remote" \
