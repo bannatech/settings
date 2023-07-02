@@ -257,13 +257,16 @@ mode "volume" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
+
 bindsym $mod+shift+v mode "volume"
+bindsym XF86AudioLowerVolume exec $HOME/.local/bin/volume.sh -1
+bindsym XF86AudioRaiseVolume exec $HOME/.local/bin/volume.sh +1
+bindsym XF86AudioMute exec $HOME/.local/bin/volume.sh t
 
-bindsym XF86AudioLowerVolume $HOME/.local/bin/volume.sh -1
-
-bindsym XF86AudioRaiseVolume $HOME/.local/bin/volume.sh +1
-
-bindsym XF86AudioMute $HOME/.local/bin/volume.sh t
+bindsym XF86AudioPlay exec mpc toggle
+bindsym XF86AudioPause exec mpc pause
+bindsym XF86AudioNext exec mpc next
+bindsym XF86AudioPrev exec mpc prev
 
 bindsym $mod+z exec $HOME/.local/bin/play.sh
 bindsym $mod+equal exec $HOME/.local/bin/calculator.sh
