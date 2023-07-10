@@ -11,6 +11,7 @@ general {
         interval = 5
 }
 
+order += "path_exists VPN"
 order += "volume master"
 order += "disk /"
 order += "load"
@@ -18,11 +19,9 @@ order += "memory"
 order += "tztime local"
 
 volume master {
-    format = " %volume "
-    format_muted = " M "
+    format = "(default) ♪: %volume "
+    format_muted = "(default) ♪: M (%volume)"
     device = "default"
-    mixer = "Master"
-    mixer_idx = "0"
 }
 
 wireless _first_ {
@@ -40,17 +39,29 @@ battery all {
 }
 
 disk "/" {
-        format = "%avail"
+        format = "/: %used / %total (%percentage_used)"
 }
 
 load {
-        format = "%1min"
+        format = "load: %1min %5min %15min"
 }
 
 memory {
-        format = "%used"
+        format = "RAM: %used / %total (%percentage_used)"
         threshold_degraded = "1G"
         format_degraded = "MEMORY < %available"
+}
+
+path_exists VPN {
+        path = "/proc/sys/net/ipv4/conf/nordlynx"
+        format = "VPN Connected"
+        format_down = "VPN Disconnected"
+}
+
+read_file UPTIME {
+        format = "Uptime: %content"
+        format_bad = "Uptime: %error (%errno)"
+        path = "/proc/uptime"
 }
 
 tztime local {

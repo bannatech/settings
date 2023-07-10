@@ -210,17 +210,17 @@ bindsym $mod+r mode "resize"
 # Read `man 5 sway-bar` for more information about this section.
 bar {
     position bottom
+    mode hide
 
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
-    status_command i3status
+    status_command $HOME/.local/bin/status.sh
 
     colors {
         statusline #ffffff
         background #323232
         inactive_workspace #32323200 #32323200 #5c5c5c
     }
-    tray_output HDMI-A-1
 }
 
 include /etc/sway/config.d/*
@@ -286,7 +286,6 @@ mode "programs" {
 }
 bindsym $mod+shift+p mode "programs"
 
-exec --no-startup-id fcitx5 -d
 exec dunst
 exec udiskie
 exec $HOME/.local/bin/readqueue.sh
