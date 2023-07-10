@@ -6,7 +6,7 @@ mpdcmd() {
 }
 
 backupactive() {
-  [ -f "/var/run/backupdisk.sh" ] && echo "Backup running | "
+  [ -f "/var/run/backupdisk.pid" ] && echo "Backup running | "
 }
 
 i3status | while :
