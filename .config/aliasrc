@@ -32,7 +32,8 @@ alias sysu="systemctl --user" \
   la="ls --color=auto -F -H -h -A" \
   exal="exa -lhb" \
   exa="exa --icons" \
-  exat="exa --tree -lbh"
+  exat="exa --tree -lbh" \
+  tract="transmission-remote -F '~l:done'"
 
 # Shortening names
 alias trem="transmission-remote" \
