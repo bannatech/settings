@@ -25,6 +25,12 @@ setopt inc_append_history
 
 # VI mode
 bindkey -v
+bindkey "^[[H" beginning-of-line
+bindkey "^[[F" end-of-line
+bindkey "^[[3~" delete-char
+autoload edit-command-line
+zle -N edit-command-line
+bindkey -v "^X^E" edit-command-line
 export KEYTIMEOUT=1
 
 # I don't want to have to import weird terminfos to all systems I SSH into
