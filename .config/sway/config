@@ -288,7 +288,6 @@ bindsym $mod+shift+p mode "programs"
 
 exec dunst
 exec udiskie
-exec $HOME/.local/bin/readqueue.sh
 
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP

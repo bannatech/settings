@@ -25,7 +25,7 @@ alias sysu="systemctl --user" \
   rfcdate="date --iso-8601=\"seconds\"" \
   emdate="date -R" \
   xz="xz --threads=0" \
-  ssh="ssh -o'VisualHostKey=yes'" \
+  ssh="kitty +kitten ssh -o'VisualHostKey=yes'" \
   ydl="yt-dlp -ic -o '%(title)s.%(ext)s' --add-metadata --user-agent 'Mozilla/5.0 (compatible; Googlebot/2.1;+http://www.google.com/bot.html/)'" \
   ls="ls --color=auto -F -H -h" \
   ll="ls --color=auto -l -F -H -h" \
