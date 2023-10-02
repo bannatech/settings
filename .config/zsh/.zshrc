@@ -98,7 +98,7 @@ alias kdiff="kitty +kitten diff"
 export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/docker.sock
 export RUSTC_WRAPPER=sccache
 
-export VAULT_ADDR="https://vault-public-vault-fb2b1f33.91dcc66b.z1.hashicorp.cloud:8200"
+export VAULT_ADDR="https://vault.aftix.xyz"
 export VAULT_NAMESPACE="admin"
 
 eval "$(starship init zsh)"
