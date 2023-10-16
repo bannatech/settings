@@ -2,16 +2,12 @@
 
 export VAULT_NAMESPACE="admin"
 
-tmp="$(mktemp /tmp/XXXXX)"
+cd "$HOME" || exit
+shopt -s globstar
 
-cd "$HOME"
-find ".local/share/password-store" -type f | grep -v ".git" > "$tmp"
-
-while read line; do
-    password="$(gpg --decript $line 2>/dev/null)"
+for line in .local/share/password-store/**/*; do
+    grep -q ".git" <<< "$line" && continue
     name="$(echo "$line" | sed 's_.local/share/password-store/__' | sed 's/\.gpg$//')"
-    data="$(gpg --decrypt $line 2>/dev/null)"
+    data="$(gpg --decrypt "$line" 2>/dev/null)"
     vault kv put "secret/password-store/$name" "data=$data"
-done < $tmp
-
-rm $tmp
+done
