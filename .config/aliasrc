@@ -27,6 +27,7 @@ alias sysu="systemctl --user" \
   xz="xz --threads=0" \
   ssh="kitty +kitten ssh -o'VisualHostKey=yes'" \
   ydl="yt-dlp -ic -o '%(title)s.%(ext)s' --add-metadata --user-agent 'Mozilla/5.0 (compatible; Googlebot/2.1;+http://www.google.com/bot.html/)'" \
+  ydln="yt-dlp -ic -o '%(title)s.%(ext)s' --add-metadata -u 'aftix@aftix.xyz' -p \"\$(pass nebula)\" " \
   ls="ls --color=auto -F -H -h" \
   ll="ls --color=auto -l -F -H -h" \
   la="ls --color=auto -F -H -h -A" \
