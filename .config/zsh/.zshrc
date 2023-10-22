@@ -1,5 +1,16 @@
 [ -f ~/.zprofile ] && source ~/.zprofile
 
+# Upgrade function
+upgrade() {
+	trizen -Syu
+	rustup update
+	cargo install-update --all
+	cpan -u
+	doas cpan -u
+	pipx upgrade-all
+	doas pipx upgrade-all
+}
+
 # locale
 export LC_ALL="en_US.UTF-8"
 
@@ -79,17 +90,17 @@ stty -ixon
 
 # Get bookmarks
 [ -f "$XDG_CONFIG_HOME/bookmarks" ] && \
-  source <(grep -ve "^$" -e "^#" $XDG_CONFIG_HOME/bookmarks \
+  source <(grep -ve "^$" -e "^#" "$XDG_CONFIG_HOME/bookmarks" \
   | cut -f1,2 | sed 's/^/alias b/ ; s/\t/="cd / ; s/$/"/')
 [ -f "$XDG_CONFIG_HOME/bookmarks" ] && \
-  source <(grep -ve "^$" -e "^#" $XDG_CONFIG_HOME/bookmarks \
+  source <(grep -ve "^$" -e "^#" "$XDG_CONFIG_HOME/bookmarks" \
   | cut -f1,2 | sed 's/^/alias e/ ; s/\t/="echo / ; s/$/"/')
 
 # NNN
 export NNN_FIFO=$XDG_RUNTIME_DIR/nnn.fifo
 
 # Fix gpg entry
-export GPG_TTY=$(tty)
+export GPG_TTY="$(tty)"
 
 # Kitty aliases
 alias icat="kitty +kitten icat"
