@@ -1,0 +1,52 @@
+#compdef _molecule_completion molecule
+
+_molecule_completion() {
+  local line state
+
+  _arguments -C \
+    "(--version --help --debug --no-debug -v --verbose 1)--version[Show version and exit]" \
+    "(--version --help --debug --no-debug -v --verbose 1)--help[Show help and exit]" \
+    "(--debug --no-debug)--debug[Enable debug mode]" \
+    "(--debug --no-dubg)--no-debug[Disable debug mode (default)]" \
+    "-"{"v","-verbose"}"[Increase Ansible verbosity level. Default is 0]" \
+    "1: :->cmds" "*::arg:->args"
+
+  case "$state" in
+    cmds)
+      _values "molecule command" \
+        "check[Use the provisioner to perform a Dry-Run]" \
+        "cleanup[Use the provisioner to cleanup any changes made to external systems]" \
+        "converge[Use the provisioner to configure instances]" \
+        "create[Use the provisioner to start the instances]" \
+        "dependency[Manage the role's dependencies]" \
+        "destroy[Use the provisioner to destroy the instances]" \
+        "drivers[List drivers]" \
+        "idempotence[Use the provisioner to configure the instances and parse the output]" \
+        "init[Initialize a new role or scenario]" \
+        "lint[Lint the role (dependency, lint)]" \
+        "list[List status of instances]" \
+        "login[Log in to one instance]" \
+        "matrix[List matrix of steps used to test instances]" \
+        "prepare[Use the provisioner to prepare the instances into a particular]" \
+        "reset[Reset molecule temporary folders]" \
+        "side-effect[Use the provisioner to perform side-effects to the instances]" \
+        "syntax[Use the provisioner to syntax check the role]" \
+        "test[Test (dependency, lint, cleanup, destroy, syntax, create, prepare)]" \
+        "verify[Run automated tests against instances]" \
+      ;;
+    args)
+      if [[ -d "molecule" ]]; then
+        SCENARIOS="($(find molecule -type d -mindepth 1 -maxdepth 1 | cut -d'/' -f2 | paste -sd' ' -))"
+      else
+        SCENARIOS=" "
+      fi
+
+      _arguments -C \
+        "(--no-parallel)--parallel[Enable parallel mode]" \
+        "(--parallel)--no-parallel[Dasble parallel mode (Default)]" \
+        "(-s --scenario-name --parallel --no-parallel)--help[Show help and exit]" \
+        "-"{"s","-scenario-name"}"=[Specify scenario to use]:TEXT:$SCENARIOS"
+      ;;
+  esac
+}
+
