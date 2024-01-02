@@ -17,6 +17,35 @@ set paths = [$@paths (path:join $E:HOME .local bin)]
 # Locale
 set-env LC_ALL "en_US.UTF-8"
 
+fn upgrade {
+  var su = (external sudo)
+  if (has-external doas) {
+    set su = (external doas)
+  }
+
+  if (has-external trizen) {
+    trizen -Syu
+  } elif (has-external pacman)  {
+    $su pacman -Syu
+  }
+  
+  if (has-external rustup) {
+    rustup update
+  }
+
+  if (has-external cargo-install-update) {
+    cargo install-update --all
+  }
+
+  cpan -u
+  $su cpan -u
+
+  if (has-external pipx) {
+    pipx upgrade-all
+    $su pipx upgrade-all
+  }
+}
+
 # ALIASES
 
 fn icat {|@rest| e:kitty +kitten icat $@rest}
@@ -29,6 +58,9 @@ if (has-external nvim) {
 
 if (has-external neomutt) {
   fn mutt {|@a| e:neomutt $@a}
+  fn em {|@a| e:neomutt $@a}
+} else {
+  fn em {|@a| e:mutt $@a}
 }
 
 # Standard utils with better options
@@ -118,9 +150,10 @@ if (has-external pbzip2) {
 }
 
 # Email
-fn em { mutt}
 fn abook { abook -C (path:join $E:XDG_CONFIG_HOME abook abookrc) --datafile (path:join $E:XDG_DATA_HOME abook addressbook) }
 fn mbsync { mbsync -c (path:join $E:XDG_CONFIG_HOME isync mbsyncrc) }
+
+# TODO bookmarks
 
 # Some convience functions that are a bit more complex but not script worthy
 if (and (has-external ffprobe) (has-external jq)) {
@@ -141,13 +174,33 @@ if (re:match '^xterm-' $E:TERM) {
   set-env TERM "xterm"
 } elif (not (has-env TERM)) {
   set-env TERM "xterm"
-}
+} 
+
+set-env TERMINAL $E:TERM
 
 set-env RUSTC_WRAPPER sccache
-set-env VAULT_ADDR "https://vault.sw.cirrus.com:8200"
-set-env EDITOR "hx"
-set-env VISUAL "hx"
-set-env PAGER "bat"
+set-env VAULT_ADDR "https://vault.aftix.xyz"
+set-env DOCKER_HOST "unix://"(path:join $E:XDG_RUNTIME_DIR docker.sock)
+
+if (has-external helix) {
+  set-env EDITOR "helix"
+  set-env VISUAL "helix"
+} elif (has-external hx) {
+  set-env EDITOR "hx"
+  set-env VISUAL "hx"
+} elif (has-external nvim) {
+  set-env EDITOR "nvim"
+  set-env VISUAL "nvim"
+} else {
+  set-env EDITOR "vim"
+  set-env VISUAL "vim"
+}
+
+if (has-external bat) {
+  set-env PAGER "bat"
+} else {
+  set-env PAGER "less"
+}
 
 if (not (has-env XDG_CONFIG_HOME)) {
   set-env XDG_CONFIG_HOME (path:join $E:HOME .config)
@@ -159,6 +212,10 @@ if (not (has-env XDG_DATA_HOME)) {
 
 if (not (has-env XDG_CACHE_HOME)) {
   set-env XDG_CACHE_HOME (path:join $E:HOME .cache)
+}
+
+if (not (has-env XDG_RUNTIME_DIR)) {
+  set-env XDG_RUNTIME_DIR (path:join $path:separator run user $E:EUID)
 }
 
 if (has-external "/Applications/Firefox.app/Contents/MacOS/firefox") {
@@ -176,24 +233,26 @@ set-env GNUPGHOME (path:join $E:XDG_DATA_HOME gnupg)
 set-env NOTMUCH_CONFIG (path:join $E:XDG_CONFIG_HOME notmuch config)
 set-env OBJC_DISABLE_INITIALIZE_FORK_SAFETY "YES"
 
-eval (^
-  brew shellenv |^
-  grep -v "PATH" |^
-  each {|l| re:replace '^export' 'set-env' $l} |^
-  each {|l| re:replace '=' ' ' $l} |^
-  each {|l| re:replace '$;' '' $l} |^
-  to-terminated " "^
-)
+if (has-external brew) {
+  eval (^
+    brew shellenv |^
+    grep -v "PATH" |^
+    each {|l| re:replace '^export' 'set-env' $l} |^
+    each {|l| re:replace '=' ' ' $l} |^
+    each {|l| re:replace '$;' '' $l} |^
+    to-terminated " "^
+  )
+}
 
 set-env FZF_DEFAULT_OPTS "--layout=reverse --height 40%"
 
 mkdir -p $E:XDG_CONFIG_HOME
 mkdir -p $E:XDG_DATA_HOME
 mkdir -p $E:XDG_CACHE_HOME
+mkdir -p $E:XDG_RUNTIME_DIR
 mkdir -p $E:WINEPREFIX
 mkdir -p $E:PASSWORD_STORE_DIR
 mkdir -p $E:GOPATH
 mkdir -p (path:join $E:HOME .local bin)
 
 eval (starship init elvish)
-
