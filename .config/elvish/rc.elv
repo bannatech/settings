@@ -62,9 +62,9 @@ if (has-external kitty) {
   fn ssh {|@a| e:kitty +kitten ssh -o'VisualHostKey=yes' $@a }
 }
 fn ydl {|@a| yt-dlp -ic -o '%(title)s.%(ext)s' --add-metadata --user-agent 'Mozilla/5.0 (compatible; Googlebot/2.1;+http://www.google.com/bot.html/)' $@a }
-fn ls {|@a| ls --color=auto -F -H -h $@a }
-fn ll {|@a| ls --color=auto -l -F -H -h $@a }
-fn la {|@a| ls --color=auto -F -H -h -A $@a }
+fn ls {|@a| e:ls --color=auto -F -H -h $@a }
+fn ll {|@a| e:ls --color=auto -l -F -H -h $@a }
+fn la {|@a| e:ls --color=auto -F -H -h -A $@a }
 fn exal {|@a| e:exa -lhb $@a }
 fn exa {|@a| e:exa --icons $@a }
 fn exat {|@a| e:exa --tree -lbh $@a }
