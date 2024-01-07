@@ -1,6 +1,7 @@
 use str
 use re
 use path
+use os
 
 # PATH
 var cargo_path = (path:clean (path:join $E:HOME .cargo bin))
@@ -13,6 +14,10 @@ if (has-external "/opt/homebrew/bin/brew") {
 }
 
 set paths = [$@paths (path:join $E:HOME .local bin)]
+
+if (has-external carapace) {
+  eval (e:carapace _carapace | slurp)
+}
 
 # Locale
 set-env LC_ALL "en_US.UTF-8"
@@ -51,17 +56,21 @@ fn upgrade {
 fn icat {|@rest| e:kitty +kitten icat $@rest}
 fn kdiff {|@rest| e:kitty +kitten diff $@rest}
 
+fn vim {|@a| e:vim $@a}
+fn vimdiff {|@a| e:vim -d $@a}
+
 if (has-external nvim) {
-  fn vim {|@a| e:nvim $@a}
-  fn vimdiff {|@a| e:nvim -d $@a}
+  set vim~ = {|@a| e:nvim $@a}
+  set vimdiff~ = {|@a| e:nvim -d $@a}
 }
 
+fn mutt {|@a| e:mutt $@a}
+fn em {|@a| e:mutt $@a}
+
 if (has-external neomutt) {
-  fn mutt {|@a| e:neomutt $@a}
-  fn em {|@a| e:neomutt $@a}
-} else {
-  fn em {|@a| e:mutt $@a}
-}
+  set mutt~ =  {|@a| e:neomutt $@a}
+  set em~ = {|@a| e:neomutt $@a}
+} 
 
 # Standard utils with better options
 fn mkd {|@a| e:mkdir -pv $@a}
@@ -78,21 +87,27 @@ fn diff {|@a| e:diff --color=auto $@a}
 # Programs with specific options
 fn sysu {|@a| systemctl --user $@a }
 fn TT {|@a| trizen -Syu $@a }
+
+fn k {|@rest| e:make -j4 $@rest}
+fn kd {|@rest| e:make DEBUG=yes -j4 $@rest}
+
 if (has-external nproc) {
-  fn k {|@a| make -j(e:nproc) $@a }
-  fn kd {|@a| make DEBUG=yes -j(e:nproc) $@a }
-} else {
-  fn k {|@a| make -j4 $@a }
-  fn kd {|@a| make DEBUG=yes -j4 $@a }
+  set k~ = {|@rest| e:make -j(e:nproc) $@rest}
+  set kd~ = {|@rest| e:make DEBUG=yes -j(e:nproc) $@rest}
 }
+
 fn mpvf {|@a| mpv --fs $@a }
 fn anipv {|@a| mpv --slang=en,eng --fs --alang=jpn,jp $@a }
 fn rfcdate {|@a| date --iso-8601="seconds" $@a }
 fn emdate {|@a| date -R $@a }
 fn xz {|@a| e:xz --threads=0 $@a }
+
+fn ssh {|@rest| e:ssh -o 'VisualHostKey=yes' $@rest}
+
 if (has-external kitty) {
-  fn ssh {|@a| e:kitty +kitten ssh -o'VisualHostKey=yes' $@a }
+  set ssh~ = {|@rest| e:kitty +kitten ssh -o "VisualHostKey=yes"}
 }
+
 fn ydl {|@a| yt-dlp -ic -o '%(title)s.%(ext)s' --add-metadata --user-agent 'Mozilla/5.0 (compatible; Googlebot/2.1;+http://www.google.com/bot.html/)' $@a }
 fn ls {|@a| e:ls --color=auto -F -H -h $@a }
 fn ll {|@a| e:ls --color=auto -l -F -H -h $@a }
@@ -116,25 +131,29 @@ fn ka {|@a| killall $@a}
 fn z {|@a| zathura $@a}
 fn um {|@a| udiskie-mount $@a}
 fn ud {|@a| udiskie-umount $@a}
+
+fn hx {|@rest| e:hx $@rest}
+fn helix {|@rest| e:helix $@rest}
+
 if (has-external hx) {
-  fn helix {|@a| e:hx $@a}
+  set helix~ = {|@rest| e:hx $@rest}
 } elif (has-external helix) {
-  fn hx {|@a| e:helix $@a}
+  set hx~ = {|@rest| e:helix $@rest}
 }
 
 # automatically raise to root
+fn p {|@rest| sudo pacman $@rest}
+fn sy {|@rest| sudo systemctl $@rest}
+fn E {|@rest| sudo $E:EDITOR $@rest}
+fn m {|@rest| sudo mount $@rest}
+fn u {|@rest| sudo umount $@rest}
+
 if (has-external doas) {
-  fn p {|@a| doas pacman $@a}
-  fn sy {|@a| doas systemctl $@a}
-  fn E {|@a| doas $E:EDITOR $@a}
-  fn m {|@a| doas mount $@a}
-  fn u {|@a| doas umount $@a}
-} else {
-  fn p {|@a| sudo pacman $@a}
-  fn sy {|@a| sudo systemctl $@a}
-  fn E {|@a| sudo $E:EDITOR $@a}
-  fn m {|@a| sudo mount $@a}
-  fn u {|@a| sudo umount $@a}
+  set p~ =  {|@rest| doas pacman $@rest}
+  set sy~ =  {|@rest| doas systemctl $@rest}
+  set E~ =  {|@rest| doas $E:EDITOR $@rest}
+  set m~ =  {|@rest| doas mount $@rest}
+  set u~ =  {|@rest| doas umount $@rest}
 }
 
 # Git stuff for all branches
@@ -142,27 +161,74 @@ fn gua { git remote | grep -v "^upstream$" | xargs -l git push }
 fn gum { git remote | grep -v "^upstream$" | xargs -I _ git push _ master }
 
 # Using better utils
+fn gzip {|@rest| e:gzip $@rest}
+fn bzip2 {|@rest| e:bzip2 $@rest}
+
 if (has-external pigz) {
-  fn gzip {|@a| e:pigz $@a}
+  set gzip~ = {|@rest| e:pigz $@rest}
 }
+
 if (has-external pbzip2) {
-  fn bzip2 {|@a| pbzip2 $@a}
+  set bzip2~ = {|@rest| e:pbzip2 $@rest}
 }
 
 # Email
 fn abook { abook -C (path:join $E:XDG_CONFIG_HOME abook abookrc) --datafile (path:join $E:XDG_DATA_HOME abook addressbook) }
 fn mbsync { mbsync -c (path:join $E:XDG_CONFIG_HOME isync mbsyncrc) }
 
-# TODO bookmarks
+var bfile = (path:join $E:XDG_CONFIG_HOME bookmarks)
+fn parse_bmarks {
+  put [(each {
+    |line|
+    var line = (re:replace '#.*$' '' $line | str:trim-space (all))
+    if (!=s $line '') {
+      put [(re:split &max=3 '()[[:space:]]+' $line)]
+    }
+  } [(all)])]
+}
 
-# Some convience functions that are a bit more complex but not script worthy
-if (and (has-external ffprobe) (has-external jq)) {
-  fn vdesc {
-    |file|
-    ffprobe -v quiet -print_format json -show_format $file | jq ".format.tags.DESCRIPTION" | sed 's/\\n/\n/g'
+var bookmarks = (from-lines < $bfile | parse_bmarks)
+
+fn get_fzf_selection {
+  |@rest|
+}
+
+set-env FZF_DEFAULT_OPTS "--layout=reverse --height 40%"
+if (has-external fzf) {
+  set edit:insert:binding[Alt-x] = {
+    var selection = (each {
+        |item|
+        echo $item | re:replace "['\\[\\]\\n]" '' (slurp) | echo (all)
+      } $bookmarks | fzf -i -n 1,3.. 2> $os:dev-tty | awk '{print $1}')
+
+    each {
+      |bmark|
+      if (==s $bmark[0] $selection) {
+        cd (eval 'echo '(str:replace '$' '$E:' $bmark[1]))
+      }
+    } $bookmarks
+  }
+
+  set edit:insert:binding[Alt-X] = {
+    var selection = (each {
+        |item|
+        echo $item | re:replace "['\\[\\]\\n]" '' (slurp) | echo (all)
+      } $bookmarks | fzf -i -n 1,3.. 2> $os:dev-tty | awk '{print $1}')
+
+    each {
+      |bmark|
+      if (==s $bmark[0] $selection) {
+        edit:insert-at-dot (eval 'echo '(str:replace '$' '$E:' $bmark[1]))
+      }
+    } $bookmarks
   }
 }
 
+# Some convience functions that are a bit more complex but not script worthy
+fn vdesc {
+  |file|
+  ffprobe -v quiet -print_format json -show_format $file | jq ".format.tags.DESCRIPTION" | sed 's/\\n/\n/g'
+}
 
 # Disable ^S and ^q
 stty -ixon
@@ -196,11 +262,7 @@ if (has-external helix) {
   set-env VISUAL "vim"
 }
 
-if (has-external bat) {
-  set-env PAGER "bat"
-} else {
-  set-env PAGER "less"
-}
+set-env PAGER "less"
 
 if (not (has-env XDG_CONFIG_HOME)) {
   set-env XDG_CONFIG_HOME (path:join $E:HOME .config)
@@ -243,8 +305,6 @@ if (has-external brew) {
     to-terminated " "^
   )
 }
-
-set-env FZF_DEFAULT_OPTS "--layout=reverse --height 40%"
 
 mkdir -p $E:XDG_CONFIG_HOME
 mkdir -p $E:XDG_DATA_HOME
