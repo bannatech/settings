@@ -105,7 +105,7 @@ fn xz {|@a| e:xz --threads=0 $@a }
 fn ssh {|@rest| e:ssh -o 'VisualHostKey=yes' $@rest}
 
 if (has-external kitty) {
-  set ssh~ = {|@rest| e:kitty +kitten ssh -o "VisualHostKey=yes"}
+  set ssh~ = {|@rest| e:kitty +kitten ssh -o "VisualHostKey=yes" $@rest}
 }
 
 fn ydl {|@a| yt-dlp -ic -o '%(title)s.%(ext)s' --add-metadata --user-agent 'Mozilla/5.0 (compatible; Googlebot/2.1;+http://www.google.com/bot.html/)' $@a }
