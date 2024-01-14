@@ -189,6 +189,64 @@ fn parse_bmarks {
 
 var bookmarks = (from-lines < $bfile | parse_bmarks)
 
+fn sanitize_location {
+  |location|
+  echo $location | tr -d "\n" |^
+   str:replace $E:XDG_CONFIG_HOME "$XDG_CONFIG_HOME" (slurp) |^
+   str:replace $E:XDG_RUNTIME_DIR "$XDG_RUNTIME_DIR" (all) |^
+   str:replace $E:XDG_DATA_HOME "$XDG_DATA_HOME" (all) |^
+   str:replace $E:XDG_CACHE_HOME "$XDG_CACHE_HOME" (all) |^
+   str:replace $E:HOME "$HOME" (all)
+}
+
+fn add_bookmark {
+  |name @rest|
+  var conflicting_name = (each {
+    |bmark|
+    if (str:equal-fold $bmark[0] $name) {
+      put $true
+    }
+  } $bookmarks | has-value [(all)] $true)
+  if $conflicting_name {
+    print 'Overwrite bookmark for '$name'? (Y/N) '
+    var override_choice = (read-line)
+    if (not (re:match '((?i)^y(es)?$)' $override_choice)) {
+      echo 'Not overwriting'
+      return
+    }
+  }
+
+  var location = (sanitize_location (pwd))
+  
+  set bookmarks = [(each {
+    |bmark|
+    if (not (str:equal-fold $bmark[0] $name)) {
+      put $bmark
+    }
+  } $bookmarks) [$name $location (print $@rest)]]
+
+  each {
+    |bmark|
+    echo $@bmark
+  } $bookmarks > $bfile
+}
+
+fn remove_bookmark {
+  |name|
+
+  set bookmarks = [(each {
+    |bmark|
+    if (not (str:equal-fold $bmark[0] $name)) {
+      put $bmark
+    }
+  } $bookmarks)]
+
+  each {
+    |bmark|
+    echo $@bmark
+  } $bookmarks > $bfile
+}
+
 fn get_fzf_selection {
   |@rest|
 }
