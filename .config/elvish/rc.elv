@@ -182,7 +182,12 @@ fn parse_bmarks {
     |line|
     var line = (re:replace '#.*$' '' $line | str:trim-space (all))
     if (!=s $line '') {
-      put [(re:split &max=3 '()[[:space:]]+' $line)]
+      put [(each {
+        |match|
+        if (>= $match[start] 0) {
+          put $match[text]
+        }
+      } [(re:find "[^\\s\"']+|\"([^\"]*)\"|'([ ^']*)'" $line)])]
     }
   } [(all)])]
 }
