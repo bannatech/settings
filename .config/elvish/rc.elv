@@ -60,6 +60,7 @@ fn vim {|@a| e:vim $@a}
 fn vimdiff {|@a| e:vim -d $@a}
 
 if (has-external nvim) {
+  set edit:completion:arg-completer[vim] = $edit:completion:arg-completer[nvim]
   set vim~ = {|@a| e:nvim $@a}
   set vimdiff~ = {|@a| e:nvim -d $@a}
 }
@@ -68,15 +69,25 @@ fn mutt {|@a| e:mutt $@a}
 fn em {|@a| e:mutt $@a}
 
 if (has-external neomutt) {
+  set edit:completion:arg-completer[mutt] = $edit:completion:arg-completer[neomutt]
+  set edit:completion:arg-completer[em] = $edit:completion:arg-completer[neomutt]
   set mutt~ =  {|@a| e:neomutt $@a}
   set em~ = {|@a| e:neomutt $@a}
 } 
 
 # Standard utils with better options
+set edit:completion:arg-completer[mkd] = $edit:completion:arg-completer[mkdir]
 fn mkd {|@a| e:mkdir -pv $@a}
+
+set edit:completion:arg-completer[s] = $edit:completion:arg-completer[sed]
 fn s {|@a| e:sed --posix $@a}
+
+set edit:completion:arg-completer[G] = $edit:completion:arg-completer[grep]
 fn G {|@a| e:grep --color=auto $@a}
+
+set edit:completion:arg-completer[a] = $edit:completion:arg-completer[awk]
 fn a {|@a| e:awk $@a}
+
 fn df {|@a| e:df $@a}
 fn mv {|@a| e:mv -iv $@a}
 fn cp {|@a| e:cp -iv $@a}
@@ -85,9 +96,13 @@ fn ed {|@a| e:ed -vp '*' $@a}
 fn diff {|@a| e:diff --color=auto $@a}
 
 # Programs with specific options
+set edit:completion:arg-completer[sysu] = $edit:completion:arg-completer[systemctl]
 fn sysu {|@a| systemctl --user $@a }
+
 fn TT {|@a| trizen -Syu $@a }
 
+set edit:completion:arg-completer[k] = $edit:completion:arg-completer[make]
+set edit:completion:arg-completer[kd] = $edit:completion:arg-completer[make]
 fn k {|@rest| e:make -j4 $@rest}
 fn kd {|@rest| e:make DEBUG=yes -j4 $@rest}
 
@@ -96,8 +111,13 @@ if (has-external nproc) {
   set kd~ = {|@rest| e:make DEBUG=yes -j(e:nproc) $@rest}
 }
 
+set edit:completion:arg-completer[mpvf] = $edit:completion:arg-completer[mpv]
+set edit:completion:arg-completer[anipv] = $edit:completion:arg-completer[mpv]
 fn mpvf {|@a| mpv --fs $@a }
 fn anipv {|@a| mpv --slang=en,eng --fs --alang=jpn,jp $@a }
+
+set edit:completion:arg-completer[rfcdate] = $edit:completion:arg-completer[date]
+set edit:completion:arg-completer[emdate] = $edit:completion:arg-completer[date]
 fn rfcdate {|@a| date --iso-8601="seconds" $@a }
 fn emdate {|@a| date -R $@a }
 fn xz {|@a| e:xz --threads=0 $@a }
@@ -108,26 +128,50 @@ if (has-external kitty) {
   set ssh~ = {|@rest| e:kitty +kitten ssh -o "VisualHostKey=yes" $@rest}
 }
 
+set edit:completion:arg-completer[ydl] = $edit:completion:arg-completer[yt-dlp]
 fn ydl {|@a| yt-dlp -ic -o '%(title)s.%(ext)s' --add-metadata --user-agent 'Mozilla/5.0 (compatible; Googlebot/2.1;+http://www.google.com/bot.html/)' $@a }
+
 fn ls {|@a| e:ls --color=auto -F -H -h $@a }
+
+set edit:completion:arg-completer[ll] = $edit:completion:arg-completer[ls]
+set edit:completion:arg-completer[la] = $edit:completion:arg-completer[ls]
 fn ll {|@a| e:ls --color=auto -l -F -H -h $@a }
 fn la {|@a| e:ls --color=auto -F -H -h -A $@a }
+
+set edit:completion:arg-completer[exal] = $edit:completion:arg-completer[exa]
+set edit:completion:arg-completer[exat] = $edit:completion:arg-completer[exa]
 fn exal {|@a| e:exa -lhb $@a }
 fn exa {|@a| e:exa --icons $@a }
 fn exat {|@a| e:exa --tree -lbh $@a }
+
 fn tract {|@a| transmission-remote -F '~l:done' $@a }
 
 # Shortening names
 fn trem {|@a| transmission-remote $@a}
+
+set edit:completion:arg-completer[P] = $edit:completion:arg-completer[pacman]
+set edit:completion:arg-completer[t] = $edit:completion:arg-completer[pacman]
 fn P {|@a| pacman $@a}
 fn t {|@a| trizen $@a}
+
+set edit:completion:arg-completer[sys] = $edit:completion:arg-completer[systemctl]
 fn sys {|@a| systemctl $@a}
+
+set edit:completion:arg-completer[e] = $edit:completion:arg-completer[$E:EDITOR]
 fn e {|@a| (external $E:EDITOR) $@a}
+
 fn f {|@a| fusermount $@a}
 fn F {|@a| fusermount -u $@a}
+
+set edit:completion:arg-completer[g] = $edit:completion:arg-completer[git]
 fn g {|@a| git $@a}
+
 fn c {|@a| ./configure $@a}
+
+set edit:completion:arg-completer[ka] = $edit:completion:arg-completer[killall]
 fn ka {|@a| killall $@a}
+
+set edit:completion:arg-completer[z] = $edit:completion:arg-completer[zathura]
 fn z {|@a| zathura $@a}
 fn um {|@a| udiskie-mount $@a}
 fn ud {|@a| udiskie-umount $@a}
@@ -142,9 +186,17 @@ if (has-external hx) {
 }
 
 # automatically raise to root
+set edit:completion:arg-completer[p] = $edit:completion:arg-completer[pacman]
 fn p {|@rest| sudo pacman $@rest}
+
+set edit:completion:arg-completer[sy] = $edit:completion:arg-completer[systemctl]
 fn sy {|@rest| sudo systemctl $@rest}
+
+set edit:completion:arg-completer[E] = $edit:completion:arg-completer[$E:EDITOR]
 fn E {|@rest| sudo $E:EDITOR $@rest}
+
+set edit:completion:arg-completer[m] = $edit:completion:arg-completer[mount]
+set edit:completion:arg-completer[u] = $edit:completion:arg-completer[umount]
 fn m {|@rest| sudo mount $@rest}
 fn u {|@rest| sudo umount $@rest}
 
