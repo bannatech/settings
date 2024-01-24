@@ -430,4 +430,8 @@ mkdir -p $E:PASSWORD_STORE_DIR
 mkdir -p $E:GOPATH
 mkdir -p (path:join $E:HOME .local bin)
 
+use mamba
+set mamba:cmd = conda
+# set mamba:root = 
+
 eval (starship init elvish)
