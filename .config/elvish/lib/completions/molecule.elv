@@ -33,7 +33,7 @@ fn complete_command {
 fn has_flag {
   |flag @args|
   for arg $args {
-    if (==s $arg '--'$flag) {
+    if (or (==s $arg '--'$flag) (==s $arg '-'$flag)) {
       put $true
       return
     }
@@ -67,6 +67,24 @@ fn complete_flags {
   edit:complex-candidate &code-suffix='' &display='-v - Increase ansible verbosity level. Default is 0' '-v'
 }
 
+fn complete_scenario {
+  |@args|
+
+  if (not (or (has_flag 's' $@args) (has_flag 'scenario-name' $@args))) {
+    edit:complex-candidate &code-suffix='' &display='-s TEXT - Name of the scenario to target. (default)' '-s'
+    edit:complex-candidate &code-suffix='' &display='--scenario-name TEXT - Name of the scenario to target. (default)' '--scenario-name'
+  }
+
+  if (or (==s $args[-2] '-s') (==s $args[-2] '--scenario-name')) {
+    var scenarios = [(find molecule -type d -mindepth 1 -maxdepth 1 | cut -d'/' -f2 | from-lines)]
+    for scenario $scenarios {
+      edit:complex-candidate &code-suffix='' $scenario
+    }
+  } elif (not (has_flag 'help' $@args)) {
+    edit:complex-candidate &code-suffix='' &display='--help - Show help and exit' '--help'
+  }
+}
+
 fn has_command {
   |@args|
   for arg $args[..-1] {
@@ -86,7 +104,7 @@ fn complete {
   }
 
   if (has_command $@rest) {
-    
+    complete_scenario $@rest
   } elif (str:has-prefix $rest[-1] '-') {
     complete_flags $@rest
   } else {
@@ -94,4 +112,4 @@ fn complete {
   }
 }
 
-set edit:completion:arg-completer[molecule] = complete
+set edit:completion:arg-completer[molecule] = $complete~
