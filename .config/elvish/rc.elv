@@ -304,17 +304,20 @@ fn remove_bookmark {
   } $bookmarks > $bfile
 }
 
-fn get_fzf_selection {
-  |@rest|
-}
-
 set-env FZF_DEFAULT_OPTS "--layout=reverse --height 40%"
 if (has-external fzf) {
   set edit:insert:binding[Alt-x] = {
-    var selection = (each {
-        |item|
-        echo $item | re:replace "['\\[\\]\\n]" '' (slurp) | echo (all)
-      } $bookmarks | fzf -i -n 1,3.. 2> $os:dev-tty | awk '{print $1}')
+    var selection = ''
+    try {
+      set selection = (each {
+          |item|
+          echo $item | re:replace "['\\[\\]\\n]" '' (slurp) | echo (all)
+        } $bookmarks | fzf -i -n 1,3.. 2> $os:dev-tty | awk '{print $1}')
+    } catch e {
+      if (!= $e[reason][exit-status] 130) {
+        fail $e
+      }
+    }
 
     each {
       |bmark|
@@ -432,6 +435,6 @@ mkdir -p (path:join $E:HOME .local bin)
 
 use mamba
 set mamba:cmd = conda
-# set mamba:root = 
+set mamba:root = (path:join $E:HOME .conda)
 
 eval (starship init elvish)
