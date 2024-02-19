@@ -4,16 +4,25 @@ use path
 use os
 
 # PATH
-var cargo_path = (path:clean (path:join $E:HOME .cargo bin))
-if (not (has-value [(each {|p| ==s $cargo_path $p} $paths)] 0)) {
-  set paths = [$cargo_path $@paths]
+fn add_to_path {
+  |@my_paths|  
+  each {
+    |my_path|
+    if (not (has-value [(each {|p| ==s $my_path $p} $paths)] 0)) {
+      set paths = [$my_path $@paths]
+    }
+  } $my_paths
 }
+
+var cargo_path = (path:clean (path:join $E:HOME .cargo bin))
+var ghcup_path = (path:clean (path:join $E:HOME .ghcup bin))
+var cabal_path = (path:clean (path:join $E:HOME .cabal bin))
+var local_bin  = (path:clean (path:join $E:HOME .local bin))
+add_to_path $cargo_path $ghcup_path $cabal_path $local_bin
 
 if (has-external "/opt/homebrew/bin/brew") {
-  set paths = [(/opt/homebrew/bin/brew --prefix)"/bin" $@paths]
+  add_to_path (/opt/homebrew/bin/brew --prefix)"/bin"
 }
-
-set paths = [$@paths (path:join $E:HOME .local bin)]
 
 if (has-external carapace) {
   eval (e:carapace _carapace | slurp)
