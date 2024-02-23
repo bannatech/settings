@@ -31,6 +31,53 @@ if (has-external carapace) {
   eval (e:carapace _carapace | slurp)
 }
 
+if (has-external helix) {
+  set-env EDITOR "helix"
+  set-env VISUAL "helix"
+} elif (has-external hx) {
+  set-env EDITOR "hx"
+  set-env VISUAL "hx"
+} elif (has-external nvim) {
+  set-env EDITOR "nvim"
+  set-env VISUAL "nvim"
+} else {
+  set-env EDITOR "vim"
+  set-env VISUAL "vim"
+}
+
+set-env PAGER "less"
+
+if (not (has-env XDG_CONFIG_HOME)) {
+  set-env XDG_CONFIG_HOME (path:join $E:HOME .config)
+}
+
+if (not (has-env XDG_DATA_HOME)) {
+  set-env XDG_DATA_HOME (path:join $E:HOME .local share)
+}
+
+if (not (has-env XDG_CACHE_HOME)) {
+  set-env XDG_CACHE_HOME (path:join $E:HOME .cache)
+}
+
+if (not (has-env XDG_RUNTIME_DIR)) {
+  set-env XDG_RUNTIME_DIR (path:join $path:separator run user $E:EUID)
+}
+
+if (has-external "/Applications/Firefox.app/Contents/MacOS/firefox") {
+  set-env BROWSER "/Applications/Firefox.app/Contents/MacOS/firefox"
+} else {
+  set-env BROWSER "firefox"
+}
+
+set-env LESSHISTFILE "-"
+set-env WINEPREFIX (path:join $E:XDG_DATA_HOME wineprefixes default)
+set-env PASSWORD_STORE_DIR (path:join $E:XDG_DATA_HOME password-store)
+set-env GOPATH (path:join $E:XDG_DATA_HOME go)
+set-env WEECHAT_HOME (path:join $E:XDG_CONFIG_HOME weechat)
+set-env GNUPGHOME (path:join $E:XDG_DATA_HOME gnupg)
+set-env NOTMUCH_CONFIG (path:join $E:XDG_CONFIG_HOME notmuch config)
+set-env OBJC_DISABLE_INITIALIZE_FORK_SAFETY "YES"
+
 # Locale
 set-env LC_ALL "en_US.UTF-8"
 
@@ -378,52 +425,6 @@ set-env RUSTC_WRAPPER sccache
 set-env VAULT_ADDR "https://vault.aftix.xyz"
 set-env DOCKER_HOST "unix://"(path:join $E:XDG_RUNTIME_DIR docker.sock)
 
-if (has-external helix) {
-  set-env EDITOR "helix"
-  set-env VISUAL "helix"
-} elif (has-external hx) {
-  set-env EDITOR "hx"
-  set-env VISUAL "hx"
-} elif (has-external nvim) {
-  set-env EDITOR "nvim"
-  set-env VISUAL "nvim"
-} else {
-  set-env EDITOR "vim"
-  set-env VISUAL "vim"
-}
-
-set-env PAGER "less"
-
-if (not (has-env XDG_CONFIG_HOME)) {
-  set-env XDG_CONFIG_HOME (path:join $E:HOME .config)
-}
-
-if (not (has-env XDG_DATA_HOME)) {
-  set-env XDG_DATA_HOME (path:join $E:HOME .local share)
-}
-
-if (not (has-env XDG_CACHE_HOME)) {
-  set-env XDG_CACHE_HOME (path:join $E:HOME .cache)
-}
-
-if (not (has-env XDG_RUNTIME_DIR)) {
-  set-env XDG_RUNTIME_DIR (path:join $path:separator run user $E:EUID)
-}
-
-if (has-external "/Applications/Firefox.app/Contents/MacOS/firefox") {
-  set-env BROWSER "/Applications/Firefox.app/Contents/MacOS/firefox"
-} else {
-  set-env BROWSER "firefox"
-}
-
-set-env LESSHISTFILE "-"
-set-env WINEPREFIX (path:join $E:XDG_DATA_HOME wineprefixes default)
-set-env PASSWORD_STORE_DIR (path:join $E:XDG_DATA_HOME password-store)
-set-env GOPATH (path:join $E:XDG_DATA_HOME go)
-set-env WEECHAT_HOME (path:join $E:XDG_CONFIG_HOME weechat)
-set-env GNUPGHOME (path:join $E:XDG_DATA_HOME gnupg)
-set-env NOTMUCH_CONFIG (path:join $E:XDG_CONFIG_HOME notmuch config)
-set-env OBJC_DISABLE_INITIALIZE_FORK_SAFETY "YES"
 
 if (has-external brew) {
   eval (^
@@ -448,5 +449,6 @@ mkdir -p (path:join $E:HOME .local bin)
 use mamba
 set mamba:cmd = conda
 set mamba:root = (path:join $E:HOME .conda)
+use completions/molecule
 
 eval (starship init elvish)
