@@ -18,7 +18,10 @@ var cargo_path = (path:clean (path:join $E:HOME .cargo bin))
 var ghcup_path = (path:clean (path:join $E:HOME .ghcup bin))
 var cabal_path = (path:clean (path:join $E:HOME .cabal bin))
 var local_bin  = (path:clean (path:join $E:HOME .local bin))
-add_to_path $cargo_path $ghcup_path $cabal_path $local_bin
+var site_perl = "/usr/bin/site_perl"
+var vendor_perl = "/usr/bin/vendor_perl"
+var core_perl = "/usr/bin/core_perl"
+add_to_path $cargo_path $ghcup_path $cabal_path $local_bin $site_perl $vendor_perl $core_perl
 
 if (has-external "/opt/homebrew/bin/brew") {
   add_to_path (/opt/homebrew/bin/brew --prefix)"/bin"
