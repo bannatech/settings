@@ -172,8 +172,10 @@ if (has-external nproc) {
 
 set edit:completion:arg-completer[mpvf] = $edit:completion:arg-completer[mpv]
 set edit:completion:arg-completer[anipv] = $edit:completion:arg-completer[mpv]
+set edit:completion:arg-completer[termpv] = $edit:completion:arg-completer[mpv]
 fn mpvf {|@a| mpv --fs $@a }
 fn anipv {|@a| mpv --slang=en,eng --fs --alang=jpn,jp $@a }
+fn termpv {|@a| mpv --vo=kitty --vo-kitty-use-shm=yes $@a }
 
 set edit:completion:arg-completer[rfcdate] = $edit:completion:arg-completer[date]
 set edit:completion:arg-completer[emdate] = $edit:completion:arg-completer[date]
