@@ -104,7 +104,7 @@ fn list {
 # =========================== deactivate function
 fn deactivate {
 	var in = []
-	try { var in = [(eval $cmd' shell deactivate -s zsh')] } catch { }
+	try { var in = [(eval $cmd' shell deactivate -s zsh' 2>/dev/null)] } catch { }
 	if (cmds:not-empty $in) { process-script $in }
 	each {|in| unset-env $in } [(str:split '→' $E:ZSH_MAMBA_ADD)]
 	each {|in| unset-env $in } [ZSH_MAMBA_ADD _THIS_ENV VIRTUAL_ENV MAMBA_ENV CONDA_DEFAULT_ENV CONDA_PREFIX CONDA_PROMPT_MODIFIER CONDA_SHLVL]
@@ -130,7 +130,7 @@ fn activate {|name|
 		deactivate # lets deactivate first
 		set-env '_OLD_PATH' $E:PATH
 		var in = []
-		try { set in = [(eval $cmd' shell activate -s zsh '$name)] } catch { }
+		try { set in = [(eval $cmd' shell activate -s zsh '$name 2>/dev/null)] } catch { }
 		if (cmds:not-empty $in) { process-script $in }
 		set-env CONDA_PREFIX $root/envs/$name
 		set-env CONDA_DEFAULT_ENV $name
