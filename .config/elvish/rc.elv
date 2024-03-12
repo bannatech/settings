@@ -1,7 +1,5 @@
-use str
 use re
 use path
-use os
 
 # PATH
 fn add_to_path {
@@ -289,119 +287,8 @@ if (has-external pbzip2) {
 fn abook { abook -C (path:join $E:XDG_CONFIG_HOME abook abookrc) --datafile (path:join $E:XDG_DATA_HOME abook addressbook) }
 fn mbsync { mbsync -c (path:join $E:XDG_CONFIG_HOME isync mbsyncrc) }
 
-var bfile = (path:join $E:XDG_CONFIG_HOME bookmarks)
-fn parse_bmarks {
-  put [(each {
-    |line|
-    var line = (re:replace '#.*$' '' $line | str:trim-space (all))
-    if (!=s $line '') {
-      put [(each {
-        |match|
-        if (>= $match[start] 0) {
-          put $match[text]
-        }
-      } [(re:find "[^\\s\"']+|\"([^\"]*)\"|'([ ^']*)'" $line)])]
-    }
-  } [(all)])]
-}
-
-var bookmarks = (from-lines < $bfile | parse_bmarks)
-
-fn sanitize_location {
-  |location|
-  echo $location | tr -d "\n" |^
-   str:replace $E:XDG_CONFIG_HOME "$XDG_CONFIG_HOME" (slurp) |^
-   str:replace $E:XDG_RUNTIME_DIR "$XDG_RUNTIME_DIR" (all) |^
-   str:replace $E:XDG_DATA_HOME "$XDG_DATA_HOME" (all) |^
-   str:replace $E:XDG_CACHE_HOME "$XDG_CACHE_HOME" (all) |^
-   str:replace $E:HOME "$HOME" (all)
-}
-
-fn add_bookmark {
-  |name @rest|
-  var conflicting_name = (each {
-    |bmark|
-    if (str:equal-fold $bmark[0] $name) {
-      put $true
-    }
-  } $bookmarks | has-value [(all)] $true)
-  if $conflicting_name {
-    print 'Overwrite bookmark for '$name'? (Y/N) '
-    var override_choice = (read-line)
-    if (not (re:match '((?i)^y(es)?$)' $override_choice)) {
-      echo 'Not overwriting'
-      return
-    }
-  }
-
-  var location = (sanitize_location (pwd))
-  
-  set bookmarks = [(each {
-    |bmark|
-    if (not (str:equal-fold $bmark[0] $name)) {
-      put $bmark
-    }
-  } $bookmarks) [$name $location (print $@rest)]]
-
-  each {
-    |bmark|
-    echo $@bmark
-  } $bookmarks > $bfile
-}
-
-fn remove_bookmark {
-  |name|
-
-  set bookmarks = [(each {
-    |bmark|
-    if (not (str:equal-fold $bmark[0] $name)) {
-      put $bmark
-    }
-  } $bookmarks)]
-
-  each {
-    |bmark|
-    echo $@bmark
-  } $bookmarks > $bfile
-}
 
 set-env FZF_DEFAULT_OPTS "--layout=reverse --height 40%"
-if (has-external fzf) {
-  set edit:insert:binding[Alt-x] = {
-    var selection = ''
-    try {
-      set selection = (each {
-          |item|
-          echo $item | re:replace "['\\[\\]\\n]" '' (slurp) | echo (all)
-        } $bookmarks | fzf -i -n 1,3.. 2> $os:dev-tty | awk '{print $1}')
-    } catch e {
-      if (!= $e[reason][exit-status] 130) {
-        fail $e
-      }
-    }
-
-    each {
-      |bmark|
-      if (==s $bmark[0] $selection) {
-        cd (eval 'echo '(str:replace '$' '$E:' $bmark[1]))
-      }
-    } $bookmarks
-  }
-
-  set edit:insert:binding[Alt-X] = {
-    var selection = (each {
-        |item|
-        echo $item | re:replace "['\\[\\]\\n]" '' (slurp) | echo (all)
-      } $bookmarks | fzf -i -n 1,3.. 2> $os:dev-tty | awk '{print $1}')
-
-    each {
-      |bmark|
-      if (==s $bmark[0] $selection) {
-        edit:insert-at-dot (eval 'echo '(str:replace '$' '$E:' $bmark[1]))
-      }
-    } $bookmarks
-  }
-}
 
 # Some convience functions that are a bit more complex but not script worthy
 fn vdesc {
@@ -452,5 +339,9 @@ use mamba
 set mamba:cmd = conda
 set mamba:root = (path:join $E:HOME .conda)
 use completions/molecule
+use bookmark
+
+fn add_bookmark {|@args| bookmark:add_bookmark $@args }
+fn remove_bookmark {|@args| bookmark:remove_bookmark $@args }
 
 eval (starship init elvish)
