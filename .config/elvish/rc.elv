@@ -339,9 +339,10 @@ use mamba
 set mamba:cmd = conda
 set mamba:root = (path:join $E:HOME .conda)
 use completions/molecule
-use bookmark
+use jump
 
-fn add_bookmark {|@args| bookmark:add_bookmark $@args }
-fn remove_bookmark {|@args| bookmark:remove_bookmark $@args }
+fn add_bookmark {|@args| jump:add_bookmark $@args }
+fn remove_bookmark {|@args| jump:remove_bookmark $@args }
+fn jump {|@args| jump:jump $@args }
 
 eval (starship init elvish)
