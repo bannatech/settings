@@ -1,0 +1,27 @@
+[commit]
+	gpgsign = true
+[diff]
+    tool = kitty
+    guitool = kitty.gui
+[difftool]
+    prompt = false
+    trustExitCode = true
+[difftool "kitty"]
+    cmd = kitty +kitten diff $LOCAL $REMOTE
+[difftool "kitty.gui"]
+    cmd = kitty kitty +kitten diff $LOCAL $REMOTE
+[rebase]
+	updateRefs = true
+[branch]
+	sort = -committerdate
+[column]
+	ui = auto
+[rerere]
+	enabled = true
+[alias]
+	bl = blame -w -C -C -C
+	staash = stash --all
+	wdiff = diff --word-diff
+	fpush = push --force-with-lease
+[core]
+	fsmonitor = true
