@@ -23,5 +23,6 @@
 	staash = stash --all
 	wdiff = diff --word-diff
 	fpush = push --force-with-lease
+	logo = log --oneline
 [core]
 	fsmonitor = true
