@@ -132,12 +132,14 @@ fn parse_bmarks {
 }
 
 var bookmarks = (from-lines < $bfile | parse_bmarks)
+fn reload_bmarks {
+  set bookmarks = (from-lines < $bfile | parse_bmarks)
+}
 
 fn sanitize_location {
   |location|
    echo $location | tr -d '\n' |^
    str:replace $E:XDG_CONFIG_HOME "$XDG_CONFIG_HOME" (slurp) |^
-   str:replace $E:XDG_RUNTIME_DIR "$XDG_RUNTIME_DIR" (all) |^
    str:replace $E:XDG_DATA_HOME "$XDG_DATA_HOME" (all) |^
    str:replace $E:XDG_CACHE_HOME "$XDG_CACHE_HOME" (all) |^
    str:replace $E:HOME "$HOME" (all)
