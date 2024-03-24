@@ -6,6 +6,17 @@ use path
 use re
 use os
 
+# Utility function for allowing canceling of fzf
+fn safe_fzf {
+  |@all|
+  
+  sort | uniq | try { 
+    fzf $@all 2> $os:dev-tty
+  } catch e {
+    echo '.'
+  } | put (all)
+}
+
 ######### JUMPS #########
 # jumplists - Not persistent. Keeps track of per-session directory information - inspired by the helix editor
 #   alt-o goes back on the jumplist stack (does not pop ; non destructive to jumplist)
@@ -72,10 +83,14 @@ fn jump_forward {
 # Opens a fuzzy finder on jump stack + explicitly marked jump points
 # changes directory to the given jump point (Removes the jump stack above the cwd)
 fn jump_pick {
-  each {
+  var choice = (each {
     |jumppoint|
     echo $jumppoint
-  } [$@jump_stack $@jump_saved] | sort | uniq | fzf -i 2> $os:dev-tty | cd (all)
+  } [$@jump_stack $@jump_saved] | safe_fzf -i)
+
+  if (==s choice '.') {
+    return
+  }
 
   # Remove all jump positions above the current one on the stack
   if (< $jump_position (count $jump_stack)) {
@@ -213,37 +228,34 @@ set edit:completion:arg-completer[remove_bookmark] = $complete~
 
 if (has-external fzf) {
   set edit:insert:binding[Alt-x] = {
-    var selection = ''
-    try {
-      set selection = (each {
-          |item|
-          echo $item | re:replace "['\\[\\]\\n]" '' (slurp) | echo (all)
-        } $bookmarks | fzf -i -n 1,3.. 2> $os:dev-tty | awk '{print $1}')
-    } catch e {
-      if (!= $e[reason][exit-status] 130) {
-        fail $e
-      }
-    }
+    var selection = (each {
+        |item|
+        echo $item | re:replace "['\\[\\]\\n]" '' (slurp) | echo (all)
+      } $bookmarks | safe_fzf -i -n 1,3.. | to-lines | awk '{print $1}')
 
-    each {
-      |bmark|
-      if (==s $bmark[0] $selection) {
-        jump (eval 'echo '(str:replace '$' '$E:' $bmark[1]))
-      }
-    } $bookmarks
+    if (!=s $selection '.') {
+      each {
+        |bmark|
+        if (==s $bmark[0] $selection) {
+          jump (eval 'echo '(str:replace '$' '$E:' $bmark[1]))
+        }
+      } $bookmarks
+    }
   }
 
   set edit:insert:binding[Alt-X] = {
     var selection = (each {
         |item|
         echo $item | re:replace "['\\[\\]\\n]" '' (slurp) | echo (all)
-      } $bookmarks | fzf -i -n 1,3.. 2> $os:dev-tty | awk '{print $1}')
+      } $bookmarks | safe_fzf -i -n 1,3.. | to-lines | awk '{print $1}')
 
-    each {
-      |bmark|
-      if (==s $bmark[0] $selection) {
-        edit:insert-at-dot (eval 'echo '(str:replace '$' '$E:' $bmark[1]))
-      }
-    } $bookmarks
+    if (!=s $selection '.') {
+      each {
+        |bmark|
+        if (==s $bmark[0] $selection) {
+          edit:insert-at-dot (eval 'echo '(str:replace '$' '$E:' $bmark[1]))
+        }
+      } $bookmarks
+    }
   }
 }
