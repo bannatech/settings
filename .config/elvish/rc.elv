@@ -340,6 +340,7 @@ use mamba
 set mamba:cmd = conda
 set mamba:root = (path:join $E:HOME .conda)
 use completions/molecule
+use completions/crev
 use jump
 
 fn add_bookmark {|@args| jump:add_bookmark $@args }
