@@ -346,5 +346,6 @@ use jump
 fn add_bookmark {|@args| jump:add_bookmark $@args }
 fn remove_bookmark {|@args| jump:remove_bookmark $@args }
 fn jump {|@args| jump:jump $@args }
+fn cd {|@args| jump:jump $@args }
 
 eval (starship init elvish)
